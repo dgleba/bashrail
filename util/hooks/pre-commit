@@ -10,4 +10,5 @@
   git add .mtimes mtimeh.txt mtimehs.txt
 
   cp -rfp util/hooks/* .git/hooks
- 
+
+  git log  -n 10 > version__may-be-missing-one-version.txt

@@ -6,20 +6,21 @@
 
 
 # comment out line with BBB ..  sed -i '/![^#]/ s/\(^.*BBB.*$\)/#\ \1/' file
-sed -i '/![^#]/ s/\(^.*turbolinks.*$\)/#\ \1/' Gemfile
+# noworky.. sed -i '/![^#]/ s/\(^.*turbolinks.*$\)/#\ \1/' Gemfile
+sed -i -e '/turbolinks/ s/^#*/#/'  Gemfile
+
 
 file1='application.js'
 cp -a app/assets/javascripts/$file1  backup/$file1$(date +"__%Y.%m.%d_%H.%M.%S").bak.txt
-#
 # delete line containing..
-# no,  sed -i '/turbolinks/d' app/assets/javascripts/$file1
+sed -i '/turbolinks/d' app/assets/javascripts/$file1
  
  
 # originally... 
   # <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   # <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
  
-# now using the heredoc below this...
+# now using the heredoc below this stanza...
 file2='application.html.erb'
 cp -a app/views/layouts/$file2  backup/$file2$(date +"__%Y.%m.%d_%H.%M.%S").bak.txt
 #remove turbolinks reference from $file2

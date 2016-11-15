@@ -1,0 +1,103 @@
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-11-13[Nov-Sun]20-59PM
+
+Models product pfeature:
+
+# app/model/product.rb
+class Product < ActiveRecord::Base
+  has_many :product_feature
+  has_many :pfeature, through: :product_feature
+end
+
+# app/model/pfeature.rb
+class Pfeature < ActiveRecord::Base
+  has_many :product_feature
+  has_many :product, through: :product_feature
+end
+_____________ 
+
+      params.require(:product).permit(:name, :ptype_ids => [])
+ _____________ 
+
+     <%= f.input :name %>
++    <%= f.association :ptype %>
+
+    <%= f.association :ptype %>
+_____________ 
+
+showpf=$(cat <<'HEREDOC'
+\<p\>
+\<\% \@product.pfeature.each do |v1| \%\>
+    \<\%= link_to v1.name, v1 \%\>
+\<\% end \%\>
+\</p\>
+HEREDOC
+)
+
++<p>
++<% @product.ptype.each do |tag| %>
++    <%= link_to tag.name, tag %>
++<% end %>
++</p>
++
+ <%= link_to 'Edit', edit_product_path(@product) %> |
+ 
+ # sed -i '/$patrn/{/\(.*\)\)/$str1\) /}' $file1
+# sed  '/.*$patrn.*/{s/\(.*\)e/$str1\)/}' $file1 |grep zxz
+# sed  "/.*$patrn.*/{i/.$/$str1/}" $file1 |grep zxz
+# sed  '/require/s/.$/$str1/' $file1
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-11-13[Nov-Sun]20-59PM
+
+# usage:
+#
+#   bashrail/rail281j-mk.sh
+#
+# example..
+# input.. /var/web/bashrail
+# output.. /var/web/$appn
+# run command above from /var/web
+#
+# if appn = rail281j then..
+# copy ..../bashrail/* var/web/bashrail for example.
+# so, input files will be in var/share203/bashrail folder.
+# cd /var/web
+#       bashrail/rail281j-mk.sh
+# The output will be that it creates  var/web/rail281j/
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### start.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ 
+function notused-comments() {
+# begin block comment =============================
+: <<'END'
+
+ 
+END
+# end block comment ===============================
+} 
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-11-13[Nov-Sun]21-26PM
+
+# echo 'Type.create({name: "Three Cities"}) '>> db/seeds.rb
+# echo 'Type.create({name: "Carob Charob"}) '>> db/seeds.rb
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

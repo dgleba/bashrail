@@ -12,7 +12,7 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
   
 # name for the new application..
 
-export appn='c-rail308ra5'
+export appn='rail308ra6'
 
 # Location of creation files relative to the parent folder of the application..
 

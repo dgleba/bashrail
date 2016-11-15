@@ -1,10 +1,12 @@
 # bashrail
 
+https://github.com/dgleba/bashrail
+
 ===
 
  usage:
 
-   bashrail/rail308a5mk.sh
+   bashrail/rail308mk.sh
 
  example..
  input.. /var/web/bashrail
@@ -13,14 +15,17 @@
 
 --
  
- edit rail308a5mk.sh
-  change $appn
+ edit rail308mk.sh
+  change $appn  <- the name of your new application
   edit scaffolds
   try it out.
-  change it per you liking if it works as is.
+  change the files to you liking, then run it again with a new $appn name.
   
 
 ===
+
+### Notes..
+
 
 git add -A
 git commit -m 'first'

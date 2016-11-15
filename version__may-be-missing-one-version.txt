@@ -1,0 +1,53 @@
+commit a5d6238ff3aac690521a0c85b44d240623e5a561
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 14 21:08:33 2016 -0500
+
+    readme
+
+commit 7a32f3d2b3470e8cf0721626657882a7246bb98a
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 14 21:04:23 2016 -0500
+
+    hooks again
+
+commit a63abf8b5cd1fc429fa0b2eba179eb61d222df9f
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 14 20:42:51 2016 -0500
+
+    hooks
+
+commit 96f3c0f354d2b835870036cff4981d6a60afe3f6
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 14 20:32:34 2016 -0500
+
+    mods
+
+commit c19c707f8168225681195e5c27a1adce7946339b
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 14 20:21:50 2016 -0500
+
+    rename
+
+commit 472f97686b8d1ea63889973263e313cb4d67c110
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 14 20:01:33 2016 -0500
+
+    fix
+
+commit bfab67abe500cadba33a6dd3d73477909b5e1f5d
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 14 19:28:00 2016 -0500
+
+    app layout with disabled turbolinks
+
+commit d80f8a24b6c9c22be69d36ed9cbc15272bdd1224
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sun Nov 13 20:39:37 2016 -0500
+
+    first
+
+commit e9e01ef44f1c20845566fa25501cc6607a4dadbf
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sun Nov 13 20:21:15 2016 -0500
+
+    first commit

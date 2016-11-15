@@ -70,6 +70,11 @@ pwd
 
 # echo 'Type.create({name: "furniture"}) '>> db/seeds.rb
 
+#rake db:reset
+rake db:drop
+rake db:migrate
+rake db:seed
+
 
 sleep 1
 git add -A # Add all files and commit them
@@ -95,10 +100,6 @@ namespace :db do
 end
 HEREDOC
 
-#rake db:reset
-rake db:drop
-rake db:migrate
-#rake db:seed
 rake db:populate
 
 sleep 1

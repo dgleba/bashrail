@@ -1,3 +1,15 @@
+commit 3fae8ce8891d8d2b87d2ee16a5b6950eee556153
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 14 21:19:57 2016 -0500
+
+    hook 4
+
+commit 5275afb441c0bb5e5d920a6445baabd139379c6c
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 14 21:15:18 2016 -0500
+
+    hooks 3
+
 commit a5d6238ff3aac690521a0c85b44d240623e5a561
 Author: David Gleba <dgleba@gmail.com>
 Date:   Mon Nov 14 21:08:33 2016 -0500
@@ -45,9 +57,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Sun Nov 13 20:39:37 2016 -0500
 
     first
-
-commit e9e01ef44f1c20845566fa25501cc6607a4dadbf
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sun Nov 13 20:21:15 2016 -0500
-
-    first commit

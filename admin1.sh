@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-  
-  
-  
+    
 ### admin1 .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 # active admin..
 
@@ -11,7 +10,9 @@
 # rake db:migrate
 # rake db:seed
 # rails generate active_admin:resource Product
-#rails destroy active_admin:resource Products
+# rails destroy active_admin:resource Products
+
+
 
 # administrate by thoughtbot
 
@@ -144,6 +145,8 @@ HEREDOC
 
 
   
+# bump version to get custom layout to load...
+#  
 # remove line containing  '[global]'  and replace the line completely with the new text...
 #      sed -i 's/.*global].*/[global]\n\nunix extensions = no/g' /etc/samba/smb.conf 
 patrn1='Rails.application.config.assets.version'

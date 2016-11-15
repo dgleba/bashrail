@@ -12,9 +12,9 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
   
 # name for the new application..
 
-export appn='rail308ra6'
+export appn='a308rail'
 
-# Location of creation files relative to the parent folder of the application..
+# Location of creator files beside the parent folder of the application..
 
 export sfil='bashrail'
 
@@ -27,9 +27,7 @@ export sfil2='../'$sfil
 
 ### start.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-pwd
-source $sfil/settings1.sh
-pwd
+
 source $sfil/new1.sh
 pwd
 source $sfil2/gemfile1.sh
@@ -41,7 +39,7 @@ pwd
 source $sfil2/applayout1.sh
 pwd
 source $sfil2/admin1.sh
-pwd
+
   
 
 ### scaffold... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -68,8 +66,14 @@ pwd
 
 ### db seed .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+# if you want to seed specific pre-planned data...
+
 # echo 'Type.create({name: "furniture"}) '>> db/seeds.rb
 
+
+sleep 1
+git add -A # Add all files and commit them
+  git commit -m "seed"
 
 
 ### populate .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -106,9 +110,6 @@ git add -A # Add all files and commit them
 
 ### finish up.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-sleep 1
-git add -A # Add all files and commit them
-git commit -m "reached end of script"
 
 set +vx
 pwd

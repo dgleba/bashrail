@@ -35,7 +35,7 @@ rails generate simple_form:install --bootstrap
 
 sleep 1
 git add -A # Add all files and commit them
-git commit -m "install 1"
+git commit -m "install 1 - bootstrap1.sh"
 
 
 
@@ -71,5 +71,5 @@ sed -i -e "s/$pattern1/$pattern2/" $path1$file1
 
 sleep 
 git add -A # Add all files and commit them
-git commit -m "copy and modify scaffold templates"
+git commit -m "copy and modify scaffold templates - bootstrap1.sh"
 

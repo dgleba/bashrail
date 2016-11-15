@@ -1,3 +1,9 @@
+commit 0e51ab469cb7c7f71307e1b157241e3b36f7d15e
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 14 22:05:29 2016 -0500
+
+    hone
+
 commit 3fae8ce8891d8d2b87d2ee16a5b6950eee556153
 Author: David Gleba <dgleba@gmail.com>
 Date:   Mon Nov 14 21:19:57 2016 -0500
@@ -51,9 +57,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Mon Nov 14 19:28:00 2016 -0500
 
     app layout with disabled turbolinks
-
-commit d80f8a24b6c9c22be69d36ed9cbc15272bdd1224
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sun Nov 13 20:39:37 2016 -0500
-
-    first

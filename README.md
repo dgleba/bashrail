@@ -6,20 +6,21 @@ https://github.com/dgleba/bashrail
 
  usage:
 
-   bashrail/rail308mk.sh
+     ```bashrail/rail308mk.sh
 
- example..
- input.. /var/web/bashrail
- output.. /var/web/$appn
- run command above from /var/web
+   
+ example.. 
+ - input.. /var/web/bashrail
+ - output.. /var/web/$appn
+ - run command above from /var/web
 
 --
  
  edit rail308mk.sh
-  change $appn  <- the name of your new application
-  edit scaffolds
-  try it out.
-  change the files to you liking, then run it again with a new $appn name.
+  - change $appn  <- the name of your new application
+  - edit scaffolds
+  - try it out.
+  - change the files to you liking, then run it again with a new $appn name.
   
 
 ===

@@ -1,0 +1,161 @@
+From a63abf8b5cd1fc429fa0b2eba179eb61d222df9f Mon Sep 17 00:00:00 2001
+From: David Gleba <dgleba@gmail.com>
+Date: Mon, 14 Nov 2016 20:42:51 -0500
+Subject: [PATCH] hooks
+
+---
+ .mtimes                  |  6 ++++++
+ hook.sh                  | 16 ++++++++++++++++
+ mtimeh.txt               | 16 ++++++++++++++++
+ mtimehs.txt              | 16 ++++++++++++++++
+ util/hooks/post-checkout |  8 ++++++++
+ util/hooks/pre-commit    | 13 +++++++++++++
+ util/mtimeh.rb           | 16 ++++++++++++++++
+ 7 files changed, 91 insertions(+)
+ create mode 100644 hook.sh
+ create mode 100644 mtimeh.txt
+ create mode 100644 mtimehs.txt
+ create mode 100644 util/hooks/post-checkout
+ create mode 100644 util/hooks/pre-commit
+ create mode 100644 util/mtimeh.rb
+
+diff --git a/.mtimes b/.mtimes
+index 24a014c..068862d 100644
+--- a/.mtimes
++++ b/.mtimes
+@@ -8,3 +8,9 @@
+ 1479173328|bootstrap1.sh
+ 1479173023|new1.sh
+ 1479173527|rail308mk.sh
++1479174072|hook.sh
++1479174139|mtimeh.txt
++1479174139|mtimehs.txt
++1477697866|util/hooks/post-checkout
++1477697815|util/hooks/pre-commit
++1477622159|util/mtimeh.rb
+diff --git a/hook.sh b/hook.sh
+new file mode 100644
+index 0000000..798c505
+--- /dev/null
++++ b/hook.sh
+@@ -0,0 +1,16 @@
++#!/bin/bash
++
++# copy git hooks into place...
++
++  cp -rfp util/hooks/* .git/hooks
++ 
++  mtimestore -s
++    sleep 2
++
++  cat .mtimes |  ruby util/mtimeh.rb  > mtimeh.txt
++  sort -r mtimeh.txt   > mtimehs.txt
++    sleep 1
++
++  # git add .mtimes mtimeh.txt mtimehs.txt
++ 
++ 
+\ No newline at end of file
+diff --git a/mtimeh.txt b/mtimeh.txt
+new file mode 100644
+index 0000000..0bdf86e
+--- /dev/null
++++ b/mtimeh.txt
+@@ -0,0 +1,16 @@
++2016-11-13 22:12:35 -0500 || 1479093155 || README.md
++2016-11-13 22:06:27 -0500 || 1479092787 || admin1.sh
++2016-11-13 22:25:01 -0500 || 1479093901 || gemfile1.sh
++2016-11-13 22:15:56 -0500 || 1479093356 || home1.sh
++2016-11-13 22:06:27 -0500 || 1479092787 || notes.txt
++2016-11-13 23:02:07 -0500 || 1479096127 || select2.sh
++2016-11-14 19:49:04 -0500 || 1479170944 || applayout1.sh
++2016-11-14 20:28:48 -0500 || 1479173328 || bootstrap1.sh
++2016-11-14 20:23:43 -0500 || 1479173023 || new1.sh
++2016-11-14 20:32:07 -0500 || 1479173527 || rail308mk.sh
++2016-11-14 20:41:12 -0500 || 1479174072 || hook.sh
++2016-11-14 20:42:19 -0500 || 1479174139 || mtimeh.txt
++2016-11-14 20:42:19 -0500 || 1479174139 || mtimehs.txt
++2016-10-28 19:37:46 -0400 || 1477697866 || util/hooks/post-checkout
++2016-10-28 19:36:55 -0400 || 1477697815 || util/hooks/pre-commit
++2016-10-27 22:35:59 -0400 || 1477622159 || util/mtimeh.rb
+diff --git a/mtimehs.txt b/mtimehs.txt
+new file mode 100644
+index 0000000..72d663b
+--- /dev/null
++++ b/mtimehs.txt
+@@ -0,0 +1,16 @@
++2016-11-14 20:42:19 -0500 || 1479174139 || mtimehs.txt
++2016-11-14 20:42:19 -0500 || 1479174139 || mtimeh.txt
++2016-11-14 20:41:12 -0500 || 1479174072 || hook.sh
++2016-11-14 20:32:07 -0500 || 1479173527 || rail308mk.sh
++2016-11-14 20:28:48 -0500 || 1479173328 || bootstrap1.sh
++2016-11-14 20:23:43 -0500 || 1479173023 || new1.sh
++2016-11-14 19:49:04 -0500 || 1479170944 || applayout1.sh
++2016-11-13 23:02:07 -0500 || 1479096127 || select2.sh
++2016-11-13 22:25:01 -0500 || 1479093901 || gemfile1.sh
++2016-11-13 22:15:56 -0500 || 1479093356 || home1.sh
++2016-11-13 22:12:35 -0500 || 1479093155 || README.md
++2016-11-13 22:06:27 -0500 || 1479092787 || notes.txt
++2016-11-13 22:06:27 -0500 || 1479092787 || admin1.sh
++2016-10-28 19:37:46 -0400 || 1477697866 || util/hooks/post-checkout
++2016-10-28 19:36:55 -0400 || 1477697815 || util/hooks/pre-commit
++2016-10-27 22:35:59 -0400 || 1477622159 || util/mtimeh.rb
+diff --git a/util/hooks/post-checkout b/util/hooks/post-checkout
+new file mode 100644
+index 0000000..eb68bc5
+--- /dev/null
++++ b/util/hooks/post-checkout
+@@ -0,0 +1,8 @@
++#!/bin/bash
++
++mtimestore -r
++
++#git update-index --refresh #causes some problems under windows tortoise git
++
++  cp -rfp util/hooks/* .git/hooks
++ 
+diff --git a/util/hooks/pre-commit b/util/hooks/pre-commit
+new file mode 100644
+index 0000000..793c15e
+--- /dev/null
++++ b/util/hooks/pre-commit
+@@ -0,0 +1,13 @@
++#!/bin/bash
++
++  mtimestore -s
++    sleep 2
++
++  cat .mtimes |  ruby util/mtimeh.rb  > mtimeh.txt
++  sort -r mtimeh.txt   > mtimehs.txt
++    sleep 1
++
++  git add .mtimes mtimeh.txt mtimehs.txt
++
++  cp -rfp util/hooks/* .git/hooks
++ 
+\ No newline at end of file
+diff --git a/util/mtimeh.rb b/util/mtimeh.rb
+new file mode 100644
+index 0000000..71d0b39
+--- /dev/null
++++ b/util/mtimeh.rb
+@@ -0,0 +1,16 @@
++#
++# Read .mtimes from stdin and write human readable datetime
++# usage : cat infile | ruby mtimeh.rb  > out.txt
++#
++#  sort -r .mtimes | ruby mtimeh.rb > out.txt
++#
++
++# read the infile and split into arrays... 
++ARGF.each_with_index do |line, idx|
++
++  aline = line.split("|")
++  #puts 'aline2: ' +  aline.inspect
++  puts "#{Time.at(aline[0].to_i)} || #{aline[0]} || #{aline[1]}"
++
++end
++
+-- 
+2.5.0.windows.1
+

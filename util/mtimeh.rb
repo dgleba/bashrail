@@ -10,7 +10,7 @@ ARGF.each_with_index do |line, idx|
 
   aline = line.split("|")
   #puts 'aline2: ' +  aline.inspect
-  puts "#{Time.at(aline[0].to_i)} || #{aline[0]} || #{aline[1]}"
+  puts "#{Time.at(aline[0].to_i)} | #{aline[0]} | #{aline[1]}"
 
 end
 

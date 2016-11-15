@@ -6,3 +6,4 @@ mtimestore -r
 
   cp -rfp util/hooks/* .git/hooks
  
+  git log  -n 10 > version.txt

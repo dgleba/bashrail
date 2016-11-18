@@ -12,13 +12,12 @@
 1479184028|util/hook.sh
 1479428256|version__may-be-missing-one-version.txt
 1479428490|util/hooks/post-checkout
-1479428498|util/hooks/pre-commit
 1479428708|mtimeh.txt
 1479428708|mtimehs.txt
-1479430656|version/version-a.txt
-1479430656|version/version-n.txt
 1479430649|version/version.sh
 1479439405|util/hooks/pre-push
-1479430656|version/version-a.txt.save
-1479430753|version/version.txt
 1479430757|version/version__may-be-missing-one-version.txt
+1479439559|util/hooks/pre-commit
+1479439591|version/version-a.txt
+1479439591|version/version-n.txt
+1479439592|version/version.txt

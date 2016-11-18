@@ -50,18 +50,21 @@ function ver_dn {
 folder=version
 GIT_VERSION=`$GITBIN rev-list HEAD | wc -l`
 let GIT_VERSION+=1
+pwd
 
 if [ ! -f $folder/version.txt ] ; then
-  echo 'Version(Date,CountCommits,IncrementingNumber), 2016, 14, 14' > $folder/version.txt
+  echo 'Version__Date-CountCommits-IncrementingNumber, 2016, 14, 16' > $folder/version.txt
 fi
     
 IFS=,
-while read ver DATE1 NUM
+while read ver DATE1 gver NUM
 do
-echo $ver, $(date +"%Y.%m.%d_%H.%M.%S"),  $GIT_VERSION,  $((NUM+1)) > $folder/tmpversiondatenumfile
+  echo $ver,    $(date +"%Y.%m.%d_%H.%M.%S"),   $GIT_VERSION,   $((NUM+1)) 
+  echo $ver,    $(date +"%Y.%m.%d_%H.%M.%S"),   $GIT_VERSION,   $((NUM+1)) > tmpversiondatenumfile
 done < $folder/version.txt 
 
-mv $folder/tmpversiondatenumfile $folder/version.txt
+cp -f tmpversiondatenumfile $folder/version.txt
+rm -f tmpversiondatenumfile 
 }
 
 

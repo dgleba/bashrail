@@ -59,8 +59,7 @@ fi
 IFS=,
 while read ver DATE1 gver NUM
 do
-  echo $ver,     $(date +"%Y.%m.%d_%H.%M.%S"),     $GIT_VERSION,     $((NUM+1)) 
-  echo $ver,     $(date +"%Y.%m.%d_%H.%M.%S"),     $GIT_VERSION,     $((NUM+1)) > tmpversiondatenumfile
+  echo $ver,  $(date +"%Y.%m.%d_%H.%M.%S"), $((NUM+1)), $GIT_VERSION > tmpversiondatenumfile
 done < $folder/version.txt 
 
 mv    tmpversiondatenumfile $folder/version.txt

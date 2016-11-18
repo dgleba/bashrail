@@ -53,18 +53,19 @@ let GIT_VERSION+=1
 pwd
 
 if [ ! -f $folder/version.txt ] ; then
-  echo 'Version__Date-CountCommits-IncrementingNumber, 2016, 14, 16' > $folder/version.txt
+  echo 'Version:   Date  IncrementingNumber  CountCommits, 2016, 16, 16' > $folder/version.txt
 fi
     
 IFS=,
 while read ver DATE1 gver NUM
 do
-  echo $ver,    $(date +"%Y.%m.%d_%H.%M.%S"),   $GIT_VERSION,   $((NUM+1)) 
-  echo $ver,    $(date +"%Y.%m.%d_%H.%M.%S"),   $GIT_VERSION,   $((NUM+1)) > tmpversiondatenumfile
+  echo $ver,     $(date +"%Y.%m.%d_%H.%M.%S"),     $GIT_VERSION,     $((NUM+1)) 
+  echo $ver,     $(date +"%Y.%m.%d_%H.%M.%S"),     $GIT_VERSION,     $((NUM+1)) > tmpversiondatenumfile
 done < $folder/version.txt 
 
-cp -f tmpversiondatenumfile $folder/version.txt
-rm -f tmpversiondatenumfile 
+mv    tmpversiondatenumfile $folder/version.txt
+# cp -f tmpversiondatenumfile $folder/version.txt
+# rm -f tmpversiondatenumfile 
 }
 
 

@@ -11,6 +11,6 @@
 
   cp -rfp util/hooks/* .git/hooks
 
-  git log  -n 10 > version__may-be-missing-one-version.txt
+  git log  -n 10 > version/version__may-be-missing-one-version.txt
 
   version/version.sh

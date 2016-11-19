@@ -1,3 +1,9 @@
+commit 86930f29510442aaef50c45cdb31e7d7f4783be6
+Author: David Gleba <dgleba@gmail.com>
+Date:   Thu Nov 17 22:26:34 2016 -0500
+
+    misc
+
 commit 9fb6041bf0c704f1dd1acee4147e5aedd77558d5
 Author: David Gleba <dgleba@gmail.com>
 Date:   Thu Nov 17 22:24:27 2016 -0500
@@ -51,9 +57,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Mon Nov 14 22:05:29 2016 -0500
 
     hone
-
-commit 3fae8ce8891d8d2b87d2ee16a5b6950eee556153
-Author: David Gleba <dgleba@gmail.com>
-Date:   Mon Nov 14 21:19:57 2016 -0500
-
-    hook 4

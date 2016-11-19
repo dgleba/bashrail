@@ -26,20 +26,24 @@ function git_func {
 function gitver {
   GITBIN=git
   folder=version
+  mkdir -p version
   
   # method 1
   if [[ 1 == 1 ]] 
   then
     if [ ! -f $folder/version-a.txt ] ; then
+      mkdir -p $folder
       echo '"version": "0.1.01"' > $folder/version-a.txt
     fi
 
     GIT_VERSION=`$GITBIN rev-list HEAD | wc -l`
     let GIT_VERSION+=1
+    
     perl -e "s/(\d+\.\d+\.)\d+/\${1}$GIT_VERSION/;" -pi.save $folder/version-a.txt
     #rm $folder/version-a.txt.save
 
     # method 2
+
     echo "Version(CountofCommits): $GIT_VERSION" > $folder/version-n.txt
   fi
 }
@@ -53,7 +57,7 @@ let GIT_VERSION+=1
 pwd
 
 if [ ! -f $folder/version.txt ] ; then
-  echo 'Version:   Date  IncrementingNumber  CountCommits, 2016, 16, 16' > $folder/version.txt
+  echo 'Version:   Date  IncrementingNumber  CountCommits, 2016, 16, 16' > version.txt
 fi
     
 IFS=,
@@ -62,13 +66,11 @@ do
   echo $ver,  $(date +"%Y.%m.%d_%H.%M.%S"), $((NUM+1)), $GIT_VERSION > tmpversiondatenumfile
 done < $folder/version.txt 
 
-mv    tmpversiondatenumfile $folder/version.txt
-# cp -f tmpversiondatenumfile $folder/version.txt
-# rm -f tmpversiondatenumfile 
+mv    tmpversiondatenumfile version.txt
 }
 
 
 set -vx
 
-gitver
+# offline.. gitver
 ver_dn

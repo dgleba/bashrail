@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+folder=version
+GITBIN=git
+
+
 function git_func {
     # I am not using this..
     GITBIN=git
@@ -51,20 +55,19 @@ function gitver {
 
 function ver_dn {
 
-folder=version
 GIT_VERSION=`$GITBIN rev-list HEAD | wc -l`
 let GIT_VERSION+=1
 pwd
 
-if [ ! -f $folder/version.txt ] ; then
-  echo 'Version:   Date  IncrementingNumber  CountCommits, 2016, 16, 16' > version.txt
+if [ ! -f version.txt ] ; then
+  echo 'Version:   Date  IncrementingNumber  CountCommits, 2016, 22, 1' > version.txt
 fi
     
 IFS=,
-while read ver DATE1 gver NUM
+while read ver DATE1  NUM gver
 do
   echo $ver,  $(date +"%Y.%m.%d_%H.%M.%S"), $((NUM+1)), $GIT_VERSION > tmpversiondatenumfile
-done < $folder/version.txt 
+done < version.txt 
 
 mv    tmpversiondatenumfile version.txt
 }

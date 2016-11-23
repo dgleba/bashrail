@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
  
-  
- 
 ### home page .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
-
 rails g controller Home index about 
  
 #
@@ -23,7 +20,12 @@ cat << 'HEREDOC' >> app/views/home/index.html.erb
 <h3> 1.   </h3>
 <%= link_to 'Products', products_path %>
 <h3> 2.   </h3>
-<%= link_to 'Rails admin', rails_admin.index_path('') %>
+
+<%# This is a comment! %>
+<%#  <%= link_to 'Rails admin', rails_admin.index_path('') %>  
+
+Use /radmin to access the rails admin tool if it is setup.
+
 <br><br><br>
 <hr>
 <%= Rails.env %> 

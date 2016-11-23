@@ -6,11 +6,12 @@ https://github.com/dgleba/bashrail
 
  usage:
 
-     ```bashrail/rail308mk.sh
+      bashrail/rail308mk.sh
 
    
+
  example.. 
- - input.. /var/web/bashrail
+ - input..  /var/web/bashrail
  - output.. /var/web/$appn
  - run command above from /var/web
 

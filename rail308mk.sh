@@ -6,13 +6,14 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
 #    bootstrap simple_form select2 rails_admin testing platform
 #
 
+# usage:  bashrail/rail308mk.sh
 
 
 ### settings .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
 # name for the new application..
 
-export appn='a308rail'
+export appn='d308rail'
 
 # Location of creator files beside the parent folder of the application..
 
@@ -32,35 +33,38 @@ source $sfil/new1.sh
 pwd
 source $sfil2/gemfile1.sh
 pwd
-source $sfil2/home1.sh
+source $sfil2/home1.sh  # optional
 pwd
-source $sfil2/bootstrap1.sh
+source $sfil2/bootstrap1.sh 
 pwd
 source $sfil2/applayout1.sh
 pwd
-source $sfil2/admin1.sh
+source $sfil2/paginate1.sh  # 
+pwd
+source $sfil2/admin1.sh  # optional
 
   
 
 ### scaffold... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-rails g scaffold Product name  pdate:datetime active_status:integer sort:integer -f \
+rails g scaffold Product name  pdate:datetime active_status:integer sort:integer -f 
 
-rails g scaffold Pfeature name fdate:datetime active_status:integer sort:integer -f \
 
-rails g scaffold ProductFeature name  product:references pfeature:references active_status:integer sort:integer -f \
+rails g scaffold Pfeature name fdate:datetime active_status:integer sort:integer -f 
+
+rails g scaffold ProductFeature name  product:references pfeature:references active_status:integer sort:integer -f 
 
 
 sleep 1
 git add -A # Add all files and commit them
-git commit -m "scaffold"
+git commit -m "scaffold"  
 
 
 ### select2 for product pfeature.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-source $sfil2/select2.sh
+source $sfil2/select2.sh  # optional
 pwd
 
 
@@ -68,7 +72,7 @@ pwd
 
 # if you want to seed specific pre-planned data...
 
-# echo 'Type.create({name: "furniture"}) '>> db/seeds.rb
+# echo 'Product.create({name: "furniture"}) '>> db/seeds.rb
 
 #rake db:reset
 rake db:drop
@@ -90,7 +94,7 @@ namespace :db do
   task :populate => :environment do
     require 'populator'
     require 'faker'
-    Product.populate 3 do |a12|
+    Product.populate 33 do |a12|
       a12.name     = Faker::Commerce.product_name
     end
     Pfeature.populate 9 do |a12|
@@ -118,6 +122,7 @@ echo  '----------------------------------------> Successfully Reached end of fil
 echo  run rails s
 echo  then visit localhost:3000/
 echo  then visit localhost:3000/products
+set +vx 
 date
 #
 

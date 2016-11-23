@@ -1,0 +1,103 @@
+  
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+function blockcomment1() {
+: <<'BLOCKCOMMENT'
+
+
+manualv:
+
+haml..
+
+.col-sm-5.col-sm-offset-7
+  = search_form_for @q, class: 'search-form' do |f|
+    .input-group
+      = f.search_field :<%= attributes.first.name %>_cont, class: 'form-control'
+      %span.input-group-btn
+        %button.btn.btn-primary
+          %i.fa.fa-search
+
+to erb..
+
+<div class="col-sm-5 col-sm-offset-7">
+  <%= search_form_for @q, class: 'search-form' do |f| %>
+    <div class="input-group">
+      <%= f.search_field :?attributes.first.name?_cont, class: 'form-control' %>
+      <span class="input-group-btn">
+        <button class="btn btn-primary">
+          <i class="fa fa-search"></i>
+        </button>
+      </span>
+    </div>
+  <% end %>
+</div>
+
+then modify for templating...
+
+
+<div class="col-sm-5 col-sm-offset-7">
+  <%%= search_form_for @q, class: 'search-form' do |f| %>
+    <div class="input-group">
+      <%%= f.search_field :<%= attributes.first.name %>_cont, class: 'form-control' %>
+      <span class="input-group-btn">
+        <button class="btn btn-primary">
+          <i class="fa fa-search"></i>
+        </button>
+      </span>
+    </div>
+  <%% end %>
+</div>
+
+
+_____________ 
+
+
+Heredoc to edit template..
+
+
+# edit template index...
+#
+file1='index.html.erb'
+path1='lib/templates/erb/scaffold/'
+cp -a $path1$file1  $path1$file1$(date +"__%Y.%m.%d_%H.%M.%S").bak.txt
+#
+#replace foo with bar once per line... #sed -i -e 's/foo/bar/' filename
+pattern1='titleize'
+
+tmpf1='/tmp/herefile1'
+cat > $tmpf1 <<HEREDOC
+
+<div class="col-sm-5 col-sm-offset-7">
+  <%%= search_form_for @q, class: 'search-form' do |f| %>
+    <div class="input-group">
+      <%%= f.search_field :<%= attributes.first.name %>_cont, class: 'form-control' %>
+      <span class="input-group-btn">
+        <button class="btn btn-primary">
+          <i class="fa fa-search"></i>
+        </button>
+      </span>
+    </div>
+  <%% end %>
+</div>
+
+HEREDOC
+
+# add place holder..
+phold="placeholder21"
+sed -i "/$pattern1/a ${phold}" $path1$file1
+# Replace placeholder with tmpfile..
+sed  "/$phold/ { r $tmpf1
+  d }" $path1$file1
+
+
+_____________ 
+
+
+
+
+BLOCKCOMMENT
+}
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+

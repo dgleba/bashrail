@@ -1,3 +1,9 @@
+commit da2cd265df81dfe3bbbe65cacbc88882b5329b6c
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat Nov 19 14:14:45 2016 -0500
+
+    fix
+
 commit cb72bb4064ed090a75c00a03abb37e8f01aacc96
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Nov 19 14:05:03 2016 -0500
@@ -51,9 +57,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Thu Nov 17 19:19:43 2016 -0500
 
     mods
-
-commit ca02260d7bddd4777319809cb2d58b748646f595
-Author: David Gleba <dgleba@gmail.com>
-Date:   Mon Nov 14 23:30:37 2016 -0500
-
-    version.sh

@@ -27,6 +27,9 @@ echo "$gem1" >> Gemfile
 
 echo "gem 'rails_admin'" >> Gemfile
 
+echo "gem 'kaminari'" >> Gemfile
+echo "gem 'ransack'" >> Gemfile
+
 #echo "gem 'administrate'" >> Gemfile
 #echo "gem 'bourbon'" >> Gemfile
 

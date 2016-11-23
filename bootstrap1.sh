@@ -69,7 +69,7 @@ pattern2='<table class="table table-striped">'
 sed -i -e "s/$pattern1/$pattern2/" $path1$file1
 
 
-sleep 
+sleep 1
 git add -A # Add all files and commit them
 git commit -m "copy and modify scaffold templates - bootstrap1.sh"
 

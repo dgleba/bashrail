@@ -1,3 +1,9 @@
+commit 53dc4d585991d714b42df3577883c1a31b960461
+Author: David Gleba <dgleba@gmail.com>
+Date:   Tue Nov 22 21:25:55 2016 -0500
+
+    paginate almost working
+
 commit da2cd265df81dfe3bbbe65cacbc88882b5329b6c
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Nov 19 14:14:45 2016 -0500
@@ -51,9 +57,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Thu Nov 17 19:20:36 2016 -0500
 
     misc
-
-commit 06c7d4b672f34c5845cc015a9c4489032cd6394f
-Author: David Gleba <dgleba@gmail.com>
-Date:   Thu Nov 17 19:19:43 2016 -0500
-
-    mods

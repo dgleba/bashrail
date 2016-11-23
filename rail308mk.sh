@@ -13,7 +13,7 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
   
 # name for the new application..
 
-export appn='d308rail'
+export appn='b308rail'
 
 # Location of creator files beside the parent folder of the application..
 
@@ -33,15 +33,15 @@ source $sfil/new1.sh
 pwd
 source $sfil2/gemfile1.sh
 pwd
-source $sfil2/home1.sh  # optional
+ source $sfil2/home1.sh  # 
 pwd
-source $sfil2/bootstrap1.sh 
+ source $sfil2/bootstrap1.sh 
 pwd
-source $sfil2/applayout1.sh
+ source $sfil2/applayout1.sh  # requires home1
 pwd
-source $sfil2/paginate1.sh  # 
+# source $sfil2/paginate1.sh  # optional
 pwd
-source $sfil2/admin1.sh  # optional
+ source $sfil2/admin1.sh  # optional, but home1 refers to this.
 
   
 
@@ -64,7 +64,7 @@ git commit -m "scaffold"
 ### select2 for product pfeature.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-source $sfil2/select2.sh  # optional
+# source $sfil2/select2.sh  # optional
 pwd
 
 
@@ -94,7 +94,7 @@ namespace :db do
   task :populate => :environment do
     require 'populator'
     require 'faker'
-    Product.populate 33 do |a12|
+    Product.populate 11 do |a12|
       a12.name     = Faker::Commerce.product_name
     end
     Pfeature.populate 9 do |a12|

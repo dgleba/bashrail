@@ -9,6 +9,9 @@ pwd
 # http://www.softwaremaniacs.net/2014/01/replacing-scaffoldcontroller-generator.html
 
 
+echo "gem 'kaminari'" >> Gemfile
+echo "gem 'ransack'" >> Gemfile
+bundle
 
 # to get original controller generator....
   railt1="$(bundle show railties)"

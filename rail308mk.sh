@@ -6,14 +6,14 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
 #    bootstrap simple_form select2 rails_admin testing platform
 #
 
-# usage:  bashrail/rail308mk.sh
+# usage:  see readme.md..       bashrail/rail308mk.sh
 
 
 ### settings .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
 # name for the new application..
 
-export appn='b308rail'
+export appn='d308rail'
 
 # Location of creator files beside the parent folder of the application..
 
@@ -31,7 +31,7 @@ export sfil2='../'$sfil
 
 source $sfil/new1.sh
 pwd
-source $sfil2/gemfile1.sh
+ source $sfil2/gemfile1.sh
 pwd
  source $sfil2/home1.sh  # 
 pwd
@@ -41,7 +41,7 @@ pwd
 pwd
 # source $sfil2/paginate1.sh  # optional
 pwd
- source $sfil2/admin1.sh  # optional, but home1 refers to this.
+ # source $sfil2/admin1.sh  # optional, but home1 refers to this.
 
   
 

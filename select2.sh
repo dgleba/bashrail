@@ -3,6 +3,10 @@
   
 ### enable select2 .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+gem1="gem 'select2-rails'"
+echo "$gem1" >> Gemfile
+bundle
+
 #
 # add line after match...  sed -i '/CLIENTSCRIPT="foo"/a CLIENTSCRIPT2="hello"' file
 # i think 0, means only do it for the first match..

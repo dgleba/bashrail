@@ -7,6 +7,21 @@
 ### setup bootstrap assets .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 pwd
 
+echo "# " >> Gemfile
+note1='# https://github.com/twbs/bootstrap-sass'
+echo "# $note1" >> Gemfile
+echo "# " >> Gemfile
+
+gem1="gem 'simple_form'"
+echo "$gem1" >> Gemfile
+
+bundle
+
+# echo "gem 'bootstrap-sass', '~> 3.3.6'" >> Gemfile
+ echo "gem 'bootstrap-sass'" >> Gemfile
+# already there, no need to repeat.... echo "gem 'sass-rails'" >> Gemfile
+
+
 #  css
 
 #\\10.4.1.227\rt\srv\share\test\rail304x2\app\assets\stylesheets\application.css

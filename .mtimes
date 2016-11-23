@@ -5,8 +5,6 @@
 1479174254|util/mtimeh.rb
 1479179055|admin1.sh
 1479184028|util/hook.sh
-1479582299|mtimeh.txt
-1479582299|mtimehs.txt
 1479581946|util/hooks/post-checkout
 1479582134|util/hooks/pre-commit
 1479581953|util/hooks/pre-push
@@ -32,3 +30,5 @@
 1479865384|thor/t1.rb
 1479872690|rail308mk.sh
 1479872127|thor/t2.rb
+1479927197|mtimeh.txt
+1479927197|mtimehs.txt

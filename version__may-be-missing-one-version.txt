@@ -1,3 +1,21 @@
+commit f1067de6570f5df7ae42bd5c4f65021be568593c
+Author: dgleba <dgleba@gmail.com>
+Date:   Wed Nov 23 10:26:14 2016 -0500
+
+    minor
+
+commit 001fa6cb301bf4bc20704aea1ce71fd6ee389777
+Author: dgleba <dgleba@gmail.com>
+Date:   Wed Nov 23 09:51:49 2016 -0500
+
+    move gem entries
+
+commit cd9a6f5337e97e61f4ddfd917bef42a9c6d86d90
+Author: David Gleba <dgleba@gmail.com>
+Date:   Tue Nov 22 22:51:31 2016 -0500
+
+    adding thor stuff
+
 commit 53dc4d585991d714b42df3577883c1a31b960461
 Author: David Gleba <dgleba@gmail.com>
 Date:   Tue Nov 22 21:25:55 2016 -0500
@@ -39,21 +57,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Thu Nov 17 19:55:38 2016 -0500
 
     m
-
-commit 69a077f642ca9b68f0478d4e22a6331e1bc939cd
-Author: David Gleba <dgleba@gmail.com>
-Date:   Thu Nov 17 19:43:55 2016 -0500
-
-    misc3
-
-commit 5475611f266d159ba38640877c48141d95c2bbe8
-Author: David Gleba <dgleba@gmail.com>
-Date:   Thu Nov 17 19:22:24 2016 -0500
-
-    misc2
-
-commit 16288d3a1ed036b6d5fb6adfd424262ad4aa13d9
-Author: David Gleba <dgleba@gmail.com>
-Date:   Thu Nov 17 19:20:36 2016 -0500
-
-    misc

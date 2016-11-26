@@ -1,3 +1,9 @@
+commit 9670c1f55c2ae017405c14711bbd70bf0a509767
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat Nov 26 12:31:11 2016 -0500
+
+    hooks
+
 commit 58f7a8d9b1526b0aadc02c55a6bc062237d999c7
 Author: dgleba <dgleba@gmail.com>
 Date:   Wed Nov 23 13:54:55 2016 -0500
@@ -51,9 +57,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Thu Nov 17 22:24:27 2016 -0500
 
     turn off pre-push
-
-commit 4403499ab1e318a387299867342dd63e29f140fc
-Author: David Gleba <dgleba@gmail.com>
-Date:   Thu Nov 17 19:59:13 2016 -0500
-
-    misc5

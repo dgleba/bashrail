@@ -55,6 +55,7 @@ function gitver {
 
 function ver_dn {
 
+GITBIN=git
 GIT_VERSION=`$GITBIN rev-list HEAD | wc -l`
 let GIT_VERSION+=1
 pwd

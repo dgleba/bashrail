@@ -70,6 +70,19 @@ do
 done < version.txt 
 
 mv    tmpversiondatenumfile version.txt
+
+git log  -n 10 > version-last10__may-be-missing-one-version.txt
+
+
+# all version history summary..
+file3='version-log__maybemissing-one.txt'
+echo -en '\n\n~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~\n\n' >> $file3
+git log  -n 1 >> $file3
+echo "---"   >> $file3
+git remote show origin>> $file3
+
+
+  
 }
 
 

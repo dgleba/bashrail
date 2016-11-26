@@ -5,12 +5,8 @@
 1479174254|util/mtimeh.rb
 1479179055|admin1.sh
 1479184028|util/hook.sh
-1479581946|util/hooks/post-checkout
-1479582134|util/hooks/pre-commit
 1479581953|util/hooks/pre-push
 1479581879|util/version-v1.sh
-1479582300|version__may-be-missing-one-version.txt
-1479582803|util/version.sh
 1479582882|version.txt
 1479663807|.gitignore
 1479862558|README.md
@@ -30,5 +26,8 @@
 1479865384|thor/t1.rb
 1479872690|rail308mk.sh
 1479872127|thor/t2.rb
-1479927197|mtimeh.txt
-1479927197|mtimehs.txt
+1480181467|mtimeh.txt
+1480181467|mtimehs.txt
+1480181296|util/hooks/post-checkout
+1480180177|util/hooks/pre-commit
+1480181071|util/version.sh

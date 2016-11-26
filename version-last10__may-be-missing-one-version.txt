@@ -1,3 +1,9 @@
+commit 58f7a8d9b1526b0aadc02c55a6bc062237d999c7
+Author: dgleba <dgleba@gmail.com>
+Date:   Wed Nov 23 13:54:55 2016 -0500
+
+    version
+
 commit f1067de6570f5df7ae42bd5c4f65021be568593c
 Author: dgleba <dgleba@gmail.com>
 Date:   Wed Nov 23 10:26:14 2016 -0500
@@ -51,9 +57,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Thu Nov 17 19:59:13 2016 -0500
 
     misc5
-
-commit 9838f52bd58ebf49449e435ea23c52bc80797ea3
-Author: David Gleba <dgleba@gmail.com>
-Date:   Thu Nov 17 19:55:38 2016 -0500
-
-    m

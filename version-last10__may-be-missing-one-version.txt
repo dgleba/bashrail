@@ -1,3 +1,9 @@
+commit ff10f722a4c127f13a7da521af191bc396449e36
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat Nov 26 23:34:39 2016 -0500
+
+    rename, devise, deal with thor 0.19.2 error.
+
 commit dd2793173e60478f62dfc9f291c1e79fac61175e
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Nov 26 12:43:07 2016 -0500
@@ -51,9 +57,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Nov 19 14:05:03 2016 -0500
 
     update version scripts
-
-commit 86930f29510442aaef50c45cdb31e7d7f4783be6
-Author: David Gleba <dgleba@gmail.com>
-Date:   Thu Nov 17 22:26:34 2016 -0500
-
-    misc

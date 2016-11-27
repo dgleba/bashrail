@@ -6,7 +6,7 @@ https://github.com/dgleba/bashrail
 
  usage:
 
-      bashrail/rail308mk.sh
+      bashrail/1mk.sh
 
    
 
@@ -17,11 +17,11 @@ https://github.com/dgleba/bashrail
 
 --
  
- edit rail308mk.sh
+ edit 1mk.sh
   - change $appn  <- the name of your new application
   - edit scaffolds
   - try it out.
-  - change the files to you liking, then run it again with a new $appn name.
+  - change the files to your liking, then run it again with a new $appn name if you like.
   
 
 ===
@@ -32,6 +32,10 @@ https://github.com/dgleba/bashrail
 git add -A
 git commit -m 'first'
 git push -u origin master
+
+
+ref..
+    Rail308
 
 ===
 

@@ -1,26 +1,25 @@
 #!/usr/bin/env bash
 
-# set -e will exit on first error. so set -vxe..
-# http://stackoverflow.com/questions/2870992/automatic-exit-from-bash-shell-script-on-error
 
 function abort()
 {
+    # set -e will exit on first error. so set -vxe..
+    # http://stackoverflow.com/questions/2870992/automatic-exit-from-bash-shell-script-on-error
     echo >&2 '
-***************
-*** ABORTED ***
-***************
-'
+    ***************
+    *** ABORTED ***
+    ***************
+    '
     echo "An error occurred. Exiting..." >&2
     exit 1
 }
-
 trap 'abort' 0
-
 set -e
-
 # Add your script below.... If an error occurs, the abort() function will be called.
 #----------------------------------------------------------
-# ===> Your script goes here
+# ===> Your script goes here.........................
+
+
 
 ### setup.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -35,14 +34,14 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
 # usage:  see readme.md..       bashrail/1mk.sh
 
 
-# or if need be..  rm -rf c308rail ;  bashrail/1mk.sh
+#          or if need be..  rm -rf $appn ;  bashrail/1mk.sh
 
 
 ### settings .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
 # name for the new application..
 
-export appn='c308rail'
+export appn='c3rail308'
 
 # Location of creator files beside the parent folder of the application..
 
@@ -63,6 +62,8 @@ gem install thor -v 0.19.1
 
 pwd
   source $sfil/new1.sh
+
+  # everything after this is done from within the project folder $appn
  
   source $sfil2/gemfile1.sh
  
@@ -72,11 +73,11 @@ pwd
  
   source $sfil2/applayout1.sh  # requires home1
  
-  source $sfil2/paginate1.sh  # optional
+  source $sfil2/paginate1.sh  # optional, but I am not sure anymore.
 
-  source $sfil2/devise1.sh  # optional
+  source $sfil2/devise1.sh   # optional, but will modify home page, so optional everywhere is getting confusing.
  
-  # source $sfil2/admin1.sh  # optional, but home1 refers to this.
+  # source $sfil2/admin1.sh  # optional
 
   
 
@@ -153,7 +154,7 @@ git add -A # Add all files and commit them
 
 set +vx
 pwd
-echo  '----------------------------------------> !!! Reached end of file !!!'
+# echo  '----------------------------------------> !!! Reached end of file !!!'
 echo  run rails s
 echo  then visit localhost:3000/
 echo  then visit localhost:3000/products
@@ -161,11 +162,11 @@ set +vx
 date
 #
 
-# Done!
-trap : 0
 
+# Done!....................
+trap : 0
 echo >&2 '
-************
-*** DONE *** 
-************
+************!!!!!!!!!!!!
+!!!!!!!!!!!!!!! DONE *** 
+************!!!!!!!!!!!!
 '

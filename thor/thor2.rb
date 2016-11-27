@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-# usage:   ruby  ../bashrail/thor/t2.rb gsub1 a
+# usage:   ruby  ../bashrail/thor/thor2.rb gsub1 a
 #
 # eg:
 # cd /var/raila

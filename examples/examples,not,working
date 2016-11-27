@@ -1,0 +1,26 @@
+  
+didn't work..
+  use thor instead..
+  
+### edit stylesheet.scss .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   
+# ugh, lots of trouble getting this one...   error.. this puts in line1 in many  lines...
+
+# add line after match...  sed -i '/CLIENTSCRIPT="foo"/a CLIENTSCRIPT2="hello"' file
+#
+# file1='app/assets/stylesheets/application.scss'
+# pattern1='require_self'
+# line1=' \*= require devise_bootstrap_views'
+# sed  -i "0,/$pattern1/a $line1" $file1
+  
+# use ruby.. but get text file busy error..
+  
+# file1='app/assets/stylesheets/application.scss'
+# # ruby -pi.bak.txt -e "gsub(/require_self/ , 'require_self\n *= require devise_bootstrap_views')" $file1
+# ruby -pi.baktxt -e 'gsub(/require_self/ , "require_self\n *= require devise_bootstrap_views")' $file1
+# mkdir -p _offline
+# cp "$file1".baktxt _offline/application.scss."$(date +"__%Y.%m.%d_%H.%M.%S")".baktxt
+# rm $file1.baktxt
+
+
+# last 2 failed, use thor..

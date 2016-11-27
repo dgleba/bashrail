@@ -1,3 +1,9 @@
+commit aedff2e110522217e473eb03f5432e6705487edb
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sun Nov 27 00:20:18 2016 -0500
+
+    more devise
+
 commit ff10f722a4c127f13a7da521af191bc396449e36
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Nov 26 23:34:39 2016 -0500
@@ -51,9 +57,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Nov 19 14:14:45 2016 -0500
 
     fix
-
-commit cb72bb4064ed090a75c00a03abb37e8f01aacc96
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sat Nov 19 14:05:03 2016 -0500
-
-    update version scripts

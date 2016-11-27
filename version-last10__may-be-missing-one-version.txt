@@ -1,3 +1,9 @@
+commit dd2793173e60478f62dfc9f291c1e79fac61175e
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat Nov 26 12:43:07 2016 -0500
+
+    fix
+
 commit 9670c1f55c2ae017405c14711bbd70bf0a509767
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Nov 26 12:31:11 2016 -0500
@@ -51,9 +57,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Thu Nov 17 22:26:34 2016 -0500
 
     misc
-
-commit 9fb6041bf0c704f1dd1acee4147e5aedd77558d5
-Author: David Gleba <dgleba@gmail.com>
-Date:   Thu Nov 17 22:24:27 2016 -0500
-
-    turn off pre-push

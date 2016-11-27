@@ -1,19 +1,48 @@
 #!/usr/bin/env bash
- # set -e will exit on first error. so set -vxe..
+
+# set -e will exit on first error. so set -vxe..
+# http://stackoverflow.com/questions/2870992/automatic-exit-from-bash-shell-script-on-error
+
+function abort()
+{
+    echo >&2 '
+***************
+*** ABORTED ***
+***************
+'
+    echo "An error occurred. Exiting..." >&2
+    exit 1
+}
+
+trap 'abort' 0
+
+set -e
+
+# Add your script below.... If an error occurs, the abort() function will be called.
+#----------------------------------------------------------
+# ===> Your script goes here
+
+### setup.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 date ; set +vx  ; set -vx ; # echo off, then echo on
 
+
 # this
-#    bootstrap simple_form select2 rails_admin testing platform
+#    bootstrap simple_form select2 rails_admin devise -  testing platform
 #
 
-# usage:  see readme.md..       bashrail/rail308mk.sh
+
+# usage:  see readme.md..       bashrail/1mk.sh
+
+
+# or if need be..  rm -rf c308rail ;  bashrail/1mk.sh
 
 
 ### settings .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
 # name for the new application..
 
-export appn='e308rail'
+export appn='c308rail'
 
 # Location of creator files beside the parent folder of the application..
 
@@ -23,25 +52,31 @@ export sfil='bashrail'
 
 export sfil2='../'$sfil
 
-  
+ 
+ 
+# See error listed in gemfile1.sh 
+# gem uninstall thor -v 0.19.2
+gem install thor -v 0.19.1 
   
 
 ### start.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+pwd
+  source $sfil/new1.sh
+ 
+  source $sfil2/gemfile1.sh
+ 
+  source $sfil2/home1.sh  # 
+ 
+  source $sfil2/bootstrap1.sh 
+ 
+  source $sfil2/applayout1.sh  # requires home1
+ 
+  source $sfil2/paginate1.sh  # optional
 
-source $sfil/new1.sh
-pwd
- source $sfil2/gemfile1.sh
-pwd
- source $sfil2/home1.sh  # 
-pwd
- source $sfil2/bootstrap1.sh 
-pwd
- source $sfil2/applayout1.sh  # requires home1
-pwd
-# source $sfil2/paginate1.sh  # optional
-pwd
- # source $sfil2/admin1.sh  # optional, but home1 refers to this.
+  source $sfil2/devise1.sh  # optional
+ 
+  # source $sfil2/admin1.sh  # optional, but home1 refers to this.
 
   
 
@@ -65,7 +100,7 @@ git commit -m "scaffold"
 
 
 # source $sfil2/select2.sh  # optional
-pwd
+ 
 
 
 ### db seed .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -118,7 +153,7 @@ git add -A # Add all files and commit them
 
 set +vx
 pwd
-echo  '----------------------------------------> Successfully Reached end of file!!!'
+echo  '----------------------------------------> !!! Reached end of file !!!'
 echo  run rails s
 echo  then visit localhost:3000/
 echo  then visit localhost:3000/products
@@ -126,3 +161,11 @@ set +vx
 date
 #
 
+# Done!
+trap : 0
+
+echo >&2 '
+************
+*** DONE *** 
+************
+'

@@ -12,7 +12,6 @@
 1479617991|bootstrap1.sh
 1479864157|examples/paginate1-notes
 1479785713|examples/paginate1_with,add,heredoc,after,pattern.sh
-1479661006|gemfile1.sh
 1479171965|lib/templates/erb/scaffold/_form.html.erb
 1472772017|lib/templates/erb/scaffold/edit.html.erb
 1479789017|lib/templates/erb/scaffold/index.html.erb
@@ -20,10 +19,8 @@
 1472772017|lib/templates/erb/scaffold/show.html.erb
 1479787206|lib/templates/rails/scaffold_controller/controller.rb
 1479656172|lib/templates/rails/scaffold_controller/origbak/controller.rb
-1479617359|new1.sh
 1479864262|paginate1.sh
 1479865384|thor/t1.rb
-1479872690|rail308mk.sh
 1479872127|thor/t2.rb
 1480181467|mtimeh.txt
 1480181467|mtimehs.txt
@@ -31,3 +28,7 @@
 1480180177|util/hooks/pre-commit
 1480181996|util/version.sh
 1480182184|version.txt
+1480220531|1mk.sh
+1480220753|devise1.sh
+1480220550|gemfile1.sh
+1480212926|new1.sh

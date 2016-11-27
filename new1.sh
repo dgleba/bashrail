@@ -17,7 +17,7 @@ if [  -d "$appn" ]; then
 fi
 
 
-rails _4.2.7.1_ new $appn
+rails _4.2.7.1_ new $appn --skip-bundle
 
 
 if [ ! -d "$appn" ]; then

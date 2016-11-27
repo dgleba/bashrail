@@ -11,6 +11,7 @@ pwd
 
 echo "gem 'kaminari'" >> Gemfile
 echo "gem 'ransack'" >> Gemfile
+echo "gem 'bootstrap-kaminari-views'" >> Gemfile
 bundle
 
 # to get original controller generator....
@@ -41,19 +42,33 @@ bundle
 #
 
 path1='lib/templates/rails/scaffold_controller'
+rm -r $path1/
 # rsync.. -a - rltpgoD  preserve almost all. -u update don't copy older source files.
 rsync -auv  $sfil2/$path1/ $path1/
 
 
 rails generate 'kaminari:config'
-
+rails g kaminari:config
 
 # Copy scaffold templates over..
 
 path1='lib/templates/erb/scaffold'
-# rm -r $path1/
+rm -r $path1/
 # rsync.. -a - rltpgoD  preserve almost all. -u update don't copy older source files.
 rsync -auv --ignore-times  $sfil2/$path1/ $path1/
+
+
+# set per_page..
+
+# Title:  . replace line containing pattern with a whole new line of text...
+# remove line containing  'global]'  and replace the line completely with the new text...
+# eg: sudo sed -i 's/.*global].*/[global]\n\nunix extensions = no/g' /etc/samba/smb.conf 
+file1='config/initializers/kaminari_config.rb'
+pattern='config.default_per_page'
+repl='  config.default_per_page = 5'
+sed -i "s/.*$pattern.*/$repl/g" $file1
+
+
 
 
 

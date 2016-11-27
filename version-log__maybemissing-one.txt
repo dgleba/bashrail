@@ -38,3 +38,23 @@ Date:   Sat Nov 26 12:31:11 2016 -0500
     master merges with remote master
   Local ref configured for 'git push':
     master pushes to master (up to date)
+
+
+~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
+
+commit dd2793173e60478f62dfc9f291c1e79fac61175e
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat Nov 26 12:43:07 2016 -0500
+
+    fix
+---
+* remote origin
+  Fetch URL: https://github.com/dgleba/bashrail.git
+  Push  URL: https://github.com/dgleba/bashrail.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)

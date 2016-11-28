@@ -1,3 +1,9 @@
+commit ba6da8c8e3ff895f29604903c50a5488bf059ef2
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sun Nov 27 22:14:00 2016 -0500
+
+    fix pagination - kaminari
+
 commit c91f87a3536e29874bcef200f6c2e2395534708d
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sun Nov 27 21:12:20 2016 -0500
@@ -51,9 +57,3 @@ Author: dgleba <dgleba@gmail.com>
 Date:   Wed Nov 23 09:51:49 2016 -0500
 
     move gem entries
-
-commit cd9a6f5337e97e61f4ddfd917bef42a9c6d86d90
-Author: David Gleba <dgleba@gmail.com>
-Date:   Tue Nov 22 22:51:31 2016 -0500
-
-    adding thor stuff

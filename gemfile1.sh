@@ -20,7 +20,7 @@ echo "# " >> Gemfile
 
 
 # gem uninstall thor -v 0.19.2
-gem install thor -v 0.19.1 
+# gem install thor -v 0.19.1 
 # bundle update thor  
   
 bundle update

@@ -16,6 +16,8 @@ bundle
  
 rails g cancan:ability
 
+
+
 ###  git. .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 git add -A # Add all files and commit them
@@ -25,6 +27,8 @@ git commit -m "add cancan 1"
 # copy ability and user model..
 
 cp -a $sfil2/app/models/ app/
+
+
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -46,6 +50,7 @@ HEREDOC
 filetarg='lib/templates/rails/scaffold_controller/controller.rb'
 ruby $r1tmp $filetarg > $filetarg.tmp
 cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+
 
 
 
@@ -72,6 +77,7 @@ cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 
 
 
+
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  # add to users_controller
@@ -87,6 +93,7 @@ filetarg='app/controllers/users_controller.rb'
 ruby $r1tmp $filetarg > $filetarg.tmp ; cp $filetarg.tmp $filetarg ; rm $filetarg.tmp
 
 
+
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  # add to roles_controller
@@ -99,7 +106,8 @@ cat << 'HEREDOC' > $r1tmp
   ARGF.each  { |line|  puts line ;  puts repl2 if line =~ /before_action/ }
 HEREDOC
 filetarg='app/controllers/roles_controller.rb'
-ruby $r1tmp $filetarg > $filetarg.tmp ; cp $filetarg.tmp $filetarg ; rm $filetarg.tmp
+ruby $r1tmp $filetarg > $filetarg.tmp && cp $filetarg.tmp $filetarg && rm $filetarg.tmp
+
 
 
 ###  git. .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

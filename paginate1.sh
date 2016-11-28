@@ -15,6 +15,7 @@ echo "gem 'bootstrap-kaminari-views'" >> Gemfile
 bundle
 
 # to get original controller generator....
+
   railt1="$(bundle show railties)"
   echo "${railt1}"
   path1='lib/rails/generators/rails/scaffold_controller/templates'
@@ -24,7 +25,11 @@ bundle
   path2='lib/templates/rails/scaffold_controller/orig_default'
   mkdir -p $path2
   rsync -auv "${railt1}/${path1}/" $path2
-# 
+ 
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# notes..
 
 # before..
 # def index
@@ -40,22 +45,27 @@ bundle
   # RUBY
 # end
 #
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# Copy this controller template over..
 
 path1='lib/templates/rails/scaffold_controller'
 rm -r $path1/
 # rsync.. -a - rltpgoD  preserve almost all. -u update don't copy older source files.
-rsync -auv  $sfil2/$path1/ $path1/
+rsync -av  $sfil2/$path1/ $path1/
 
 
 rails generate 'kaminari:config'
 rails g kaminari:config
+
 
 # Copy scaffold templates over..
 
 path1='lib/templates/erb/scaffold'
 rm -r $path1/
 # rsync.. -a - rltpgoD  preserve almost all. -u update don't copy older source files.
-rsync -auv --ignore-times  $sfil2/$path1/ $path1/
+rsync -av --ignore-times  $sfil2/$path1/ $path1/
 
 
 # set per_page..
@@ -78,6 +88,8 @@ cp -a $sfil2/app/helpers/ app/
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+# I didn't do this yet...
 
 # config/locales/en.yml
   # views:

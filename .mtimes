@@ -23,7 +23,6 @@
 1480180177|util/hooks/pre-commit
 1480181996|util/version.sh
 1480182184|version.txt
-1480220550|gemfile1.sh
 1480212926|new1.sh
 1480261532|README.md
 1480261984|devise2thor.rb
@@ -34,11 +33,12 @@
 1480296575|app/models/ability.rb
 1477773827|app/models/role.rb
 1480286712|app/models/user.rb
-1480297596|applayout1.sh
-1480296072|cancan1.sh
 1480297819|devise1.sh
 1480296298|examples/bashruby-textsubreplace,know.sh
 1480301420|1mk.sh
 1480299998|app/helpers/application_helper.rb
 1480302805|lib/templates/erb/scaffold/index.html.erb
-1480302105|paginate1.sh
+1480348724|applayout1.sh
+1480350629|cancan1.sh
+1480348556|gemfile1.sh
+1480349066|paginate1.sh

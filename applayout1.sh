@@ -72,9 +72,7 @@ cat << 'HEREDOC' > app/views/layouts/$file2
     <div class="container-fluid">
       <% flash.each do |type, msg| %>
         <div class="alert alert-<%= type == 'alert' ? 'danger' : 'success' %> alert-dismissable" role="alert">
-          <button class="close">
-            
-          </button>
+          <button class="close"> Close </button>
           <%= msg if msg.is_a?(String) %>
         </div>
       <% end %>

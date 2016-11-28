@@ -12,12 +12,10 @@
 1479785713|examples/paginate1_with,add,heredoc,after,pattern.sh
 1479171965|lib/templates/erb/scaffold/_form.html.erb
 1472772017|lib/templates/erb/scaffold/edit.html.erb
-1479789017|lib/templates/erb/scaffold/index.html.erb
 1472772017|lib/templates/erb/scaffold/new.html.erb
 1472772017|lib/templates/erb/scaffold/show.html.erb
 1479787206|lib/templates/rails/scaffold_controller/controller.rb
 1479656172|lib/templates/rails/scaffold_controller/origbak/controller.rb
-1479864262|paginate1.sh
 1479865384|thor/t1.rb
 1480181467|mtimeh.txt
 1480181467|mtimehs.txt
@@ -33,7 +31,6 @@
 1480268197|thor/thor2.rb
 1480272442|utilbr/adduser1.rb
 1469623249|utilbr/passw.rb
-1480297881|1mk.sh
 1480296575|app/models/ability.rb
 1477773827|app/models/role.rb
 1480286712|app/models/user.rb
@@ -41,3 +38,7 @@
 1480296072|cancan1.sh
 1480297819|devise1.sh
 1480296298|examples/bashruby-textsubreplace,know.sh
+1480301420|1mk.sh
+1480299998|app/helpers/application_helper.rb
+1480302805|lib/templates/erb/scaffold/index.html.erb
+1480302105|paginate1.sh

@@ -69,7 +69,23 @@ repl='  config.default_per_page = 5'
 sed -i "s/.*$pattern.*/$repl/g" $file1
 
 
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+# copy app helper..
+
+cp -a $sfil2/app/helpers/ app/
+
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# config/locales/en.yml
+  # views:
+    # pagination:
+      # previous: "&lt; Previous"
+      # next: "Next &gt;"
+      # truncate: "..."
+      
 
 
 git add -A # Add all files and commit them

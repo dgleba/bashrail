@@ -1,3 +1,9 @@
+commit c91f87a3536e29874bcef200f6c2e2395534708d
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sun Nov 27 21:12:20 2016 -0500
+
+    cancan added.
+
 commit 69955e835b77d9e9b3e826dad15aeb9eaecaa5d9
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sun Nov 27 16:43:23 2016 -0500
@@ -51,9 +57,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Tue Nov 22 22:51:31 2016 -0500
 
     adding thor stuff
-
-commit 53dc4d585991d714b42df3577883c1a31b960461
-Author: David Gleba <dgleba@gmail.com>
-Date:   Tue Nov 22 21:25:55 2016 -0500
-
-    paginate almost working

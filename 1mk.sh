@@ -41,7 +41,7 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
   
 # name for the new application..
 
-export appn='c7rail308'
+export appn='c8rail308'
 
 # Location of creator files beside the parent folder of the application..
 

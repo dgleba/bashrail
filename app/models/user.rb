@@ -18,35 +18,35 @@ class User < ActiveRecord::Base
 
 
   def assign_role
-    self.role = Role.find_by name: "sc_minimal" if self.role.nil?
+    self.role = Role.find_by name: "lr_minimal" if self.role.nil?
   end
 
-  def sc_admin?
-    self.role.name == "sc_admin"
+  def lr_admin?
+    self.role.name == "lr_admin"
   end
 
-  def sc_minimal?
-    self.role.name == "sc_minimal"
+  def lr_minimal?
+    self.role.name == "lr_minimal"
   end
 
-  def sc_readonly?
-    self.role.name == "sc_readonly"
+  def lr_readonly?
+    self.role.name == "lr_readonly"
   end
   
-  def sc_create?
-    self.role.name == "sc_create"
+  def lr_create?
+    self.role.name == "lr_create"
   end
 
-  def sc_regular?
-    self.role.name == "sc_regular"
+  def lr_regular?
+    self.role.name == "lr_regular"
   end
 
-  def sc_supervisor?
-    self.role.name == "sc_supervisor"
+  def lr_supervisor?
+    self.role.name == "lr_supervisor"
   end
 
-  def sc_seller?
-    self.role.name == "sc_seller"
+  def lr_seller?
+    self.role.name == "lr_seller"
   end
   
      

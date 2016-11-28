@@ -3,7 +3,7 @@ class Ability
 
   def initialize(user)
 
-    if user.sc_admin?
+    if user.lr_admin?
       can :manage, :all
       can :access, :rails_admin       # only allow admin users to access Rails Admin
       can :dashboard                  # allow access to dashboard
@@ -13,10 +13,10 @@ class Ability
     # http://hibbard.eu/authentication-with-devise-and-cancancan-in-rails-4-2/  
     #
 
-    elsif user.sc_regular?
+    elsif user.lr_regular?
       can :read, [ Role, User]
       
-    elsif user.sc_readonly?
+    elsif user.lr_readonly?
       can :read, Role
     end
     

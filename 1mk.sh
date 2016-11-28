@@ -41,7 +41,7 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
   
 # name for the new application..
 
-export appn='c8rail308'
+export appn='c2rail308'
 
 # Location of creator files beside the parent folder of the application..
 
@@ -55,7 +55,7 @@ export sfil2='../'$sfil
  
 # See error listed in gemfile1.sh 
 # gem uninstall thor -v 0.19.2
-gem install thor -v 0.19.1 
+# gem install thor -v 0.19.1 
   
 
 ### start.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -67,6 +67,8 @@ pwd
  
   source $sfil2/gemfile1.sh
  
+  source $sfil2/tableprefix1.sh  # optional
+  
   source $sfil2/home1.sh  # 
  
   source $sfil2/bootstrap1.sh 

@@ -1,3 +1,9 @@
+commit 896d0fd2b6c44d8db096a1691426efa06caaf94e
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 28 15:53:50 2016 -0500
+
+    minor
+
 commit ba6da8c8e3ff895f29604903c50a5488bf059ef2
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sun Nov 27 22:14:00 2016 -0500
@@ -51,9 +57,3 @@ Author: dgleba <dgleba@gmail.com>
 Date:   Wed Nov 23 10:26:14 2016 -0500
 
     minor
-
-commit 001fa6cb301bf4bc20704aea1ce71fd6ee389777
-Author: dgleba <dgleba@gmail.com>
-Date:   Wed Nov 23 09:51:49 2016 -0500
-
-    move gem entries

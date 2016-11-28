@@ -21,7 +21,6 @@
 1480181467|mtimehs.txt
 1480181296|util/hooks/post-checkout
 1480180177|util/hooks/pre-commit
-1480181996|util/version.sh
 1480182184|version.txt
 1480212926|new1.sh
 1480261532|README.md
@@ -44,3 +43,5 @@
 1480369196|devise1.sh
 1480366686|docs/devise,install,info.txt
 1480368977|tableprefix1.sh
+1480371675|util/version.sh
+1480371817|version-log__maybemissing-one.txt

@@ -1,3 +1,9 @@
+commit 9c978baf4a54702310cd93219b4a41385b7bba1a
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 28 16:50:11 2016 -0500
+
+    add table prefix, timezone, change roles prefix.
+
 commit 896d0fd2b6c44d8db096a1691426efa06caaf94e
 Author: David Gleba <dgleba@gmail.com>
 Date:   Mon Nov 28 15:53:50 2016 -0500
@@ -51,9 +57,3 @@ Author: dgleba <dgleba@gmail.com>
 Date:   Wed Nov 23 13:54:55 2016 -0500
 
     version
-
-commit f1067de6570f5df7ae42bd5c4f65021be568593c
-Author: dgleba <dgleba@gmail.com>
-Date:   Wed Nov 23 10:26:14 2016 -0500
-
-    minor

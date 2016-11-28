@@ -82,6 +82,18 @@ git log  -n 1 >> $file3
 echo "---"   >> $file3
 git remote show origin>> $file3
 
+# shorten the file by deleting some lines at the beginning of the file..
+numlines=$(cat $file3 | wc -l )
+#echo $numlines
+if [ $numlines -gt 1500 ]; then  
+  #echo 'morethan 1500';
+  # delete first 43 lines..
+  sed -i 1,43d $vfile1
+else
+  echo 'less';
+fi  
+
+
 
   
 }

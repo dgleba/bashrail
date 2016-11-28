@@ -1,3 +1,9 @@
+commit 69955e835b77d9e9b3e826dad15aeb9eaecaa5d9
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sun Nov 27 16:43:23 2016 -0500
+
+    devise added.
+
 commit aedff2e110522217e473eb03f5432e6705487edb
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sun Nov 27 00:20:18 2016 -0500
@@ -51,9 +57,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Tue Nov 22 21:25:55 2016 -0500
 
     paginate almost working
-
-commit da2cd265df81dfe3bbbe65cacbc88882b5329b6c
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sat Nov 19 14:14:45 2016 -0500
-
-    fix

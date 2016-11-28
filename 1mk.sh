@@ -41,7 +41,7 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
   
 # name for the new application..
 
-export appn='c3rail308'
+export appn='c7rail308'
 
 # Location of creator files beside the parent folder of the application..
 
@@ -76,8 +76,10 @@ pwd
   source $sfil2/paginate1.sh  # optional, but I am not sure anymore.
 
   source $sfil2/devise1.sh   # optional, but will modify home page, so optional everywhere is getting confusing.
+  
+  source $sfil2/cancan1.sh   # optional, but .. s optional everywhere is getting confusing.
  
-  # source $sfil2/admin1.sh  # optional
+  source $sfil2/admin1.sh  # optional
 
   
 
@@ -100,7 +102,7 @@ git commit -m "scaffold"
 ### select2 for product pfeature.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-# source $sfil2/select2.sh  # optional
+source $sfil2/select2.sh  # optional
  
 
 
@@ -151,7 +153,6 @@ git add -A # Add all files and commit them
 
 ### finish up.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 set +vx
 pwd
 # echo  '----------------------------------------> !!! Reached end of file !!!'
@@ -166,7 +167,7 @@ date
 # Done!....................
 trap : 0
 echo >&2 '
-************!!!!!!!!!!!!
-!!!!!!!!!!!!!!! DONE *** 
-************!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!   DONE    !!!**
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 '

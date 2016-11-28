@@ -9,6 +9,12 @@ echo 'gem "devise"' >> Gemfile
 
 bundle
 
+# Create user and roles tables..
+
+rails g scaffold role name description active_status:integer sort:integer
+rails g scaffold user name role:belongs_to 
+rake db:migrate
+
 
 rails generate devise:install
 rails generate devise user
@@ -60,9 +66,29 @@ ruby ../bashrail/devise2thor.rb gsub1 a
   
 cat << 'HEREDOC' >> db/seeds.rb
 
-User.create! email: 'a@e',  password: 'a', password_confirmation: 'a'
-User.create! email: 'a',  password: 'a', password_confirmation: 'a'
-# u1 = User.create({name: "reg", email: "r", password: "a", password_confirmation: "a"})
+ r1 = Role.create({name: "sc_minimal", description: "Can't do much"})
+ r2 = Role.create({name: "sc_future1", description: ""})
+ r3 = Role.create({name: "sc_readonly", description: ""})
+ r4 = Role.create({name: "sc_future2", description: ""})
+ r5 = Role.create({name: "sc_create", description: ""})
+ r6 = Role.create({name: "sc_future3", description: ""})
+ r7 = Role.create({name: "sc_regular", description: "Can edit data, readonly lookup tables"})
+ r8 = Role.create({name: "sc_future4", description: ""})
+ r9 = Role.create({name: "sc_supervisor", description: "Can edit lookup tables"})
+r10 = Role.create({name: "sc_future5", description: ""})
+r11 = Role.create({name: "sc_delete", description: ""})
+r12 = Role.create({name: "sc_future6", description: ""})
+r13 = Role.create({name: "sc_vip", description: ""})
+r14 = Role.create({name: "sc_future7", description: ""})
+r15 = Role.create({name: "sc_special1", description: ""})
+r16 = Role.create({name: "sc_seller", description: ""})
+r17 = Role.create({name: "sc_future8", description: ""})
+r18 = Role.create({name: "sc_admin", description: "Can perform any CRUD operation on any resource"})
+ 
+
+User.create! email: 'a@e', name: "admin", password: 'a', password_confirmation: 'a', role_id: r18.id
+User.create! email: 'a', name: "admin", password: 'a', password_confirmation: 'a', role_id: r18.id
+u1 = User.create({name: "reg", email: "r", password: "a", password_confirmation: "a", role_id: r7.id})
 
 HEREDOC
   

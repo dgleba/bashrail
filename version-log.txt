@@ -177,3 +177,63 @@ Date:   Mon Nov 28 20:09:48 2016 -0500
     master merges with remote master
   Local ref configured for 'git push':
     master pushes to master (fast-forwardable)
+
+
+~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
+
+commit 1e3fc4f36fe595b9672988f4b6be908e17ceea9a
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 28 21:59:52 2016 -0500
+
+    working on devise token auth
+---
+* remote origin
+  Fetch URL: https://github.com/dgleba/bashrail.git
+  Push  URL: https://github.com/dgleba/bashrail.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+
+~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
+
+commit 1e3fc4f36fe595b9672988f4b6be908e17ceea9a
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 28 21:59:52 2016 -0500
+
+    working on devise token auth
+---
+* remote origin
+  Fetch URL: https://github.com/dgleba/bashrail.git
+  Push  URL: https://github.com/dgleba/bashrail.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+
+~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
+
+commit 1e3fc4f36fe595b9672988f4b6be908e17ceea9a
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 28 21:59:52 2016 -0500
+
+    working on devise token auth
+---
+* remote origin
+  Fetch URL: https://github.com/dgleba/bashrail.git
+  Push  URL: https://github.com/dgleba/bashrail.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)

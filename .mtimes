@@ -4,8 +4,6 @@
 1479174254|util/mtimeh.rb
 1479179055|admin1.sh
 1479184028|util/hook.sh
-1479581953|util/hooks/pre-push
-1479581879|util/version-v1.sh
 1479663807|.gitignore
 1479617991|bootstrap1.sh
 1479864157|examples/paginate1-notes
@@ -17,11 +15,7 @@
 1479787206|lib/templates/rails/scaffold_controller/controller.rb
 1479656172|lib/templates/rails/scaffold_controller/origbak/controller.rb
 1479865384|thor/t1.rb
-1480181467|mtimeh.txt
-1480181467|mtimehs.txt
-1480181296|util/hooks/post-checkout
 1480180177|util/hooks/pre-commit
-1480182184|version.txt
 1480212926|new1.sh
 1480261532|README.md
 1480261984|devise2thor.rb
@@ -41,11 +35,19 @@
 1480369196|app/models/user.rb
 1480366686|docs/devise,install,info.txt
 1480368977|tableprefix1.sh
-1480371817|version-log__maybemissing-one.txt
 1480033399|docs/rails,reverse,legacydatabase,scaffold,schemadump,yamldb,seed,,etc,know - Copy.txt
-1480371895|util/version.sh
 1480388351|1mk.sh
 1480384633|Gemfile
 1480384633|Gemfile.lock
 1480384515|devise1.sh
 1480385044|devisetokenauth1.sh
+1479581879|examples/version-v1.sh
+1480371895|examples/version__2016-11-29_17.33.11.sh
+1480459574|mtimeh.txt
+1480459574|mtimehs.txt
+1480458977|util/hooks/post-checkout
+1480459011|util/hooks/pre-push
+1480459100|util/version.sh
+1480459576|version-last10.txt
+1480459576|version-log.txt
+1480459575|version.txt

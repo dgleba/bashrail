@@ -1,3 +1,9 @@
+commit e4175c8436b7147146715762ef0107f3ebb5bc84
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 28 20:09:48 2016 -0500
+
+    version.sh
+
 commit 944898b3e4edfac9986ee3035d044ba9773b1e8c
 Author: David Gleba <dgleba@gmail.com>
 Date:   Mon Nov 28 17:23:39 2016 -0500
@@ -51,9 +57,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Nov 26 12:43:07 2016 -0500
 
     fix
-
-commit 9670c1f55c2ae017405c14711bbd70bf0a509767
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sat Nov 26 12:31:11 2016 -0500
-
-    hooks

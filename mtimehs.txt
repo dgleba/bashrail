@@ -1,5 +1,5 @@
+2016-11-28 17:24:55 -0500 | 1480371895 | util/version.sh
 2016-11-28 17:23:37 -0500 | 1480371817 | version-log__maybemissing-one.txt
-2016-11-28 17:21:15 -0500 | 1480371675 | util/version.sh
 2016-11-28 16:39:56 -0500 | 1480369196 | devise1.sh
 2016-11-28 16:39:56 -0500 | 1480369196 | app/models/user.rb
 2016-11-28 16:39:56 -0500 | 1480369196 | app/models/ability.rb
@@ -24,6 +24,7 @@
 2016-11-26 12:31:07 -0500 | 1480181467 | mtimeh.txt
 2016-11-26 12:28:16 -0500 | 1480181296 | util/hooks/post-checkout
 2016-11-26 12:09:37 -0500 | 1480180177 | util/hooks/pre-commit
+2016-11-24 19:23:19 -0500 | 1480033399 | docs/rails,reverse,legacydatabase,scaffold,schemadump,yamldb,seed,,etc,know - Copy.txt
 2016-11-22 20:43:04 -0500 | 1479865384 | thor/t1.rb
 2016-11-22 20:22:37 -0500 | 1479864157 | examples/paginate1-notes
 2016-11-21 23:00:06 -0500 | 1479787206 | lib/templates/rails/scaffold_controller/controller.rb

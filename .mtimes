@@ -37,12 +37,15 @@
 1480350629|cancan1.sh
 1480348556|gemfile1.sh
 1480349066|paginate1.sh
-1480369049|1mk.sh
 1480369196|app/models/ability.rb
 1480369196|app/models/user.rb
-1480369196|devise1.sh
 1480366686|docs/devise,install,info.txt
 1480368977|tableprefix1.sh
 1480371817|version-log__maybemissing-one.txt
 1480033399|docs/rails,reverse,legacydatabase,scaffold,schemadump,yamldb,seed,,etc,know - Copy.txt
 1480371895|util/version.sh
+1480388351|1mk.sh
+1480384633|Gemfile
+1480384633|Gemfile.lock
+1480384515|devise1.sh
+1480385044|devisetokenauth1.sh

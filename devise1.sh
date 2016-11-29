@@ -11,8 +11,8 @@ bundle
 
 # Create user and roles tables..
 
-rails g scaffold role name description active_status:integer sort:integer
-rails g scaffold user name role:belongs_to 
+rails g scaffold Role name description active_status:integer sort:integer
+rails g scaffold User name role:belongs_to 
 rake db:migrate
 
 

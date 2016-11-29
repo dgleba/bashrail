@@ -41,7 +41,8 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
   
 # name for the new application..
 
-export appn='c2rail308'
+# export appn='c2rail308'
+export appn='dta2e'
 
 # Location of creator files beside the parent folder of the application..
 
@@ -67,21 +68,23 @@ pwd
  
   source $sfil2/gemfile1.sh
  
-  source $sfil2/tableprefix1.sh  # optional
+  # source $sfil2/tableprefix1.sh  # optional
   
   source $sfil2/home1.sh  # 
  
-  source $sfil2/bootstrap1.sh 
+   source $sfil2/bootstrap1.sh 
  
-  source $sfil2/applayout1.sh  # requires home1
+  # source $sfil2/applayout1.sh  # requires home1
  
-  source $sfil2/paginate1.sh  # optional, but I am not sure anymore.
+  # source $sfil2/paginate1.sh  # optional, but you may need to edit to overcome some errors since it may included some code that depends on other features.
 
-  source $sfil2/devise1.sh   # optional, but will modify home page, so optional everywhere is getting confusing.
+  source $sfil2/devise1.sh   # optional, but will modify home page, so optional is getting confusing everywhere .
   
-  source $sfil2/cancan1.sh   # optional, but .. s optional everywhere is getting confusing.
+  source $sfil2/cancan1.sh   # optional, but ..  optional is getting confusing everywhere.
+  
+  # source $sfil2/devisetokenauth1.sh   # optional,  
  
-  source $sfil2/admin1.sh  # optional
+  # source $sfil2/admin1.sh  # optional
 
   
 
@@ -91,9 +94,9 @@ pwd
 rails g scaffold Product name  pdate:datetime active_status:integer sort:integer -f 
 
 
-rails g scaffold Pfeature name fdate:datetime active_status:integer sort:integer -f 
+# rails g scaffold Pfeature name fdate:datetime active_status:integer sort:integer -f 
 
-rails g scaffold ProductFeature name  product:references pfeature:references active_status:integer sort:integer -f 
+# rails g scaffold ProductFeature name  product:references pfeature:references active_status:integer sort:integer -f 
 
 
 sleep 1
@@ -104,7 +107,7 @@ git commit -m "scaffold"
 ### select2 for product pfeature.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-source $sfil2/select2.sh  # optional
+# source $sfil2/select2.sh  # optional
  
 
 
@@ -114,8 +117,8 @@ source $sfil2/select2.sh  # optional
 
 # echo 'Product.create({name: "furniture"}) '>> db/seeds.rb
 
-#rake db:reset
-rake db:drop
+# rake db:reset
+# rake db:drop
 rake db:migrate
 rake db:seed
 

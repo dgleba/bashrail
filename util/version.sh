@@ -87,8 +87,8 @@ numlines=$(cat $file3 | wc -l )
 #echo $numlines
 if [ $numlines -gt 1500 ]; then  
   #echo 'morethan 1500';
-  # delete first 43 lines..
-  sed -i 1,43d $vfile1
+  # delete first 41 lines..
+  sed -i 1,41d $vfile1
 else
   echo 'less';
 fi  

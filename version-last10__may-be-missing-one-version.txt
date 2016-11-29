@@ -1,3 +1,9 @@
+commit 944898b3e4edfac9986ee3035d044ba9773b1e8c
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Nov 28 17:23:39 2016 -0500
+
+    shorten version history file.
+
 commit 9c978baf4a54702310cd93219b4a41385b7bba1a
 Author: David Gleba <dgleba@gmail.com>
 Date:   Mon Nov 28 16:50:11 2016 -0500
@@ -51,9 +57,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Nov 26 12:31:11 2016 -0500
 
     hooks
-
-commit 58f7a8d9b1526b0aadc02c55a6bc062237d999c7
-Author: dgleba <dgleba@gmail.com>
-Date:   Wed Nov 23 13:54:55 2016 -0500
-
-    version

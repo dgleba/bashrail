@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+
+
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# should already be there..
+#echo "gem 'devise'" >> Gemfile
+
+echo "gem 'devise_token_auth'" >> Gemfile
+echo "gem 'omniauth'" >> Gemfile
+
+bundle
+
+
+
+
+rails g devise_token_auth:install User auth
+
+
+albe@v206x20161030220807:~/share203/dta2e$ rails g devise_token_auth:install User auth
+/home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/routing/route_set.rb:549:in `add_route': Invalid route name, already in use: 'new_user_session'  (ArgumentError)
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created
+	from /home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/routing/mapper.rb:1562:in `add_route'
+	from /home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/routing/mapper.rb:1537:in `decomposed_match'
+	from /home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/routing/mapper.rb:1535:in `block in decomposed_match'
+	from /home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/routing/mapper.rb:1420:in `block (2 levels) in member'
+	from /home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/routing/mapper.rb:817:in `scope'
+  
+`	
+  
+  
+  
+rake db:migrate

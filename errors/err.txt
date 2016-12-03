@@ -1,0 +1,28 @@
+### edit devise config .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   
+ruby ../bashrail/devise2thor.rb gsub1 a
+++ ruby ../bashrail/devise2thor.rb gsub1 a
+        gsub  config/initializers/devise.rb
+/home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/actions/file_manipulation.rb:231:in `binread': No such file or directory @ rb_sysopen - /home/albe/share203/dta2k/config/initializers/devise.rb (Errno::ENOENT)
+	from /home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/actions/file_manipulation.rb:231:in `gsub_file'
+	from ../bashrail/devise2thor.rb:27:in `gsub1'
+	from /home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+	from /home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+	from /home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
+	from /home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
+	from ../bashrail/devise2thor.rb:100:in `<main>'
+abort
++ abort
++ echo '
+    ***************
+    *** ABORTED ***
+    ***************
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Title:  .
+    -----------------------2016-11-30[Nov-Wed]22-36PM
+    
+    
+    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    

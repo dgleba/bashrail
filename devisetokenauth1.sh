@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
-
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ # read settings..
+ 
+read  appn  sfil  sfil2  mpwd  parm0 < /tmp/brvar1202.txt
+echo $appn $sfil $sfil2 $mpwd $parm0
+ 
+# timeout1=5 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..." || true ;  echo ;
+ 
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -13,34 +21,84 @@ echo "gem 'omniauth'" >> Gemfile
 bundle
 
 
-
-
-rails g devise_token_auth:install User auth
-
-
-albe@v206x20161030220807:~/share203/dta2e$ rails g devise_token_auth:install User auth
-/home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/routing/route_set.rb:549:in `add_route': Invalid route name, already in use: 'new_user_session'  (ArgumentError)
-You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
-http://guides.rubyonrails.org/routing.html#restricting-the-routes-created
-	from /home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/routing/mapper.rb:1562:in `add_route'
-	from /home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/routing/mapper.rb:1537:in `decomposed_match'
-	from /home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/routing/mapper.rb:1535:in `block in decomposed_match'
-	from /home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/routing/mapper.rb:1420:in `block (2 levels) in member'
-	from /home/albe/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/routing/mapper.rb:817:in `scope'
+rails g devise_token_auth:install User auth 
   
-`	
-  
-  
+# NoMethodError: undefined method []' for ActiveRecord::Migration:...   db/migrate/ _devise_token_auth_create_users.rb
+# NoMethodError: undefined method `[]' for ActiveRecord Migration db/migrate/ devise_token_auth_create_users.rb [4.2]
+ 
+
+# remove 4.2  
+# class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[4.2]
+
+r1tmp='/tmp/temprubyrunner.rb'
+cat << 'HEREDOC' > $r1tmp
+  path='db/migrate/'
+  # get the filename of the newest file in the folder..
+  filep1=Dir[File.join(path, '*')].max_by(&File.method(:ctime))
+  puts filep1
+  #edit the file to remove [4.2]
+  File.write(filep1,File.open(filep1,&:read).sub("[4.2]",""))
+HEREDOC
+ruby $r1tmp 
+
   
 rake db:migrate
 
 
+git add -A # Add all files and commit them
+git commit -m "devise token auth1"
+  
+  
+  
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+ # add roles and tie it to users.
+ 
+# http://danielstrunk.me/blog/2014/08/19/references-vs-belongs_to-activerecord-migrations/
+# http://stackoverflow.com/questions/15385087/add-associations-to-exisiting-models
+
+# see cancan... rails g scaffold Role name description active_status:integer sort:integer
+
+# git add -A # Add all files and commit them
+# git commit -m "devise token auth2"
+  
+
+
+
+
+### edit seeds .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   
+  
+$sfil2/seeds2.sh 
+ 
+ 
+ 
+ # http://stackoverflow.com/questions/30496770/devise-token-auth-cant-create-user-account-after-installing-devise-token-auth
+  
+  
+  
+  
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  
+ 
+# add auth requirement in controller..  
+#     sed -i '/CLIENTSCRIPT="foo"/a CLIENTSCRIPT2="hello"' file  # add line after pattern
+sed -i '/ApplicationController/a  before_filter :authenticate_user!' app/controllers/application_controller.rb
+ 
+ 
+ 
+ 
+### edit devise config .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   
+# ruby $sfil2/devise2thor.rb gsub1 a
+  
+ 
 
 
 ###  git. .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 git add -A # Add all files and commit them
-git commit -m "devise token auth"
+git commit -m "devise token auth3"
   
   

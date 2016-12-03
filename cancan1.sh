@@ -2,6 +2,16 @@
  
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
+ # read settings..
+ 
+read  appn  sfil  sfil2  mpwd  parm0 < /tmp/brvar1202.txt
+echo $appn $sfil $sfil2 $mpwd $parm0
+ 
+# timeout1=15 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..."  || true;  echo ;
+ 
+
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
  
 echo 'gem "cancancan"' >> Gemfile
 
@@ -23,11 +33,6 @@ rails g cancan:ability
 git add -A # Add all files and commit them
 git commit -m "add cancan 1"
   
-  
-# copy ability and user model..
-
-cp -a $sfil2/app/models/ app/
-
 
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -90,7 +95,11 @@ cat << 'HEREDOC' > $r1tmp
   ARGF.each  { |line|  puts line ;  puts repl2 if line =~ /before_action/ }
 HEREDOC
 filetarg='app/controllers/users_controller.rb'
-ruby $r1tmp $filetarg > $filetarg.tmp ; cp $filetarg.tmp $filetarg ; rm $filetarg.tmp
+if [ -f $filetarg ] ; then
+  ruby $r1tmp $filetarg > $filetarg.tmp ; cp $filetarg.tmp $filetarg ; rm $filetarg.tmp
+else
+  echo 'skipping, file doesnt exist.'
+fi 
 
 
 
@@ -98,16 +107,40 @@ ruby $r1tmp $filetarg > $filetarg.tmp ; cp $filetarg.tmp $filetarg ; rm $filetar
 
  # add to roles_controller
  
-r1tmp='/tmp/temprubyrunner.rb'
-cat << 'HEREDOC' > $r1tmp
-  repl2 = %Q{
-  #cancancan
-  load_and_authorize_resource}
-  ARGF.each  { |line|  puts line ;  puts repl2 if line =~ /before_action/ }
-HEREDOC
-filetarg='app/controllers/roles_controller.rb'
-ruby $r1tmp $filetarg > $filetarg.tmp && cp $filetarg.tmp $filetarg && rm $filetarg.tmp
+# r1tmp='/tmp/temprubyrunner.rb'
+# cat << 'HEREDOC' > $r1tmp
+  # repl2 = %Q{
+  # #cancancan
+  # load_and_authorize_resource}
+  # ARGF.each  { |line|  puts line ;  puts repl2 if line =~ /before_action/ }
+# HEREDOC
+# filetarg='app/controllers/roles_controller.rb'
+# ruby $r1tmp $filetarg > $filetarg.tmp && cp $filetarg.tmp $filetarg && rm $filetarg.tmp
 
+
+# add roles.
+
+rails g scaffold Role name description active_status:integer sort:integer
+
+# Add role to user.
+
+rails g migration AddRoleToUser role:references 
+rake db:migrate
+
+
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ 
+# copy ability and user model..
+
+mkdir -p  backup/app/models
+cp -a app/models/ backup/app/
+
+cp -a $sfil2/app/models/ app/
+
+# timeout1=15 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..."  || true;  echo ;
+ 
+ 
 
 
 ###  git. .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

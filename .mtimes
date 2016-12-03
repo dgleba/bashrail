@@ -1,10 +1,8 @@
 1479093356|home1.sh
-1479092787|notes.txt
 1479096127|select2.sh
 1479174254|util/mtimeh.rb
 1479179055|admin1.sh
 1479184028|util/hook.sh
-1479663807|.gitignore
 1479617991|bootstrap1.sh
 1479864157|examples/paginate1-notes
 1479785713|examples/paginate1_with,add,heredoc,after,pattern.sh
@@ -17,7 +15,6 @@
 1479865384|thor/t1.rb
 1480180177|util/hooks/pre-commit
 1480212926|new1.sh
-1480261532|README.md
 1480261984|devise2thor.rb
 1480262908|examples/examples,not,working
 1480268197|thor/thor2.rb
@@ -28,19 +25,14 @@
 1480299998|app/helpers/application_helper.rb
 1480302805|lib/templates/erb/scaffold/index.html.erb
 1480348724|applayout1.sh
-1480350629|cancan1.sh
 1480348556|gemfile1.sh
-1480349066|paginate1.sh
 1480369196|app/models/ability.rb
 1480369196|app/models/user.rb
 1480366686|docs/devise,install,info.txt
 1480368977|tableprefix1.sh
 1480033399|docs/rails,reverse,legacydatabase,scaffold,schemadump,yamldb,seed,,etc,know - Copy.txt
-1480388351|1mk.sh
 1480384633|Gemfile
 1480384633|Gemfile.lock
-1480384515|devise1.sh
-1480385044|devisetokenauth1.sh
 1479581879|examples/version-v1.sh
 1480371895|examples/version__2016-11-29_17.33.11.sh
 1480459574|mtimeh.txt
@@ -51,3 +43,20 @@
 1480459576|version-last10.txt
 1480459576|version-log.txt
 1480459575|version.txt
+1480615328|.gitignore
+1480724496|1mk.sh
+1480701844|README.md
+1480718935|cancan1.sh
+1480721018|devise1.sh
+1480723178|devisetokenauth1.sh
+1480563419|errors/err.txt
+1480553866|errors/error,dta1.txt
+1480641450|examples/2commandlineparameters.sh
+1480708747|examples/3commandlineparameters.sh
+1480701863|examples/New Text Document.txt
+1480700340|examples/cparse.sh
+1480701897|examples/settings.sh
+1480714202|notes.txt
+1480715880|paginate1.sh
+1480562397|seeds1.sh
+1480723174|seeds2.sh

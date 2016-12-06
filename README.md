@@ -20,11 +20,13 @@ This is a set of bash and ruby scripts to create a rails app with features like 
 
 --
  
+ 
  edit 1mk.sh
-  - change $appn  <- the name of your new application
+  - Check to see if you might just run it the way it is and give it a go.
+  - when it is up and running, then maybe... 
   - edit scaffolds
   - try it out.
-  - change the files to your liking, then run it again with a new $appn name if you like.
+  - change the files to your liking, then run it again with a new $appn / project_name on the commandline if you like.
   
 
 ===

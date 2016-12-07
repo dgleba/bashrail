@@ -1,32 +1,39 @@
-rails generate devise:install
-++ rails generate devise:install
-      create  config/initializers/devise.rb
-      create  config/locales/devise.en.yml
-===============================================================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+----------------------------  2016-12-06_22.02.10-PM
 
-Some setup you must do manually if you haven't yet:
 
-  1. Ensure you have defined default url options in your environments files. Here
-     is an example of default_url_options appropriate for a development environment
-     in config/environments/development.rb:
+sed is different on mac...
 
-       config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-     In production, :host should be set to the actual host of your application.
+____________________
 
-  2. Ensure you have defined root_url to *something* in your config/routes.rb.
-     For example:
 
-       root to: "home#index"
+sed: 1: "app/assets/javascripts/ ...": command a expects \ followed by text
 
-  3. Ensure you have flash messages in app/views/layouts/application.html.erb.
-     For example:
+sed:  "app ...": command a expects \ followed by text
 
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
 
-  4. You can copy Devise views (for customization) to your app by running:
+sed: 1: "0,/application.routes/a ...": command a expects up to 1 address(es), found 2
 
-       rails g devise:views
+sed: 1: "0,/app/a ...": command a expects up to 1 address(es), found 2
 
-===============================================================================
+____________________
+
+
+
+Had the same problem and solved it with brew:
+
+brew install gnu-sed
+
+gsed YOUR_USUAL_SED_COMMAND
+
+If you want to use the sed command, then you can set an alias:
+
+alias sed=gsed
+
+
+
+http://stackoverflow.com/questions/14846304/sed-command-error-on-macos-x
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

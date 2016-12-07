@@ -78,10 +78,10 @@ file1='index.html.erb'
 path1='lib/templates/erb/scaffold/'
 cp -a $path1$file1  $path1$file1$(date +"__%Y.%m.%d_%H.%M.%S").bak.txt
 #
-#replace foo with bar once per line... #sed -i '.bakup' -e 's/foo/bar/' filename
+#replace foo with bar once per line... #sed -i  -e 's/foo/bar/' filename
 pattern1='<table>'
 pattern2='<table class="table table-striped">'
-sed -i '.bakup' -e "s/$pattern1/$pattern2/" $path1$file1
+sed -i  -e "s/$pattern1/$pattern2/" $path1$file1
 
 
 sleep 1

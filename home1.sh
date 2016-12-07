@@ -6,13 +6,13 @@
 rails g controller Home index about
 
 #
-# add line after match...  sed -i '.bakup' '/CLIENTSCRIPT="foo"/a CLIENTSCRIPT2="hello"' file
+# add line after match...  sed -i  '/CLIENTSCRIPT="foo"/a CLIENTSCRIPT2="hello"' file
 # i think 0, means only do it for the first match..
 #
 pattern1='application.routes'
 line1=' root "home#index"'
 #line2='  about "home#about"'
-sed -i '.bakup' "0,/$pattern1/a \ \n$line1\n\n" config/routes.rb
+sed -i "0,/$pattern1/a \ \n$line1\n\n" config/routes.rb
 
 
 cat << 'HEREDOC' >> app/views/home/index.html.erb

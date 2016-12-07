@@ -88,7 +88,7 @@ numlines=$(cat $file3 | wc -l )
 if [ $numlines -gt 1500 ]; then  
   #echo 'morethan 1500';
   # delete first 41 lines..
-  sed -i '.bakup' 1,41d $vfile1
+  sed -i  1,41d $vfile1
 else
   echo 'less';
 fi  

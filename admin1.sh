@@ -157,18 +157,18 @@ HEREDOC
 # bump version to get custom layout to load...
 #  
 # remove line containing  '[global]'  and replace the line completely with the new text...
-#      sed -i '.bakup' 's/.*global].*/[global]\n\nunix extensions = no/g' /etc/samba/smb.conf 
+#      sed -i  's/.*global].*/[global]\n\nunix extensions = no/g' /etc/samba/smb.conf 
 patrn1='Rails.application.config.assets.version'
 # patrn1='version'
 patrn2='Rails.application.config.assets.version = \"1.1\"'
 # patrn2='Railsxxxxx'
-sed -i '.bakup' -e "s/.*$patrn1.*/$patrn2/" config/initializers/assets.rb
+sed -i  -e "s/.*$patrn1.*/$patrn2/" config/initializers/assets.rb
 
 # add configs... 
-#   sed -i '.bakup' '/CLIENTSCRIPT/a \ \ CLIENTSCRIPT2' file  # add line after pattern - include leading spaces like so - escape them.. '\ '  
+#   sed -i  '/CLIENTSCRIPT/a \ \ CLIENTSCRIPT2' file  # add line after pattern - include leading spaces like so - escape them.. '\ '  
 patrn='RailsAdmin.config'
 addln='\ \ config.total_columns_width = 9999999'
-sed -i '.bakup' "/$patrn/a$addln" config/initializers/rails_admin.rb
+sed -i  "/$patrn/a$addln" config/initializers/rails_admin.rb
 
 
 sleep 1

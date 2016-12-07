@@ -66,6 +66,16 @@ timeout1=5 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..."
 
 date ; set +vx  ; set -vx ; # echo off, then echo on
 
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# for mac osx install gnu-sed,  brew install gnu-sed
+# alias gsed to sed..
+# http://apple.stackexchange.com/questions/236177/using-alias-in-bash-script-in-osx
+
+# uncomment next lines for osx..
+
+alias sed=gsed
+shopt -s expand_aliases
 
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

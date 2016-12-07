@@ -8,7 +8,7 @@ echo "$gem1" >> Gemfile
 bundle
 
 #
-# add line after match...  sed -i '.bakup' '/CLIENTSCRIPT="foo"/a CLIENTSCRIPT2="hello"' file
+# add line after match...  sed -i  '/CLIENTSCRIPT="foo"/a CLIENTSCRIPT2="hello"' file
 # i think 0, means only do it for the first match..
 #
 pattern1='ActiveRecord::Base'
@@ -28,7 +28,7 @@ sed  -i "0,/$pattern1/a $line1" $file1
 
 line1='<%= f.association :pfeature %>'
 patrn='f.input :name'
-sed -i '.bakup' "/.*$patrn.*/a $line1" app/views/products/_form.html.erb
+sed -i  "/.*$patrn.*/a $line1" app/views/products/_form.html.erb
 
       
 sleep 1
@@ -43,7 +43,7 @@ patrn='require'
 str1=', :pfeature_ids=> []'
 file1='app/controllers/products_controller.rb'
 echo $patrn,  $str1,  $file1
-sed -i '.bakup'  "/$patrn/{s/.$/$str1\)/}" $file1 
+sed -i   "/$patrn/{s/.$/$str1\)/}" $file1 
 
 # rev $file1 | sed "s/)/ZaZ@Z/" | rev
 
@@ -57,7 +57,7 @@ ln3='    <%= link_to v1.name, v1 %>'
 ln4='<% end %>'
 ln5='</p>'
 patrn='edit_product_path'
-sed -i '.bakup' "/.*$patrn.*/i $ln1\n$ln2\n$ln3\n$ln4\n$ln5\n" app/views/products/show.html.erb
+sed -i  "/.*$patrn.*/i $ln1\n$ln2\n$ln3\n$ln4\n$ln5\n" app/views/products/show.html.erb
 
 sleep 1
 
@@ -89,8 +89,8 @@ echo '//= require select2' >> app/assets/javascripts/application.js
 ln1='\ \ \*= require select2'
 ln2='  \*= require select2-bootstrap'
 # got error.. patrn='self'
-# sed -i '.bakup' "/self/a "$ln1"\n"$ln2"\n" app/assets/stylesheets/application.scss
-  sed -i '.bakup' "/require_self/a $ln1\n$ln2" app/assets/stylesheets/application.scss
+# sed -i  "/self/a "$ln1"\n"$ln2"\n" app/assets/stylesheets/application.scss
+  sed -i  "/require_self/a $ln1\n$ln2" app/assets/stylesheets/application.scss
 
 
 sleep 1

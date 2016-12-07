@@ -1,3 +1,20 @@
+2016-12-02 19:21:36 -0500 | 1480724496 | 1mk.sh
+2016-12-02 18:59:38 -0500 | 1480723178 | devisetokenauth1.sh
+2016-12-02 18:59:34 -0500 | 1480723174 | seeds2.sh
+2016-12-02 18:23:38 -0500 | 1480721018 | devise1.sh
+2016-12-02 17:48:55 -0500 | 1480718935 | cancan1.sh
+2016-12-02 16:58:00 -0500 | 1480715880 | paginate1.sh
+2016-12-02 16:30:02 -0500 | 1480714202 | notes.txt
+2016-12-02 14:59:07 -0500 | 1480708747 | examples/3commandlineparameters.sh
+2016-12-02 13:04:57 -0500 | 1480701897 | examples/settings.sh
+2016-12-02 13:04:23 -0500 | 1480701863 | examples/New Text Document.txt
+2016-12-02 13:04:04 -0500 | 1480701844 | README.md
+2016-12-02 12:39:00 -0500 | 1480700340 | examples/cparse.sh
+2016-12-01 20:17:30 -0500 | 1480641450 | examples/2commandlineparameters.sh
+2016-12-01 13:02:08 -0500 | 1480615328 | .gitignore
+2016-11-30 22:36:59 -0500 | 1480563419 | errors/err.txt
+2016-11-30 22:19:57 -0500 | 1480562397 | seeds1.sh
+2016-11-30 19:57:46 -0500 | 1480553866 | errors/error,dta1.txt
 2016-11-29 17:46:16 -0500 | 1480459576 | version-log.txt
 2016-11-29 17:46:16 -0500 | 1480459576 | version-last10.txt
 2016-11-29 17:46:15 -0500 | 1480459575 | version.txt
@@ -6,18 +23,13 @@
 2016-11-29 17:38:20 -0500 | 1480459100 | util/version.sh
 2016-11-29 17:36:51 -0500 | 1480459011 | util/hooks/pre-push
 2016-11-29 17:36:17 -0500 | 1480458977 | util/hooks/post-checkout
-2016-11-28 21:59:11 -0500 | 1480388351 | 1mk.sh
-2016-11-28 21:04:04 -0500 | 1480385044 | devisetokenauth1.sh
 2016-11-28 20:57:13 -0500 | 1480384633 | Gemfile.lock
 2016-11-28 20:57:13 -0500 | 1480384633 | Gemfile
-2016-11-28 20:55:15 -0500 | 1480384515 | devise1.sh
 2016-11-28 17:24:55 -0500 | 1480371895 | examples/version__2016-11-29_17.33.11.sh
 2016-11-28 16:39:56 -0500 | 1480369196 | app/models/user.rb
 2016-11-28 16:39:56 -0500 | 1480369196 | app/models/ability.rb
 2016-11-28 16:36:17 -0500 | 1480368977 | tableprefix1.sh
 2016-11-28 15:58:06 -0500 | 1480366686 | docs/devise,install,info.txt
-2016-11-28 11:30:29 -0500 | 1480350629 | cancan1.sh
-2016-11-28 11:04:26 -0500 | 1480349066 | paginate1.sh
 2016-11-28 10:58:44 -0500 | 1480348724 | applayout1.sh
 2016-11-28 10:55:56 -0500 | 1480348556 | gemfile1.sh
 2016-11-27 22:13:25 -0500 | 1480302805 | lib/templates/erb/scaffold/index.html.erb
@@ -27,7 +39,6 @@
 2016-11-27 12:36:37 -0500 | 1480268197 | thor/thor2.rb
 2016-11-27 11:08:28 -0500 | 1480262908 | examples/examples,not,working
 2016-11-27 10:53:04 -0500 | 1480261984 | devise2thor.rb
-2016-11-27 10:45:32 -0500 | 1480261532 | README.md
 2016-11-26 21:15:26 -0500 | 1480212926 | new1.sh
 2016-11-26 12:09:37 -0500 | 1480180177 | util/hooks/pre-commit
 2016-11-24 19:23:19 -0500 | 1480033399 | docs/rails,reverse,legacydatabase,scaffold,schemadump,yamldb,seed,,etc,know - Copy.txt
@@ -35,7 +46,6 @@
 2016-11-22 20:22:37 -0500 | 1479864157 | examples/paginate1-notes
 2016-11-21 23:00:06 -0500 | 1479787206 | lib/templates/rails/scaffold_controller/controller.rb
 2016-11-21 22:35:13 -0500 | 1479785713 | examples/paginate1_with,add,heredoc,after,pattern.sh
-2016-11-20 12:43:27 -0500 | 1479663807 | .gitignore
 2016-11-20 10:36:12 -0500 | 1479656172 | lib/templates/rails/scaffold_controller/origbak/controller.rb
 2016-11-19 23:59:51 -0500 | 1479617991 | bootstrap1.sh
 2016-11-19 13:57:59 -0500 | 1479581879 | examples/version-v1.sh
@@ -45,7 +55,6 @@
 2016-11-14 20:06:05 -0500 | 1479171965 | lib/templates/erb/scaffold/_form.html.erb
 2016-11-13 23:02:07 -0500 | 1479096127 | select2.sh
 2016-11-13 22:15:56 -0500 | 1479093356 | home1.sh
-2016-11-13 22:06:27 -0500 | 1479092787 | notes.txt
 2016-10-29 16:43:47 -0400 | 1477773827 | app/models/role.rb
 2016-09-01 19:20:17 -0400 | 1472772017 | lib/templates/erb/scaffold/show.html.erb
 2016-09-01 19:20:17 -0400 | 1472772017 | lib/templates/erb/scaffold/new.html.erb

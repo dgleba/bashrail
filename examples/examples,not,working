@@ -6,7 +6,7 @@ didn't work..
    
 # ugh, lots of trouble getting this one...   error.. this puts in line1 in many  lines...
 
-# add line after match...  sed -i '/CLIENTSCRIPT="foo"/a CLIENTSCRIPT2="hello"' file
+# add line after match...  sed -i '.bakup' '/CLIENTSCRIPT="foo"/a CLIENTSCRIPT2="hello"' file
 #
 # file1='app/assets/stylesheets/application.scss'
 # pattern1='require_self'

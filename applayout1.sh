@@ -5,15 +5,15 @@
 ### create new application.html.erb layout with disabled turbolinks .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-# comment out line with BBB ..  sed -i '/![^#]/ s/\(^.*BBB.*$\)/#\ \1/' file
-# noworky.. sed -i '/![^#]/ s/\(^.*turbolinks.*$\)/#\ \1/' Gemfile
-sed -i -e '/turbolinks/ s/^#*/#/'  Gemfile
+# comment out line with BBB ..  sed -i '.bakup' '/![^#]/ s/\(^.*BBB.*$\)/#\ \1/' file
+# noworky.. sed -i '.bakup' '/![^#]/ s/\(^.*turbolinks.*$\)/#\ \1/' Gemfile
+sed -i '.bakup' -e '/turbolinks/ s/^#*/#/'  Gemfile
 
 
 file1='application.js'
 cp -a app/assets/javascripts/$file1  backup/$file1$(date +"__%Y.%m.%d_%H.%M.%S").bak.txt
 # delete line containing..
-sed -i '/turbolinks/d' app/assets/javascripts/$file1
+sed -i '.bakup' '/turbolinks/d' app/assets/javascripts/$file1
  
  
 # originally... 
@@ -25,7 +25,7 @@ file2='application.html.erb'
 cp -a app/views/layouts/$file2  backup/$file2$(date +"__%Y.%m.%d_%H.%M.%S").bak.txt
 #remove turbolinks reference from $file2
 patrn=", 'data-turbolinks-track' => true"
-sed -i "s/$patrn/ /" app/views/layouts/$file2
+sed -i '.bakup' "s/$patrn/ /" app/views/layouts/$file2
  
  
  

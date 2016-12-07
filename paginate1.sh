@@ -85,11 +85,11 @@ rsync -av --ignore-times  $sfil2/$path1/ $path1/
 
 # Title:  . replace line containing pattern with a whole new line of text...
 # remove line containing  'global]'  and replace the line completely with the new text...
-# eg: sudo sed -i 's/.*global].*/[global]\n\nunix extensions = no/g' /etc/samba/smb.conf 
+# eg: sudo sed -i '.bakup' 's/.*global].*/[global]\n\nunix extensions = no/g' /etc/samba/smb.conf 
 file1='config/initializers/kaminari_config.rb'
 pattern='config.default_per_page'
 repl='  config.default_per_page = 5'
-sed -i "s/.*$pattern.*/$repl/g" $file1
+sed -i '.bakup' "s/.*$pattern.*/$repl/g" $file1
 
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

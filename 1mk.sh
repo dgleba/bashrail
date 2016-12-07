@@ -22,14 +22,14 @@ set -e
 
 
 ### settings .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  
+
 # http://how-to.wikia.com/wiki/How_to_read_command_line_arguments_in_a_bash_script
 # $0 is scripts name.
 # http://stackoverflow.com/questions/6121091/get-file-directory-path-from-filepath
-# http://stackoverflow.com/questions/1464253/global-environment-variables-in-a-shell-script 
+# http://stackoverflow.com/questions/1464253/global-environment-variables-in-a-shell-script
 # http://stackoverflow.com/questions/29270289/bash-read-from-file-and-store-to-variables
 
- 
+
 if [ -z "$1" ] ; then
 set +vx
   echo ;
@@ -50,17 +50,17 @@ else
   export sfil=$bpath  # ex: bashrail
   # Location modified for use after cd into the new app folder..
   export sfil2='../'$sfil  # ex: ../bashrail
-fi 
+fi
 export mpwd=$PWD
 
 
 # Save commandline parameters so they can be used to run one subscript later.
 mkdir -p /tmp
-echo $appn $sfil $sfil2 $mpwd $0 > /tmp/brvar1202.txt
+echo $appn $sfil $sfil2 $mpwd $0 > /tmp/$USER_brvar1202.txt
 
 
 timeout1=5 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..." || true ;  echo ;
-  
+
 
 ### setup.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -71,63 +71,63 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # thor error in version 0.19.2
- 
-# See error listed in gemfile1.sh 
-# gem uninstall thor -v 0.19.2
-# gem install thor -v 0.19.1 
-  
 
-  
+# See error listed in gemfile1.sh
+# gem uninstall thor -v 0.19.2
+# gem install thor -v 0.19.1
+
+
+
 ### start.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 pwd
   source $sfil/new1.sh
 
   # everything after this is done from within the project folder $appn
- 
+
   source $sfil2/gemfile1.sh
- 
+
   source $sfil2/tableprefix1.sh  # optional
-  
-  source $sfil2/home1.sh  # 
- 
-  source $sfil2/bootstrap1.sh 
- 
+
+  source $sfil2/home1.sh  #
+
+  source $sfil2/bootstrap1.sh
+
   source $sfil2/applayout1.sh  # requires home1
- 
+
   source $sfil2/paginate1.sh  # optional, but you may need to edit to overcome some errors since it may included some code that depends on other features.
 
-  source $sfil2/devise1.sh   # optional, but will modify home page, so  
+  source $sfil2/devise1.sh   # optional, but will modify home page, so
 # or
-  # source $sfil2/devisetokenauth1.sh   # optional,  
-   
+  # source $sfil2/devisetokenauth1.sh   # optional,
+
   source $sfil2/cancan1.sh   # optional, but ..  optional may require some further edits.
-  
+
 
   source $sfil2/admin1.sh  # optional
 
-  
+
 
 ### scaffold... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-rails g scaffold Product name  pdate:datetime active_status:integer sort:integer -f 
+rails g scaffold Product name  pdate:datetime active_status:integer sort:integer -f
 
-rails g scaffold Pfeature name fdate:datetime active_status:integer sort:integer -f 
+rails g scaffold Pfeature name fdate:datetime active_status:integer sort:integer -f
 
-rails g scaffold ProductFeature name  product:references pfeature:references active_status:integer sort:integer -f 
+rails g scaffold ProductFeature name  product:references pfeature:references active_status:integer sort:integer -f
 
 
 sleep 1
 git add -A # Add all files and commit them
-git commit -m "scaffold"  
+git commit -m "scaffold"
 
 
 ### select2 for product pfeature.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
   source $sfil2/select2.sh  # optional
- 
+
 
 
 ### db seed .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -173,7 +173,7 @@ git add -A # Add all files and commit them
   git commit -m "populate"
 
 
- 
+
 
 ### finish up.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -183,7 +183,7 @@ pwd
 echo  run rails s
 echo  then visit localhost:3000/
 echo  then visit localhost:3000/products
-set +vx 
+set +vx
 date
 #
 

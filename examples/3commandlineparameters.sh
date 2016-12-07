@@ -37,9 +37,9 @@ echo ;
 
    
   
-echo $appn $sfil $sfil2 $mpwd $0 > /tmp/brvar1202.txt
+echo $appn $sfil $sfil2 $mpwd $0 > /tmp/$USER_brvar1202.txt
   
-read ap sf sf2 mp zero <  /tmp/brvar1202.txt
+read ap sf sf2 mp zero <  /tmp/$USER_brvar1202.txt
 
 echo 'read from file..'
 echo ;

@@ -4,7 +4,7 @@
  
  # read settings..
  
-read  appn  sfil  sfil2  mpwd  parm0 < /tmp/brvar1202.txt
+read  appn  sfil  sfil2  mpwd  parm0 < /tmp/$USER_brvar1202.txt
 echo $appn $sfil $sfil2 $mpwd $parm0
  
  timeout1=5 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..." || true ;  echo ;

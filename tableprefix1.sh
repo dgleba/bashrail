@@ -4,7 +4,7 @@
 
  # add table prefix and timezone
  
-r1tmp='/tmp/temprubyrunner.rb'
+r1tmp='/tmp/$USER_temprubyrunner.rb'
 #   add lines after line matching..
 cat << 'HEREDOC' > $r1tmp
   replc = %Q{

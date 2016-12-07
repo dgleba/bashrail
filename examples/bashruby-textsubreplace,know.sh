@@ -98,7 +98,7 @@ or
 
 #  add new lines of text after patrn...
 
-r1tmp='/tmp/temprubyrunner.rb'
+r1tmp='/tmp/$USER_temprubyrunner.rb'
 filetarg='lib/templates/rails/scaffold_controller/controller.rb'
 cat << 'HEREDOC' > $r1tmp
   #$-i = ".origtxt" # make backup and appear to edit in place. | #file busy error, maybe due to virtualbox windows share.
@@ -120,7 +120,7 @@ or
 
  # add lines to roles_controller after..
  
-r1tmp='/tmp/temprubyrunner.rb'
+r1tmp='/tmp/$USER_temprubyrunner.rb'
 cat << 'HEREDOC' > $r1tmp
   repl2 = %Q{
   #cancancan

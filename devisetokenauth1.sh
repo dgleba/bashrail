@@ -4,7 +4,7 @@
 
  # read settings..
 
-read  appn  sfil  sfil2  mpwd  parm0 < /tmp/brvar1202.txt
+read  appn  sfil  sfil2  mpwd  parm0 < /tmp/$USER_brvar1202.txt
 echo $appn $sfil $sfil2 $mpwd $parm0
 
 # timeout1=5 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..." || true ;  echo ;
@@ -30,7 +30,7 @@ rails g devise_token_auth:install User auth
 # remove 4.2
 # class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[4.2]
 
-r1tmp='/tmp/temprubyrunner.rb'
+r1tmp='/tmp/$USER_temprubyrunner.rb'
 cat << 'HEREDOC' > $r1tmp
   path='db/migrate/'
   # get the filename of the newest file in the folder..

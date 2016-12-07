@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
- 
+
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 
+
  # read settings..
- 
-read  appn  sfil  sfil2  mpwd  parm0 < /tmp/brvar1202.txt
+
+read  appn  sfil  sfil2  mpwd  parm0 < /tmp/$USER_brvar1202.txt
 echo $appn $sfil $sfil2 $mpwd $parm0
- 
+
 # timeout1=15 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..."  || true;  echo ;
- 
+
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- 
+
 echo 'gem "cancancan"' >> Gemfile
 
 bundle
@@ -22,8 +22,8 @@ bundle
 # note .. roles table was created with users table in devise1.rb.
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 
- 
+
+
 rails g cancan:ability
 
 
@@ -32,7 +32,7 @@ rails g cancan:ability
 
 git add -A # Add all files and commit them
 git commit -m "add cancan 1"
-  
+
 
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -42,7 +42,7 @@ git commit -m "add cancan 1"
 
 # sub , add new lines of text after patrn...
 
-r1tmp='/tmp/temprubyrunner.rb'
+r1tmp='/tmp/$USER_temprubyrunner.rb'
 cat << 'HEREDOC' > $r1tmp
   repl2 = %Q{
   #cancancan
@@ -50,7 +50,7 @@ cat << 'HEREDOC' > $r1tmp
   ARGF.each do |line|
     puts line
     puts repl2 if line =~ /before_action/
-  end  
+  end
 HEREDOC
 filetarg='lib/templates/rails/scaffold_controller/controller.rb'
 ruby $r1tmp $filetarg > $filetarg.tmp
@@ -63,7 +63,7 @@ cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 
  # add to appl..contro..rb
 
-r1tmp='/tmp/temprubyrunner.rb'
+r1tmp='/tmp/$USER_temprubyrunner.rb'
 cat << 'HEREDOC' > $r1tmp
   repl2 = %Q{
   rescue_from CanCan::AccessDenied do |exception|
@@ -74,7 +74,7 @@ cat << 'HEREDOC' > $r1tmp
   ARGF.each do |line|
     puts line
     puts repl2 if line =~ /protect_from_forgery/
-  end  
+  end
 HEREDOC
 filetarg='app/controllers/application_controller.rb'
 ruby $r1tmp $filetarg > $filetarg.tmp
@@ -86,8 +86,8 @@ cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  # add to users_controller
- 
-r1tmp='/tmp/temprubyrunner.rb'
+
+r1tmp='/tmp/$USER_temprubyrunner.rb'
 cat << 'HEREDOC' > $r1tmp
   repl2 = %Q{
   #cancancan
@@ -99,15 +99,15 @@ if [ -f $filetarg ] ; then
   ruby $r1tmp $filetarg > $filetarg.tmp ; cp $filetarg.tmp $filetarg ; rm $filetarg.tmp
 else
   echo 'skipping, file doesnt exist.'
-fi 
+fi
 
 
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  # add to roles_controller
- 
-# r1tmp='/tmp/temprubyrunner.rb'
+
+# r1tmp='/tmp/$USER_temprubyrunner.rb'
 # cat << 'HEREDOC' > $r1tmp
   # repl2 = %Q{
   # #cancancan
@@ -124,13 +124,13 @@ rails g scaffold Role name description active_status:integer sort:integer
 
 # Add role to user.
 
-rails g migration AddRoleToUser role:references 
+rails g migration AddRoleToUser role:references
 rake db:migrate
 
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 
- 
+
+
 # copy ability and user model..
 
 mkdir -p  backup/app/models
@@ -139,13 +139,13 @@ cp -a app/models/ backup/app/
 cp -a $sfil2/app/models/ app/
 
 # timeout1=15 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..."  || true;  echo ;
- 
- 
+
+
 
 
 ###  git. .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 git add -A # Add all files and commit them
 git commit -m "add cancan 2"
-  
-  
+
+

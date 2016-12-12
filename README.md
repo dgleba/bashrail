@@ -22,6 +22,7 @@ This is a set of bash and ruby scripts to create a rails app with features like 
 
 
  edit 1mk.sh
+  - There are some Mac OSX specific settings around line 77. Check that.
   - Check to see if you might just run it the way it is and give it a go.
   - when it is up and running, then maybe...
   - edit scaffolds.

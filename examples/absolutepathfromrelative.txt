@@ -1,0 +1,54 @@
+
+
+
+
+http://stackoverflow.com/questions/4045253/converting-relative-path-into-absolute-path
+
+
+eg:
+alias realpath="perl -MCwd -e 'print Cwd::realpath(\$ARGV[0]),qq<\n>'"
+realpath path/folder/file
+
+
+works..
+
+alias realpathp="perl -MCwd -e 'print Cwd::realpath(\$ARGV[0]),qq<\n>'"
+
+realpathp bashrail/1mk.sh
+
+
+cd
+cd tmp
+ls -l ../../../etc/fstab
+realpathp ../../../etc/fstab
+
+realpathp /etc/fstab
+
+
+
+_____________ 
+
+
+
+
+http://stackoverflow.com/questions/4175264/bash-retrieve-absolute-path-given-relative
+
+
+noworky..
+
+line=bashrail/1mk.sh
+echo $(pwd)/$line
+
+
+noworky..
+
+cd
+cd tmp
+ls -l ../../../etc/fstab
+$(dirname $(readlink -e ../../../etc/fstab))
+
+albe@v206x20161030220807:~/tmp$ $(dirname $(readlink -e ../../../etc/fstab))
+bash: /etc: Is a directory
+
+
+_____________ 

@@ -4,7 +4,7 @@
 
  # read settings..
 
-read  appn  sfil  sfil2  mpwd  parm0 < /tmp/$USER_brvar1202.txt
+read  appn  sfil  sfil2  mpwd  parm0</tmp/"_brvar1202_${USER}".txt
 echo $appn $sfil $sfil2 $mpwd $parm0
 
 # timeout1=15 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..."  || true;  echo ;
@@ -42,7 +42,7 @@ git commit -m "add cancan 1"
 
 # sub , add new lines of text after patrn...
 
-r1tmp='/tmp/$USER_temprubyrunner.rb'
+r1tmp="/tmp/_temprubyrunner_${USER}.rb"
 cat << 'HEREDOC' > $r1tmp
   repl2 = %Q{
   #cancancan
@@ -63,7 +63,7 @@ cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 
  # add to appl..contro..rb
 
-r1tmp='/tmp/$USER_temprubyrunner.rb'
+r1tmp="/tmp/_temprubyrunner_${USER}.rb"
 cat << 'HEREDOC' > $r1tmp
   repl2 = %Q{
   rescue_from CanCan::AccessDenied do |exception|
@@ -87,7 +87,7 @@ cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 
  # add to users_controller
 
-r1tmp='/tmp/$USER_temprubyrunner.rb'
+r1tmp="/tmp/_temprubyrunner_${USER}.rb"
 cat << 'HEREDOC' > $r1tmp
   repl2 = %Q{
   #cancancan
@@ -107,7 +107,7 @@ fi
 
  # add to roles_controller
 
-# r1tmp='/tmp/$USER_temprubyrunner.rb'
+# r1tmp="/tmp/_temprubyrunner_${USER}.rb"
 # cat << 'HEREDOC' > $r1tmp
   # repl2 = %Q{
   # #cancancan

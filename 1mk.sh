@@ -52,14 +52,20 @@ else
   export sfil2='../'$sfil  # ex: ../bashrail
 fi
 export mpwd=$PWD
+export mhome=$HOME
 
 
 # Save commandline parameters so they can be used to run one subscript later.
 mkdir -p /tmp
-echo $appn $sfil $sfil2 $mpwd $0 > /tmp/$USER_brvar1202.txt
+echo $appn $sfil $sfil2 $mpwd $0 $mhome>/tmp/"_brvar1202_${USER}".txt
+chmod 777 /tmp/"_brvar1202_${USER}".txt
+
+# create the tmp ruby runner file...
+touch "/tmp/_temprubyrunner_${USER}.rb"
+chmod 777 "/tmp/_temprubyrunner_${USER}.rb"
 
 
-timeout1=5 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..." || true ;  echo ;
+timeout1=3 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..." || true ;  echo ;
 
 
 ### setup.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -74,8 +80,8 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
 
 # uncomment next lines for osx..
 
-alias sed=gsed
-shopt -s expand_aliases
+# alias sed=gsed
+# shopt -s expand_aliases
 
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -103,7 +109,7 @@ pwd
 
   source $sfil2/bootstrap1.sh
 
-  source $sfil2/applayout1.sh  # requires home1
+  source $sfil2/applayout1.sh  # requires home1.sh
 
   source $sfil2/paginate1.sh  # optional, but you may need to edit to overcome some errors since it may included some code that depends on other features.
 

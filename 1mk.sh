@@ -64,8 +64,12 @@ chmod 777 /tmp/"_brvar1202_${USER}".txt
 touch "/tmp/_temprubyrunner_${USER}.rb"
 chmod 777 "/tmp/_temprubyrunner_${USER}.rb"
 
+echo 
+echo
+echo Press ctrl-c now if you want to stop and edit settings in /tmp/_brvar1202_${USER}.txt
+echo 
 
-timeout1=3 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..." || true ;  echo ;
+timeout1=20 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..." || true ;  echo ;
 
 
 ### setup.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -103,7 +107,7 @@ pwd
 
   source $sfil2/gemfile1.sh
 
-  source $sfil2/tableprefix1.sh  # optional
+  # source $sfil2/tableprefix1.sh  # optional
 
   source $sfil2/home1.sh  #
 
@@ -120,7 +124,7 @@ pwd
   source $sfil2/cancan1.sh   # optional, but ..  optional may require some further edits.
 
 
-  source $sfil2/admin1.sh  # optional
+  # source $sfil2/admin1.sh  # optional
 
 
 
@@ -142,7 +146,7 @@ git commit -m "scaffold"
 ### select2 for product pfeature.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-  source $sfil2/select2.sh  # optional
+  # source $sfil2/select2.sh  # optional
 
 
 

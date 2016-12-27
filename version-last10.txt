@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 3c4bff1d924998b8197f2f956be37e5948aa15e8
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sun Dec 11 20:32:40 2016 -0500
+
+    fix temp file names
+
 commit 912b6cceaf9cf1d27e535e3711f1d65df0b2b985
 Author: dgleba <dgleba@gmail.com>
 Date:   Wed Dec 7 07:09:19 2016 -0500
@@ -56,9 +62,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Tue Nov 29 17:46:19 2016 -0500
 
     Change file names
-
-commit 1e3fc4f36fe595b9672988f4b6be908e17ceea9a
-Author: David Gleba <dgleba@gmail.com>
-Date:   Mon Nov 28 21:59:52 2016 -0500
-
-    working on devise token auth

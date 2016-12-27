@@ -76,6 +76,7 @@ rails g kaminari:config
 # Copy scaffold templates over..
 
 path1='lib/templates/erb/scaffold'
+mkdir -p $path1/
 rm -r $path1/
 # rsync.. -a - rltpgoD  preserve almost all. -u update don't copy older source files.
 rsync -av --ignore-times  $sfil2/$path1/ $path1/

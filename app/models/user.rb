@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
     "#{email},#{name}"
   end
 
-  validates_presence_of :name
+  # validates_presence_of :name
   before_save :assign_role
 
 

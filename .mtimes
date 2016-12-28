@@ -27,7 +27,6 @@
 1480348724|applayout1.sh
 1480348556|gemfile1.sh
 1480369196|app/models/ability.rb
-1480369196|app/models/user.rb
 1480366686|docs/devise,install,info.txt
 1480033399|docs/rails,reverse,legacydatabase,scaffold,schemadump,yamldb,seed,,etc,know - Copy.txt
 1480384633|Gemfile
@@ -61,3 +60,4 @@
 1482809954|mtimeh.txt
 1482809954|mtimehs.txt
 1482809695|paginate1.sh
+1482953280|app/models/user.rb

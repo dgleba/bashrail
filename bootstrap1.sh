@@ -84,6 +84,58 @@ pattern2='<table class="table table-striped">'
 sed -i  -e "s/$pattern1/$pattern2/" $path1$file1
 
 
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# fix vertical-align on top row of index.  title, search, and pagination are not aligned vertically.
+
+file1='dg_twitterbootstrap.scss'
+cat << 'HEREDOC' > app/assets/stylesheets/$file1
+
+//# app/assets/stylesheets/dg_twitterbootstrap.scss
+//# eg: C:\var\share203\rail317jwtbr6\app\assets\stylesheets\dg_twitterbootstrap.scss
+
+// bootstrap components have different heights
+// https://scotch.io/bar-talk/different-tricks-on-how-to-make-bootstrap-columns-all-the-same-height
+//
+// usage: on top row of index page for example.. <row class="row is-table-row" >
+//
+@media only screen and (min-width : 768px) {
+  .is-table-row {
+    display: table;
+  }
+  .is-table-row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.is-table-row .box {
+  background: none;
+  position: static;
+}
+.is-table-row [class*="col-"] {
+  background: #fff;
+}
+
+HEREDOC
+
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+function blockcomment211() {
+: <<'BLOCKCOMMENT'
+
+
+
+BLOCKCOMMENT
+}
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
 sleep 1
 git add -A # Add all files and commit them
 git commit -m "copy and modify scaffold templates - bootstrap1.sh"

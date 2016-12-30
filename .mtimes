@@ -2,7 +2,6 @@
 1479174254|util/mtimeh.rb
 1479179055|admin1.sh
 1479184028|util/hook.sh
-1479617991|bootstrap1.sh
 1479864157|examples/paginate1-notes
 1479785713|examples/paginate1_with,add,heredoc,after,pattern.sh
 1479171965|lib/templates/erb/scaffold/_form.html.erb
@@ -21,7 +20,6 @@
 1477773827|app/models/role.rb
 1480296298|examples/bashruby-textsubreplace,know.sh
 1480299998|app/helpers/application_helper.rb
-1480302805|lib/templates/erb/scaffold/index.html.erb
 1480348724|applayout1.sh
 1480348556|gemfile1.sh
 1480366686|docs/devise,install,info.txt
@@ -74,3 +72,5 @@
 1483064930|home1.sh
 1483054326|new1.sh
 1483067119|version-last10.txt
+1483114020|bootstrap1.sh
+1483114074|lib/templates/erb/scaffold/index.html.erb

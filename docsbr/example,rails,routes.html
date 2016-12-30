@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Routes</title>
+
+</head>
+<body>
+
+  
+<p><code>Rails.root: /home/albe/share203/rail314-dta-again/dtademo1</code></p>
+
+
+</div>
+
+
+    <h2>
+      Routes
+    </h2>
+
+    <p>
+      Routes match in priority from top to bottom
+    </p>
+
+    
+<table id='route_table' class='route_table'>
+  <thead>
+    <tr>
+      <th>Helper</th>
+      <th>HTTP Verb</th>
+      <th>Path</th>
+      <th>Controller#Action</th>
+    </tr>
+  </thead>
+  <tbody class='exact_matches' id='exact_matches'>
+  </tbody>
+  <tbody class='fuzzy_matches' id='fuzzy_matches'>
+  </tbody>
+  <tbody>
+    <tr class='route_row' data-helper='path'>
+  <td data-route-name='products'>
+      products<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/products(.:format)' data-regexp='^\/products(?:\.([^\/.?]+))?$'>
+    /products(.:format)
+  </td>
+  <td data-route-reqs='products#index'>
+    products#index
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='POST'>
+    POST
+  </td>
+  <td data-route-path='/products(.:format)' data-regexp='^\/products(?:\.([^\/.?]+))?$'>
+    /products(.:format)
+  </td>
+  <td data-route-reqs='products#create'>
+    products#create
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='new_product'>
+      new_product<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/products/new(.:format)' data-regexp='^\/products\/new(?:\.([^\/.?]+))?$'>
+    /products/new(.:format)
+  </td>
+  <td data-route-reqs='products#new'>
+    products#new
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='edit_product'>
+      edit_product<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/products/:id/edit(.:format)' data-regexp='^\/products\/([^\/.?]+)\/edit(?:\.([^\/.?]+))?$'>
+    /products/:id/edit(.:format)
+  </td>
+  <td data-route-reqs='products#edit'>
+    products#edit
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='product'>
+      product<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/products/:id(.:format)' data-regexp='^\/products\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+    /products/:id(.:format)
+  </td>
+  <td data-route-reqs='products#show'>
+    products#show
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='PATCH'>
+    PATCH
+  </td>
+  <td data-route-path='/products/:id(.:format)' data-regexp='^\/products\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+    /products/:id(.:format)
+  </td>
+  <td data-route-reqs='products#update'>
+    products#update
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='PUT'>
+    PUT
+  </td>
+  <td data-route-path='/products/:id(.:format)' data-regexp='^\/products\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+    /products/:id(.:format)
+  </td>
+  <td data-route-reqs='products#update'>
+    products#update
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='DELETE'>
+    DELETE
+  </td>
+  <td data-route-path='/products/:id(.:format)' data-regexp='^\/products\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+    /products/:id(.:format)
+  </td>
+  <td data-route-reqs='products#destroy'>
+    products#destroy
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='new_user_session'>
+      new_user_session<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/auth/sign_in(.:format)' data-regexp='^\/auth\/sign_in(?:\.([^\/.?]+))?$'>
+    /auth/sign_in(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/sessions#new'>
+    devise_token_auth/sessions#new
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='user_session'>
+      user_session<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='POST'>
+    POST
+  </td>
+  <td data-route-path='/auth/sign_in(.:format)' data-regexp='^\/auth\/sign_in(?:\.([^\/.?]+))?$'>
+    /auth/sign_in(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/sessions#create'>
+    devise_token_auth/sessions#create
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='destroy_user_session'>
+      destroy_user_session<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='DELETE'>
+    DELETE
+  </td>
+  <td data-route-path='/auth/sign_out(.:format)' data-regexp='^\/auth\/sign_out(?:\.([^\/.?]+))?$'>
+    /auth/sign_out(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/sessions#destroy'>
+    devise_token_auth/sessions#destroy
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='user_password'>
+      user_password<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='POST'>
+    POST
+  </td>
+  <td data-route-path='/auth/password(.:format)' data-regexp='^\/auth\/password(?:\.([^\/.?]+))?$'>
+    /auth/password(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/passwords#create'>
+    devise_token_auth/passwords#create
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='new_user_password'>
+      new_user_password<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/auth/password/new(.:format)' data-regexp='^\/auth\/password\/new(?:\.([^\/.?]+))?$'>
+    /auth/password/new(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/passwords#new'>
+    devise_token_auth/passwords#new
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='edit_user_password'>
+      edit_user_password<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/auth/password/edit(.:format)' data-regexp='^\/auth\/password\/edit(?:\.([^\/.?]+))?$'>
+    /auth/password/edit(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/passwords#edit'>
+    devise_token_auth/passwords#edit
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='PATCH'>
+    PATCH
+  </td>
+  <td data-route-path='/auth/password(.:format)' data-regexp='^\/auth\/password(?:\.([^\/.?]+))?$'>
+    /auth/password(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/passwords#update'>
+    devise_token_auth/passwords#update
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='PUT'>
+    PUT
+  </td>
+  <td data-route-path='/auth/password(.:format)' data-regexp='^\/auth\/password(?:\.([^\/.?]+))?$'>
+    /auth/password(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/passwords#update'>
+    devise_token_auth/passwords#update
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='cancel_user_registration'>
+      cancel_user_registration<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/auth/cancel(.:format)' data-regexp='^\/auth\/cancel(?:\.([^\/.?]+))?$'>
+    /auth/cancel(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/registrations#cancel'>
+    devise_token_auth/registrations#cancel
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='user_registration'>
+      user_registration<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='POST'>
+    POST
+  </td>
+  <td data-route-path='/auth(.:format)' data-regexp='^\/auth(?:\.([^\/.?]+))?$'>
+    /auth(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/registrations#create'>
+    devise_token_auth/registrations#create
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='new_user_registration'>
+      new_user_registration<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/auth/sign_up(.:format)' data-regexp='^\/auth\/sign_up(?:\.([^\/.?]+))?$'>
+    /auth/sign_up(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/registrations#new'>
+    devise_token_auth/registrations#new
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='edit_user_registration'>
+      edit_user_registration<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/auth/edit(.:format)' data-regexp='^\/auth\/edit(?:\.([^\/.?]+))?$'>
+    /auth/edit(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/registrations#edit'>
+    devise_token_auth/registrations#edit
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='PATCH'>
+    PATCH
+  </td>
+  <td data-route-path='/auth(.:format)' data-regexp='^\/auth(?:\.([^\/.?]+))?$'>
+    /auth(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/registrations#update'>
+    devise_token_auth/registrations#update
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='PUT'>
+    PUT
+  </td>
+  <td data-route-path='/auth(.:format)' data-regexp='^\/auth(?:\.([^\/.?]+))?$'>
+    /auth(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/registrations#update'>
+    devise_token_auth/registrations#update
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='DELETE'>
+    DELETE
+  </td>
+  <td data-route-path='/auth(.:format)' data-regexp='^\/auth(?:\.([^\/.?]+))?$'>
+    /auth(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/registrations#destroy'>
+    devise_token_auth/registrations#destroy
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='auth_validate_token'>
+      auth_validate_token<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/auth/validate_token(.:format)' data-regexp='^\/auth\/validate_token(?:\.([^\/.?]+))?$'>
+    /auth/validate_token(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/token_validations#validate_token'>
+    devise_token_auth/token_validations#validate_token
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='auth_failure'>
+      auth_failure<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/auth/failure(.:format)' data-regexp='^\/auth\/failure(?:\.([^\/.?]+))?$'>
+    /auth/failure(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/omniauth_callbacks#omniauth_failure'>
+    devise_token_auth/omniauth_callbacks#omniauth_failure
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/auth/:provider/callback(.:format)' data-regexp='^\/auth\/([^\/.?]+)\/callback(?:\.([^\/.?]+))?$'>
+    /auth/:provider/callback(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/omniauth_callbacks#omniauth_success'>
+    devise_token_auth/omniauth_callbacks#omniauth_success
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/omniauth/:provider/callback(.:format)' data-regexp='^\/omniauth\/([^\/.?]+)\/callback(?:\.([^\/.?]+))?$'>
+    /omniauth/:provider/callback(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/omniauth_callbacks#redirect_callbacks'>
+    devise_token_auth/omniauth_callbacks#redirect_callbacks
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='omniauth_failure'>
+      omniauth_failure<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/omniauth/failure(.:format)' data-regexp='^\/omniauth\/failure(?:\.([^\/.?]+))?$'>
+    /omniauth/failure(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/omniauth_callbacks#omniauth_failure'>
+    devise_token_auth/omniauth_callbacks#omniauth_failure
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/auth/:provider(.:format)' data-regexp='^\/auth\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+    /auth/:provider(.:format)
+  </td>
+  <td data-route-reqs='redirect(301)'>
+    redirect(301)
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='new_mang_session'>
+      new_mang_session<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/mangs/sign_in(.:format)' data-regexp='^\/mangs\/sign_in(?:\.([^\/.?]+))?$'>
+    /mangs/sign_in(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/sessions#new'>
+    devise_token_auth/sessions#new
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='mang_session'>
+      mang_session<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='POST'>
+    POST
+  </td>
+  <td data-route-path='/mangs/sign_in(.:format)' data-regexp='^\/mangs\/sign_in(?:\.([^\/.?]+))?$'>
+    /mangs/sign_in(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/sessions#create'>
+    devise_token_auth/sessions#create
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='destroy_mang_session'>
+      destroy_mang_session<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='DELETE'>
+    DELETE
+  </td>
+  <td data-route-path='/mangs/sign_out(.:format)' data-regexp='^\/mangs\/sign_out(?:\.([^\/.?]+))?$'>
+    /mangs/sign_out(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/sessions#destroy'>
+    devise_token_auth/sessions#destroy
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='mang_password'>
+      mang_password<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='POST'>
+    POST
+  </td>
+  <td data-route-path='/mangs/password(.:format)' data-regexp='^\/mangs\/password(?:\.([^\/.?]+))?$'>
+    /mangs/password(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/passwords#create'>
+    devise_token_auth/passwords#create
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='new_mang_password'>
+      new_mang_password<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/mangs/password/new(.:format)' data-regexp='^\/mangs\/password\/new(?:\.([^\/.?]+))?$'>
+    /mangs/password/new(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/passwords#new'>
+    devise_token_auth/passwords#new
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='edit_mang_password'>
+      edit_mang_password<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/mangs/password/edit(.:format)' data-regexp='^\/mangs\/password\/edit(?:\.([^\/.?]+))?$'>
+    /mangs/password/edit(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/passwords#edit'>
+    devise_token_auth/passwords#edit
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='PATCH'>
+    PATCH
+  </td>
+  <td data-route-path='/mangs/password(.:format)' data-regexp='^\/mangs\/password(?:\.([^\/.?]+))?$'>
+    /mangs/password(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/passwords#update'>
+    devise_token_auth/passwords#update
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='PUT'>
+    PUT
+  </td>
+  <td data-route-path='/mangs/password(.:format)' data-regexp='^\/mangs\/password(?:\.([^\/.?]+))?$'>
+    /mangs/password(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/passwords#update'>
+    devise_token_auth/passwords#update
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='cancel_mang_registration'>
+      cancel_mang_registration<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/mangs/cancel(.:format)' data-regexp='^\/mangs\/cancel(?:\.([^\/.?]+))?$'>
+    /mangs/cancel(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/registrations#cancel'>
+    devise_token_auth/registrations#cancel
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='mang_registration'>
+      mang_registration<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='POST'>
+    POST
+  </td>
+  <td data-route-path='/mangs(.:format)' data-regexp='^\/mangs(?:\.([^\/.?]+))?$'>
+    /mangs(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/registrations#create'>
+    devise_token_auth/registrations#create
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='new_mang_registration'>
+      new_mang_registration<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/mangs/sign_up(.:format)' data-regexp='^\/mangs\/sign_up(?:\.([^\/.?]+))?$'>
+    /mangs/sign_up(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/registrations#new'>
+    devise_token_auth/registrations#new
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='edit_mang_registration'>
+      edit_mang_registration<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/mangs/edit(.:format)' data-regexp='^\/mangs\/edit(?:\.([^\/.?]+))?$'>
+    /mangs/edit(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/registrations#edit'>
+    devise_token_auth/registrations#edit
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='PATCH'>
+    PATCH
+  </td>
+  <td data-route-path='/mangs(.:format)' data-regexp='^\/mangs(?:\.([^\/.?]+))?$'>
+    /mangs(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/registrations#update'>
+    devise_token_auth/registrations#update
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='PUT'>
+    PUT
+  </td>
+  <td data-route-path='/mangs(.:format)' data-regexp='^\/mangs(?:\.([^\/.?]+))?$'>
+    /mangs(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/registrations#update'>
+    devise_token_auth/registrations#update
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='DELETE'>
+    DELETE
+  </td>
+  <td data-route-path='/mangs(.:format)' data-regexp='^\/mangs(?:\.([^\/.?]+))?$'>
+    /mangs(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/registrations#destroy'>
+    devise_token_auth/registrations#destroy
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='mang_confirmation'>
+      mang_confirmation<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='POST'>
+    POST
+  </td>
+  <td data-route-path='/mangs/confirmation(.:format)' data-regexp='^\/mangs\/confirmation(?:\.([^\/.?]+))?$'>
+    /mangs/confirmation(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/confirmations#create'>
+    devise_token_auth/confirmations#create
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='new_mang_confirmation'>
+      new_mang_confirmation<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/mangs/confirmation/new(.:format)' data-regexp='^\/mangs\/confirmation\/new(?:\.([^\/.?]+))?$'>
+    /mangs/confirmation/new(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/confirmations#new'>
+    devise_token_auth/confirmations#new
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/mangs/confirmation(.:format)' data-regexp='^\/mangs\/confirmation(?:\.([^\/.?]+))?$'>
+    /mangs/confirmation(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/confirmations#show'>
+    devise_token_auth/confirmations#show
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='mangs_validate_token'>
+      mangs_validate_token<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/mangs/validate_token(.:format)' data-regexp='^\/mangs\/validate_token(?:\.([^\/.?]+))?$'>
+    /mangs/validate_token(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/token_validations#validate_token'>
+    devise_token_auth/token_validations#validate_token
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='mangs_failure'>
+      mangs_failure<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/mangs/failure(.:format)' data-regexp='^\/mangs\/failure(?:\.([^\/.?]+))?$'>
+    /mangs/failure(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/omniauth_callbacks#omniauth_failure'>
+    devise_token_auth/omniauth_callbacks#omniauth_failure
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/mangs/:provider/callback(.:format)' data-regexp='^\/mangs\/([^\/.?]+)\/callback(?:\.([^\/.?]+))?$'>
+    /mangs/:provider/callback(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/omniauth_callbacks#omniauth_success'>
+    devise_token_auth/omniauth_callbacks#omniauth_success
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/omniauth/:provider/callback(.:format)' data-regexp='^\/omniauth\/([^\/.?]+)\/callback(?:\.([^\/.?]+))?$'>
+    /omniauth/:provider/callback(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/omniauth_callbacks#redirect_callbacks'>
+    devise_token_auth/omniauth_callbacks#redirect_callbacks
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/omniauth/failure(.:format)' data-regexp='^\/omniauth\/failure(?:\.([^\/.?]+))?$'>
+    /omniauth/failure(.:format)
+  </td>
+  <td data-route-reqs='devise_token_auth/omniauth_callbacks#omniauth_failure'>
+    devise_token_auth/omniauth_callbacks#omniauth_failure
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name=''>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/mangs/:provider(.:format)' data-regexp='^\/mangs\/([^\/.?]+)(?:\.([^\/.?]+))?$'>
+    /mangs/:provider(.:format)
+  </td>
+  <td data-route-reqs='redirect(301)'>
+    redirect(301)
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='demo_members_only'>
+      demo_members_only<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/demo/members_only(.:format)' data-regexp='^\/demo\/members_only(?:\.([^\/.?]+))?$'>
+    /demo/members_only(.:format)
+  </td>
+  <td data-route-reqs='demo_user#members_only'>
+    demo_user#members_only
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='demo_members_only_mang'>
+      demo_members_only_mang<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/demo/members_only_mang(.:format)' data-regexp='^\/demo\/members_only_mang(?:\.([^\/.?]+))?$'>
+    /demo/members_only_mang(.:format)
+  </td>
+  <td data-route-reqs='demo_mang#members_only'>
+    demo_mang#members_only
+  </td>
+</tr>
+<tr class='route_row' data-helper='path'>
+  <td data-route-name='demo_members_only_group'>
+      demo_members_only_group<span class='helper'>_path</span>
+  </td>
+  <td data-route-verb='GET'>
+    GET
+  </td>
+  <td data-route-path='/demo/members_only_group(.:format)' data-regexp='^\/demo\/members_only_group(?:\.([^\/.?]+))?$'>
+    /demo/members_only_group(.:format)
+  </td>
+  <td data-route-reqs='demo_group#members_only'>
+    demo_group#members_only
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+
+</body>
+</html>

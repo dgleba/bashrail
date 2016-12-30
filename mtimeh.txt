@@ -27,7 +27,6 @@
 2016-11-28 10:58:44 -0500 | 1480348724 | applayout1.sh
 2016-11-28 10:55:56 -0500 | 1480348556 | gemfile1.sh
 2016-11-28 16:39:56 -0500 | 1480369196 | app/models/ability.rb
-2016-11-28 16:39:56 -0500 | 1480369196 | app/models/user.rb
 2016-11-28 15:58:06 -0500 | 1480366686 | docs/devise,install,info.txt
 2016-11-24 19:23:19 -0500 | 1480033399 | docs/rails,reverse,legacydatabase,scaffold,schemadump,yamldb,seed,,etc,know - Copy.txt
 2016-11-28 20:57:13 -0500 | 1480384633 | Gemfile
@@ -61,3 +60,4 @@
 2016-12-26 22:39:14 -0500 | 1482809954 | mtimeh.txt
 2016-12-26 22:39:14 -0500 | 1482809954 | mtimehs.txt
 2016-12-26 22:34:55 -0500 | 1482809695 | paginate1.sh
+2016-12-28 14:28:00 -0500 | 1482953280 | app/models/user.rb

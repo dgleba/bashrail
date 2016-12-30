@@ -107,7 +107,7 @@ pwd
 
   source $sfil2/gemfile1.sh
 
-  # source $sfil2/tableprefix1.sh  # optional
+  source $sfil2/tableprefix1.sh  # optional
 
   source $sfil2/home1.sh  #
 
@@ -115,20 +115,30 @@ pwd
 
   source $sfil2/applayout1.sh  # requires home1.sh
 
-  source $sfil2/paginate1.sh  # optional, but you may need to edit to overcome some errors since it may included some code that depends on other features.
+  source $sfil2/paginate1.sh  # optional, but you may need to edit to overcome some errors since it may include some code that depends on other features.
 
-  source $sfil2/devise1.sh   # optional, but will modify home page, so
+  
+  
+  # use only devisetokenauth1.sh  or devisejwt.sh   NOT both..
+
+  source $sfil2/devise1.sh   # optional, but will modify home page, so.. some edits to overcome missing items may be necessary
+  source $sfil2/devisejwt.sh   # optional. requires devise1.sh
 # or
-  # source $sfil2/devisetokenauth1.sh   # optional,
+  # source $sfil2/devisetokenauth1.sh   # optional
+
+  
 
   source $sfil2/cancan1.sh   # optional, but ..  optional may require some further edits.
+  
 
 
-  # source $sfil2/admin1.sh  # optional
+  source $sfil2/admin1.sh  # optional
 
 
+  
 
 ### scaffold... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 
 rails g scaffold Product name  pdate:datetime active_status:integer sort:integer -f
@@ -136,6 +146,7 @@ rails g scaffold Product name  pdate:datetime active_status:integer sort:integer
 rails g scaffold Pfeature name fdate:datetime active_status:integer sort:integer -f
 
 rails g scaffold ProductFeature name  product:references pfeature:references active_status:integer sort:integer -f
+
 
 
 sleep 1
@@ -146,9 +157,27 @@ git commit -m "scaffold"
 ### select2 for product pfeature.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-  # source $sfil2/select2.sh  # optional
+  source $sfil2/select2.sh  # optional
 
 
+ 
+
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# Copy migration files over..
+
+path1='db/migrate'
+mkdir -p $path1/
+# rm -r $path1/
+# rsync.. -a - rltpgoD  preserve almost all. -u update don't copy older source files.
+rsync -av --ignore-times  $sfil2/$path1/ $path1/
+
+  
+
+
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
 
 ### db seed .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

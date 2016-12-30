@@ -1,0 +1,52 @@
+         
+     
+sign_up     
+     
+curl -H "Content-Type: application/json" \
+      -X POST -D ./curldump -i\
+      -d '{"user": {"email":"dgleba1@gmail.com","password":"1234","password_confirmation":"1234"}}' \
+      http://localhost:3001/users.json
+    
+    
+             
+ 
+sign_in
+ 
+curl -H "Content-Type: application/json" \
+      -X POST -D ./curldump -i\
+      -d '{"user": {"email":"dgleba1@gmail.com","password":"1234"}}' \
+      http://localhost:3001/users/sign_in.json
+   
+   
+   
+get
+
+curl -X GET --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE0ODMwNjc4NDJ9.NG6L62C4oQWdhngpcf5IDDfxJ9dCR9ezpYsZFuTo5Xs' 'http://localhost:3001/products.json'    
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+other
+
+curl -H "Content-Type: application/json" \
+      -X POST -D ./curldump -i\
+      -d '{"user": {"email":"a","password":"a"}}' \
+      http://v206x2016103022:3001/users/sign_in.json
+      
+      
+curl -H "Content-Type: application/json" \
+      -X POST -D ./curldump -i\
+      -d '{"user": {"email":"a","password":"a"}}' \
+      http://localhost:3001/users/sign_in.json
+            
+
+            
+no... curl -H "Content-Type: application/json" \
+      -X POST -D ./curldump -i\
+      -d '{"user": {"email":"dgleba3@gmail.com","password":"1234","password_confirmation":"1234"}}' \
+      http://localhost:3001/users/sign_up.json
+    
+
+
+    

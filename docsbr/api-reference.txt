@@ -1,0 +1,52 @@
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-12-29[Dec-Thu]18-18PM
+
+primarily..
+
+
+https://medium.com/@goncalvesjoao/rails-devise-jwt-and-the-forgotten-warden-67cfcf8a0b73#.pbl1obgxs
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-12-27[Dec-Tue]11-11AM
+
+for devise controllers..
+
+https://github.com/jimjeffers/rails-devise-cors-jwt-example
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2016-12-26[Dec-Mon]22-51PM
+
+less so..
+
+
+David@redwe MINGW64 /c/var/share203/rail316jwt1
+$ 
+git clone https://github.com/RohitRox/Rails-API-and-JWT.git
+Cloning into 'Rails-API-and-JWT'...
+remote: Counting objects: 464, done.
+remote: Compressing objects: 100% (176/176), done.
+, reused 464 (deltReca 243), pack-reused 0
+Receiving objects: 100% (464/464), 88.70 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (243/243), done.
+Checking connectivity... done.
+restoring dates from .mtimes
+warning: .mtimes not found
+
+David@redwe MINGW64 /c/var/share203/rail316jwt1
+$
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

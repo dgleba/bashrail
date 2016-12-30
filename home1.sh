@@ -10,7 +10,7 @@ rails g controller Home index about
 # i think 0, means only do it for the first match..
 #
 pattern1='application.routes'
-line1=' root "home#index"'
+line1='  root "home#index"'
 #line2='  about "home#about"'
 sed -i "0,/$pattern1/a \ \n$line1\n\n" config/routes.rb
 

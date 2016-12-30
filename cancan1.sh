@@ -73,7 +73,7 @@ cat << 'HEREDOC' > $r1tmp
   }
   ARGF.each do |line|
     puts line
-    puts repl2 if line =~ /protect_from_forgery/
+    puts repl2 if line =~ /protect_from_forgery with\: \:exception/
   end
 HEREDOC
 filetarg='app/controllers/application_controller.rb'

@@ -1,4 +1,3 @@
-1479093356|home1.sh
 1479096127|select2.sh
 1479174254|util/mtimeh.rb
 1479179055|admin1.sh
@@ -14,7 +13,6 @@
 1479656172|lib/templates/rails/scaffold_controller/origbak/controller.rb
 1479865384|thor/t1.rb
 1480180177|util/hooks/pre-commit
-1480212926|new1.sh
 1480261984|devise2thor.rb
 1480262908|examples/examples,not,working
 1480268197|thor/thor2.rb
@@ -26,7 +24,6 @@
 1480302805|lib/templates/erb/scaffold/index.html.erb
 1480348724|applayout1.sh
 1480348556|gemfile1.sh
-1480369196|app/models/ability.rb
 1480366686|docs/devise,install,info.txt
 1480033399|docs/rails,reverse,legacydatabase,scaffold,schemadump,yamldb,seed,,etc,know - Copy.txt
 1480384633|Gemfile
@@ -51,13 +48,29 @@
 1480562397|seeds1.sh
 1480723174|seeds2.sh
 1481467840|README.md
-1481501369|cancan1.sh
 1481501449|devisetokenauth1.sh
 1480795075|examples/absolutepathfromrelative.txt
 1481501196|tableprefix1.sh
-1481506357|version-last10.txt
-1482809759|1mk.sh
 1482809954|mtimeh.txt
 1482809954|mtimehs.txt
 1482809695|paginate1.sh
 1482953280|app/models/user.rb
+1483059193|1mk.sh
+1483050333|app/controllers/users/registrations_controller.rb
+1483050397|app/controllers/users/sessions_controller.rb
+1482807049|app/helpers/jwt_wrapper.rb
+1483066444|app/models/ability.rb
+1483064003|cancan1.sh
+1482806946|config/initializers/core/extensions/devise/strategies/json_web_token.rb
+1483043219|config/secrets.yml
+1483058558|db/migrate/50161230223301_change_users_role_id_default.rb
+1483064524|devisejwt.sh
+1483053668|docsbr/api-reference.txt
+1483061349|docsbr/api-requests,curl,signin,etc.txt
+1482857708|docsbr/api-requests-examples-insomnia-2016-12-27.json
+1483066860|docsbr/api-responses.txt
+1483054152|docsbr/example,rails,routes.html
+1483063590|errors/application_controller__2016-12-29_21.05.31.rb
+1483064930|home1.sh
+1483054326|new1.sh
+1483067119|version-last10.txt

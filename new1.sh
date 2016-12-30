@@ -33,5 +33,5 @@ cd $appn ; pwd
 rm -rf .git
 git init
 git add -A # Add all files and commit them
-  git commit -m "New, Before any changes"
+  git commit -m "New, Before any changes. Created using github.com/dgleba/bashrail."
 

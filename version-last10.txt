@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 4feb0e85740f949dee13fc92307f17c4bd498901
+Author: David Gleba <dgleba@gmail.com>
+Date:   Wed Dec 28 14:28:22 2016 -0500
+
+    make name optional
+
 commit 5c5c786c33099bfd07a64aa925b4da6e83441e86
 Author: David Gleba <dgleba@gmail.com>
 Date:   Mon Dec 26 22:39:18 2016 -0500
@@ -54,11 +60,3 @@ Author: dgleba <dgleba@users.noreply.github.com>
 Date:   Tue Dec 6 17:52:22 2016 -0500
 
     Update README.md
-
-commit ee1093f4ef9f519ec9384f487f75e5315a801cbb
-Author: David Gleba <dgleba@gmail.com>
-Date:   Fri Dec 2 19:34:21 2016 -0500
-
-    move things,
-    get settings from command line and save to file,
-    fix seeding of devise token auth.

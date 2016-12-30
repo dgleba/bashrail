@@ -2,11 +2,15 @@
 
 <row class="row is-table-row" >
 
-  <div class="col-sm-2 ">
-    <h3>Listing <%= plural_table_name.titleize -%></h3>
+  <div class="col-sm-1 ">
+    <%%= link_to 'Create', new_<%= singular_table_name %>_path %>
   </div>
 
-  <div class="col-sm-3 col-sm-offset-1">
+  <div class="col-sm-2 ">
+    <h4>Listing <%= plural_table_name.titleize -%></h4>
+  </div>
+
+  <div class="col-sm-3">
     <%%= search_form_for @q, class: 'search-form' do |f| %>
       <div class="input-group">
         <%%= f.search_field :<%= attributes.first.name %>_cont, class: 'form-control' %>
@@ -18,8 +22,12 @@
     <%% end %>
   </div>
 
-  <div class="col-sm-5 ">
+  <div class="col-sm-4 ">
     <%%= paginate @<%= plural_table_name %> %>
+  </div>
+  
+  <div class="col-sm-2 ">
+    <%%= page_entries_info @<%= plural_table_name %>, :entry_name => 'item' %>
   </div>
   
 </row>
@@ -51,4 +59,3 @@
 
 <br>
 
-<%%= link_to 'New <%= human_name %>', new_<%= singular_table_name %>_path %>

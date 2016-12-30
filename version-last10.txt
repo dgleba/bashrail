@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 412c1ae10f77c3a57d7f3120dbad88a4d01c25a6
+Author: David Gleba <dgleba@gmail.com>
+Date:   Fri Dec 30 11:09:05 2016 -0500
+
+    fix vertcal misalignment on top row of index pages
+
 commit 4b2f3ff2f93fca6ba71c95f1e734bca68ff83c33
 Author: David Gleba <dgleba@gmail.com>
 Date:   Thu Dec 29 22:05:22 2016 -0500
@@ -54,9 +60,3 @@ Author: dgleba <dgleba@gmail.com>
 Date:   Tue Dec 6 22:07:05 2016 -0500
 
     add bakup to sed command for osx compatibility
-
-commit 479efc93952071db2daf2f6d00cedb75a1b647c1
-Author: dgleba <dgleba@users.noreply.github.com>
-Date:   Tue Dec 6 18:19:13 2016 -0500
-
-    Update devise1.sh

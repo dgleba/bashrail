@@ -1,3 +1,5 @@
+2016-12-30 11:07:54 -0500 | 1483114074 | lib/templates/erb/scaffold/index.html.erb
+2016-12-30 11:07:00 -0500 | 1483114020 | bootstrap1.sh
 2016-12-29 22:05:19 -0500 | 1483067119 | version-last10.txt
 2016-12-29 22:01:00 -0500 | 1483066860 | docsbr/api-responses.txt
 2016-12-29 21:54:04 -0500 | 1483066444 | app/models/ability.rb
@@ -48,7 +50,6 @@
 2016-11-28 15:58:06 -0500 | 1480366686 | docs/devise,install,info.txt
 2016-11-28 10:58:44 -0500 | 1480348724 | applayout1.sh
 2016-11-28 10:55:56 -0500 | 1480348556 | gemfile1.sh
-2016-11-27 22:13:25 -0500 | 1480302805 | lib/templates/erb/scaffold/index.html.erb
 2016-11-27 21:26:38 -0500 | 1480299998 | app/helpers/application_helper.rb
 2016-11-27 20:24:58 -0500 | 1480296298 | examples/bashruby-textsubreplace,know.sh
 2016-11-27 13:47:22 -0500 | 1480272442 | utilbr/adduser1.rb
@@ -62,7 +63,6 @@
 2016-11-21 23:00:06 -0500 | 1479787206 | lib/templates/rails/scaffold_controller/controller.rb
 2016-11-21 22:35:13 -0500 | 1479785713 | examples/paginate1_with,add,heredoc,after,pattern.sh
 2016-11-20 10:36:12 -0500 | 1479656172 | lib/templates/rails/scaffold_controller/origbak/controller.rb
-2016-11-19 23:59:51 -0500 | 1479617991 | bootstrap1.sh
 2016-11-19 13:57:59 -0500 | 1479581879 | examples/version-v1.sh
 2016-11-14 23:27:08 -0500 | 1479184028 | util/hook.sh
 2016-11-14 22:04:15 -0500 | 1479179055 | admin1.sh

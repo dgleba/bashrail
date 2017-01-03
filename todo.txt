@@ -5,12 +5,16 @@ Title:  .
 
 1.
 done.
+
 edit gitignore to include sqlite db
+
 
 2.
 done. may do more later..
+
 add docs to generated proj to indicate bashrail version x made this..
 include relevant files like 1mk.sh
+
 
 3.
 currently getting html response from curl / json create product request. 
@@ -18,6 +22,22 @@ how to get json response?
 
   curl gives different html response.
 
+idea:  
+  # POST /products
+  def create
+    # @product = Product.new(product_params)
+    # if @product.save
+      # redirect_to @product, notice: 'Product was successfully created.'
+    # else
+      # render :new
+    # end
+    
+    # http://www.justinweiss.com/articles/respond-to-without-all-the-pain/
+    @product = Product.new(product_params)
+    flash[:notice] = "Product was successfully created." if @product.save
+    respond_with(@product)
+  end
 
+  
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

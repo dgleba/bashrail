@@ -1,3 +1,9 @@
+2017-01-03 09:51:50 -0500 | 1483455110 | mtimehs.txt
+2017-01-03 09:51:50 -0500 | 1483455110 | mtimeh.txt
+2017-01-03 09:51:29 -0500 | 1483455089 | todo.txt
+2017-01-03 09:46:18 -0500 | 1483454778 | 1mk.sh
+2017-01-03 08:19:53 -0500 | 1483449593 | root/.gitignore
+2017-01-02 11:26:41 -0500 | 1483374401 | util/hook.sh
 2016-12-30 11:39:49 -0500 | 1483115989 | lib/templates/erb/scaffold/index.html.erb
 2016-12-30 11:07:00 -0500 | 1483114020 | bootstrap1.sh
 2016-12-29 22:05:19 -0500 | 1483067119 | version-last10.txt
@@ -8,7 +14,6 @@
 2016-12-29 21:13:23 -0500 | 1483064003 | cancan1.sh
 2016-12-29 21:06:30 -0500 | 1483063590 | errors/application_controller__2016-12-29_21.05.31.rb
 2016-12-29 20:29:09 -0500 | 1483061349 | docsbr/api-requests,curl,signin,etc.txt
-2016-12-29 19:53:13 -0500 | 1483059193 | 1mk.sh
 2016-12-29 19:42:38 -0500 | 1483058558 | db/migrate/50161230223301_change_users_role_id_default.rb
 2016-12-29 18:32:06 -0500 | 1483054326 | new1.sh
 2016-12-29 18:29:12 -0500 | 1483054152 | docsbr/example,rails,routes.html
@@ -18,8 +23,6 @@
 2016-12-29 15:26:59 -0500 | 1483043219 | config/secrets.yml
 2016-12-28 14:28:00 -0500 | 1482953280 | app/models/user.rb
 2016-12-27 11:55:08 -0500 | 1482857708 | docsbr/api-requests-examples-insomnia-2016-12-27.json
-2016-12-26 22:39:14 -0500 | 1482809954 | mtimehs.txt
-2016-12-26 22:39:14 -0500 | 1482809954 | mtimeh.txt
 2016-12-26 22:34:55 -0500 | 1482809695 | paginate1.sh
 2016-12-26 21:50:49 -0500 | 1482807049 | app/helpers/jwt_wrapper.rb
 2016-12-26 21:49:06 -0500 | 1482806946 | config/initializers/core/extensions/devise/strategies/json_web_token.rb
@@ -64,7 +67,6 @@
 2016-11-21 22:35:13 -0500 | 1479785713 | examples/paginate1_with,add,heredoc,after,pattern.sh
 2016-11-20 10:36:12 -0500 | 1479656172 | lib/templates/rails/scaffold_controller/origbak/controller.rb
 2016-11-19 13:57:59 -0500 | 1479581879 | examples/version-v1.sh
-2016-11-14 23:27:08 -0500 | 1479184028 | util/hook.sh
 2016-11-14 22:04:15 -0500 | 1479179055 | admin1.sh
 2016-11-14 20:44:14 -0500 | 1479174254 | util/mtimeh.rb
 2016-11-14 20:06:05 -0500 | 1479171965 | lib/templates/erb/scaffold/_form.html.erb

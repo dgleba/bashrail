@@ -4,7 +4,18 @@ https://github.com/dgleba/bashrail
 
 ===
 
-This is a set of bash and ruby scripts to create a rails app with features like bootstrap, select2, devise, cancan, etc...
+This is a set of bash and ruby scripts to create a rails app with features like 
+ - bootstrap styling, 
+ - select2 dropdown selects, 
+ - devise login, 
+ - cancancan role based access, 
+ - kaminari pagination, 
+ - ransack search, 
+ - jwt token authentication 
+ - database is populated with users, roles, and faked data,
+ - etc...
+
+The resulting generated application has both an html interface which you can consume with most modern browsers and mobile device browsers, and a restful api which responds to json requests.
 
 
  usage:
@@ -27,7 +38,7 @@ This is a set of bash and ruby scripts to create a rails app with features like 
   - when it is up and running, then maybe...
   - edit scaffolds.
   - try it out.
-  - change the files to your liking, then run it again with a new $appn / project_name on the commandline if you like.
+  - change the files to your liking, turn things on or off, then run it again with a new $appn / project_name on the commandline if you like.
 
 
 ===

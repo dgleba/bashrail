@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 59ba28f4cd7f81336aeb5f925c08eb3153dafb46
+Author: dgleba <dgleba@gmail.com>
+Date:   Tue Jan 3 09:54:58 2017 -0500
+
+    more docs 2017-01-03
+
 commit af9669f969f630759d5b2efb953bace3f50b39e6
 Author: David Gleba <dgleba@gmail.com>
 Date:   Fri Dec 30 11:46:41 2016 -0500
@@ -53,10 +59,3 @@ Author: dgleba <dgleba@gmail.com>
 Date:   Tue Dec 6 22:21:06 2016 -0500
 
     add user to tmp file names
-
-commit f89afd788126c0348b7b93a854cd7605c11c0cad
-Merge: 3ff4273 479efc9
-Author: dgleba <dgleba@gmail.com>
-Date:   Tue Dec 6 22:09:05 2016 -0500
-
-    Merge branch 'master' of https://github.com/dgleba/bashrail

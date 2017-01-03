@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit af9669f969f630759d5b2efb953bace3f50b39e6
+Author: David Gleba <dgleba@gmail.com>
+Date:   Fri Dec 30 11:46:41 2016 -0500
+
+    Change index layout
+
 commit 412c1ae10f77c3a57d7f3120dbad88a4d01c25a6
 Author: David Gleba <dgleba@gmail.com>
 Date:   Fri Dec 30 11:09:05 2016 -0500
@@ -54,9 +60,3 @@ Author: dgleba <dgleba@gmail.com>
 Date:   Tue Dec 6 22:09:05 2016 -0500
 
     Merge branch 'master' of https://github.com/dgleba/bashrail
-
-commit 3ff42732ddb88e97f382915f4774332730ad4243
-Author: dgleba <dgleba@gmail.com>
-Date:   Tue Dec 6 22:07:05 2016 -0500
-
-    add bakup to sed command for osx compatibility

@@ -1,0 +1,23 @@
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2017-01-03[Jan-Tue]08-35AM
+
+1.
+done.
+edit gitignore to include sqlite db
+
+2.
+done. may do more later..
+add docs to generated proj to indicate bashrail version x made this..
+include relevant files like 1mk.sh
+
+3.
+currently getting html response from curl / json create product request. 
+how to get json response?
+
+  curl gives different html response.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

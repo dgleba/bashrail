@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit e9d4aac8b0a3593c26412af2afc9668db99f2290
+Author: dgleba <dgleba@gmail.com>
+Date:   Tue Jan 3 14:20:34 2017 -0500
+
+    docs 2017-01-03_Tue_14.20-PM
+
 commit 59ba28f4cd7f81336aeb5f925c08eb3153dafb46
 Author: dgleba <dgleba@gmail.com>
 Date:   Tue Jan 3 09:54:58 2017 -0500
@@ -53,9 +59,3 @@ Author: dgleba <dgleba@gmail.com>
 Date:   Tue Dec 6 22:23:54 2016 -0500
 
     minor
-
-commit 4752f4dbd9b15155d3fc1767b583c5c0a86bdab7
-Author: dgleba <dgleba@gmail.com>
-Date:   Tue Dec 6 22:21:06 2016 -0500
-
-    add user to tmp file names

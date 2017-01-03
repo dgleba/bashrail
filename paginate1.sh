@@ -27,7 +27,9 @@ echo "gem 'ransack'" >> Gemfile
 echo "gem 'bootstrap-kaminari-views'" >> Gemfile
 bundle
 
-# to get original controller generator....
+# to get original controller generator...
+
+# Just copy them from bashrail instead. see below...
 
   railt1="$(bundle show railties)"
   echo "${railt1}"
@@ -36,8 +38,8 @@ bundle
   ls -la "${railt1}/${path1}"
 
   path2='lib/templates/rails/scaffold_controller/orig_default'
-  mkdir -p $path2
-  rsync -auv "${railt1}/${path1}/" $path2
+  # mkdir -p $path2
+  # rsync -auv "${railt1}/${path1}/" $path2
  
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -64,7 +66,8 @@ bundle
 # Copy this controller template over..
 
 path1='lib/templates/rails/scaffold_controller'
-rm -r $path1/
+rm -rf $path1/
+mkdir -p $path1
 # rsync.. -a - rltpgoD  preserve almost all. -u update don't copy older source files.
 rsync -av  $sfil2/$path1/ $path1/
 

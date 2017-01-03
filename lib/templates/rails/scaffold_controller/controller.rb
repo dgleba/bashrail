@@ -29,12 +29,16 @@ class <%= controller_class_name %>Controller < ApplicationController
   # POST <%= route_url %>
   def create
     @<%= singular_table_name %> = <%= orm_class.build(class_name, "#{singular_table_name}_params") %>
+    # http://www.justinweiss.com/articles/respond-to-without-all-the-pain/
+    flash[:notice] = "Successfully created.." if @<%= orm_instance.save %>
+    respond_with(@<%= singular_table_name %>)
 
-    if @<%= orm_instance.save %>
-      redirect_to @<%= singular_table_name %>, notice: <%= "'#{human_name} was successfully created.'" %>
-    else
-      render :new
-    end
+    # From rails 4.2, it was originally:
+    # if @<%= orm_instance.save %>
+      # redirect_to @<%= singular_table_name %>, notice: <%= "'#{human_name} was successfully created.'" %>
+    # else
+      # render :new
+    # end
   end
 
   # PATCH/PUT <%= route_url %>/1

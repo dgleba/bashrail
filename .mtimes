@@ -7,7 +7,6 @@
 1472772017|lib/templates/erb/scaffold/edit.html.erb
 1472772017|lib/templates/erb/scaffold/new.html.erb
 1472772017|lib/templates/erb/scaffold/show.html.erb
-1479787206|lib/templates/rails/scaffold_controller/controller.rb
 1479656172|lib/templates/rails/scaffold_controller/origbak/controller.rb
 1479865384|thor/t1.rb
 1480180177|util/hooks/pre-commit
@@ -47,7 +46,6 @@
 1481501449|devisetokenauth1.sh
 1480795075|examples/absolutepathfromrelative.txt
 1481501196|tableprefix1.sh
-1482809695|paginate1.sh
 1482953280|app/models/user.rb
 1483050333|app/controllers/users/registrations_controller.rb
 1483050397|app/controllers/users/sessions_controller.rb
@@ -69,10 +67,12 @@
 1483067119|version-last10.txt
 1483114020|bootstrap1.sh
 1483115989|lib/templates/erb/scaffold/index.html.erb
-1483454778|1mk.sh
 1483455110|mtimeh.txt
 1483455110|mtimehs.txt
 1483449593|root/.gitignore
 1483374401|util/hook.sh
 1483465134|README.md
 1483467356|todo.txt
+1483473528|1mk.sh
+1483474147|lib/templates/rails/scaffold_controller/controller.rb
+1483473532|paginate1.sh

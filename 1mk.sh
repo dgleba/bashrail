@@ -10,6 +10,7 @@ function abort()
     *** ABORTED ***
     ***************
     '
+    date
     echo "An error occurred. Exiting..." >&2
     exit 1
 }
@@ -69,6 +70,7 @@ echo
 echo Press ctrl-c now if you want to stop and edit settings in /tmp/_brvar1202_${USER}.txt
 echo 
 
+date
 timeout1=20 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..." || true ;  echo ;
 
 
@@ -274,12 +276,12 @@ echo  run rails s
 echo  then visit localhost:3000/
 echo  then visit localhost:3000/products
 set +vx
-date
 #
 
 
 # Done!....................
 trap : 0
+date
 echo >&2 '
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!   DONE    !!!**

@@ -1,3 +1,4 @@
+2017-01-03 20:48:18 -0500 | 1483494498 | new1.sh
 2017-01-03 15:09:07 -0500 | 1483474147 | lib/templates/rails/scaffold_controller/controller.rb
 2017-01-03 14:58:52 -0500 | 1483473532 | paginate1.sh
 2017-01-03 14:58:48 -0500 | 1483473528 | 1mk.sh
@@ -18,7 +19,6 @@
 2016-12-29 21:06:30 -0500 | 1483063590 | errors/application_controller__2016-12-29_21.05.31.rb
 2016-12-29 20:29:09 -0500 | 1483061349 | docsbr/api-requests,curl,signin,etc.txt
 2016-12-29 19:42:38 -0500 | 1483058558 | db/migrate/50161230223301_change_users_role_id_default.rb
-2016-12-29 18:32:06 -0500 | 1483054326 | new1.sh
 2016-12-29 18:29:12 -0500 | 1483054152 | docsbr/example,rails,routes.html
 2016-12-29 18:21:08 -0500 | 1483053668 | docsbr/api-reference.txt
 2016-12-29 17:26:37 -0500 | 1483050397 | app/controllers/users/sessions_controller.rb

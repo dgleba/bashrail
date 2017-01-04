@@ -1,0 +1,43 @@
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2017-01-04[Jan-Wed]09-24AM
+
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$ curl -i  --request PUT \
+>   --url http://pmdsdata4:3003/products/1.json \
+>   --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODM2MDMxMTd9.Y9tKQFFv07jHV5NuYNVwKczqkn62cA58nco0LiVMv4M' \
+>   --header 'content-type: application/json' \
+>   --data '{"name":"David8 Linen Keyboard"}'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    32    0     0  100    32      0     73 --:--:-- --:--:-- --:--:--    76HTTP/1.1 204 No Content
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Cache-Control: no-cache
+X-Request-Id: 70850bdb-0513-485c-a29d-7e4df6ae34cc
+X-Runtime: 0.403357
+Server: WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+Date: Wed, 04 Jan 2017 14:18:05 GMT
+Connection: Keep-Alive
+
+
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+

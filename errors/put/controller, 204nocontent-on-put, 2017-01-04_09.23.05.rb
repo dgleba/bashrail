@@ -1,3 +1,5 @@
+
+
 <% if namespaced? -%>
 require_dependency "<%= namespaced_path %>/application_controller"
 
@@ -44,35 +46,18 @@ class <%= controller_class_name %>Controller < ApplicationController
     # end
   end
 
-  
-  
-  # PATCH/PUT <%= route_url %>/1
-  # def update
-    # if @<%= orm_instance.update("#{singular_table_name}_params") %>
-      # respond_with(@<%= singular_table_name %>)
-      # # was..
-      # # redirect_to @<%= singular_table_name %>, notice: <%= "'#{human_name} was successfully updated.'" %>
-    # else
-      # render :edit
-      # # ? not sure what to do here... respond_with(@<%= singular_table_name %>)
-    # end
-  # end
-
-  # from rail263...
   # PATCH/PUT <%= route_url %>/1
   def update
-    respond_to do |format|
-      if @<%= orm_instance.update("#{singular_table_name}_params") %>
-        format.html { redirect_to @<%= singular_table_name %>, notice: t('success_update') }
-        format.json { render :show, status: :ok, location: @<%= singular_table_name %> }
-      else
-        format.html { render :edit }
-        format.json { render json: @<%= singular_table_name %>.errors, status: :unprocessable_entity }
-      end
+    if @<%= orm_instance.update("#{singular_table_name}_params") %>
+      respond_with(@<%= singular_table_name %>)
+      # was..
+      # redirect_to @<%= singular_table_name %>, notice: <%= "'#{human_name} was successfully updated.'" %>
+    else
+      render :edit
+      # ? not sure what to do here... respond_with(@<%= singular_table_name %>)
     end
   end
 
-  
   # DELETE <%= route_url %>/1
   def destroy
     @<%= orm_instance.destroy %>

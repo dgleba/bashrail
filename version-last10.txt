@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit ed22aaede2b921f7deedd7130436d5f9f18b0a05
+Author: dgleba <dgleba@gmail.com>
+Date:   Tue Jan 3 15:22:15 2017 -0500
+
+    modify controller template
+
 commit e9d4aac8b0a3593c26412af2afc9668db99f2290
 Author: dgleba <dgleba@gmail.com>
 Date:   Tue Jan 3 14:20:34 2017 -0500
@@ -53,9 +59,3 @@ Author: dgleba <dgleba@gmail.com>
 Date:   Wed Dec 7 07:09:19 2016 -0500
 
     remove bakup from sed
-
-commit ab900e68df11cbec61f1546405dc8f51d059a6da
-Author: dgleba <dgleba@gmail.com>
-Date:   Tue Dec 6 22:23:54 2016 -0500
-
-    minor

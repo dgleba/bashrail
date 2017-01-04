@@ -1,0 +1,71 @@
+_____________
+
+
+from insomnia ;click  down-arrow for the request ; generate code ; select: shell , curl
+
+gives this output.
+
+i added :  -i  -v
+
+
+just as it comes from insomnia...
+
+
+curl -i  -v --request POST \
+  --url http://pmdsdata4:3003/products.json \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE0ODM1MTQxNjV9.v2Us9dkvtEYhNEnMgoUlVnowI_lWCWFqzUyHf_euSCE' \
+  --header 'content-type: application/json' \
+  --cookie _rail317jwtbr9_session=aEdYeVB1WWRXNmt0MEM3RVcwR1hhMEVaMjIwSnQrV0JUbXZLTVEzR2pqd1hhbHRucnhkcTd0eFlmcVJGeHJhTzV3OWJWUDBqbGpTUjc2UUNBVkVWQmt1QVBmRDhNVDBpNUlaeE5ubFQ2V1lCSFVhT3BOZkhhMnZPRjZERjloMExmN0NrcHovZTJkeUh1dG14TDFLUzNrNDNRYmFUM3d2RXgrOFMwdGVkMy9NMlBtVFV6YVp1dENidk16WlJ1ZUxJYVMwZ2RQMGE1ZnlBK2dKUVZvckFsN0lmTThmTnBlS2hRa1BnSng4KzhBRT0tLTZjYWVFYnRwZTZ4a0pZRzVZLzEvamc9PQ%3D%3D--19a8bc97e9636ce3e15e2562dc5bf07ab352ff88 \
+  --data '{"name":"David6 Linen Keyboard"}'
+  
+_____________
+
+modified...
+
+curl -i   --request POST \
+  --url http://pmdsdata4:3003/products.json \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODM1MzkzNTB9.R7vx3cHGDOhoOks0a1G9j5axbuLbBaUj99XJR2EQzlo' \
+  --header 'content-type: application/json' \
+  --data '{"name":"David6 Linen Keyboard"}'
+  
+
+2017-01-03_Tue_15.20-PM
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODM1MzkzNTB9.R7vx3cHGDOhoOks0a1G9j5axbuLbBaUj99XJR2EQzlo
+  
+  
+_____________
+
+response after changing controller.
+2017-01-03_Tue_14.17-PM
+
+201 created.
+
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$ curl -i   --request POST \
+>   --url http://pmdsdata4:3003/products.json \
+>   --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODM1MzkzNTB9.R7vx3cHGDOhoOks0a1G9j5axbuLbBaUj99XJR2EQzlo' \
+>   --header 'content-type: application/json' \
+>   --data '{"name":"David6 Linen Keyboard"}'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   208  100   176  100    32    564    102 --:--:-- --:--:-- --:--:--   592HTTP/1.1 201 Created
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Location: http://pmdsdata4:3003/products/14
+Content-Type: application/json; charset=utf-8
+Etag: W/"fc1b6b686a4fb0f6f5178cce9724818a"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: f26d3219-819e-4a2c-85b9-a88222fb315c
+X-Runtime: 0.109806
+Server: WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+Date: Wed, 04 Jan 2017 14:10:21 GMT
+Content-Length: 176
+Connection: Keep-Alive
+
+{"id":14,"name":"David6 Linen Keyboard","pdate":null,"active_status":null,"sort":null,"created_at":"2017-01-04T09:10:21.165-05:00","updated_at":"2017-01-04T09:10:21.165-05:00"}
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$
+

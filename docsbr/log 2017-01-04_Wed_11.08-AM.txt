@@ -1,0 +1,180 @@
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$     curl -i -H "Content-Type: application/json" \
+>       -X POST -D ./curldump -i\
+>       -d '{"user": {"email":"dgleba1@gmail.com","password":"1234"}}' \
+>       http://pmdsdata4:3003/users/sign_in.json
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   217  100   160  100    57    213     76 --:--:-- --:--:-- --:--:--   213HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Type: application/json; charset=utf-8
+Etag: W/"30184b658980f3fa8b61567fd0ca1cfe"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: e150b3b2-c0f3-4454-ba02-35e1d69cdb6c
+X-Runtime: 0.540093
+Server: WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+Date: Wed, 04 Jan 2017 15:01:45 GMT
+Content-Length: 160
+Connection: Keep-Alive
+Set-Cookie: _rail317jwtbr11_session=SE5RajNGeWR2R1RQRnNkL1d5Q3AzcHQwbldPbWdZekthZEhwZ2ZuVi9LV1Q0V2VZZzhnKzJSWkVKVy9YSlpUdC9WQUFJR0JDakNSMkhCaVR5bjdVd2JLdmJtNmpaNEFoQTZTOVlxZlgyMXBXOW9YbElWdytKRjdxLzlMR3RaUUE5ZnNsZ0xSRlZwZFZSV0ZLM1dRZ3Z3PT0tLXpET0xtcGFDOEhPY1Z1b2szaC9QNGc9PQ%3D%3D--cbb8ab58221f518ec4aba803384338c0448ec393; path=/; HttpOnly
+
+{"user":"dgleba1@gmail.com","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE0ODM2MDY5MDV9.sE5Rpn3Pc7ZeX3cmxWfVtEwKWucVd1w2GEh4UTqrwYg"}
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE0ODM2MDY5MDV9.sE5Rpn3Pc7ZeX3cmxWfVtEwKWucVd1w2GEh4UTqrwYg
+
+
+curl -i   --request GET \
+  --url http://pmdsdata4:3003/products/1.json \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE0ODM2MDY5MDV9.sE5Rpn3Pc7ZeX3cmxWfVtEwKWucVd1w2GEh4UTqrwYg' \
+  --header 'content-type: application/json' 
+
+  _____________
+  
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$ curl -i   --request GET \
+>   --url http://pmdsdata4:3003/products/1.json \
+>   --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE0ODM2MDY5MDV9.sE5Rpn3Pc7ZeX3cmxWfVtEwKWucVd1w2GEh4UTqrwYg' \
+>   --header 'content-type: application/json'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   224  100   224    0     0    842      0 --:--:-- --:--:-- --:--:--   842HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Type: application/json; charset=utf-8
+Etag: W/"98863c539629bec57c910c6bc31afe43"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 3ec1c2d6-ca75-4961-9e74-98a46f609b2e
+X-Runtime: 0.071437
+Server: WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+Date: Wed, 04 Jan 2017 15:03:15 GMT
+Content-Length: 224
+Connection: Keep-Alive
+Set-Cookie: _rail317jwtbr11_session=TXdXTFhvSHk3eGNVSld3bHFYMS9mb2pqQzF0MlN5dkVzVnVuSU80eXJrcmkrWmpzc09sbmtxb2Y0dWZPWEh0alAzdFBzb2FJNFVhbExWV1didVY2eFBjT0pnd1h0RVpJaVIzVm5FcEI1aXBqUDlLSWVqM3o5R0JObnp6TW40MzhSdkxvcklwR1hBUEl6Yll1WHdOY3BnPT0tLU9OVDVNcjcvWTNIS2JReG14TzVGRGc9PQ%3D%3D--5468495999476b2b75b0086e8731c39db39c5f1a; path=/; HttpOnly
+
+{"id":1,"name":"Practical Leather Wallet","pdate":null,"active_status":null,"sort":null,"created_at":"2017-01-04T09:45:37.853-05:00","updated_at":"2017-01-04T09:45:37.853-05:00","url":"http://pmdsdata4:3003/products/1.json"}
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$
+
+
+  
+_____________
+
+
+curl -i   --request POST \
+  --url http://pmdsdata4:3003/products.json \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE0ODM2MDY5MDV9.sE5Rpn3Pc7ZeX3cmxWfVtEwKWucVd1w2GEh4UTqrwYg' \
+  --header 'content-type: application/json' \
+  --data '{"name":"David8 Linen Keyboard"}'
+  
+  
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$ curl -i   --request POST \
+>   --url http://pmdsdata4:3003/products.json \
+>   --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE0ODM2MDY5MDV9.sE5Rpn3Pc7ZeX3cmxWfVtEwKWucVd1w2GEh4UTqrwYg' \
+>   --header 'content-type: application/json' \
+>   --data '{"name":"David8 Linen Keyboard"}'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   208  100   176  100    32    592    107 --:--:-- --:--:-- --:--:--   626HTTP/1.1 201 Created
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Location: http://pmdsdata4:3003/products/12
+Content-Type: application/json; charset=utf-8
+Etag: W/"6c240f0f140c70fdad51981083af89ab"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: b9e459b7-399d-4330-a796-2ac27b227efd
+X-Runtime: 0.092786
+Server: WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+Date: Wed, 04 Jan 2017 15:05:12 GMT
+Content-Length: 176
+Connection: Keep-Alive
+
+{"id":12,"name":"David8 Linen Keyboard","pdate":null,"active_status":null,"sort":null,"created_at":"2017-01-04T10:05:12.749-05:00","updated_at":"2017-01-04T10:05:12.749-05:00"}
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$
+
+
+_____________
+
+
+curl -i  --request PUT \
+  --url http://pmdsdata4:3003/products/1.json \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE0ODM2MDY5MDV9.sE5Rpn3Pc7ZeX3cmxWfVtEwKWucVd1w2GEh4UTqrwYg' \
+  --header 'content-type: application/json' \
+  --data '{"name":"David9 largeLinen Keyboard"}'
+  
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$ curl -i  --request PUT \
+>   --url http://pmdsdata4:3003/products/1.json \
+>   --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE0ODM2MDY5MDV9.sE5Rpn3Pc7ZeX3cmxWfVtEwKWucVd1w2GEh4UTqrwYg' \
+>   --header 'content-type: application/json' \
+>   --data '{"name":"David9 largeLinen Keyboard"}'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   263  100   226  100    37    804    131 --:--:-- --:--:-- --:--:--   804HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Location: http://pmdsdata4:3003/products/1
+Content-Type: application/json; charset=utf-8
+Etag: W/"212d68c9d69ccd3807fcbe9a97d5cd05"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 9bff477c-8ae3-4071-83d5-778eac037a87
+X-Runtime: 0.079546
+Server: WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+Date: Wed, 04 Jan 2017 15:07:10 GMT
+Content-Length: 226
+Connection: Keep-Alive
+
+{"id":1,"name":"David9 largeLinen Keyboard","pdate":null,"active_status":null,"sort":null,"created_at":"2017-01-04T09:45:37.853-05:00","updated_at":"2017-01-04T10:07:10.262-05:00","url":"http://pmdsdata4:3003/products/1.json"}
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$
+
+
+_____________
+
+  
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$ curl -i   --request GET \
+>   --url http://pmdsdata4:3003/products/1.json \
+>   --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE0ODM2MDY5MDV9.sE5Rpn3Pc7ZeX3cmxWfVtEwKWucVd1w2GEh4UTqrwYg' \
+>   --header 'content-type: application/json'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   226  100   226    0     0    907      0 --:--:-- --:--:-- --:--:--   907HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Type: application/json; charset=utf-8
+Etag: W/"212d68c9d69ccd3807fcbe9a97d5cd05"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 68934a6b-8f29-404e-8c21-4c0299c76671
+X-Runtime: 0.044577
+Server: WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+Date: Wed, 04 Jan 2017 15:07:44 GMT
+Content-Length: 226
+Connection: Keep-Alive
+Set-Cookie: _rail317jwtbr11_session=ZjlWUCtUSDhaN01CeGZOVjd6OHV3ZDVXc1l4WU9lTndVRjkrNGx4Y096cU5tamZvMWg1Z0x1dVBTMlpON3ZudkZSQThVZUx0QTdRSUgraXZIcXNjSEd0NVlXZWFzTGpiVFl4NGo1aXVadi9SeXNpelNxcVYwdjJTZXRPZEVDVytSTnlSMmZLcXB3UzB6VlNhcGZCQ1Z3PT0tLVBNR1RsUjVvQzBLRmZ6MTdxcmpBWUE9PQ%3D%3D--58424e0fca862e6430dd59e66ad9d5beae232a0b; path=/; HttpOnly
+
+{"id":1,"name":"David9 largeLinen Keyboard","pdate":null,"active_status":null,"sort":null,"created_at":"2017-01-04T09:45:37.853-05:00","updated_at":"2017-01-04T10:07:10.262-05:00","url":"http://pmdsdata4:3003/products/1.json"}
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+
+_____________
+
+
+
+  

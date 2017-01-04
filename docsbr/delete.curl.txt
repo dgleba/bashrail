@@ -1,0 +1,92 @@
+_____________
+
+
+from insomnia ;click  down-arrow for the request ; generate code ; select: shell , curl
+
+gives this output.
+
+[i added :  -i  -v]
+
+
+_____________
+
+
+curl -i  --request DELETE \
+  --url http://pmdsdata4:3003/products/4.json \
+  --header 'content-type: application/json' \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE0ODM2MDY5MDV9.sE5Rpn3Pc7ZeX3cmxWfVtEwKWucVd1w2GEh4UTqrwYg'  
+  
+  > 2017-01-04.txt
+  
+_____________
+
+response
+
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+
+$ curl -i  --request DELETE \
+>   --url http://pmdsdata4:3003/products/2.json \
+>   --header 'content-type: application/json' \
+>   --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE0ODM2MDY5MDV9.sE5Rpn3Pc7ZeX3cmxWfVtEwKWucVd1w2GEh4UTqrwYg'
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    96  100    96    0     0    341      0 --:--:-- --:--:-- --:--:--   341
+
+HTTP/1.1 302 Found
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Location: http://pmdsdata4:3003/products
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache
+X-Request-Id: ee95ac79-3a83-4739-b8bd-2ef3e4c820e5
+X-Runtime: 0.079258
+Server: WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+Date: Wed, 04 Jan 2017 15:13:56 GMT
+Content-Length: 96
+Connection: Keep-Alive
+
+<html><body>You are being <a href="http://pmdsdata4:3003/products">redirected</a>.</body></html>
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$
+
+_____________
+
+
+
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$
+  --url http://pmdsdata4:3003/products/4.json \
+  --header 'content-type: application/json' \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE0ODM2MDY5MDV9.sE5Rpn3Pc7ZeX3cmxWfVtEwKWucVd1w2GEh4UTqrwYg'
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$ curl -i  --request DELETE \
+>   --url http://pmdsdata4:3003/products/4.json \
+>   --header 'content-type: application/json' \
+>   --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE0ODM2MDY5MDV9.sE5Rpn3Pc7ZeX3cmxWfVtEwKWucVd1w2GEh4UTqrwYg'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  
+  HTTP/1.1 204 No Content
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Cache-Control: no-cache
+X-Request-Id: b88a5c77-4ebc-4b0d-b927-15e2ded7401d
+X-Runtime: 0.081349
+Server: WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+Date: Wed, 04 Jan 2017 15:56:26 GMT
+Connection: Keep-Alive
+
+
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$
+
+

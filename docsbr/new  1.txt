@@ -1,0 +1,43 @@
+
+{"user":"a","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODM2MTExNTZ9.FgOrV_w5g80WalB14NNU98PbHpJVPqc-mk1Dxt1n338"}
+
+_____________
+
+
+
+curl -i  --request DELETE \
+  --url http://pmdsdata4:3003/products/4.json \
+  --header 'content-type: application/json' \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODM2MTExNTZ9.FgOrV_w5g80WalB14NNU98PbHpJVPqc-mk1Dxt1n338'  
+
+  ==
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$ curl -i  --request DELETE \
+>   --url http://pmdsdata4:3003/products/4.json \
+>   --header 'content-type: application/json' \
+>   --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODM2MTExNTZ9.FgOrV_w5g80WalB14NNU98PbHpJVPqc-mk1Dxt1n338'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    96  100    96    0     0    323      0 --:--:-- --:--:-- --:--:--   323HTTP/1.1 302 Found
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Location: http://pmdsdata4:3003/products
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache
+X-Request-Id: c3945ddb-9f99-48bf-ac06-2fe9e1caff21
+X-Runtime: 0.094235
+Server: WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+Date: Wed, 04 Jan 2017 16:13:19 GMT
+Content-Length: 96
+Connection: Keep-Alive
+
+<html><body>You are being <a href="http://pmdsdata4:3003/products">redirected</a>.</body></html>
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$
+  
+_____________
+
+  

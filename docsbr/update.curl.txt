@@ -1,0 +1,93 @@
+_____________
+
+
+from insomnia ;click  down-arrow for the request ; generate code ; select: shell , curl
+
+gives this output.
+
+[i added :  -i  -v]
+
+
+_____________
+
+
+2017-01-04_Wed_09.03-AM
+
+curl -i  --request PUT \
+  --url http://pmdsdata4:3003/products/1.json \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODM2MDMxMTd9.Y9tKQFFv07jHV5NuYNVwKczqkn62cA58nco0LiVMv4M' \
+  --header 'content-type: application/json' \
+  --data '{"name":"David9 Linen Keyboard"}'
+  
+_____________
+
+response
+
+2017-01-04_Wed_09.29-AM
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$ curl -i  --request PUT \
+>   --url http://pmdsdata4:3003/products/1.json \
+>   --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODM2MDMxMTd9.Y9tKQFFv07jHV5NuYNVwKczqkn62cA58nco0LiVMv4M' \
+>   --header 'content-type: application/json' \
+>   --data '{"name":"David9 Linen Keyboard"}'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   253  100   221  100    32    708    102 --:--:-- --:--:-- --:--:--   744HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Location: http://pmdsdata4:3003/products/1
+Content-Type: application/json; charset=utf-8
+Etag: W/"fc5cea9913c9a0666ffd398ed1c49ef1"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: becadc34-6cb4-46ca-b08b-8a1c8fece155
+X-Runtime: 0.104221
+Server: WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+Date: Wed, 04 Jan 2017 14:25:40 GMT
+Content-Length: 221
+Connection: Keep-Alive
+
+{"id":1,"name":"David9 Linen Keyboard","pdate":null,"active_status":null,"sort":null,"created_at":"2017-01-03T15:13:00.346-05:00","updated_at":"2017-01-04T09:25:40.449-05:00","url":"http://pmdsdata4:3003/products/1.json"}
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$
+
+
+   
+_____________
+
+response  
+
+2017-01-04a
+
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+$ curl -i  --request PUT \
+>   --url http://pmdsdata4:3003/products/1.json \
+>   --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODM2MDMxMTd9.Y9tKQFFv07jHV5NuYNVwKczqkn62cA58nco0LiVMv4M' \
+>   --header 'content-type: application/json' \
+>   --data '{"name":"David7 Linen Keyboard"}'
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   130  100    98  100    32    348    113 --:--:-- --:--:-- --:--:--   348
+
+HTTP/1.1 302 Found
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Location: http://pmdsdata4:3003/products/1
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache
+X-Request-Id: d550d2e8-9b30-451c-98ea-da7361167dc5
+X-Runtime: 0.070612
+Server: WEBrick/1.3.1 (Ruby/2.3.0/2015-12-25)
+Date: Wed, 04 Jan 2017 14:08:51 GMT
+Content-Length: 98
+Connection: Keep-Alive
+
+<html><body>You are being <a href="http://pmdsdata4:3003/products/1">redirected</a>.</body></html>
+
+dgleba@PMDS-3HZGD42 MINGW64 ~
+

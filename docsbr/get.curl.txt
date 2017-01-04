@@ -11,10 +11,10 @@ _____________
 
 
 curl -i   --request GET \
-  --url http://pmdsdata4:3003/products/2.json \
-  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODM2MDMxMTd9.Y9tKQFFv07jHV5NuYNVwKczqkn62cA58nco0LiVMv4M' \
-  --header 'content-type: application/json' 
-
+  --url http://pmdsdata4:3003/products/4.json \
+  --header 'content-type: application/json' \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODM2MTIyMjN9.2o1JrvdLdYU9TCl4_6FhUwOR2H3V8SNLTR-Hw1WjSb8'  
+  
   
   
   
@@ -32,6 +32,7 @@ $ curl -i   --request GET \
 100   221  100   221    0     0    744      0 --:--:-- --:--:-- --:--:--   744
 
 HTTP/1.1 200 OK
+
 X-Frame-Options: SAMEORIGIN
 X-Xss-Protection: 1; mode=block
 X-Content-Type-Options: nosniff

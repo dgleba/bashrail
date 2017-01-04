@@ -1,0 +1,7 @@
+
+curl -i  --request PUT \
+  --url http://pmdsdata4:3003/products/4.json \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODM2MTIyMjN9.2o1JrvdLdYU9TCl4_6FhUwOR2H3V8SNLTR-Hw1WjSb8'  \
+    --header 'content-type: application/json' \
+  --data '{"name":"David9 Linen Keyboard"}'
+  

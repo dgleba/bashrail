@@ -49,7 +49,10 @@ $ curl -i   --request POST \
 >   --data '{"name":"David6 Linen Keyboard"}'
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100   208  100   176  100    32    564    102 --:--:-- --:--:-- --:--:--   592HTTP/1.1 201 Created
+100   208  100   176  100    32    564    102 --:--:-- --:--:-- --:--:--   592
+
+HTTP/1.1 201 Created
+
 X-Frame-Options: SAMEORIGIN
 X-Xss-Protection: 1; mode=block
 X-Content-Type-Options: nosniff

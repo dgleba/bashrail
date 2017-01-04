@@ -24,7 +24,9 @@ $ curl -i -H "Content-Type: application/json" \
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100   182  100   144  100    38    288     76 --:--:-- --:--:-- --:--:--   288
+
 HTTP/1.1 200 OK
+
 X-Frame-Options: SAMEORIGIN
 X-Xss-Protection: 1; mode=block
 X-Content-Type-Options: nosniff

@@ -12,9 +12,9 @@ _____________
 
 
 curl -i  --request DELETE \
-  --url http://pmdsdata4:3003/products/4.json \
+  --url http://pmdsdata4:3003/products/5.json \
   --header 'content-type: application/json' \
-  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE0ODM2MDY5MDV9.sE5Rpn3Pc7ZeX3cmxWfVtEwKWucVd1w2GEh4UTqrwYg'  
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODM2MTIyMjN9.2o1JrvdLdYU9TCl4_6FhUwOR2H3V8SNLTR-Hw1WjSb8'  
   
   > 2017-01-04.txt
   
@@ -35,6 +35,7 @@ $ curl -i  --request DELETE \
 100    96  100    96    0     0    341      0 --:--:-- --:--:-- --:--:--   341
 
 HTTP/1.1 302 Found
+
 X-Frame-Options: SAMEORIGIN
 X-Xss-Protection: 1; mode=block
 X-Content-Type-Options: nosniff

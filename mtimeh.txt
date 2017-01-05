@@ -79,13 +79,13 @@
 2017-01-04 09:22:41 -0500 | 1483539761 | errors/put/put.txt
 2017-01-04 09:24:36 -0500 | 1483539876 | lib/templates/rails/scaffold_controller/controller.rb
 2017-01-04 09:45:43 -0500 | 1483541143 | 1mk.sh
-2017-01-04 10:04:27 -0500 | 1483542267 | docsbr/create.curl.txt
-2017-01-04 11:04:51 -0500 | 1483545891 | docsbr/delete-notfound.curl.txt
-2017-01-04 11:14:14 -0500 | 1483546454 | docsbr/delete.curl.txt
-2017-01-04 10:21:14 -0500 | 1483543274 | docsbr/get.curl.txt
 2017-01-04 10:08:39 -0500 | 1483542519 | docsbr/log 2017-01-04_Wed_11.08-AM.txt
-2017-01-04 11:13:56 -0500 | 1483546436 | docsbr/new  1.txt
-2017-01-04 09:04:47 -0500 | 1483538687 | docsbr/signin.curl.txt
 2017-01-04 09:32:40 -0500 | 1483540360 | docsbr/signup.curl.txt
-2017-01-04 09:26:40 -0500 | 1483540000 | docsbr/update.curl.txt
 2017-01-04 10:52:40 -0500 | 1483545160 | errors/put/products_controller example 2017-01-04_11.08.50.rb
+2017-01-04 11:41:27 -0500 | 1483548087 | docsbr/create.curl.txt
+2017-01-04 11:41:05 -0500 | 1483548065 | docsbr/delete-notfound.curl.txt
+2017-01-04 11:43:24 -0500 | 1483548204 | docsbr/delete.curl.txt
+2017-01-04 11:41:05 -0500 | 1483548065 | docsbr/get.curl.txt
+2017-01-04 11:41:09 -0500 | 1483548069 | docsbr/log 2017-01-04_Wed_11.08-AM (2).txt
+2017-01-04 11:41:05 -0500 | 1483548065 | docsbr/signin.curl.txt
+2017-01-04 11:41:05 -0500 | 1483548065 | docsbr/update.curl.txt

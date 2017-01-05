@@ -40,7 +40,20 @@ The resulting generated application has both an html interface which you can con
   - try it out.
   - change the files to your liking, turn things on or off, then run it again with a new $appn / project_name on the commandline if you like.
 
+  
+--
 
+  To run the resulting app...
+    - cd project_name
+    - rails s
+    - visit localhost:3000/
+    - login as:
+          - admin:   username = a   password = a
+          - regular: username = r   password = a
+          
+    - to use the api, see bashrail/docsbr/ for tips on how to consume the restful json api
+
+    
 ===
 
 ### Notes..

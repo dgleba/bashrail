@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit d92ba49f70b5d240b62c56b674f84e6b091fe18f
+Author: dgleba <dgleba@gmail.com>
+Date:   Thu Jan 5 14:36:14 2017 -0500
+
+    readme 105
+
 commit 763ced47dfade949c434c71f416071e2508eabc7
 Author: dgleba <dgleba@gmail.com>
 Date:   Wed Jan 4 12:05:00 2017 -0500
@@ -53,9 +59,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Fri Dec 30 11:09:05 2016 -0500
 
     fix vertcal misalignment on top row of index pages
-
-commit 4b2f3ff2f93fca6ba71c95f1e734bca68ff83c33
-Author: David Gleba <dgleba@gmail.com>
-Date:   Thu Dec 29 22:05:22 2016 -0500
-
-    add jwt token auth 2016-12-29

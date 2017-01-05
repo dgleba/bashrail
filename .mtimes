@@ -18,7 +18,6 @@
 1477773827|app/models/role.rb
 1480296298|examples/bashruby-textsubreplace,know.sh
 1480299998|app/helpers/application_helper.rb
-1480348724|applayout1.sh
 1480348556|gemfile1.sh
 1480366686|docs/devise,install,info.txt
 1480033399|docs/rails,reverse,legacydatabase,scaffold,schemadump,yamldb,seed,,etc,know - Copy.txt
@@ -64,7 +63,6 @@
 1483063590|errors/application_controller__2016-12-29_21.05.31.rb
 1483064930|home1.sh
 1483067119|version-last10.txt
-1483114020|bootstrap1.sh
 1483115989|lib/templates/erb/scaffold/index.html.erb
 1483455110|mtimeh.txt
 1483455110|mtimehs.txt
@@ -89,3 +87,5 @@
 1483548065|docsbr/signin.curl.txt
 1483548065|docsbr/update.curl.txt
 1483644708|README.md
+1483650378|applayout1.sh
+1483651100|bootstrap1.sh

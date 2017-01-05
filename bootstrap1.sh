@@ -94,7 +94,7 @@ file1='dg_twitterbootstrap.scss'
 cat << 'HEREDOC' > app/assets/stylesheets/$file1
 
 //# app/assets/stylesheets/dg_twitterbootstrap.scss
-//# eg: C:\var\share203\rail317jwtbr6\app\assets\stylesheets\dg_twitterbootstrap.scss
+//# eg: C:\var\share203\rail_jwtbr\app\assets\stylesheets\dg_twitterbootstrap.scss
 
 // bootstrap components have different heights
 // https://scotch.io/bar-talk/different-tricks-on-how-to-make-bootstrap-columns-all-the-same-height

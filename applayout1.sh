@@ -37,7 +37,7 @@ cat << 'HEREDOC' > app/views/layouts/$file2
     <meta charset="utf-8">
       <meta content="IE=edge" http-equiv="X-UA-Compatible">
         <meta content="width=device-width, initial-scale=1" name="viewport">
-          <title>rail263</title>
+          <title><%= Rails.application.class.parent_name %></title>
           <%= stylesheet_link_tag    'application', media: 'all' %>
           <%= javascript_include_tag 'application' %>
           <%= csrf_meta_tags %>

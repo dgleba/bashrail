@@ -1,0 +1,269 @@
+From d937fb629c4857b0471229fbad3d1620b078a165 Mon Sep 17 00:00:00 2001
+From: David Gleba <dgleba@gmail.com>
+Date: Thu, 19 Jan 2017 23:11:18 -0500
+Subject: add a column - country_of_origin.
+
+
++1484884233|app/controllers/products_controller.rb
++1484884233|app/models/product.rb
++1484884233|app/views/products/_form.html.erb
++1484884234|app/views/products/_product.json.jbuilder
++1484884233|app/views/products/index.html.erb
++1484884233|app/views/products/show.html.erb
++1484884233|backup/50161230223303_create_products.rb
++1484885040|db/migrate/50161230223303_add_country_of_origin_to_products.rb
++1484884233|test/controllers/products_controller_test.rb
++1484884233|test/fixtures/products.yml
+
+
+
+diff --git a/app/controllers/products_controller.rb b/app/controllers/products_controller.rb
+index 41ff56a..00a5ab4 100644
+--- a/app/controllers/products_controller.rb
++++ b/app/controllers/products_controller.rb
+@@ -85,6 +85,6 @@ class ProductsController < ApplicationController
+ 
+     # Only allow a trusted parameter "white list" through.
+     def product_params
+-      params.require(:product).permit(:name, :pdate, :active_status, :sort, :pfeature_ids=> [])
++      params.require(:product).permit(:name, :country_of_origin_id, :pdate, :active_status, :sort)
+     end
+ end
+ 
+ 
+diff --git a/app/models/product.rb b/app/models/product.rb
+index 53979be..4739b22 100644
+--- a/app/models/product.rb
++++ b/app/models/product.rb
+@@ -1,5 +1,3 @@
+ class Product < ActiveRecord::Base
+-has_many :product_feature
+-  has_many :pfeature, through: :product_feature
+-
++  belongs_to :country_of_origin
+ end
+ 
+ 
+diff --git a/app/views/products/_form.html.erb b/app/views/products/_form.html.erb
+index b255bb7..cc73df4 100644
+--- a/app/views/products/_form.html.erb
++++ b/app/views/products/_form.html.erb
+@@ -3,7 +3,7 @@
+ 
+   <div class="form-inputs">
+     <%= f.input :name %>
+-<%= f.association :pfeature %>
++    <%= f.association :country_of_origin %>
+     <%= f.input :pdate %>
+     <%= f.input :active_status %>
+     <%= f.input :sort %>
+     
+     
+diff --git a/app/views/products/_product.json.jbuilder b/app/views/products/_product.json.jbuilder
+index abf0d46..02eb55a 100644
+--- a/app/views/products/_product.json.jbuilder
++++ b/app/views/products/_product.json.jbuilder
+@@ -1,2 +1,2 @@
+-json.extract! product, :id, :name, :pdate, :active_status, :sort, :created_at, :updated_at
++json.extract! product, :id, :name, :country_of_origin_id, :pdate, :active_status, :sort, :created_at, :updated_at
+ json.url product_url(product, format: :json)
+\ No newline at end of file
+
+
+diff --git a/app/views/products/index.html.erb b/app/views/products/index.html.erb
+index b482287..996abb4 100644
+--- a/app/views/products/index.html.erb
++++ b/app/views/products/index.html.erb
+@@ -37,6 +37,7 @@
+   <thead>
+     <tr>
+       <th>Name</th>
++      <th>Country of origin</th>
+       <th>Pdate</th>
+       <th>Active status</th>
+       <th>Sort</th>
+@@ -48,6 +49,7 @@
+     <% @products.each do |product| %>
+       <tr>
+         <td><%= product.name %></td>
++        <td><%= product.country_of_origin %></td>
+         <td><%= product.pdate %></td>
+         <td><%= product.active_status %></td>
+         <td><%= product.sort %></td>
+         
+         
+diff --git a/app/views/products/show.html.erb b/app/views/products/show.html.erb
+index 775b105..b4e8081 100644
+--- a/app/views/products/show.html.erb
++++ b/app/views/products/show.html.erb
+@@ -6,6 +6,11 @@
+ </p>
+ 
+ <p>
++  <strong>Country of origin:</strong>
++  <%= @product.country_of_origin %>
++</p>
++
++<p>
+   <strong>Pdate:</strong>
+   <%= @product.pdate %>
+ </p>
+@@ -20,11 +25,5 @@
+   <%= @product.sort %>
+ </p>
+ 
+-<p>
+-<% @product.pfeature.each do |v1| %>
+-    <%= link_to v1.name, v1 %>
+-<% end %>
+-</p>
+-
+ <%= link_to 'Edit', edit_product_path(@product) %> |
+ <%= link_to 'Back', products_path %>
+ 
+ 
+diff --git a/backup/50161230223303_create_products.rb b/backup/50161230223303_create_products.rb
+new file mode 100644
+index 0000000..63a61cd
+--- /dev/null
++++ b/backup/50161230223303_create_products.rb
+@@ -0,0 +1,13 @@
++class CreateProducts < ActiveRecord::Migration
++  def change
++    create_table :products do |t|
++      t.string :name
++      t.references :country_of_origin, index: true, foreign_key: true
++      t.datetime :pdate
++      t.integer :active_status
++      t.integer :sort
++
++      t.timestamps null: false
++    end
++  end
++end
+
+
+diff --git a/db/development.sqlite3 b/db/development.sqlite3
+index 13cf9a8..32e98cd 100644
+Binary files a/db/development.sqlite3 and b/db/development.sqlite3 differ
+
+
+diff --git a/db/migrate/20170104174742_create_products.rb b/db/migrate/20170104174742_create_products.rb
+deleted file mode 100644
+index 674dd3c..0000000
+
+--- a/db/migrate/20170104174742_create_products.rb
++++ /dev/null
+@@ -1,12 +0,0 @@
+-class CreateProducts < ActiveRecord::Migration
+-  def change
+-    create_table :products do |t|
+-      t.string :name
+-      t.datetime :pdate
+-      t.integer :active_status
+-      t.integer :sort
+-
+-      t.timestamps null: false
+-    end
+-  end
+-end
+
+
+diff --git a/db/migrate/50161230223303_add_country_of_origin_to_products.rb b/db/migrate/50161230223303_add_country_of_origin_to_products.rb
+new file mode 100644
+index 0000000..47eecd9
+--- /dev/null
++++ b/db/migrate/50161230223303_add_country_of_origin_to_products.rb
+@@ -0,0 +1,5 @@
++class AddCountryOfOriginToProducts < ActiveRecord::Migration
++  def change
++    add_reference :products, :country_of_origin, index: true, foreign_key: true
++  end
++end
+
+
+diff --git a/db/schema.rb b/db/schema.rb
+index b09688c..a293133 100644
+--- a/db/schema.rb
++++ b/db/schema.rb
+@@ -11,7 +11,16 @@
+ #
+ # It's strongly recommended that you check this file into your version control system.
+ 
+-ActiveRecord::Schema.define(version: 50161230223301) do
++ActiveRecord::Schema.define(version: 50161230223303) do
++
++  create_table "country_of_origins", force: :cascade do |t|
++    t.string   "name"
++    t.datetime "fdate"
++    t.integer  "active_status"
++    t.integer  "sort"
++    t.datetime "created_at",    null: false
++    t.datetime "updated_at",    null: false
++  end
+ 
+   create_table "pfeatures", force: :cascade do |t|
+     t.string   "name"
+@@ -40,10 +49,13 @@ ActiveRecord::Schema.define(version: 50161230223301) do
+     t.datetime "pdate"
+     t.integer  "active_status"
+     t.integer  "sort"
+-    t.datetime "created_at",    null: false
+-    t.datetime "updated_at",    null: false
++    t.datetime "created_at",           null: false
++    t.datetime "updated_at",           null: false
++    t.integer  "country_of_origin_id"
+   end
+ 
++  add_index "products", ["country_of_origin_id"], name: "index_rr4_products_on_country_of_origin_id"
++
+   create_table "roles", force: :cascade do |t|
+     t.string   "name"
+     t.string   "description"
+
+diff --git a/test/controllers/products_controller_test.rb b/test/controllers/products_controller_test.rb
+index fb2a807..fe04b98 100644
+--- a/test/controllers/products_controller_test.rb
++++ b/test/controllers/products_controller_test.rb
+@@ -18,7 +18,7 @@ class ProductsControllerTest < ActionController::TestCase
+ 
+   test "should create product" do
+     assert_difference('Product.count') do
+-      post :create, product: { active_status: @product.active_status, name: @product.name, pdate: @product.pdate, sort: @product.sort }
++      post :create, product: { active_status: @product.active_status, country_of_origin_id: @product.country_of_origin_id, name: @product.name, pdate: @product.pdate, sort: @product.sort }
+     end
+ 
+     assert_redirected_to product_path(assigns(:product))
+@@ -35,7 +35,7 @@ class ProductsControllerTest < ActionController::TestCase
+   end
+ 
+   test "should update product" do
+-    patch :update, id: @product, product: { active_status: @product.active_status, name: @product.name, pdate: @product.pdate, sort: @product.sort }
++    patch :update, id: @product, product: { active_status: @product.active_status, country_of_origin_id: @product.country_of_origin_id, name: @product.name, pdate: @product.pdate, sort: @product.sort }
+     assert_redirected_to product_path(assigns(:product))
+   end
+ 
+
+ diff --git a/test/fixtures/products.yml b/test/fixtures/products.yml
+index 968bee6..4023fe4 100644
+--- a/test/fixtures/products.yml
++++ b/test/fixtures/products.yml
+@@ -2,12 +2,14 @@
+ 
+ one:
+   name: MyString
+-  pdate: 2017-01-04 12:47:42
++  country_of_origin_id: 
++  pdate: 2017-01-19 22:50:35
+   active_status: 1
+   sort: 1
+ 
+ two:
+   name: MyString
+-  pdate: 2017-01-04 12:47:42
++  country_of_origin_id: 
++  pdate: 2017-01-19 22:50:35
+   active_status: 1
+   sort: 1
+
+   

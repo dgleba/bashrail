@@ -61,8 +61,6 @@
 1483066860|docsbr/api-responses.txt
 1483054152|docsbr/example,rails,routes.html
 1483063590|errors/application_controller__2016-12-29_21.05.31.rb
-1483064930|home1.sh
-1483067119|version-last10.txt
 1483115989|lib/templates/erb/scaffold/index.html.erb
 1483455110|mtimeh.txt
 1483455110|mtimehs.txt
@@ -75,7 +73,6 @@
 1483539433|errors/put/products_controller__2017-01-04_09.24.50.rb
 1483539761|errors/put/put.txt
 1483539876|lib/templates/rails/scaffold_controller/controller.rb
-1483541143|1mk.sh
 1483542519|docsbr/log 2017-01-04_Wed_11.08-AM.txt
 1483540360|docsbr/signup.curl.txt
 1483545160|errors/put/products_controller example 2017-01-04_11.08.50.rb
@@ -89,3 +86,7 @@
 1483644708|README.md
 1483650378|applayout1.sh
 1483651100|bootstrap1.sh
+1484886192|1mk.sh
+1484885840|docs/howtoaddacolumn.txt
+1484888104|home1.sh
+1484888153|version-last10.txt

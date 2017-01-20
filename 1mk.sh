@@ -109,7 +109,7 @@ pwd
 
   source $sfil2/gemfile1.sh
 
-  source $sfil2/tableprefix1.sh  # optional
+  # source $sfil2/tableprefix1.sh  # optional
 
   source $sfil2/home1.sh  #
 
@@ -142,13 +142,26 @@ pwd
 ### scaffold... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-
-rails g scaffold Product name  pdate:datetime active_status:integer sort:integer -f
+rails g scaffold CountryOfOrigin name fdate:datetime active_status:integer sort:integer -f
 
 rails g scaffold Pfeature name fdate:datetime active_status:integer sort:integer -f
 
 rails g scaffold ProductFeature name  product:references pfeature:references active_status:integer sort:integer -f
 
+rails g scaffold Product name country_of_origin:references pdate:datetime active_status:integer sort:integer -f
+
+
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# How to add a column..
+# http://stackoverflow.com/questions/22815009/add-a-reference-column-migration-in-rails-4
+# rails g migration AddUserToUploads user:references
+
+# rails g migration AddCountryOfOriginToProducts country_of_origin:references
+
+# See howtoaddacolumn.txt in docs/
+
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 sleep 1
@@ -209,6 +222,9 @@ namespace :db do
     require 'faker'
     Product.populate 11 do |a12|
       a12.name     = Faker::Commerce.product_name
+    end
+    CountryOfOrigin.populate 99 do |a12|
+      a12.name     = Faker::Address.country
     end
     Pfeature.populate 9 do |a12|
       a12.name     = Faker::Commerce.color

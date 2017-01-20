@@ -15,6 +15,7 @@ line1='  root "home#index"'
 sed -i "0,/$pattern1/a \ \n$line1\n\n" config/routes.rb
 
 
+
 cat << 'HEREDOC' >> app/views/home/index.html.erb
 
 <h3> 1.   </h3>
@@ -26,7 +27,21 @@ cat << 'HEREDOC' >> app/views/home/index.html.erb
 
 Use /radmin to access the rails admin tool if it is setup.
 
-<br><br><br>
+<h3> 3.   </h3>
+
+<%# this not working.. = link_to(:url =>"http://#{request.host}/pfeatures", :text => 'Pfeatures list') %>
+<%# = link_to(:url =>"http://localhost:3001/pfeatures", :text => "pfeatures list") %>
+
+<%= link_to 'Pfeatures', pfeatures_path %>
+<br>
+<br>
+<%= link_to 'Country of Origin list', country_of_origins_path %>
+<br>
+<br>
+<%= link_to 'Product_features join table', product_features_path %>
+<br>
+<br>
+
 <hr>
 <%= Rails.env %>
 

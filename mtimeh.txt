@@ -18,7 +18,6 @@
 2016-10-29 16:43:47 -0400 | 1477773827 | app/models/role.rb
 2016-11-27 20:24:58 -0500 | 1480296298 | examples/bashruby-textsubreplace,know.sh
 2016-11-27 21:26:38 -0500 | 1480299998 | app/helpers/application_helper.rb
-2016-11-28 10:58:44 -0500 | 1480348724 | applayout1.sh
 2016-11-28 10:55:56 -0500 | 1480348556 | gemfile1.sh
 2016-11-28 15:58:06 -0500 | 1480366686 | docs/devise,install,info.txt
 2016-11-24 19:23:19 -0500 | 1480033399 | docs/rails,reverse,legacydatabase,scaffold,schemadump,yamldb,seed,,etc,know - Copy.txt
@@ -64,7 +63,6 @@
 2016-12-29 21:06:30 -0500 | 1483063590 | errors/application_controller__2016-12-29_21.05.31.rb
 2016-12-29 21:28:50 -0500 | 1483064930 | home1.sh
 2016-12-29 22:05:19 -0500 | 1483067119 | version-last10.txt
-2016-12-30 11:07:00 -0500 | 1483114020 | bootstrap1.sh
 2016-12-30 11:39:49 -0500 | 1483115989 | lib/templates/erb/scaffold/index.html.erb
 2017-01-03 09:51:50 -0500 | 1483455110 | mtimeh.txt
 2017-01-03 09:51:50 -0500 | 1483455110 | mtimehs.txt
@@ -89,3 +87,5 @@
 2017-01-04 11:41:05 -0500 | 1483548065 | docsbr/signin.curl.txt
 2017-01-04 11:41:05 -0500 | 1483548065 | docsbr/update.curl.txt
 2017-01-05 14:31:48 -0500 | 1483644708 | README.md
+2017-01-05 16:06:18 -0500 | 1483650378 | applayout1.sh
+2017-01-05 16:18:20 -0500 | 1483651100 | bootstrap1.sh

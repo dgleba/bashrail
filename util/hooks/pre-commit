@@ -1,12 +1,15 @@
 #!/bin/bash
 
+ cp -rfp util/hooks/* .git/hooks
+ chmod +x util/hook.sh
+ 
   cat .mtimes |  ruby util/mtimeh.rb  > mtimeh.txt
   sort -r mtimeh.txt   > mtimehs.txt
     sleep 1
 
   # git add .mtimes mtimeh.txt mtimehs.txt
 
-  cp -rfp util/hooks/* .git/hooks
+  # cp -rfp util/hooks/* .git/hooks
 
 
   util/version.sh

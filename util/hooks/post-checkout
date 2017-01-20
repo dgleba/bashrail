@@ -1,9 +1,10 @@
 #!/bin/bash
 
-mtimestore -r
-
-#git update-index --refresh #causes some problems under windows tortoise git
-
-  cp -rfp util/hooks/* .git/hooks
+ cp -rfp util/hooks/* .git/hooks
+ chmod +x util/hook.sh
  
-  git log  -n 10 > version-last10.txt
+ mtimestore -r
+
+ #git update-index --refresh #causes some problems under windows tortoise git
+ 
+ git log  -n 10 > version-last10.txt

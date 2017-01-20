@@ -9,7 +9,6 @@
 1472772017|lib/templates/erb/scaffold/show.html.erb
 1479656172|lib/templates/rails/scaffold_controller/origbak/controller.rb
 1479865384|thor/t1.rb
-1480180177|util/hooks/pre-commit
 1480261984|devise2thor.rb
 1480262908|examples/examples,not,working
 1480268197|thor/thor2.rb
@@ -25,8 +24,6 @@
 1480384633|Gemfile.lock
 1479581879|examples/version-v1.sh
 1480371895|examples/version__2016-11-29_17.33.11.sh
-1480458977|util/hooks/post-checkout
-1480459011|util/hooks/pre-push
 1480459100|util/version.sh
 1480459576|version-log.txt
 1480459575|version.txt
@@ -61,9 +58,6 @@
 1483066860|docsbr/api-responses.txt
 1483054152|docsbr/example,rails,routes.html
 1483063590|errors/application_controller__2016-12-29_21.05.31.rb
-1483115989|lib/templates/erb/scaffold/index.html.erb
-1483455110|mtimeh.txt
-1483455110|mtimehs.txt
 1483449593|root/.gitignore
 1483374401|util/hook.sh
 1483467356|todo.txt
@@ -87,6 +81,12 @@
 1483650378|applayout1.sh
 1483651100|bootstrap1.sh
 1484886192|1mk.sh
-1484885840|docs/howtoaddacolumn.txt
 1484888104|home1.sh
 1484888153|version-last10.txt
+1484940280|docs/howtoaddacolumn-railsknow.txt
+1484947175|lib/templates/erb/scaffold/index.html.erb
+1484947703|mtimeh.txt
+1484947703|mtimehs.txt
+1480458977|util/hooks/post-checkout
+1480180177|util/hooks/pre-commit
+1480459011|util/hooks/pre-push

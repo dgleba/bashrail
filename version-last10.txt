@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit c3b06488e7f67cdc0191d457b306bfcadd59ee8c
+Author: dgleba <dgleba@gmail.com>
+Date:   Fri Jan 20 16:32:11 2017 -0500
+
+    change index template
+
 commit d1d150880620476ae082d5a486731f48ef2ae910
 Author: David Gleba <dgleba@gmail.com>
 Date:   Thu Jan 19 23:55:56 2017 -0500
@@ -53,9 +59,3 @@ Author: dgleba <dgleba@gmail.com>
 Date:   Tue Jan 3 14:20:34 2017 -0500
 
     docs 2017-01-03_Tue_14.20-PM
-
-commit 59ba28f4cd7f81336aeb5f925c08eb3153dafb46
-Author: dgleba <dgleba@gmail.com>
-Date:   Tue Jan 3 09:54:58 2017 -0500
-
-    more docs 2017-01-03

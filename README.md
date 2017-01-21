@@ -43,15 +43,15 @@ The resulting generated application has both an html interface which you can con
   
 --
 
-  To run the resulting app...
-    - cd project_name
-    - rails s
-    - visit localhost:3000/
-    - login as:
-          - admin:   username = a   password = a
-          - regular: username = r   password = a
-          
-    - to use the api, see bashrail/docsbr/ for tips on how to consume the restful json api
+ To run the resulting app...  
+  - cd project_name  
+  - rails s  
+  - visit localhost:3000/  
+  - login as:  
+        - admin:   username = a   password = a  
+        - regular: username = r   password = a  
+            
+  - to use the api, see bashrail/docsbr/ for tips on how to consume the restful json api    
 
     
 ===

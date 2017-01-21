@@ -24,7 +24,6 @@
 1480384633|Gemfile.lock
 1479581879|examples/version-v1.sh
 1480371895|examples/version__2016-11-29_17.33.11.sh
-1480459100|util/version.sh
 1480459576|version-log.txt
 1480459575|version.txt
 1480615328|.gitignore
@@ -77,16 +76,17 @@
 1483548069|docsbr/log 2017-01-04_Wed_11.08-AM (2).txt
 1483548065|docsbr/signin.curl.txt
 1483548065|docsbr/update.curl.txt
-1483644708|README.md
 1483650378|applayout1.sh
 1483651100|bootstrap1.sh
 1484886192|1mk.sh
 1484888104|home1.sh
-1484888153|version-last10.txt
-1484940280|docs/howtoaddacolumn-railsknow.txt
 1484947175|lib/templates/erb/scaffold/index.html.erb
 1484947703|mtimeh.txt
 1484947703|mtimehs.txt
 1480458977|util/hooks/post-checkout
 1480180177|util/hooks/pre-commit
 1480459011|util/hooks/pre-push
+1484969196|README.md
+1484966291|docs/howtoaddacolumn-railsknow.txt
+1484957040|util/version.sh
+1484969389|version-last10.txt

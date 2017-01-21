@@ -1,3 +1,22 @@
+
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+rails g scaffold CountryOfOrigin name fdate:datetime active_status:integer sort:integer -f
+
+rails g scaffold Product name country_of_origin:references pdate:datetime active_status:integer sort:integer -f
+
+
+# How to add a column..
+# http://stackoverflow.com/questions/22815009/add-a-reference-column-migration-in-rails-4
+# rails g migration AddUserToUploads user:references
+
+# rails g migration AddCountryOfOriginToProducts country_of_origin:references
+
+# See howtoaddacolumn.txt in docs/
+
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 From d937fb629c4857b0471229fbad3d1620b078a165 Mon Sep 17 00:00:00 2001
 From: David Gleba <dgleba@gmail.com>
 Date: Thu, 19 Jan 2017 23:11:18 -0500

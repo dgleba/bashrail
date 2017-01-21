@@ -43,7 +43,7 @@ git remote show origin>> $file3
 # shorten the file by deleting some lines at the beginning of the file..
 numlines=$(cat $file3 | wc -l )
 #echo $numlines
-if [ $numlines -gt 2500 ]; then
+if [ $numlines -gt 999 ]; then
   #echo 'morethan 2500';
   # delete first 41 lines..
   sed -i  1,41d $vfile1

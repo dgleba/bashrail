@@ -22,8 +22,6 @@
 1480033399|docs/rails,reverse,legacydatabase,scaffold,schemadump,yamldb,seed,,etc,know - Copy.txt
 1479581879|examples/version-v1.sh
 1480371895|examples/version__2016-11-29_17.33.11.sh
-1480459576|version-log.txt
-1480459575|version.txt
 1480615328|.gitignore
 1480721018|devise1.sh
 1480563419|errors/err.txt
@@ -77,17 +75,20 @@
 1484886192|1mk.sh
 1484888104|home1.sh
 1484947175|lib/templates/erb/scaffold/index.html.erb
-1484947703|mtimeh.txt
-1484947703|mtimehs.txt
 1480458977|util/hooks/post-checkout
 1480180177|util/hooks/pre-commit
 1480459011|util/hooks/pre-push
 1484969196|README.md
 1484966291|docs/howtoaddacolumn-railsknow.txt
 1484957040|util/version.sh
-1484969389|version-last10.txt
 1485918694|Gemfile
 1485918696|Gemfile.lock
 1485910589|devisejwt.sh
 1484885040|docs/50161230223303_add_country_of_origin_to_products.rb
 1483053668|docsbr/api-reference_articles-I-used-for-jwt.txt
+1485918708|app/assets/javascripts/rails_admin/custom/ui.js
+1485918710|mtimeh.txt
+1485918710|mtimehs.txt
+1485918711|version-last10.txt
+1485918711|version-log.txt
+1485918711|version.txt

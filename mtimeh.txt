@@ -20,8 +20,6 @@
 2016-11-28 10:55:56 -0500 | 1480348556 | gemfile1.sh
 2016-11-28 15:58:06 -0500 | 1480366686 | docs/devise,install,info.txt
 2016-11-24 19:23:19 -0500 | 1480033399 | docs/rails,reverse,legacydatabase,scaffold,schemadump,yamldb,seed,,etc,know - Copy.txt
-2016-11-28 20:57:13 -0500 | 1480384633 | Gemfile
-2016-11-28 20:57:13 -0500 | 1480384633 | Gemfile.lock
 2016-11-19 13:57:59 -0500 | 1479581879 | examples/version-v1.sh
 2016-11-28 17:24:55 -0500 | 1480371895 | examples/version__2016-11-29_17.33.11.sh
 2016-11-29 17:46:16 -0500 | 1480459576 | version-log.txt
@@ -50,8 +48,6 @@
 2016-12-26 21:49:06 -0500 | 1482806946 | config/initializers/core/extensions/devise/strategies/json_web_token.rb
 2016-12-29 15:26:59 -0500 | 1483043219 | config/secrets.yml
 2016-12-29 19:42:38 -0500 | 1483058558 | db/migrate/50161230223301_change_users_role_id_default.rb
-2016-12-29 21:22:04 -0500 | 1483064524 | devisejwt.sh
-2016-12-29 18:21:08 -0500 | 1483053668 | docsbr/api-reference.txt
 2016-12-29 20:29:09 -0500 | 1483061349 | docsbr/api-requests,curl,signin,etc.txt
 2016-12-27 11:55:08 -0500 | 1482857708 | docsbr/api-requests-examples-insomnia-2016-12-27.json
 2016-12-29 22:01:00 -0500 | 1483066860 | docsbr/api-responses.txt
@@ -90,3 +86,8 @@
 2017-01-20 21:38:11 -0500 | 1484966291 | docs/howtoaddacolumn-railsknow.txt
 2017-01-20 19:04:00 -0500 | 1484957040 | util/version.sh
 2017-01-20 22:29:49 -0500 | 1484969389 | version-last10.txt
+2017-01-31 22:11:34 -0500 | 1485918694 | Gemfile
+2017-01-31 22:11:36 -0500 | 1485918696 | Gemfile.lock
+2017-01-31 19:56:29 -0500 | 1485910589 | devisejwt.sh
+2017-01-19 23:04:00 -0500 | 1484885040 | docs/50161230223303_add_country_of_origin_to_products.rb
+2016-12-29 18:21:08 -0500 | 1483053668 | docsbr/api-reference_articles-I-used-for-jwt.txt

@@ -20,8 +20,6 @@
 1480348556|gemfile1.sh
 1480366686|docs/devise,install,info.txt
 1480033399|docs/rails,reverse,legacydatabase,scaffold,schemadump,yamldb,seed,,etc,know - Copy.txt
-1480384633|Gemfile
-1480384633|Gemfile.lock
 1479581879|examples/version-v1.sh
 1480371895|examples/version__2016-11-29_17.33.11.sh
 1480459576|version-log.txt
@@ -50,8 +48,6 @@
 1482806946|config/initializers/core/extensions/devise/strategies/json_web_token.rb
 1483043219|config/secrets.yml
 1483058558|db/migrate/50161230223301_change_users_role_id_default.rb
-1483064524|devisejwt.sh
-1483053668|docsbr/api-reference.txt
 1483061349|docsbr/api-requests,curl,signin,etc.txt
 1482857708|docsbr/api-requests-examples-insomnia-2016-12-27.json
 1483066860|docsbr/api-responses.txt
@@ -90,3 +86,8 @@
 1484966291|docs/howtoaddacolumn-railsknow.txt
 1484957040|util/version.sh
 1484969389|version-last10.txt
+1485918694|Gemfile
+1485918696|Gemfile.lock
+1485910589|devisejwt.sh
+1484885040|docs/50161230223303_add_country_of_origin_to_products.rb
+1483053668|docsbr/api-reference_articles-I-used-for-jwt.txt

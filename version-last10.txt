@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit f870b67ec071caa1fefaada65e5d730f93660649
+Author: David Gleba <dgleba@gmail.com>
+Date:   Fri Jan 20 22:29:53 2017 -0500
+
+    docs 2017-01-20
+
 commit c3b06488e7f67cdc0191d457b306bfcadd59ee8c
 Author: dgleba <dgleba@gmail.com>
 Date:   Fri Jan 20 16:32:11 2017 -0500
@@ -53,9 +59,3 @@ Author: dgleba <dgleba@gmail.com>
 Date:   Tue Jan 3 15:22:15 2017 -0500
 
     modify controller template
-
-commit e9d4aac8b0a3593c26412af2afc9668db99f2290
-Author: dgleba <dgleba@gmail.com>
-Date:   Tue Jan 3 14:20:34 2017 -0500
-
-    docs 2017-01-03_Tue_14.20-PM

@@ -207,7 +207,7 @@ cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 
 sleep 1
 
-# comment out line if matches patrn and add line2 after that line...
+# comment out line if matches patrn and insert repl2 before that line...
 
 filetarg='app/controllers/application_controller.rb'
 r1tmp="/tmp/_temprubyrunner_${USER}.rb"

@@ -57,7 +57,7 @@ The resulting generated application has both an html interface which you can con
 
 Images:
   
-    ![List View](docs/images/list-main.png?raw=true "List view")
+![List View](docs/images/list-main.png?raw=true "List view")
     
     
     Check out more images in  docs/images  folder...

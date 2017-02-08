@@ -1,8 +1,10 @@
+2017-02-07 21:11:56 -0500 | 1486519916 | README.md
 2017-02-07 20:41:58 -0500 | 1486518118 | docs/images/list-support-table.png
 2017-02-07 20:41:08 -0500 | 1486518068 | docs/images/home.png
 2017-02-07 20:40:42 -0500 | 1486518042 | docs/images/datepicker.png
 2017-02-07 20:40:24 -0500 | 1486518024 | docs/images/select2-multiple-manytomany.png
 2017-02-07 20:39:39 -0500 | 1486517979 | docs/images/list-main.png
+2017-02-07 20:39:16 -0500 | 1486517956 | docs/images/login.png
 2017-01-31 22:11:51 -0500 | 1485918711 | version.txt
 2017-01-31 22:11:51 -0500 | 1485918711 | version-log.txt
 2017-01-31 22:11:51 -0500 | 1485918711 | version-last10.txt
@@ -12,7 +14,6 @@
 2017-01-31 22:11:36 -0500 | 1485918696 | Gemfile.lock
 2017-01-31 22:11:34 -0500 | 1485918694 | Gemfile
 2017-01-31 19:56:29 -0500 | 1485910589 | devisejwt.sh
-2017-01-20 22:26:36 -0500 | 1484969196 | README.md
 2017-01-20 21:38:11 -0500 | 1484966291 | docs/howtoaddacolumn-railsknow.txt
 2017-01-20 19:04:00 -0500 | 1484957040 | util/version.sh
 2017-01-20 16:19:35 -0500 | 1484947175 | lib/templates/erb/scaffold/index.html.erb

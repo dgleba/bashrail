@@ -55,24 +55,24 @@ The resulting generated application has both an html interface which you can con
 
 ===
 
-Images:
+# Images:
   
-<img src="docs/images/list-main.png" width="150">
+<img src="docs/images/list-main.png" width="300">
 
  - - -
 
- ![Imagez](docs/images/login.png "Image")
- 
- - - -
-
-![Imagez](docs/images/select2-multiple-manytomany.png?raw=true "Image")
+ <img src="docs/images/login.png" width="300">
 
  - - -
 
-![Imagez](docs/images/home.png?raw=true "Image")
+<img src="docs/images/select2-multiple-manytomany.png" width="300">
+
+ - - -
+
+<img src="docs/images/home.png" width="300">
 
     
-    Check out more images in  docs/images  folder...
+    Check out more images in  `docs/images`  folder...
     
     
 ===

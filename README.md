@@ -57,19 +57,19 @@ The resulting generated application has both an html interface which you can con
 
 Images:
   
-![List View](docs/images/list-main.png?raw=true "List view")
+![Imagez](docs/images/list-main.png "List view")
 
  - - -
 
- ![Image](docs/images/login.png?raw=true "Image")
+ ![Imagez](docs/images/login.png "Image")
  
  - - -
 
-![Image](docs/images/select2-multiple-manytomany.png?raw=true "Image")
+![Imagez](docs/images/select2-multiple-manytomany.png?raw=true "Image")
 
  - - -
 
-![Image](docs/images/home.png?raw=true "Image")
+![Imagez](docs/images/home.png?raw=true "Image")
 
     
     Check out more images in  docs/images  folder...
@@ -87,4 +87,7 @@ ref..
 
 ===
 
-
+img[alt="Image"] { 
+  max-width:  120px; 
+  display: block;
+}

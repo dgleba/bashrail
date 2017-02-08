@@ -57,19 +57,19 @@ The resulting generated application has both an html interface which you can con
 
 # Images:
   
-<img src="docs/images/list-main.png" width="300">
+<img src="docs/images/list-main.png" width="400">
 
  - - -
 
- <img src="docs/images/login.png" width="300">
+ <img src="docs/images/login.png" width="400">
 
  - - -
 
-<img src="docs/images/select2-multiple-manytomany.png" width="300">
+<img src="docs/images/select2-multiple-manytomany.png" width="400">
 
  - - -
 
-<img src="docs/images/home.png" width="300">
+<img src="docs/images/home.png" width="400">
 
     
     Check out more images in  `docs/images`  folder...

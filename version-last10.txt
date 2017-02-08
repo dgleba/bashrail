@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 063a39e0fe4eb1fc310c4a7edd1a785184238854
+Author: David Gleba <dgleba@gmail.com>
+Date:   Tue Feb 7 21:13:29 2017 -0500
+
+    fix
+
 commit 1bec4b357826750f889f0a43c5f7dfdce10b80ca
 Author: David Gleba <dgleba@gmail.com>
 Date:   Tue Feb 7 21:12:18 2017 -0500
@@ -53,9 +59,3 @@ Author: dgleba <dgleba@gmail.com>
 Date:   Thu Jan 5 14:36:14 2017 -0500
 
     readme 105
-
-commit 763ced47dfade949c434c71f416071e2508eabc7
-Author: dgleba <dgleba@gmail.com>
-Date:   Wed Jan 4 12:05:00 2017 -0500
-
-    docs 2017-01-04_Wed_12.04-PM

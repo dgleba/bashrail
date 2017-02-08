@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit f4bfa358e041406292c7b43182a24aa16ded0f61
+Author: David Gleba <dgleba@gmail.com>
+Date:   Tue Feb 7 20:48:28 2017 -0500
+
+    add images
+
 commit 477ff95374b0911ea06292f550fb02c773596705
 Author: David Gleba <dgleba@gmail.com>
 Date:   Tue Jan 31 22:11:49 2017 -0500
@@ -53,9 +59,3 @@ Author: dgleba <dgleba@gmail.com>
 Date:   Wed Jan 4 11:23:00 2017 -0500
 
     changes for delete
-
-commit 20e104065b7d12391955110d81b0d5052c53d5ab
-Author: dgleba <dgleba@gmail.com>
-Date:   Wed Jan 4 09:32:21 2017 -0500
-
-    update for json response - contoller put

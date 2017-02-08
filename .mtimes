@@ -78,7 +78,6 @@
 1480458977|util/hooks/post-checkout
 1480180177|util/hooks/pre-commit
 1480459011|util/hooks/pre-push
-1484969196|README.md
 1484966291|docs/howtoaddacolumn-railsknow.txt
 1484957040|util/version.sh
 1485918694|Gemfile
@@ -97,3 +96,5 @@
 1486517979|docs/images/list-main.png
 1486518118|docs/images/list-support-table.png
 1486518024|docs/images/select2-multiple-manytomany.png
+1486519916|README.md
+1486517956|docs/images/login.png

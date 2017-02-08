@@ -57,7 +57,7 @@ The resulting generated application has both an html interface which you can con
 
 Images:
   
-![Imagez](docs/images/list-main.png "List view")
+<img src="docs/images/list-main.png" width="150">
 
  - - -
 
@@ -87,7 +87,4 @@ ref..
 
 ===
 
-img[alt="Image"] { 
-  max-width:  120px; 
-  display: block;
-}
+

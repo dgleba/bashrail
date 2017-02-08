@@ -58,12 +58,15 @@ The resulting generated application has both an html interface which you can con
 Images:
   
 ![List View](docs/images/list-main.png?raw=true "List view")
+
  - - -
 
  ![Image](docs/images/login.png?raw=true "Image")
+ 
  - - -
 
-![Image](docs/images/selec2-multiple-manytomany.png?raw=true "Image")
+![Image](docs/images/select2-multiple-manytomany.png?raw=true "Image")
+
  - - -
 
 ![Image](docs/images/home.png?raw=true "Image")

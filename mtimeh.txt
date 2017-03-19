@@ -3,10 +3,6 @@
 2016-11-14 22:04:15 -0500 | 1479179055 | admin1.sh
 2016-11-22 20:22:37 -0500 | 1479864157 | examples/paginate1-notes
 2016-11-21 22:35:13 -0500 | 1479785713 | examples/paginate1_with,add,heredoc,after,pattern.sh
-2016-11-14 20:06:05 -0500 | 1479171965 | lib/templates/erb/scaffold/_form.html.erb
-2016-09-01 19:20:17 -0400 | 1472772017 | lib/templates/erb/scaffold/edit.html.erb
-2016-09-01 19:20:17 -0400 | 1472772017 | lib/templates/erb/scaffold/new.html.erb
-2016-09-01 19:20:17 -0400 | 1472772017 | lib/templates/erb/scaffold/show.html.erb
 2016-11-20 10:36:12 -0500 | 1479656172 | lib/templates/rails/scaffold_controller/origbak/controller.rb
 2016-11-22 20:43:04 -0500 | 1479865384 | thor/t1.rb
 2016-11-27 10:53:04 -0500 | 1480261984 | devise2thor.rb
@@ -23,7 +19,6 @@
 2016-11-19 13:57:59 -0500 | 1479581879 | examples/version-v1.sh
 2016-11-28 17:24:55 -0500 | 1480371895 | examples/version__2016-11-29_17.33.11.sh
 2016-12-01 13:02:08 -0500 | 1480615328 | .gitignore
-2016-12-02 18:23:38 -0500 | 1480721018 | devise1.sh
 2016-11-30 22:36:59 -0500 | 1480563419 | errors/err.txt
 2016-11-30 19:57:46 -0500 | 1480553866 | errors/error,dta1.txt
 2016-12-01 20:17:30 -0500 | 1480641450 | examples/2commandlineparameters.sh
@@ -59,7 +54,6 @@
 2017-01-04 09:22:35 -0500 | 1483539755 | errors/put/controller, 204nocontent-on-put, 2017-01-04_09.23.05.rb
 2017-01-04 09:17:13 -0500 | 1483539433 | errors/put/products_controller__2017-01-04_09.24.50.rb
 2017-01-04 09:22:41 -0500 | 1483539761 | errors/put/put.txt
-2017-01-04 09:24:36 -0500 | 1483539876 | lib/templates/rails/scaffold_controller/controller.rb
 2017-01-04 10:08:39 -0500 | 1483542519 | docsbr/log 2017-01-04_Wed_11.08-AM.txt
 2017-01-04 09:32:40 -0500 | 1483540360 | docsbr/signup.curl.txt
 2017-01-04 10:52:40 -0500 | 1483545160 | errors/put/products_controller example 2017-01-04_11.08.50.rb
@@ -70,11 +64,7 @@
 2017-01-04 11:41:09 -0500 | 1483548069 | docsbr/log 2017-01-04_Wed_11.08-AM (2).txt
 2017-01-04 11:41:05 -0500 | 1483548065 | docsbr/signin.curl.txt
 2017-01-04 11:41:05 -0500 | 1483548065 | docsbr/update.curl.txt
-2017-01-05 16:06:18 -0500 | 1483650378 | applayout1.sh
 2017-01-05 16:18:20 -0500 | 1483651100 | bootstrap1.sh
-2017-01-19 23:23:12 -0500 | 1484886192 | 1mk.sh
-2017-01-19 23:55:04 -0500 | 1484888104 | home1.sh
-2017-01-20 16:19:35 -0500 | 1484947175 | lib/templates/erb/scaffold/index.html.erb
 2016-11-29 17:36:17 -0500 | 1480458977 | util/hooks/post-checkout
 2016-11-26 12:09:37 -0500 | 1480180177 | util/hooks/pre-commit
 2016-11-29 17:36:51 -0500 | 1480459011 | util/hooks/pre-push
@@ -98,3 +88,16 @@
 2017-02-07 20:40:24 -0500 | 1486518024 | docs/images/select2-multiple-manytomany.png
 2017-02-07 20:39:16 -0500 | 1486517956 | docs/images/login.png
 2017-02-07 21:18:07 -0500 | 1486520287 | README.md
+2017-03-18 15:27:32 -0400 | 1489865252 | 1mk.sh
+2017-03-18 20:17:15 -0400 | 1489882635 | applayout1.sh
+2017-03-18 19:53:51 -0400 | 1489881231 | config/locales/en.yml
+2017-03-18 19:25:26 -0400 | 1489879526 | devise1.sh
+2017-03-18 20:42:08 -0400 | 1489884128 | docsbr/log-2017-03-18_Sat_20.41-PM.txt
+2017-03-18 17:04:53 -0400 | 1489871093 | home1.sh
+2017-03-18 16:11:19 -0400 | 1489867879 | lib/templates/erb/scaffold/_form.html.erb
+2017-03-18 17:30:18 -0400 | 1489872618 | lib/templates/erb/scaffold/edit.html.erb
+2017-03-18 19:54:55 -0400 | 1489881295 | lib/templates/erb/scaffold/index.html.erb
+2017-03-18 17:29:50 -0400 | 1489872590 | lib/templates/erb/scaffold/new.html.erb
+2017-03-18 19:54:48 -0400 | 1489881288 | lib/templates/erb/scaffold/show.html.erb
+2017-03-18 18:33:24 -0400 | 1489876404 | lib/templates/rails/scaffold_controller/controller.rb
+2017-03-18 17:22:06 -0400 | 1489872126 | lib/templates/rails/scaffold_controller/controller__beforerail263controller.rb

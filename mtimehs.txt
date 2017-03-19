@@ -1,3 +1,16 @@
+2017-03-18 20:42:08 -0400 | 1489884128 | docsbr/log-2017-03-18_Sat_20.41-PM.txt
+2017-03-18 20:17:15 -0400 | 1489882635 | applayout1.sh
+2017-03-18 19:54:55 -0400 | 1489881295 | lib/templates/erb/scaffold/index.html.erb
+2017-03-18 19:54:48 -0400 | 1489881288 | lib/templates/erb/scaffold/show.html.erb
+2017-03-18 19:53:51 -0400 | 1489881231 | config/locales/en.yml
+2017-03-18 19:25:26 -0400 | 1489879526 | devise1.sh
+2017-03-18 18:33:24 -0400 | 1489876404 | lib/templates/rails/scaffold_controller/controller.rb
+2017-03-18 17:30:18 -0400 | 1489872618 | lib/templates/erb/scaffold/edit.html.erb
+2017-03-18 17:29:50 -0400 | 1489872590 | lib/templates/erb/scaffold/new.html.erb
+2017-03-18 17:22:06 -0400 | 1489872126 | lib/templates/rails/scaffold_controller/controller__beforerail263controller.rb
+2017-03-18 17:04:53 -0400 | 1489871093 | home1.sh
+2017-03-18 16:11:19 -0400 | 1489867879 | lib/templates/erb/scaffold/_form.html.erb
+2017-03-18 15:27:32 -0400 | 1489865252 | 1mk.sh
 2017-02-07 21:18:07 -0500 | 1486520287 | README.md
 2017-02-07 20:41:58 -0500 | 1486518118 | docs/images/list-support-table.png
 2017-02-07 20:41:08 -0500 | 1486518068 | docs/images/home.png
@@ -16,12 +29,8 @@
 2017-01-31 19:56:29 -0500 | 1485910589 | devisejwt.sh
 2017-01-20 21:38:11 -0500 | 1484966291 | docs/howtoaddacolumn-railsknow.txt
 2017-01-20 19:04:00 -0500 | 1484957040 | util/version.sh
-2017-01-20 16:19:35 -0500 | 1484947175 | lib/templates/erb/scaffold/index.html.erb
-2017-01-19 23:55:04 -0500 | 1484888104 | home1.sh
-2017-01-19 23:23:12 -0500 | 1484886192 | 1mk.sh
 2017-01-19 23:04:00 -0500 | 1484885040 | docs/50161230223303_add_country_of_origin_to_products.rb
 2017-01-05 16:18:20 -0500 | 1483651100 | bootstrap1.sh
-2017-01-05 16:06:18 -0500 | 1483650378 | applayout1.sh
 2017-01-04 11:43:24 -0500 | 1483548204 | docsbr/delete.curl.txt
 2017-01-04 11:41:27 -0500 | 1483548087 | docsbr/create.curl.txt
 2017-01-04 11:41:09 -0500 | 1483548069 | docsbr/log 2017-01-04_Wed_11.08-AM (2).txt
@@ -32,7 +41,6 @@
 2017-01-04 10:52:40 -0500 | 1483545160 | errors/put/products_controller example 2017-01-04_11.08.50.rb
 2017-01-04 10:08:39 -0500 | 1483542519 | docsbr/log 2017-01-04_Wed_11.08-AM.txt
 2017-01-04 09:32:40 -0500 | 1483540360 | docsbr/signup.curl.txt
-2017-01-04 09:24:36 -0500 | 1483539876 | lib/templates/rails/scaffold_controller/controller.rb
 2017-01-04 09:22:41 -0500 | 1483539761 | errors/put/put.txt
 2017-01-04 09:22:35 -0500 | 1483539755 | errors/put/controller, 204nocontent-on-put, 2017-01-04_09.23.05.rb
 2017-01-04 09:17:13 -0500 | 1483539433 | errors/put/products_controller__2017-01-04_09.24.50.rb
@@ -60,7 +68,6 @@
 2016-12-11 19:06:36 -0500 | 1481501196 | tableprefix1.sh
 2016-12-03 14:57:55 -0500 | 1480795075 | examples/absolutepathfromrelative.txt
 2016-12-02 18:59:34 -0500 | 1480723174 | seeds2.sh
-2016-12-02 18:23:38 -0500 | 1480721018 | devise1.sh
 2016-12-02 16:30:02 -0500 | 1480714202 | notes.txt
 2016-12-02 14:59:07 -0500 | 1480708747 | examples/3commandlineparameters.sh
 2016-12-02 13:04:57 -0500 | 1480701897 | examples/settings.sh
@@ -91,10 +98,6 @@
 2016-11-19 13:57:59 -0500 | 1479581879 | examples/version-v1.sh
 2016-11-14 22:04:15 -0500 | 1479179055 | admin1.sh
 2016-11-14 20:44:14 -0500 | 1479174254 | util/mtimeh.rb
-2016-11-14 20:06:05 -0500 | 1479171965 | lib/templates/erb/scaffold/_form.html.erb
 2016-11-13 23:02:07 -0500 | 1479096127 | select2.sh
 2016-10-29 16:43:47 -0400 | 1477773827 | app/models/role.rb
-2016-09-01 19:20:17 -0400 | 1472772017 | lib/templates/erb/scaffold/show.html.erb
-2016-09-01 19:20:17 -0400 | 1472772017 | lib/templates/erb/scaffold/new.html.erb
-2016-09-01 19:20:17 -0400 | 1472772017 | lib/templates/erb/scaffold/edit.html.erb
 2016-07-27 08:40:49 -0400 | 1469623249 | utilbr/passw.rb

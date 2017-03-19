@@ -31,7 +31,6 @@
 1480723174|seeds2.sh
 1481501449|devisetokenauth1.sh
 1480795075|examples/absolutepathfromrelative.txt
-1481501196|tableprefix1.sh
 1482953280|app/models/user.rb
 1483050333|app/controllers/users/registrations_controller.rb
 1483050397|app/controllers/users/sessions_controller.rb
@@ -88,7 +87,6 @@
 1486518024|docs/images/select2-multiple-manytomany.png
 1486517956|docs/images/login.png
 1486520287|README.md
-1489865252|1mk.sh
 1489882635|applayout1.sh
 1489881231|config/locales/en.yml
 1489879526|devise1.sh
@@ -101,3 +99,6 @@
 1489881288|lib/templates/erb/scaffold/show.html.erb
 1489876404|lib/templates/rails/scaffold_controller/controller.rb
 1489872126|lib/templates/rails/scaffold_controller/controller__beforerail263controller.rb
+1489888189|1mk.sh
+1489886320|tableprefix1.sh
+1489886280|timezone1.sh

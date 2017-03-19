@@ -19,7 +19,7 @@ sed -i "0,/$pattern1/a \ \n$line1\n\n" config/routes.rb
 cat << 'HEREDOC' >> app/views/home/index.html.erb
 
 <h3> 1.   </h3>
-<%= link_to 'Products', products_path %>
+<%= link_to 'Products', products_path, class: "btn btn-primary", :style=>'color:#FFFFFF;' %>
 <h3> 2.   </h3>
 
 <%# This is a comment! %>
@@ -32,13 +32,13 @@ Use /radmin to access the rails admin tool if it is setup.
 <%# this not working.. = link_to(:url =>"http://#{request.host}/pfeatures", :text => 'Pfeatures list') %>
 <%# = link_to(:url =>"http://localhost:3001/pfeatures", :text => "pfeatures list") %>
 
-<%= link_to 'Pfeatures', pfeatures_path %>
+<%= link_to 'Pfeatures', pfeatures_path, class: "btn btn-primary", :style=>'color:#FFFFFF;' %>
 <br>
 <br>
-<%= link_to 'Country of Origin list', country_of_origins_path %>
+<%= link_to 'Country of Origin list', country_of_origins_path, class: "btn btn-primary", :style=>'color:#FFFFFF;' %>
 <br>
 <br>
-<%= link_to 'Product_features join table', product_features_path %>
+<%= link_to 'Product_features join table', product_features_path, class: "btn btn-primary", :style=>'color:#FFFFFF;' %>
 <br>
 <br>
 

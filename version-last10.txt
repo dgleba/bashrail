@@ -1,5 +1,41 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 72ebf717b8fa5e27ef4c04757ce09ae0772e9c98
+Author: dgleba <dgleba@users.noreply.github.com>
+Date:   Tue Feb 7 21:56:52 2017 -0500
+
+    change image sizes
+
+commit f4720890dc1bbf1a1f6fe55cce53fabb91e55649
+Author: dgleba <dgleba@users.noreply.github.com>
+Date:   Tue Feb 7 21:44:37 2017 -0500
+
+    fix readme
+
+commit 35d1d54304ca8390b327c510118e337981eb6d99
+Author: dgleba <dgleba@users.noreply.github.com>
+Date:   Tue Feb 7 21:32:03 2017 -0500
+
+    Update README.md
+
+commit e6221319bdd3d065734cac708cb4e7b731744a93
+Author: dgleba <dgleba@users.noreply.github.com>
+Date:   Tue Feb 7 21:28:32 2017 -0500
+
+    Update README.md
+
+commit f07fa930b3e175fe7144298cc4b1621afa53a354
+Author: dgleba <dgleba@users.noreply.github.com>
+Date:   Tue Feb 7 21:23:47 2017 -0500
+
+    Update README.md
+
+commit 3b45682c6655a5e90cdaad6166d97a615c513591
+Author: David Gleba <dgleba@gmail.com>
+Date:   Tue Feb 7 21:18:21 2017 -0500
+
+    fix
+
 commit 50627d587172d1be5a98c4d52097d8c5b6cfabbd
 Author: David Gleba <dgleba@gmail.com>
 Date:   Tue Feb 7 21:16:22 2017 -0500
@@ -23,39 +59,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Tue Feb 7 20:48:28 2017 -0500
 
     add images
-
-commit 477ff95374b0911ea06292f550fb02c773596705
-Author: David Gleba <dgleba@gmail.com>
-Date:   Tue Jan 31 22:11:49 2017 -0500
-
-    configure customized  admin
-
-commit 30dc971fff93152a64e304ccd9da4dac5983fd30
-Author: David Gleba <dgleba@gmail.com>
-Date:   Tue Jan 31 22:11:36 2017 -0500
-
-    install  admin1
-
-commit f870b67ec071caa1fefaada65e5d730f93660649
-Author: David Gleba <dgleba@gmail.com>
-Date:   Fri Jan 20 22:29:53 2017 -0500
-
-    docs 2017-01-20
-
-commit c3b06488e7f67cdc0191d457b306bfcadd59ee8c
-Author: dgleba <dgleba@gmail.com>
-Date:   Fri Jan 20 16:32:11 2017 -0500
-
-    change index template
-
-commit d1d150880620476ae082d5a486731f48ef2ae910
-Author: David Gleba <dgleba@gmail.com>
-Date:   Thu Jan 19 23:55:56 2017 -0500
-
-    add country of origin
-
-commit 531a24bcb1361e9c080cc9abf32af4e9fe163645
-Author: dgleba <dgleba@gmail.com>
-Date:   Thu Jan 5 16:22:34 2017 -0500
-
-    App name

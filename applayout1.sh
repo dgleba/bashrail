@@ -72,7 +72,7 @@ cat << 'HEREDOC' > app/views/layouts/$file2
     <div class="container-fluid">
       <% flash.each do |type, msg| %>
         <div class="alert alert-<%= type == 'alert' ? 'danger' : 'success' %> alert-dismissable" role="alert">
-          <button class="close"> Close </button>
+          <button class="close"> .. </button>
           <%= msg if msg.is_a?(String) %>
         </div>
       <% end %>
@@ -82,8 +82,22 @@ cat << 'HEREDOC' > app/views/layouts/$file2
   </body>
 </html>
 HEREDOC
+
+
   
-  
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# Copy files over..
+
+
+path1='config/locales/en.yml'
+cp -a  $sfil2/$path1 $path1
+
+
+
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 sleep 1
 git add -A # Add all files and commit them
 git commit -m "app layout with disabled turbolinks"

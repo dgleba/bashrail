@@ -49,10 +49,10 @@ git commit -m "add devise 1"
  
 # add auth requirement in controller..  
 #     sed -i  '/CLIENTSCRIPT="foo"/a CLIENTSCRIPT2="hello"' file  # add line after pattern
-sed -i  '/ApplicationController/a  before_filter :authenticate_user!' app/controllers/application_controller.rb
- 
- 
- 
+#sed -i  "/ApplicationController/a  before_filter :authenticate_user!" app/controllers/application_controller.rb
+sed -i  "/ApplicationController/a  before_filter :authenticate_user!" lib/templates/rails/scaffold_controller/controller.rb
+
+
  
 ### edit devise config .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    

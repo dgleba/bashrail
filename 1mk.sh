@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
 
+# Requirements:
+ # - ruby
+ # - rails
+ # - apt install zip
+ # - rsync
+ #
+
+ 
 function abort()
 {
     # set -e will exit on first error. so set -vxe..

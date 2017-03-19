@@ -1,0 +1,37 @@
+
+successful testing..
+
+
+curl -i -H "Content-Type: application/json" \
+      -X POST -D ./curldump -i\
+      -d '{"user": {"email":"a","password":"a"}}' \
+      http://localhost:3001/users/sign_in.json
+      
+   
+   
+curl -i   --request POST \
+  --url http://localhost:3001/products.json \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODk5NDgzNzV9.h92Bwt8GdpAqpd52-6b8sSO59hKfvRsz88daORHy2go' \
+  --header 'content-type: application/json' \
+  --data '{"name":"David6 Linen Keyboard"}'
+     
+     
+     
+
+     Set-Cookie: _brail317b24_session=elVNbEUxT0xzb0VLYkRVMnZ3YXpwa3QyL1BBTFlWWldJY3FLQlJjNnRJUjRxeUdXeVd3RkdCSEs4L0RhU0NIT0dsSUl1QWxBb245UE5KMVJNeTlERHhCSFI0U05XZmtiNm9hSEx1M3dHaVp2WnN4c09yZUxwaTBFNm5ISG91cmFRN0Z5bkJaR1NBNEprcEo1ZWh0MzFnPT0tLUY0aHRCZ2lSQzlEOXR6M3RPWngwVHc9PQ%3D%3D--7b90e15a8a2382e15665bd3e15f9d91339383d49; path=/; HttpOnly
+
+{"user":"a","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODk5NDgzNzV9.h92Bwt8GdpAqpd52-6b8sSO59hKfvRsz88daORHy2go"}
+
+albe@v206x20161030220807:~/share203$       ifconfig
+     
+ 
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODk5NDgzNzV9.h92Bwt8GdpAqpd52-6b8sSO59hKfvRsz88daORHy2go
+
+ 
+ 
+curl -i  --request DELETE \
+  --url http://localhost:3001/products/1.json \
+  --header 'content-type: application/json' \
+  --header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE0ODk5NDgzNzV9.h92Bwt8GdpAqpd52-6b8sSO59hKfvRsz88daORHy2go'  
+      
+      

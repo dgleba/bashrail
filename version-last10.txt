@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit e80b87392ff9381aa133bbf483c8160efe45c2c3
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat Mar 18 21:53:15 2017 -0400
+
+    move timezone to seperate file.
+
 commit a6ce063e631b6f9784bac61e4a2e746d1675b801
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Mar 18 20:45:01 2017 -0400
@@ -53,9 +59,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Tue Feb 7 21:13:29 2017 -0500
 
     fix
-
-commit 1bec4b357826750f889f0a43c5f7dfdce10b80ca
-Author: David Gleba <dgleba@gmail.com>
-Date:   Tue Feb 7 21:12:18 2017 -0500
-
-    add image

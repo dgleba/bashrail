@@ -21,19 +21,21 @@ pwd
 
 # http://www.softwaremaniacs.net/2014/01/replacing-scaffoldcontroller-generator.html
 
+# example form generator template..
+# http://daniel.fone.net.nz/blog/2014/02/01/customising-scaffold-views-in-ruby-on-rails/
+
 
 echo "gem 'kaminari'" >> Gemfile
 echo "gem 'ransack'" >> Gemfile
 echo "gem 'bootstrap-kaminari-views'" >> Gemfile
 bundle
 
-# to get original controller generator...
 
-# Just copy them from bashrail instead. see below...
+# I will just Just copy them from bashrail instead. see below...
 
-  railt1="$(bundle show railties)"
+  railt1="$(bundle show railties)"  # to get original controller generator...
   echo "${railt1}"
-  path1='lib/rails/generators/rails/scaffold_controller/templates'
+  path1='lib/rails/generators/rails/scaffold_controller/templates' # to get original controller generator...
   echo "${railt1}/${path1}"
   ls -la "${railt1}/${path1}"
 

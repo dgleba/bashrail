@@ -1,0 +1,155 @@
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2017-04-12[Apr-Wed]16-00PM
+
+Required:
+
+copy in new _form template...
+      /bashrail/lib/templates/erb/scaffold/_form.html,railsform_for-2.erb
+          to  _form.html.erb
+
+
+Optional:
+
+remove simple_form gem.
+
+remove initializers for simpleform.
+
+rails generate devise:views
+
+____________________
+
+or use bootstrap_form_for
+
+see:
+    /bashrail/lib/templates/erb/scaffold/_form.html,bootstrap_form_for-1.erb
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2017-04-13[Apr-Thu]11-55AM
+
+tried:
+https://github.com/decioferreira/bootstrap-generators
+
+It didn't add much that I don't already have.
+
+
+gem 'bootstrap-generators', git: 'git://github.com/decioferreira/bootstrap-generators.git'
+
+
+bundle
+rails generate bootstrap:install
+
+rails g scaffold Product2 name country_of_origin:references pdate:datetime active_status:integer sort:integer -f
+rake db:migrate
+
+
+\\10.4.1.227\rt\srv\share\test\brail317r26\app\views\layouts\application.html.erb
+
+albe@pmdsdata4:/srv/share/test/brail317r26$ rails generate bootstrap:install
+       exist  lib/templates/erb
+      create  lib/templates/erb/controller/view.html.erb
+    conflict  lib/templates/erb/scaffold/edit.html.erb
+Overwrite /srv/share/test/brail317r26/lib/templates/erb/scaffold/edit.html.erb? (enter "h" for help) [Ynaqdh] y
+       force  lib/templates/erb/scaffold/edit.html.erb
+    conflict  lib/templates/erb/scaffold/index.html.erb
+Overwrite /srv/share/test/brail317r26/lib/templates/erb/scaffold/index.html.erb? (enter "h" for help) [Ynaqdh] y
+       force  lib/templates/erb/scaffold/index.html.erb
+    conflict  lib/templates/erb/scaffold/new.html.erb
+Overwrite /srv/share/test/brail317r26/lib/templates/erb/scaffold/new.html.erb? (enter "h" for help) [Ynaqdh] y
+       force  lib/templates/erb/scaffold/new.html.erb
+    conflict  lib/templates/erb/scaffold/show.html.erb
+Overwrite /srv/share/test/brail317r26/lib/templates/erb/scaffold/show.html.erb? (enter "h" for help) [Ynaqdh] y
+       force  lib/templates/erb/scaffold/show.html.erb
+    conflict  lib/templates/erb/scaffold/_form.html.erb
+Overwrite /srv/share/test/brail317r26/lib/templates/erb/scaffold/_form.html.erb? (enter "h" for help) [Ynaqdh] y
+       force  lib/templates/erb/scaffold/_form.html.erb
+    conflict  app/views/layouts/application.html.erb
+Overwrite /srv/share/test/brail317r26/app/views/layouts/application.html.erb? (enter "h" for help) [Ynaqdh] y
+       force  app/views/layouts/application.html.erb
+      create  app/assets/stylesheets/bootstrap-generators.scss
+      create  app/assets/stylesheets/bootstrap-variables.scss
+      insert  app/assets/javascripts/application.js
+albe@pmdsdata4:/srv/share/test/brail317r26$ rails g scaffold Product2 name country_of_origin:references pdate:datetime active_status:integer sort:integer -f
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2017-04-13[Apr-Thu]12-43PM
+
+good  ggl search..
+rails bootstrap scaffold
+
+consider:
+
+https://github.com/seyhunak/twitter-bootstrap-rails
+
+http://stackoverflow.com/questions/18063651/rails-generate-bootstrap-layout-with-bootstrap-sass-instead-of-twitter-bootstrap
+
+https://medium.com/@thrivesmart/bootscaf-easily-sexify-your-rails-scaffolds-to-use-bootstrap-d30c09d8649d
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2017-04-13[Apr-Thu]09-19AM
+
+# example form generator template..
+# http://daniel.fone.net.nz/blog/2014/02/01/customising-scaffold-views-in-ruby-on-rails/
+
+
+<%%= form_for(@<%= singular_table_name %>) do |f| %>
+  <%% if @<%= singular_table_name %>.errors.any? %>
+    <div id="error_explanation">
+      <h2><%%= pluralize(@<%= singular_table_name %>.errors.count, "error") %> prohibited this <%= singular_table_name %> from being saved:</h2>
+
+      <ul>
+      <%% @<%= singular_table_name %>.errors.full_messages.each do |msg| %>
+        <li><%%= msg %></li>
+      <%% end %>
+      </ul>
+    </div>
+  <%% end %>
+
+<% attributes.each do |attribute| -%>
+  <div class="field">
+<% if attribute.password_digest? -%>
+    <%%= f.label :password %><br>
+    <%%= f.password_field :password %>
+  </div>
+  <div>
+    <%%= f.label :password_confirmation %><br>
+    <%%= f.password_field :password_confirmation %>
+<% else -%>
+  <%- if attribute.reference? -%>
+    <%%= f.label :<%= attribute.column_name %> %><br>
+    <%%= f.collection_select :<%= attribute.column_name %>, <%= attribute.name.camelize %>.all, :id, :name, prompt: true  %>
+  <%- else -%>
+    <%%= f.label :<%= attribute.name %> %><br>
+    <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
+  <%- end -%>
+<% end -%>
+  </div>
+<% end -%>
+  <div class="actions">
+    <%%= f.submit %>
+  </div>
+<%% end %>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+https://github.com/thrivesmart/bootscaf.git
+

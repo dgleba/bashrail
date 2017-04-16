@@ -1,0 +1,41 @@
+<%#= comment! bootstrap_form_for David Gleba 2017-04-15a
+Add it to your Gemfile:
+gem 'bootstrap_form'
+Then:
+bundle
+Then require the CSS in your application.css file:
+/*
+ *= require rails_bootstrap_forms
+ */
+%>
+<%%= bootstrap_form_for(@<%= singular_table_name %>, layout: :horizontal,  label_col: 'col-sm-2', control_col: 'col-sm-10' ) do |f| %>
+  <%% if @<%= singular_table_name %>.errors.any? %>
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4><%%= pluralize(@<%= singular_table_name %>.errors.count, "error") %> prohibited this <%= singular_table_name %> from being saved:</h4>
+      <ul>
+      <%% @<%= singular_table_name %>.errors.full_messages.each do |msg| %>
+        <li><%%= msg %></li>
+      <%% end %>
+      </ul>
+    </div>
+  <%% end %>
+<% attributes.each do |attribute| -%>
+  <div class="form-group">
+    <% if attribute.field_type == :check_box %>
+            <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
+    <% else %>
+      <%- if attribute.reference? -%>
+          <%%= f.collection_select :<%= attribute.column_name %>, <%= attribute.name.camelize %>.all, :id, :name,  { prompt: true }, { :class => 'dgselect2' }  %>
+      <%- else -%>
+        <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
+    <% end %>
+  <% end %>
+  </div>
+<% end -%>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%%= f.submit class: "btn btn-primary" %>
+    </div>
+  </div>
+<%% end %>

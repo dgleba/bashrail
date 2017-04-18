@@ -103,8 +103,8 @@
 1492472883|1mk.sh
 1492472883|docs/switchfrom,simpleform,to,railsform.txt
 1492472883|lib/templates/erb/scaffold/_form.html,bootstrap_form_for-1.erb
-1492472883|lib/templates/erb/scaffold/_form.html,railsform_for-1.erb
-1492472883|lib/templates/erb/scaffold/_form.html,railsform_for-2.erb
 1492472883|lib/templates/erb/scaffold/_form.html,simpleform-1.erb
 1492472883|lib/templates/erb/scaffold/_form.html.erb
 1492026242|libs/railsform/lib/templates/erb/scaffold/_form.html.erb
+1492475606|lib/templates/erb/scaffold/_form.html,railsform_for-1.erb
+1492475972|lib/templates/erb/scaffold/_form.html,railsform_for-2.erb

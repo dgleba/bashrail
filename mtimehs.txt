@@ -1,5 +1,12 @@
+2017-04-17 19:48:03 -0400 | 1492472883 | lib/templates/erb/scaffold/_form.html.erb
+2017-04-17 19:48:03 -0400 | 1492472883 | lib/templates/erb/scaffold/_form.html,simpleform-1.erb
+2017-04-17 19:48:03 -0400 | 1492472883 | lib/templates/erb/scaffold/_form.html,railsform_for-2.erb
+2017-04-17 19:48:03 -0400 | 1492472883 | lib/templates/erb/scaffold/_form.html,railsform_for-1.erb
+2017-04-17 19:48:03 -0400 | 1492472883 | lib/templates/erb/scaffold/_form.html,bootstrap_form_for-1.erb
+2017-04-17 19:48:03 -0400 | 1492472883 | docs/switchfrom,simpleform,to,railsform.txt
+2017-04-17 19:48:03 -0400 | 1492472883 | 1mk.sh
+2017-04-12 15:44:02 -0400 | 1492026242 | libs/railsform/lib/templates/erb/scaffold/_form.html.erb
 2017-04-11 21:44:00 -0400 | 1491961440 | paginate1.sh
-2017-03-18 21:49:49 -0400 | 1489888189 | 1mk.sh
 2017-03-18 21:18:40 -0400 | 1489886320 | tableprefix1.sh
 2017-03-18 21:18:00 -0400 | 1489886280 | timezone1.sh
 2017-03-18 20:42:08 -0400 | 1489884128 | docsbr/log-2017-03-18_Sat_20.41-PM.txt
@@ -13,7 +20,6 @@
 2017-03-18 17:29:50 -0400 | 1489872590 | lib/templates/erb/scaffold/new.html.erb
 2017-03-18 17:22:06 -0400 | 1489872126 | lib/templates/rails/scaffold_controller/controller__beforerail263controller.rb
 2017-03-18 17:04:53 -0400 | 1489871093 | home1.sh
-2017-03-18 16:11:19 -0400 | 1489867879 | lib/templates/erb/scaffold/_form.html.erb
 2017-02-07 21:18:07 -0500 | 1486520287 | README.md
 2017-02-07 20:41:58 -0500 | 1486518118 | docs/images/list-support-table.png
 2017-02-07 20:41:08 -0500 | 1486518068 | docs/images/home.png

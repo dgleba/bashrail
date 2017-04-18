@@ -2,6 +2,7 @@
   <%% if @<%= singular_table_name %>.errors.any? %>
     <div id="error_explanation">
       <h2><%%= pluralize(@<%= singular_table_name %>.errors.count, "error") %> prohibited this <%= singular_table_name %> from being saved:</h2>
+
       <ul>
       <%% @<%= singular_table_name %>.errors.full_messages.each do |msg| %>
         <li><%%= msg %></li>
@@ -9,6 +10,7 @@
       </ul>
     </div>
   <%% end %>
+
 <% attributes.each do |attribute| -%>
   <div class="field">
 <% if attribute.password_digest? -%>

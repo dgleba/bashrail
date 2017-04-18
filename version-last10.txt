@@ -1,5 +1,23 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 9f132685c29c974cd7b18eca3485dbda3e393d72
+Author: dgleba <dgleba@gmail.com>
+Date:   Sun Apr 16 10:15:40 2017 -0400
+
+    use <%  -%> to avoid empty lines in output.
+
+commit 715563eaccdcbb4271f1890f44d37053f04f6735
+Author: dgleba <dgleba@gmail.com>
+Date:   Sun Apr 16 09:56:49 2017 -0400
+
+    add rails form_for and bootstrap_form_for templates
+
+commit 4a79dd96ee4452e29bca5ed07f5d273da28e1fb1
+Author: David Gleba <dgleba@gmail.com>
+Date:   Wed Apr 12 08:18:24 2017 -0400
+
+    notes 2017-04-12
+
 commit e80b87392ff9381aa133bbf483c8160efe45c2c3
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Mar 18 21:53:15 2017 -0400
@@ -41,21 +59,3 @@ Author: dgleba <dgleba@users.noreply.github.com>
 Date:   Tue Feb 7 21:23:47 2017 -0500
 
     Update README.md
-
-commit 3b45682c6655a5e90cdaad6166d97a615c513591
-Author: David Gleba <dgleba@gmail.com>
-Date:   Tue Feb 7 21:18:21 2017 -0500
-
-    fix
-
-commit 50627d587172d1be5a98c4d52097d8c5b6cfabbd
-Author: David Gleba <dgleba@gmail.com>
-Date:   Tue Feb 7 21:16:22 2017 -0500
-
-    more
-
-commit 063a39e0fe4eb1fc310c4a7edd1a785184238854
-Author: David Gleba <dgleba@gmail.com>
-Date:   Tue Feb 7 21:13:29 2017 -0500
-
-    fix

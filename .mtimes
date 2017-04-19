@@ -1,6 +1,5 @@
 1479096127|select2.sh
 1479174254|util/mtimeh.rb
-1479179055|admin1.sh
 1479864157|examples/paginate1-notes
 1479785713|examples/paginate1_with,add,heredoc,after,pattern.sh
 1479656172|lib/templates/rails/scaffold_controller/origbak/controller.rb
@@ -99,7 +98,6 @@
 1489872126|lib/templates/rails/scaffold_controller/controller__beforerail263controller.rb
 1489886320|tableprefix1.sh
 1489886280|timezone1.sh
-1491961440|paginate1.sh
 1492472883|1mk.sh
 1492472883|docs/switchfrom,simpleform,to,railsform.txt
 1492472883|lib/templates/erb/scaffold/_form.html,bootstrap_form_for-1.erb
@@ -108,3 +106,6 @@
 1492026242|libs/railsform/lib/templates/erb/scaffold/_form.html.erb
 1492475606|lib/templates/erb/scaffold/_form.html,railsform_for-1.erb
 1492475972|lib/templates/erb/scaffold/_form.html,railsform_for-2.erb
+1492561700|admin1.sh
+1492565690|cocoon1.sh
+1492561268|paginate1.sh

@@ -5,13 +5,15 @@
 
 echo "gem 'rails_admin'" >> Gemfile
 
+bundle update
+
 # gem1="gem 'activeadmin', github: 'activeadmin'"
 # echo "$gem1" >> Gemfile
 
 #echo "gem 'administrate'" >> Gemfile
 #echo "gem 'bourbon'" >> Gemfile
 
-bundle
+bundle update
 
 # active admin..
 

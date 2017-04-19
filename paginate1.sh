@@ -28,7 +28,9 @@ pwd
 echo "gem 'kaminari'" >> Gemfile
 echo "gem 'ransack'" >> Gemfile
 echo "gem 'bootstrap-kaminari-views'" >> Gemfile
+bundle update
 bundle
+
 
 
 # I will just Just copy them from bashrail instead. see below...

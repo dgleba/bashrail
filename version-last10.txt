@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 9d3da0e55a61af60da0ef676af106ca6ddc772d9
+Author: David Gleba <dgleba@gmail.com>
+Date:   Tue Apr 18 23:31:30 2017 -0400
+
+    Cocoon Notes 2017-04-18
+
 commit e7d0b5b9c52589774389ef6797ee6add3067d4c8
 Author: David Gleba <dgleba@gmail.com>
 Date:   Mon Apr 17 23:26:16 2017 -0400
@@ -53,9 +59,3 @@ Author: dgleba <dgleba@users.noreply.github.com>
 Date:   Tue Feb 7 21:44:37 2017 -0500
 
     fix readme
-
-commit 35d1d54304ca8390b327c510118e337981eb6d99
-Author: dgleba <dgleba@users.noreply.github.com>
-Date:   Tue Feb 7 21:32:03 2017 -0500
-
-    Update README.md

@@ -1,3 +1,8 @@
+2017-04-23 12:06:34 -0400 | 1492963594 | lib/templates/erb/scaffold/index.html-with-separate-buttons.erb
+2017-04-23 12:00:18 -0400 | 1492963218 | lib/templates/erb/scaffold/index.html.erb
+2017-04-18 21:34:50 -0400 | 1492565690 | cocoon1.sh
+2017-04-18 20:28:20 -0400 | 1492561700 | admin1.sh
+2017-04-18 20:21:08 -0400 | 1492561268 | paginate1.sh
 2017-04-17 20:39:32 -0400 | 1492475972 | lib/templates/erb/scaffold/_form.html,railsform_for-2.erb
 2017-04-17 20:33:26 -0400 | 1492475606 | lib/templates/erb/scaffold/_form.html,railsform_for-1.erb
 2017-04-17 19:48:03 -0400 | 1492472883 | lib/templates/erb/scaffold/_form.html.erb
@@ -6,12 +11,10 @@
 2017-04-17 19:48:03 -0400 | 1492472883 | docs/switchfrom,simpleform,to,railsform.txt
 2017-04-17 19:48:03 -0400 | 1492472883 | 1mk.sh
 2017-04-12 15:44:02 -0400 | 1492026242 | libs/railsform/lib/templates/erb/scaffold/_form.html.erb
-2017-04-11 21:44:00 -0400 | 1491961440 | paginate1.sh
 2017-03-18 21:18:40 -0400 | 1489886320 | tableprefix1.sh
 2017-03-18 21:18:00 -0400 | 1489886280 | timezone1.sh
 2017-03-18 20:42:08 -0400 | 1489884128 | docsbr/log-2017-03-18_Sat_20.41-PM.txt
 2017-03-18 20:17:15 -0400 | 1489882635 | applayout1.sh
-2017-03-18 19:54:55 -0400 | 1489881295 | lib/templates/erb/scaffold/index.html.erb
 2017-03-18 19:54:48 -0400 | 1489881288 | lib/templates/erb/scaffold/show.html.erb
 2017-03-18 19:53:51 -0400 | 1489881231 | config/locales/en.yml
 2017-03-18 19:25:26 -0400 | 1489879526 | devise1.sh
@@ -103,7 +106,6 @@
 2016-11-21 22:35:13 -0500 | 1479785713 | examples/paginate1_with,add,heredoc,after,pattern.sh
 2016-11-20 10:36:12 -0500 | 1479656172 | lib/templates/rails/scaffold_controller/origbak/controller.rb
 2016-11-19 13:57:59 -0500 | 1479581879 | examples/version-v1.sh
-2016-11-14 22:04:15 -0500 | 1479179055 | admin1.sh
 2016-11-14 20:44:14 -0500 | 1479174254 | util/mtimeh.rb
 2016-11-13 23:02:07 -0500 | 1479096127 | select2.sh
 2016-10-29 16:43:47 -0400 | 1477773827 | app/models/role.rb

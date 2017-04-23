@@ -73,11 +73,6 @@
 1484885040|docs/50161230223303_add_country_of_origin_to_products.rb
 1483053668|docsbr/api-reference_articles-I-used-for-jwt.txt
 1485918708|app/assets/javascripts/rails_admin/custom/ui.js
-1485918710|mtimeh.txt
-1485918710|mtimehs.txt
-1485918711|version-last10.txt
-1485918711|version-log.txt
-1485918711|version.txt
 1486518042|docs/images/datepicker.png
 1486518068|docs/images/home.png
 1486517979|docs/images/list-main.png
@@ -91,7 +86,6 @@
 1489884128|docsbr/log-2017-03-18_Sat_20.41-PM.txt
 1489871093|home1.sh
 1489872618|lib/templates/erb/scaffold/edit.html.erb
-1489881295|lib/templates/erb/scaffold/index.html.erb
 1489872590|lib/templates/erb/scaffold/new.html.erb
 1489881288|lib/templates/erb/scaffold/show.html.erb
 1489876404|lib/templates/rails/scaffold_controller/controller.rb
@@ -109,3 +103,11 @@
 1492561700|admin1.sh
 1492565690|cocoon1.sh
 1492561268|paginate1.sh
+1492963930|.mtimes
+1492963594|lib/templates/erb/scaffold/index.html-with-separate-buttons.erb
+1492963218|lib/templates/erb/scaffold/index.html.erb
+1492963929|mtimeh.txt
+1492963929|mtimehs.txt
+1492963930|version-last10.txt
+1492963930|version-log.txt
+1492963930|version.txt

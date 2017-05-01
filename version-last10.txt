@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit f773ffd17107228f47e3f7585c3235ddcf3396c2
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sun Apr 23 21:34:29 2017 -0400
+
+    fix
+
 commit 42406570e5bec359e56236cbeb7f0ac97f92a3d1
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sun Apr 23 12:12:09 2017 -0400
@@ -53,9 +59,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Mar 18 20:45:01 2017 -0400
 
     add buttons, refine things.
-
-commit 72ebf717b8fa5e27ef4c04757ce09ae0772e9c98
-Author: dgleba <dgleba@users.noreply.github.com>
-Date:   Tue Feb 7 21:56:52 2017 -0500
-
-    change image sizes

@@ -17,7 +17,6 @@
 1480033399|docs/rails,reverse,legacydatabase,scaffold,schemadump,yamldb,seed,,etc,know - Copy.txt
 1479581879|examples/version-v1.sh
 1480371895|examples/version__2016-11-29_17.33.11.sh
-1480615328|.gitignore
 1480563419|errors/err.txt
 1480553866|errors/error,dta1.txt
 1480641450|examples/2commandlineparameters.sh
@@ -104,10 +103,12 @@
 1492565690|cocoon1.sh
 1492561268|paginate1.sh
 1492963594|lib/templates/erb/scaffold/index.html-with-separate-buttons.erb
-1492997671|.mtimes
 1492965297|lib/templates/erb/scaffold/index.html.erb
-1492997670|mtimeh.txt
-1492997670|mtimehs.txt
-1492997671|version-last10.txt
-1492997671|version-log.txt
-1492997671|version.txt
+1493603201|.gitignore
+1493607441|.mtimes
+1493606819|docs/remove-scaffolds_product_pfeature_etc.txt
+1493607439|mtimeh.txt
+1493607439|mtimehs.txt
+1493607440|version-last10.txt
+1493607441|version-log.txt
+1493607440|version.txt

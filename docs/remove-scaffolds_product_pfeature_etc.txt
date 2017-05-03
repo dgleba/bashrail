@@ -1,42 +1,46 @@
 
-dd1="../0movedfiles1"
-tf1='/tmp/rsyncfiles'
-pat="*product*"
-find . -type f  \( -iname $pat ! -iname "production.rb" \) > $tf1
-  rsync -av --remove-source-files  --files-from=$tf1 . $dd1
-find . -type d  \( -iname $pat  \) > $tf1
-sed -i  's/$/\//' $tf1  # add trailing slash to end of each line in file..
-  rsync -av --remove-source-files  --files-from=$tf1 . $dd1
-
-pat="*pfeature*"
-dd1="../0movedfiles1"
-tf1='/tmp/rsyncfiles'
-find . -type f  \( -iname $pat ! -iname "production.rb" \) > $tf1
-  rsync -av --remove-source-files  --files-from=$tf1 . $dd1
-find . -type d  \( -iname $pat  \) > $tf1
-sed -i  's/$/\//' $tf1  # add trailing slash to end of each line in file..
-  rsync -av --remove-source-files  --files-from=$tf1 . $dd1
-  
-pat="*country_of_ori*"
-dd1="../0movedfiles1"
-tf1='/tmp/rsyncfiles'
-find . -type f  \( -iname $pat ! -iname "production.rb" \) > $tf1
-  rsync -av --remove-source-files  --files-from=$tf1 . $dd1
-find . -type d  \( -iname $pat  \) > $tf1
-sed -i  's/$/\//' $tf1  # add trailing slash to end of each line in file..
-  rsync -av --remove-source-files  --files-from=$tf1 . $dd1
-  
-  
-res1=product  
-grep -ri  --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3} $res1 .
-grep -rli --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3} $res1 .
+# move files matching criteria in find command...
+  # this is for a rails project. move scaffolds.
  
-res1=pfeature 
-grep -ri  --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3,*.logz} $res1 .
-grep -rli --exclude-dir={tmp,log,docs,.git} --exclude=*.sqlite3 $res1 .
-   
-res1=country_of_or
-grep -ri  --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3,*.logz} $res1 .
-grep -rli --exclude-dir={tmp,log,docs,.git} --exclude=*.sqlite3 $res1 .
-   
+patrn="*product*"
+dest1="../0movedfiles1"
+tmpf1='/tmp/rsyncfiles'
+find . -type f  \( -iname $patrn ! -iname "production.rb" \) > $tmpf1 # files.
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+find . -type d  \( -iname $patrn  \) > $tmpf1                         # directories/folders.
+sed -i  's/$/\//' $tmpf1  # add trailing slash to end of each line in file..
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+
+patrn="*pfeature*"
+dest1="../0movedfiles1"
+tmpf1='/tmp/rsyncfiles'
+find . -type f  \( -iname $patrn ! -iname "production.rb" \) > $tmpf1 # files.
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+find . -type d  \( -iname $patrn  \) > $tmpf1                        # directories/folders.
+sed -i  's/$/\//' $tmpf1  # add trailing slash to end of each line in file..
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
   
+patrn="*country_of_ori*"
+dest1="../0movedfiles1"
+tmpf1='/tmp/rsyncfiles'
+find . -type f  \( -iname $patrn ! -iname "production.rb" \) > $tmpf1 # files.
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+find . -type d  \( -iname $patrn  \) > $tmpf1                        # directories/folders.
+sed -i  's/$/\//' $tmpf1  # add trailing slash to end of each line in file..
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+  
+  
+patrn2=product  
+grep -ri  --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3} $patrn2 .
+grep -rli --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3} $patrn2 .
+ 
+patrn2=pfeature 
+grep -ri  --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3,*.logz} $patrn2 .
+grep -rli --exclude-dir={tmp,log,docs,.git} --exclude=*.sqlite3 $patrn2 .
+   
+patrn2=country_of_or
+grep -ri  --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3,*.logz} $patrn2 .
+grep -rli --exclude-dir={tmp,log,docs,.git} --exclude=*.sqlite3 $patrn2 .
+   
+   
+

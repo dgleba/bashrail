@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 73e73509b781f8701fec45811b04f5d166a2c3f8
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sun Apr 30 22:57:19 2017 -0400
+
+    commands to remove example scaffolds
+
 commit f773ffd17107228f47e3f7585c3235ddcf3396c2
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sun Apr 23 21:34:29 2017 -0400
@@ -53,9 +59,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Mar 18 21:53:15 2017 -0400
 
     move timezone to seperate file.
-
-commit a6ce063e631b6f9784bac61e4a2e746d1675b801
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sat Mar 18 20:45:01 2017 -0400
-
-    add buttons, refine things.

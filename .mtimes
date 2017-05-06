@@ -1,4 +1,3 @@
-1479096127|select2.sh
 1479174254|util/mtimeh.rb
 1479864157|examples/paginate1-notes
 1479785713|examples/paginate1_with,add,heredoc,after,pattern.sh
@@ -46,7 +45,6 @@
 1483449593|root/.gitignore
 1483374401|util/hook.sh
 1483467356|todo.txt
-1483494498|new1.sh
 1483539755|errors/put/controller, 204nocontent-on-put, 2017-01-04_09.23.05.rb
 1483539433|errors/put/products_controller__2017-01-04_09.24.50.rb
 1483539761|errors/put/put.txt
@@ -111,3 +109,22 @@
 1493607441|version-log.txt
 1493607440|version.txt
 1493778207|docs/remove-scaffolds_product_pfeature_etc.txt
+1468703838|docs/deploy/deploy-drail-howto-notes.txt
+1494097527|docs/deploy/deploy.sh
+1468703838|docs/deploy/puma-manager.conf
+1468703838|docs/deploy/puma.conf
+1468703838|docs/deploy/puma.rb
+1494095572|docs/dotenv-rails-howto-know/.env
+1480369569|docs/dotenv-rails-howto-know/application.rb
+1480369564|docs/dotenv-rails-howto-know/database.yml
+1494098256|docs/dotenv-rails-howto-know/dotenv-rails-howto-know,dot.env.txt
+1469708154|docs/ldap/devise.rb
+1494102384|docs/ldap/ldap-example.yml
+1476891792|docs/ldap/ldap265.sh
+1476892483|docs/ldap/ldap265h-v206c.local_home_albe_share203__2016.10.19_11.54.42.tgz
+1469716724|docs/ldap/ldap265mk-copy.sh
+1494101906|docs/ldap/ldap_howto_readme.sh.txt
+1494102984|docs/ldap_howto_readme.sh.txt
+1493838295|new1.sh
+1493857447|readme,runone,script,howto.txt
+1493857376|select2.sh

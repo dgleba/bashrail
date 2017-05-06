@@ -11,15 +11,15 @@ bundle
 # add line after match...  sed -i  '/CLIENTSCRIPT="foo"/a CLIENTSCRIPT2="hello"' file
 # i think 0, means only do it for the first match..
 #
-pattern1='ActiveRecord::Base'
+pattern1='class'   # changed because this is common to rails4 and rails5
 line1='  has_many :product_feature\n  has_many :pfeature, through: :product_feature\n'
 file1='app/models/product.rb'
 sed  -i "0,/$pattern1/a $line1" $file1
 #
-sleep 1
+# sleep 1
 
 #
-pattern1='ActiveRecord::Base'
+pattern1='class'   # changed because this is common to rails4 and rails5
 line1='   has_many :product_feature\n   has_many :product, through: :product_feature\n'
 file1='app/models/pfeature.rb'
 sed  -i "0,/$pattern1/a $line1" $file1
@@ -31,7 +31,7 @@ patrn='f.input :name'
 sed -i  "/.*$patrn.*/a $line1" app/views/products/_form.html.erb
 
       
-sleep 1
+# sleep 1
       
 # add this.. :ptype_ids => [] ... Edit line to look like this..  params.require(:product).permit(:name, :ptype_ids => [])
 # http://unix.stackexchange.com/questions/155331/sed-replace-a-character-in-a-matched-line-in-place  /ipsum/{s/#//g;s/@/-at-/g;}

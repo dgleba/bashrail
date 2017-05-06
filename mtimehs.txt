@@ -1,10 +1,18 @@
+2017-05-06 16:36:24 -0400 | 1494102984 | docs/ldap_howto_readme.sh.txt
+2017-05-06 16:26:24 -0400 | 1494102384 | docs/ldap/ldap-example.yml
+2017-05-06 16:18:26 -0400 | 1494101906 | docs/ldap/ldap_howto_readme.sh.txt
+2017-05-06 15:17:36 -0400 | 1494098256 | docs/dotenv-rails-howto-know/dotenv-rails-howto-know,dot.env.txt
+2017-05-06 15:05:27 -0400 | 1494097527 | docs/deploy/deploy.sh
+2017-05-06 14:32:52 -0400 | 1494095572 | docs/dotenv-rails-howto-know/.env
+2017-05-03 20:24:07 -0400 | 1493857447 | readme,runone,script,howto.txt
+2017-05-03 20:22:56 -0400 | 1493857376 | select2.sh
+2017-05-03 15:04:55 -0400 | 1493838295 | new1.sh
+2017-05-02 22:23:27 -0400 | 1493778207 | docs/remove-scaffolds_product_pfeature_etc.txt
 2017-04-30 22:57:21 -0400 | 1493607441 | version-log.txt
-2017-04-30 22:57:21 -0400 | 1493607441 | .mtimes
 2017-04-30 22:57:20 -0400 | 1493607440 | version.txt
 2017-04-30 22:57:20 -0400 | 1493607440 | version-last10.txt
 2017-04-30 22:57:19 -0400 | 1493607439 | mtimehs.txt
 2017-04-30 22:57:19 -0400 | 1493607439 | mtimeh.txt
-2017-04-30 22:46:59 -0400 | 1493606819 | docs/remove-scaffolds_product_pfeature_etc.txt
 2017-04-30 21:46:41 -0400 | 1493603201 | .gitignore
 2017-04-23 12:34:57 -0400 | 1492965297 | lib/templates/erb/scaffold/index.html.erb
 2017-04-23 12:06:34 -0400 | 1492963594 | lib/templates/erb/scaffold/index.html-with-separate-buttons.erb
@@ -59,7 +67,6 @@
 2017-01-04 09:22:41 -0500 | 1483539761 | errors/put/put.txt
 2017-01-04 09:22:35 -0500 | 1483539755 | errors/put/controller, 204nocontent-on-put, 2017-01-04_09.23.05.rb
 2017-01-04 09:17:13 -0500 | 1483539433 | errors/put/products_controller__2017-01-04_09.24.50.rb
-2017-01-03 20:48:18 -0500 | 1483494498 | new1.sh
 2017-01-03 13:15:56 -0500 | 1483467356 | todo.txt
 2017-01-03 08:19:53 -0500 | 1483449593 | root/.gitignore
 2017-01-02 11:26:41 -0500 | 1483374401 | util/hook.sh
@@ -93,6 +100,8 @@
 2016-11-29 17:36:51 -0500 | 1480459011 | util/hooks/pre-push
 2016-11-29 17:36:17 -0500 | 1480458977 | util/hooks/post-checkout
 2016-11-28 17:24:55 -0500 | 1480371895 | examples/version__2016-11-29_17.33.11.sh
+2016-11-28 16:46:09 -0500 | 1480369569 | docs/dotenv-rails-howto-know/application.rb
+2016-11-28 16:46:04 -0500 | 1480369564 | docs/dotenv-rails-howto-know/database.yml
 2016-11-28 15:58:06 -0500 | 1480366686 | docs/devise,install,info.txt
 2016-11-28 10:55:56 -0500 | 1480348556 | gemfile1.sh
 2016-11-27 21:26:38 -0500 | 1480299998 | app/helpers/application_helper.rb
@@ -109,6 +118,13 @@
 2016-11-20 10:36:12 -0500 | 1479656172 | lib/templates/rails/scaffold_controller/origbak/controller.rb
 2016-11-19 13:57:59 -0500 | 1479581879 | examples/version-v1.sh
 2016-11-14 20:44:14 -0500 | 1479174254 | util/mtimeh.rb
-2016-11-13 23:02:07 -0500 | 1479096127 | select2.sh
 2016-10-29 16:43:47 -0400 | 1477773827 | app/models/role.rb
+2016-10-19 11:54:43 -0400 | 1476892483 | docs/ldap/ldap265h-v206c.local_home_albe_share203__2016.10.19_11.54.42.tgz
+2016-10-19 11:43:12 -0400 | 1476891792 | docs/ldap/ldap265.sh
+2016-07-28 10:38:44 -0400 | 1469716724 | docs/ldap/ldap265mk-copy.sh
+2016-07-28 08:15:54 -0400 | 1469708154 | docs/ldap/devise.rb
 2016-07-27 08:40:49 -0400 | 1469623249 | utilbr/passw.rb
+2016-07-16 17:17:18 -0400 | 1468703838 | docs/deploy/puma.rb
+2016-07-16 17:17:18 -0400 | 1468703838 | docs/deploy/puma.conf
+2016-07-16 17:17:18 -0400 | 1468703838 | docs/deploy/puma-manager.conf
+2016-07-16 17:17:18 -0400 | 1468703838 | docs/deploy/deploy-drail-howto-notes.txt

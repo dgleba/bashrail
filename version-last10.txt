@@ -1,5 +1,17 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 31a5a8b3caed737fdfb54a61e2e2fb7826ddf480
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat May 6 17:24:05 2017 -0400
+
+    deploy, .env, ldap instructions
+
+commit c369f1da8ff3df2a6ee832431bda51b143a98481
+Author: David Gleba <dgleba@gmail.com>
+Date:   Tue May 2 22:36:34 2017 -0400
+
+    2017-05-02
+
 commit 73e73509b781f8701fec45811b04f5d166a2c3f8
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sun Apr 30 22:57:19 2017 -0400
@@ -47,15 +59,3 @@ Author: dgleba <dgleba@gmail.com>
 Date:   Sun Apr 16 09:56:49 2017 -0400
 
     add rails form_for and bootstrap_form_for templates
-
-commit 4a79dd96ee4452e29bca5ed07f5d273da28e1fb1
-Author: David Gleba <dgleba@gmail.com>
-Date:   Wed Apr 12 08:18:24 2017 -0400
-
-    notes 2017-04-12
-
-commit e80b87392ff9381aa133bbf483c8160efe45c2c3
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sat Mar 18 21:53:15 2017 -0400
-
-    move timezone to seperate file.

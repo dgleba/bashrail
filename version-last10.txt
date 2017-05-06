@@ -1,10 +1,10 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
-commit 31a5a8b3caed737fdfb54a61e2e2fb7826ddf480
+commit c3ad2cb6eeea7ea9da9e2e5a1f8981ae2f92c380
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sat May 6 17:24:05 2017 -0400
 
-    deploy, .env, ldap instructions
+    update for 5ails5, add deploy, .env, ldap instructions
 
 commit c369f1da8ff3df2a6ee832431bda51b143a98481
 Author: David Gleba <dgleba@gmail.com>

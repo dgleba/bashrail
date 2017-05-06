@@ -103,11 +103,6 @@
 1492963594|lib/templates/erb/scaffold/index.html-with-separate-buttons.erb
 1492965297|lib/templates/erb/scaffold/index.html.erb
 1493603201|.gitignore
-1493607439|mtimeh.txt
-1493607439|mtimehs.txt
-1493607440|version-last10.txt
-1493607441|version-log.txt
-1493607440|version.txt
 1493778207|docs/remove-scaffolds_product_pfeature_etc.txt
 1468703838|docs/deploy/deploy-drail-howto-notes.txt
 1494097527|docs/deploy/deploy.sh
@@ -128,3 +123,8 @@
 1493838295|new1.sh
 1493857447|readme,runone,script,howto.txt
 1493857376|select2.sh
+1494106236|mtimeh.txt
+1494106236|mtimehs.txt
+1494106237|version-last10.txt
+1494106238|version-log.txt
+1494106237|version.txt

@@ -5,7 +5,8 @@
 # new rails app  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 pwd
 
-gem install rails -v 4.2.7.1 --no-ri --no-rdoc
+# change for rails 5
+# gem install rails -v 4.2.7.1 --no-ri --no-rdoc
 
 ruby -v ; rails -v
 
@@ -19,7 +20,9 @@ if [  -d "$appn" ]; then
 fi
 
 
-rails _4.2.7.1_ new $appn --skip-bundle
+# change for rails 5
+# rails _4.2.7.1_ new $appn --skip-bundle
+rails new $appn --skip-bundle
 
 
 if [ ! -d "$appn" ]; then

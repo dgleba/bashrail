@@ -105,10 +105,9 @@
 2017-04-23 12:06:34 -0400 | 1492963594 | lib/templates/erb/scaffold/index.html-with-separate-buttons.erb
 2017-04-23 12:34:57 -0400 | 1492965297 | lib/templates/erb/scaffold/index.html.erb
 2017-04-30 21:46:41 -0400 | 1493603201 | .gitignore
-2017-04-30 22:57:21 -0400 | 1493607441 | .mtimes
-2017-04-30 22:46:59 -0400 | 1493606819 | docs/remove-scaffolds_product_pfeature_etc.txt
 2017-04-30 22:57:19 -0400 | 1493607439 | mtimeh.txt
 2017-04-30 22:57:19 -0400 | 1493607439 | mtimehs.txt
 2017-04-30 22:57:20 -0400 | 1493607440 | version-last10.txt
 2017-04-30 22:57:21 -0400 | 1493607441 | version-log.txt
 2017-04-30 22:57:20 -0400 | 1493607440 | version.txt
+2017-05-02 22:23:27 -0400 | 1493778207 | docs/remove-scaffolds_product_pfeature_etc.txt

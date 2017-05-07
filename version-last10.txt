@@ -1,10 +1,23 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 6bc6e5a166bef76c75d80c4625e16c3b61eca913
+Merge: c3ad2cb 31a5a8b
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat May 6 17:30:36 2017 -0400
+
+    fix
+
 commit c3ad2cb6eeea7ea9da9e2e5a1f8981ae2f92c380
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sat May 6 17:24:05 2017 -0400
 
     update for 5ails5, add deploy, .env, ldap instructions
+
+commit 31a5a8b3caed737fdfb54a61e2e2fb7826ddf480
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat May 6 17:24:05 2017 -0400
+
+    deploy, .env, ldap instructions
 
 commit c369f1da8ff3df2a6ee832431bda51b143a98481
 Author: David Gleba <dgleba@gmail.com>
@@ -47,15 +60,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Mon Apr 17 20:24:01 2017 -0400
 
     mode
-
-commit 9f132685c29c974cd7b18eca3485dbda3e393d72
-Author: dgleba <dgleba@gmail.com>
-Date:   Sun Apr 16 10:15:40 2017 -0400
-
-    use <%  -%> to avoid empty lines in output.
-
-commit 715563eaccdcbb4271f1890f44d37053f04f6735
-Author: dgleba <dgleba@gmail.com>
-Date:   Sun Apr 16 09:56:49 2017 -0400
-
-    add rails form_for and bootstrap_form_for templates

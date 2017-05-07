@@ -103,11 +103,6 @@
 2017-04-23 12:06:34 -0400 | 1492963594 | lib/templates/erb/scaffold/index.html-with-separate-buttons.erb
 2017-04-23 12:34:57 -0400 | 1492965297 | lib/templates/erb/scaffold/index.html.erb
 2017-04-30 21:46:41 -0400 | 1493603201 | .gitignore
-2017-04-30 22:57:19 -0400 | 1493607439 | mtimeh.txt
-2017-04-30 22:57:19 -0400 | 1493607439 | mtimehs.txt
-2017-04-30 22:57:20 -0400 | 1493607440 | version-last10.txt
-2017-04-30 22:57:21 -0400 | 1493607441 | version-log.txt
-2017-04-30 22:57:20 -0400 | 1493607440 | version.txt
 2017-05-02 22:23:27 -0400 | 1493778207 | docs/remove-scaffolds_product_pfeature_etc.txt
 2016-07-16 17:17:18 -0400 | 1468703838 | docs/deploy/deploy-drail-howto-notes.txt
 2017-05-06 15:05:27 -0400 | 1494097527 | docs/deploy/deploy.sh
@@ -128,3 +123,8 @@
 2017-05-03 15:04:55 -0400 | 1493838295 | new1.sh
 2017-05-03 20:24:07 -0400 | 1493857447 | readme,runone,script,howto.txt
 2017-05-03 20:22:56 -0400 | 1493857376 | select2.sh
+2017-05-06 17:30:36 -0400 | 1494106236 | mtimeh.txt
+2017-05-06 17:30:36 -0400 | 1494106236 | mtimehs.txt
+2017-05-06 17:30:37 -0400 | 1494106237 | version-last10.txt
+2017-05-06 17:30:38 -0400 | 1494106238 | version-log.txt
+2017-05-06 17:30:37 -0400 | 1494106237 | version.txt

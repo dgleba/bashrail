@@ -49,6 +49,9 @@ set +vx
   echo ;
   exit 7
 else
+  #
+  # Set variables 
+  #
   # set app name as first pramater on commandline
   export appn=$1
   #  get the command that invoked this..
@@ -64,7 +67,9 @@ export mpwd=$PWD
 export mhome=$HOME
 
 
+#
 # Save commandline parameters so they can be used to run one subscript later.
+#
 mkdir -p /tmp
 echo $appn $sfil $sfil2 $mpwd $0 $mhome>/tmp/"_brvar1202_${USER}".txt
 chmod 777 /tmp/"_brvar1202_${USER}".txt
@@ -144,7 +149,10 @@ pwd
 
 
   source $sfil2/admin1.sh  # optional
-
+  
+  #source ../bashrail/admin-ra-materialtheme.sh
+  # or
+  source $sfil2/admin-ra-materialtheme.sh
 
   
 
@@ -288,7 +296,7 @@ HEREDOC
 
 sleep 1
 git add -A # Add all files and commit them
-  git commit -m "add sqlite db and docs"
+  git commit -m "add sqlite db and docs. Bashrail Finished."
   
 
 ### finish up.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

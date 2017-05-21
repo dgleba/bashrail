@@ -3,8 +3,12 @@
     
 ### admin1 .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-echo "gem 'rails_admin', :git =>  'https://github.com/dgleba/rails_admin.git'" >> Gemfile
+#echo "gem 'rails_admin', :git =>  'https://github.com/dgleba/rails_admin.git'" >> Gemfile
+# 2017-05-21 got error with git repo. Missing template rails_admin/main/dashboard, rails_admin/application/dashboard with...
+#   changed to v 1.1.1...
+echo "gem 'rails_admin', '~> 1.1.1'" >> Gemfile
 
+# 
 bundle update
 
 # gem1="gem 'activeadmin', github: 'activeadmin'"

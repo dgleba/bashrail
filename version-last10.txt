@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit f5f622049196747bdae31bf0a8e37a0b56713566
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sun May 7 00:05:15 2017 -0400
+
+    ldap example.yml
+
 commit 6bc6e5a166bef76c75d80c4625e16c3b61eca913
 Merge: c3ad2cb 31a5a8b
 Author: David Gleba <dgleba@gmail.com>
@@ -54,9 +60,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Mon Apr 17 23:26:16 2017 -0400
 
     add dash [-] to rails form
-
-commit 397353aeb88d2709bd0faba45e6d8f7da3bcfffd
-Author: David Gleba <dgleba@gmail.com>
-Date:   Mon Apr 17 20:24:01 2017 -0400
-
-    mode

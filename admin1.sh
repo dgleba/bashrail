@@ -3,7 +3,7 @@
     
 ### admin1 .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-echo "gem 'rails_admin'" >> Gemfile
+echo "gem 'rails_admin', :git =>  'https://github.com/dgleba/rails_admin.git'" >> Gemfile
 
 bundle update
 
@@ -80,6 +80,10 @@ git commit -m "install  admin"
   
  
 # _____________  custom layout for rails_admin list
+
+
+# https://github.com/sferik/rails_admin/wiki/Horizontally-scrolling-table-with-frozen-columns-in-list-view
+
 
 mkdir -p app/assets/javascripts/rails_admin/custom
 
@@ -162,7 +166,7 @@ HEREDOC
 #      sed -i  's/.*global].*/[global]\n\nunix extensions = no/g' /etc/samba/smb.conf 
 patrn1='Rails.application.config.assets.version'
 # patrn1='version'
-patrn2='Rails.application.config.assets.version = \"1.1\"'
+patrn2='Rails.application.config.assets.version = \"1.2\"'
 # patrn2='Railsxxxxx'
 sed -i  -e "s/.*$patrn1.*/$patrn2/" config/initializers/assets.rb
 

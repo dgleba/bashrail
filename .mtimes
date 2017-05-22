@@ -115,7 +115,6 @@
 1476892483|docs/ldap/ldap265h-v206c.local_home_albe_share203__2016.10.19_11.54.42.tgz
 1469716724|docs/ldap/ldap265mk-copy.sh
 1494101906|docs/ldap/ldap_howto_readme.sh.txt
-1494102984|docs/ldap_howto_readme.sh.txt
 1493838295|new1.sh
 1493857447|readme,runone,script,howto.txt
 1493857376|select2.sh
@@ -126,8 +125,11 @@
 1494106237|version.txt
 1494114599|config/ldap-example.yml
 1493347799|lib/templates/erb/scaffold/_form.html.erb
-1495402461|1mk.sh
 1495399792|admin-ra-materialtheme.sh
 1495403164|admin1.sh
 1495406015|app/models/ability.rb
 1495407402|papertrail1.sh
+1495414334|1mk.sh
+1495412061|docs/ldap_howto_readme.sh.txt
+1495468856|ldap1.sh
+1495422596|ldap_manual-edits.txt

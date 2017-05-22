@@ -24,6 +24,29 @@ git diff
 git add .
 git commit -m "after rails g devise_ldap_authenticatable:install"
 
+_____________ 
+
+
+
+# turn it off..
+#   put this in model..
+
+devise :database_authenticatable, :registerable,
+# devise :ldap_authenticatable, :registerable,
+
+_____________ 
+
+add this after /config.*ldap/ in config/initializers/devise.rb
+
+
+  config.ldap_create_user = true
+  config.ldap_auth_username_builder = Proc.new() {|attribute, login, ldap| "#{login}@stackpole.ca"}
+
+_____________ 
+
+
+
+
 
 done already?   rails generate devise:views 
 
@@ -40,9 +63,12 @@ sed -i -e '0,/email_field/s/email_field/text_field/' app/views/devise/sessions/n
 
 # copy in config files..
 
-
-cp -f $sfiles/devise.rb config/initializers
 cp  $sfiles/ldap.yml  config
+
+
+# no: it's done by install above..
+# cp -f $sfiles/devise.rb config/initializers
+
 
 git add .
 git commit -m "change devise config for ldap"

@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 9362e2d5178f5288454e9f9f7ff18b0994a4437e
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sun May 21 19:02:28 2017 -0400
+
+    Material theme rails_admin. Paper_trail.
+
 commit f6ae09400bfbc6ded1ac381d46aadb65313867a7
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sun May 21 00:01:56 2017 -0400
@@ -54,9 +60,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Sun Apr 23 12:12:09 2017 -0400
 
     add button group to index
-
-commit 9d3da0e55a61af60da0ef676af106ca6ddc772d9
-Author: David Gleba <dgleba@gmail.com>
-Date:   Tue Apr 18 23:31:30 2017 -0400
-
-    Cocoon Notes 2017-04-18

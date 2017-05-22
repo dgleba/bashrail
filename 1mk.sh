@@ -153,6 +153,10 @@ pwd
   #source ../bashrail/admin-ra-materialtheme.sh
   # or
   source $sfil2/admin-ra-materialtheme.sh
+  
+  source $sfil2/papertrail1.sh
+  
+  source $sfil2/ldap1.sh
 
   
 

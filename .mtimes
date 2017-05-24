@@ -100,11 +100,6 @@
 1492965297|lib/templates/erb/scaffold/index.html.erb
 1493603201|.gitignore
 1493778207|docs/remove-scaffolds_product_pfeature_etc.txt
-1468703838|docs/deploy/deploy-drail-howto-notes.txt
-1494097527|docs/deploy/deploy.sh
-1468703838|docs/deploy/puma-manager.conf
-1468703838|docs/deploy/puma.conf
-1468703838|docs/deploy/puma.rb
 1494095572|docs/dotenv-rails-howto-know/.env
 1480369569|docs/dotenv-rails-howto-know/application.rb
 1480369564|docs/dotenv-rails-howto-know/database.yml
@@ -133,3 +128,8 @@
 1495412061|docs/ldap_howto_readme.sh.txt
 1495468856|ldap1.sh
 1495422596|ldap_manual-edits.txt
+1468703838|deploy/deploy-drail-howto-notes.txt
+1494097527|deploy/deploy.sh
+1468703838|deploy/puma-manager.conf
+1468703838|deploy/puma.conf
+1468703838|deploy/puma.rb

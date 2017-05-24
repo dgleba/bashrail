@@ -129,7 +129,7 @@
 1495468856|ldap1.sh
 1495422596|ldap_manual-edits.txt
 1468703838|deploy/deploy-drail-howto-notes.txt
-1494097527|deploy/deploy.sh
 1468703838|deploy/puma-manager.conf
 1468703838|deploy/puma.conf
-1468703838|deploy/puma.rb
+1495590142|deploy/deploy.sh
+1495590056|deploy/puma.rb

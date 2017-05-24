@@ -15,7 +15,7 @@
 2017-05-06 16:26:24 -0400 | 1494102384 | docs/ldap/ldap-example.yml
 2017-05-06 16:18:26 -0400 | 1494101906 | docs/ldap/ldap_howto_readme.sh.txt
 2017-05-06 15:17:36 -0400 | 1494098256 | docs/dotenv-rails-howto-know/dotenv-rails-howto-know,dot.env.txt
-2017-05-06 15:05:27 -0400 | 1494097527 | docs/deploy/deploy.sh
+2017-05-06 15:05:27 -0400 | 1494097527 | deploy/deploy.sh
 2017-05-06 14:32:52 -0400 | 1494095572 | docs/dotenv-rails-howto-know/.env
 2017-05-03 20:24:07 -0400 | 1493857447 | readme,runone,script,howto.txt
 2017-05-03 20:22:56 -0400 | 1493857376 | select2.sh
@@ -129,7 +129,7 @@
 2016-07-28 10:38:44 -0400 | 1469716724 | docs/ldap/ldap265mk-copy.sh
 2016-07-28 08:15:54 -0400 | 1469708154 | docs/ldap/devise.rb
 2016-07-27 08:40:49 -0400 | 1469623249 | utilbr/passw.rb
-2016-07-16 17:17:18 -0400 | 1468703838 | docs/deploy/puma.rb
-2016-07-16 17:17:18 -0400 | 1468703838 | docs/deploy/puma.conf
-2016-07-16 17:17:18 -0400 | 1468703838 | docs/deploy/puma-manager.conf
-2016-07-16 17:17:18 -0400 | 1468703838 | docs/deploy/deploy-drail-howto-notes.txt
+2016-07-16 17:17:18 -0400 | 1468703838 | deploy/puma.rb
+2016-07-16 17:17:18 -0400 | 1468703838 | deploy/puma.conf
+2016-07-16 17:17:18 -0400 | 1468703838 | deploy/puma-manager.conf
+2016-07-16 17:17:18 -0400 | 1468703838 | deploy/deploy-drail-howto-notes.txt

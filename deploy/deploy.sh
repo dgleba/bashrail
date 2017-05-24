@@ -53,7 +53,7 @@ echo $vport
 
 cd $dpath
 
-mkdir -p shared/pids shared/sockets shared/log
+mkdir -p deployed/pids deployed/sockets deployed/log
 
 sudo cp deploy/puma.conf /etc/init/puma.conf
 sudo cp deploy/puma-manager.conf /etc/init/puma-manager.conf
@@ -90,7 +90,7 @@ sudo tee /etc/nginx/sites-available/$prjname.conf <<EOF
 
 upstream app$vport {
     # Path to Puma SOCK file, as defined previously
-    server unix:/srv/web/$prjname/shared/sockets/puma.sock fail_timeout=0;
+    server unix:/srv/web/$prjname/deployed/sockets/puma.sock fail_timeout=0;
 }
 
 server {

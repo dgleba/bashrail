@@ -119,3 +119,23 @@ Date:   Mon May 22 13:00:39 2017 -0400
     master merges with remote master
   Local ref configured for 'git push':
     master pushes to master (up to date)
+
+
+~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
+
+commit f59919f5b05816f85ba4d0bb4aaf8e2227f60782
+Author: David Gleba <dgleba@gmail.com>
+Date:   Tue May 23 21:39:15 2017 -0400
+
+    Move folder
+---
+* remote origin
+  Fetch URL: https://github.com/dgleba/bashrail.git
+  Push  URL: https://github.com/dgleba/bashrail.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)

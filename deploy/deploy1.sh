@@ -53,15 +53,11 @@ echo $vport
 
 cd $dpath
 
-mkdir -p deployed/pids deployed/sockets deployed/log
+mkdir -p shared/pids shared/sockets shared/log
 
 sudo cp deploy/puma.conf /etc/init/puma.conf
 sudo cp deploy/puma-manager.conf /etc/init/puma-manager.conf
-
 cp deploy/puma.rb config/puma.rb
-# I don't think this works.. it has to be config/puma.rb
-# mkdir -p config/puma 
-# cp deploy/puma/production.rb config/puma/production.rb
 
 
 #old..
@@ -94,7 +90,7 @@ sudo tee /etc/nginx/sites-available/$prjname.conf <<EOF
 
 upstream app$vport {
     # Path to Puma SOCK file, as defined previously
-    server unix:/srv/web/$prjname/deployed/sockets/puma.sock fail_timeout=0;
+    server unix:/srv/web/$prjname/shared/sockets/puma.sock fail_timeout=0;
 }
 
 server {

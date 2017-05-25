@@ -35,7 +35,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th colspan="1"></th>
+      <th colspan="2"></th>
       <% attributes.reject(&:password_digest?).each do |attribute| -%>
       <th><%= attribute.human_name %></th>
 <% end -%>
@@ -45,14 +45,8 @@
   <tbody>
     <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
       <tr>
-        <td>
-          <div class="btn-group">
-          <%%= link_to 'Show', <%= singular_table_name %>, class: "btn btn-info", :style=>'color:#FFFFFF;' %>
-          <%%= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>), class: "btn btn-primary", :style=>'color:#FFFFFF;' %>
-          <%% #commentedout  = link_to 'Destroy', <%= singular_table_name %>, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning", :style=>'color:#FFFFFF;' %>
-          </div>
-        </td>
-        
+        <td><%%= link_to 'Show', <%= singular_table_name %>, class: "btn btn-info", :style=>'color:#FFFFFF;' %></td>
+        <td><%%= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>), class: "btn btn-primary", :style=>'color:#FFFFFF;' %></td>
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
         <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
 <% end -%>

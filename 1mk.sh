@@ -22,8 +22,14 @@ function abort()
     echo "An error occurred. Exiting..." >&2
     exit 1
 }
+
+# comment out the next two lines to disable the abort on error. [ trap and set -e]..
+# commented out it will not stop - just continue after and error and go to completion. 
+# You will have to find the error way back somewhere in the terminal. You may want that to happen. You have a choice.
 trap 'abort' 0
 set -e
+
+
 # Add your script below.... If an error occurs, the abort() function will be called.
 #----------------------------------------------------------
 # ===> Your script goes here.........................

@@ -1,0 +1,50 @@
+# Auto detect text files and perform LF normalization
+# * text=auto
+
+# Force the following filetypes to have unix eols, so Windows does not break them
+*.* text eol=lf
+# not sure what multiple entries will do.. 2016-09-23
+* text eol=lf
+
+# Custom for Visual Studio
+*.cs     diff=csharp
+*.sln    merge=union
+*.csproj merge=union
+*.vbproj merge=union
+*.fsproj merge=union
+*.dbproj merge=union
+
+# Standard to msysgit
+*.doc	 diff=astextplain
+*.DOC	 diff=astextplain
+*.docx diff=astextplain
+*.DOCX diff=astextplain
+*.dot  diff=astextplain
+*.DOT  diff=astextplain
+*.pdf  diff=astextplain
+*.PDF	 diff=astextplain
+*.rtf	 diff=astextplain
+*.RTF	 diff=astextplain
+
+
+
+# ...Unless the name matches the following
+# overriding patterns
+
+# Definitively text files 
+*.txt text
+*.c text
+*.h text
+*.rb text
+*.php text
+*.conf text
+*.yml text
+
+# Ensure those won't be messed up with
+*.jpg binary
+*.data binary
+*.sqlite3 binary
+*.db binary
+*.7z binary
+*.tgz binary
+*.7z binary

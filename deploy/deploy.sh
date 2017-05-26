@@ -24,7 +24,7 @@ usage:
 *******   Don't run with sudo..  *******
 
 
- cd /srv/web/rail263
+ cd /srv/web/railci350
  deploy/deploy.sh
 
 end -- usage. 
@@ -41,9 +41,9 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
 
 # settings...
 
-prjname="lpa346"
+prjname="railci350"
 dpath="/srv/web/$prjname"
-vport="1293"
+vport="1301"
 
 
 
@@ -58,10 +58,10 @@ mkdir -p deployed/pids deployed/sockets deployed/log
 sudo cp deploy/puma.conf /etc/init/puma.conf
 sudo cp deploy/puma-manager.conf /etc/init/puma-manager.conf
 
-cp deploy/puma.rb config/puma.rb
+cp deploy/puma_production.rb config/puma_production.rb
 # I don't think this works.. it has to be config/puma.rb
-# mkdir -p config/puma 
-# cp deploy/puma/production.rb config/puma/production.rb
+ # mkdir -p config/puma 
+ # cp deploy/puma/production.rb config/puma/production.rb
 
 
 #old..

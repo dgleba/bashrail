@@ -1,0 +1,274 @@
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+array1=( country_of_origin cilisting1  ci_review  leader  lkup_sugg_status  )
+array2=( CountryOfOrigin   Cilisting1  CiReview   Leader  LkupSuggStatus )  
+
+set -x
+for patrn in "${array1[@]}"
+do
+  echo $patrn
+  dest1="../0movedfiles1"
+  tmpf1='/tmp/rsyncfiles'
+  find . -type f  \( -iname "*$patrn*" ! -iname "production.rb" \) > $tmpf1 # files.
+    rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+  find . -type d  \( -iname "*$patrn*"  \) > $tmpf1                        # directories/folders.
+  sed -i  's/$/\//' $tmpf1  # add trailing slash to end of each line in file..
+    rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+done 
+#
+
+for patrn in "${array2[@]}"
+do
+  echo $patrn
+  rails destroy scaffold $patrn  
+done 
+set +x
+#
+
+for patrn in "${array1[@]}"
+do
+  echo $patrn
+  grep -ri  --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3} $patrn .
+  grep -rli --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3} $patrn .
+done  
+#
+
+ 
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+# move files matching criteria in find command...
+  # this is for a rails project. move scaffolds.
+
+patrn="*part_num*"
+dest1="../0movedfiles1"
+tmpf1='/tmp/rsyncfiles'
+find . -type f  \( -iname $patrn ! -iname "production.rb" \) > $tmpf1 # files.
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+find . -type d  \( -iname $patrn  \) > $tmpf1                         # directories/folders.
+sed -i  's/$/\//' $tmpf1  # add trailing slash to end of each line in file..
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+
+patrn="*process_step*"
+dest1="../0movedfiles1"
+tmpf1='/tmp/rsyncfiles'
+find . -type f  \( -iname $patrn ! -iname "production.rb" \) > $tmpf1 # files.
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+find . -type d  \( -iname $patrn  \) > $tmpf1                         # directories/folders.
+sed -i  's/$/\//' $tmpf1  # add trailing slash to end of each line in file..
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+  
+  
+patrn="*answer*"
+dest1="../0movedfiles1"
+tmpf1='/tmp/rsyncfiles'
+find . -type f  \( -iname $patrn ! -iname "production.rb" \) > $tmpf1 # files.
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+find . -type d  \( -iname $patrn  \) > $tmpf1                         # directories/folders.
+sed -i  's/$/\//' $tmpf1  # add trailing slash to end of each line in file..
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+
+patrn="*question*"
+dest1="../0movedfiles1"
+tmpf1='/tmp/rsyncfiles'
+find . -type f  \( -iname $patrn ! -iname "production.rb" \) > $tmpf1 # files.
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+find . -type d  \( -iname $patrn  \) > $tmpf1                         # directories/folders.
+sed -i  's/$/\//' $tmpf1  # add trailing slash to end of each line in file..
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+
+patrn="*survey*"
+dest1="../0movedfiles1"
+tmpf1='/tmp/rsyncfiles'
+find . -type f  \( -iname $patrn ! -iname "production.rb" \) > $tmpf1 # files.
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+find . -type d  \( -iname $patrn  \) > $tmpf1                         # directories/folders.
+sed -i  's/$/\//' $tmpf1  # add trailing slash to end of each line in file..
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+
+
+  
+patrn="*product*"
+dest1="../0movedfiles1"
+tmpf1='/tmp/rsyncfiles'
+find . -type f  \( -iname $patrn ! -iname "production.rb" \) > $tmpf1 # files.
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+find . -type d  \( -iname $patrn  \) > $tmpf1                         # directories/folders.
+sed -i  's/$/\//' $tmpf1  # add trailing slash to end of each line in file..
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+
+patrn="*pfeature*"
+dest1="../0movedfiles1"
+tmpf1='/tmp/rsyncfiles'
+find . -type f  \( -iname $patrn ! -iname "production.rb" \) > $tmpf1 # files.
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+find . -type d  \( -iname $patrn  \) > $tmpf1                        # directories/folders.
+sed -i  's/$/\//' $tmpf1  # add trailing slash to end of each line in file..
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+  
+patrn="*country_of_origin*"
+dest1="../0movedfiles1"
+tmpf1='/tmp/rsyncfiles'
+find . -type f  \( -iname $patrn ! -iname "production.rb" \) > $tmpf1 # files.
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+find . -type d  \( -iname $patrn  \) > $tmpf1                        # directories/folders.
+sed -i  's/$/\//' $tmpf1  # add trailing slash to end of each line in file..
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+rails destroy scaffold $patrn  
+  
+  
+patrn2=product  
+grep -ri  --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3} $patrn2 .
+grep -rli --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3} $patrn2 .
+ 
+patrn2=pfeature 
+grep -ri  --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3,*.logz} $patrn2 .
+grep -rli --exclude-dir={tmp,log,docs,.git} --exclude=*.sqlite3 $patrn2 .
+   
+patrn2=country_of_or
+grep -ri  --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3,*.logz} $patrn2 .
+grep -rli --exclude-dir={tmp,log,docs,.git} --exclude=*.sqlite3 $patrn2 .
+ 
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+patrn="CountryOfOrigin*"
+rails destroy scaffold $patrn  
+
+patrn="Product*"
+rails destroy scaffold $patrn  
+  
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ 
+   
+rm -rf .git  
+git init  
+git add -A  # Add all files and commit them  
+git commit -m "Removed history and started over"  
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Application name is referenced in..
+
+grep -rin --color=always rail2 . | grep -vi -e deploy -e tmp -e .git -e log -e /offline -e readme -e docs -e mtime -e offlin
+grep -rin --color=always lpa34 . | grep -vi -e deploy -e tmp -e .git -e log -e /offline -e readme -e docs -e mtime -e offlin
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+remove from routes.rb
+
+
+  resources :answers
+  resources :questions
+  resources :question_lists
+  resources :process_steps
+  resources :part_numbers
+  resources :surveys do
+    resources :questions do
+    end
+  end
+  resources :answers, only: [:create]
+  root "surveys#index"
+  resources :products
+  resources :product_features
+  resources :pfeatures
+  resources :country_of_origins
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+try running it.
+
+
+edit home index erb
+
+Showing /srv/share/ci/ci349a/app/views/layouts/application.html.erb where line #30 raised:
+
+edit ability.rb
+
+edit user.rb, remove surveys reference.
+
+rename development.sqlite3
+
+rake db:migrate
+rake db:seed
+
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+_____________
+
+
+array=( "one" "two" "three" )
+for i in "${array[@]}"
+do
+	echo $i
+done
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# move files matching criteria in find command...
+  # this is for a rails project. move scaffolds.
+ 
+patrn="*product*"
+dest1="../0movedfiles1"
+tmpf1='/tmp/rsyncfiles'
+find . -type f  \( -iname $patrn ! -iname "production.rb" \) > $tmpf1 # files.
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+find . -type d  \( -iname $patrn  \) > $tmpf1                         # directories/folders.
+sed -i  's/$/\//' $tmpf1  # add trailing slash to end of each line in file..
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+
+patrn="*pfeature*"
+dest1="../0movedfiles1"
+tmpf1='/tmp/rsyncfiles'
+find . -type f  \( -iname $patrn ! -iname "production.rb" \) > $tmpf1 # files.
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+find . -type d  \( -iname $patrn  \) > $tmpf1                        # directories/folders.
+sed -i  's/$/\//' $tmpf1  # add trailing slash to end of each line in file..
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+  
+patrn="*country_of_ori*"
+dest1="../0movedfiles1"
+tmpf1='/tmp/rsyncfiles'
+find . -type f  \( -iname $patrn ! -iname "production.rb" \) > $tmpf1 # files.
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+find . -type d  \( -iname $patrn  \) > $tmpf1                        # directories/folders.
+sed -i  's/$/\//' $tmpf1  # add trailing slash to end of each line in file..
+  rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
+  
+  
+patrn2=product  
+grep -ri  --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3} $patrn2 .
+grep -rli --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3} $patrn2 .
+ 
+patrn2=pfeature 
+grep -ri  --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3,*.logz} $patrn2 .
+grep -rli --exclude-dir={tmp,log,docs,.git} --exclude=*.sqlite3 $patrn2 .
+   
+patrn2=country_of_or
+grep -ri  --exclude-dir={tmp,log,docs,.git} --exclude={*.sqlite3,*.logz} $patrn2 .
+grep -rli --exclude-dir={tmp,log,docs,.git} --exclude=*.sqlite3 $patrn2 .
+   
+   
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   
+

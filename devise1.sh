@@ -9,15 +9,37 @@ echo 'gem "devise"' >> Gemfile
 
 bundle
 
+git add -A # Add all files and commit them
+git commit -m "add devise start"
+
 # Create user and roles tables..
 
 # rails g scaffold Role name description active_status:integer sort:integer
 # rails g scaffold User name role:belongs_to 
 # rake db:migrate
 
-
 rails generate devise:install
+
+git add -A # Add all files and commit them
+git commit -m "add devise 1a"
+ 
 rails generate devise user
+
+git add -A # Add all files and commit them
+git commit -m "add devise 1b"
+  
+# copy ability and user model..
+mkdir -p  backup/app/models
+cp -a app/models/ backup/app/
+cp -a $sfil2/app/models/user.rb app/models/
+
+cp -a $sfil2/db/migrate/30170101010101_add_devise2_to_users.rb db/migrate/
+
+
+git add -A # Add all files and commit them
+git commit -m "add devise 1c"
+  
+
 rake db:migrate
 
 #rails g devise_ldap_authenticatable:install
@@ -43,7 +65,7 @@ rails generate devise:views
 ###  git. .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 git add -A # Add all files and commit them
-git commit -m "add devise 1"
+git commit -m "add devise 1d"
   
   
  
@@ -76,6 +98,14 @@ ruby $sfil2/devise2thor.rb gsub3 a
 # Add Name to user
 rails g migration AddNameToUser name
    
+   
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# copy ability and user model..
+cp -a $sfil2/config/environments/development.rb config/environments/
+
+
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    
 git add -A # Add all files and commit them

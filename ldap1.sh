@@ -28,6 +28,11 @@ git commit -m "ldap - 1 - before rails g devise_ldap_authenticatable:install"
 
 rails g devise_ldap_authenticatable:install
 
+# copy  user model..
+mkdir -p  backup/app/models
+# cp -a app/models/ backup/app/
+cp -a $sfil2/app/models/user.rb app/models/
+
 git status
 # git diff
 git add .
@@ -39,43 +44,43 @@ git commit -m "after rails g devise_ldap_authenticatable:install"
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-# add new lines of text after patrn...
-#
-filetarg='app/models/user.rb'
-r1tmp="/tmp/_temprubyrunner_${USER}.rb"
-cat << 'HEREDOC' > $r1tmp
-  repl2 = %Q{
-  devise :database_authenticatable, :registerable,
-  }
-  ARGF.each do |line|
-    puts line
-    puts repl2 if line =~ /confirmable/
-  end
-HEREDOC
-ruby $r1tmp $filetarg > $filetarg.tmp
-cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+# # add new lines of text after patrn...
+# #
+# filetarg='app/models/user.rb'
+# r1tmp="/tmp/_temprubyrunner_${USER}.rb"
+# cat << 'HEREDOC' > $r1tmp
+  # repl2 = %Q{
+  # devise :database_authenticatable, :registerable,
+  # }
+  # ARGF.each do |line|
+    # puts line
+    # puts repl2 if line =~ /confirmable/
+  # end
+# HEREDOC
+# ruby $r1tmp $filetarg > $filetarg.tmp
+# cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 
 
 
 
-# comment line containing pattern...
-#
-filetarg='app/models/user.rb'
-r1tmp="/tmp/_temprubyrunner_${USER}.rb"
-cat << 'HEREDOC' > $r1tmp
-  repl2 = %Q{
-  notused
-  }
-  ARGF.each do |line|
-    if line =~ /ldap_authenticatable/
-      puts "  ##{line}" 
-    else
-      puts line
-    end
-  end
-HEREDOC
-ruby $r1tmp $filetarg > $filetarg.tmp
-cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+# # comment line containing pattern...
+# #
+# filetarg='app/models/user.rb'
+# r1tmp="/tmp/_temprubyrunner_${USER}.rb"
+# cat << 'HEREDOC' > $r1tmp
+  # repl2 = %Q{
+  # notused
+  # }
+  # ARGF.each do |line|
+    # if line =~ /ldap_authenticatable/
+      # puts "  ##{line}" 
+    # else
+      # puts line
+    # end
+  # end
+# HEREDOC
+# ruby $r1tmp $filetarg > $filetarg.tmp
+# cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 
 
 
@@ -97,10 +102,8 @@ function offline21() {
 
 I am getting this error.
 
-
 Just make the changes manually for now.
 Have to copy my ldap.yml into place anyway..
-
 
 
 albe@v206x20161030220807:~/share203/dg/brail347a11papertrail$ irb
@@ -112,7 +115,6 @@ NameError: undefined local variable or method `login' for main:Object
 	from (irb):3
 	from /home/albe/.rbenv/versions/2.3.0/bin/irb:11:in `<main>'
 irb(main):005:0> 
-
 
 
 BLOCKCOMMENT
@@ -149,8 +151,8 @@ HEREDOC
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-git add -A # Add all files and commit them
-git commit -m "paper_trail - 3. setup"
+# git add -A # Add all files and commit them
+# git commit -m "ldap - 3. setup"
 
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

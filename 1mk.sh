@@ -140,19 +140,18 @@ pwd
   source $sfil2/paginate1.sh  # optional, but you may need to edit to overcome some errors since it may include some code that depends on other features.
 
   
-  
   # use only devisetokenauth1.sh  or devisejwt.sh   NOT both..
 
+
   source $sfil2/devise1.sh   # optional, but will modify home page, so.. some edits to overcome missing items may be necessary
+
+  
   source $sfil2/devisejwt.sh   # optional. requires devise1.sh
 # or
   # source $sfil2/devisetokenauth1.sh   # optional
 
-  
 
   source $sfil2/cancan1.sh   # optional, but ..  optional may require some further edits.
-  
-
 
   source $sfil2/admin1.sh  # optional
   
@@ -269,18 +268,14 @@ git add -A # Add all files and commit them
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 # Copy files over..
-
 
 path1='empty'
 pathtmp='/tmp/bashrail'
-rm -rf $pathtmp
-mkdir -p $pathtmp/
-pathtarget='docs/generatedby'
-mkdir -p $pathtarget/
-# rsync.. -a - rltpgoD  preserve almost all. -u update don't copy older source files.
+rm -rf $pathtmp; mkdir -p $pathtmp/
+pathtarget='docs/generatedby' ;mkdir -p $pathtarget/
 rsync -av --ignore-times  $sfil2/ $pathtmp/
+# rsync.. -a - rltpgoD  preserve almost all. -u update don't copy older source files.
 rm -rf $pathtmp/.git
 zip -r  /tmp/bashrail_copy.zip $pathtmp/*
 cp /tmp/bashrail_copy.zip $pathtarget

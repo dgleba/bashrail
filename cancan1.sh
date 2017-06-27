@@ -132,10 +132,8 @@ rake db:migrate
 
 
 # copy ability and user model..
-
 mkdir -p  backup/app/models
 cp -a app/models/ backup/app/
-
 cp -a $sfil2/app/models/ app/
 
 # timeout1=15 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..."  || true;  echo ;

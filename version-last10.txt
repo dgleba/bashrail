@@ -1,5 +1,53 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit da988d07aa942bdf2eb153b9b8748dd8426277b3
+Author: albe <albe@pmdsdata9.local>
+Date:   Wed Jun 14 15:34:49 2017 -0400
+
+    remove scaffolds doc
+
+commit 3fc0174b1ffb9f080e5c524bf7f70540ae09089e
+Author: albe <albe@pmdsdata9.local>
+Date:   Mon Jun 5 15:56:41 2017 -0400
+
+    license
+
+commit 91fb2920e52b6a784e544fc628636e5348f3f63d
+Author: albe <albe@pmdsdata9.local>
+Date:   Mon Jun 5 15:52:03 2017 -0400
+
+    license
+
+commit 65c22dcb8a37e173c5f443211371deef69fe14a0
+Author: albe <albe@pmdsdata9.local>
+Date:   Fri May 26 16:33:25 2017 -0400
+
+    features list
+
+commit 0337c62fc5ef782f2b590b170b264fe6952258f6
+Author: albe <albe@pmdsdata9.local>
+Date:   Thu May 25 23:02:42 2017 -0400
+
+    change deploy paths
+
+commit cca29dfe16e3f9a10a47b298c42263f4c8f4f7c7
+Author: albe <albe@pmdsdata9.local>
+Date:   Thu May 25 16:33:21 2017 -0400
+
+    working on deploy
+
+commit 1b641192c25da8477d1ff5b9c41829414ea0ae62
+Author: albe <albe@pmdsdata9.local>
+Date:   Thu May 25 10:58:18 2017 -0400
+
+    2017-05-25a
+
+commit 9b26519d02023356aa34ceb71044ce78032eea0f
+Author: David Gleba <dgleba@gmail.com>
+Date:   Tue May 23 21:44:59 2017 -0400
+
+    rename shared dir to deployed
+
 commit f59919f5b05816f85ba4d0bb4aaf8e2227f60782
 Author: David Gleba <dgleba@gmail.com>
 Date:   Tue May 23 21:39:15 2017 -0400
@@ -11,52 +59,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Mon May 22 13:00:39 2017 -0400
 
     add ldap setup, some manual edits needed due to privacy
-
-commit 9362e2d5178f5288454e9f9f7ff18b0994a4437e
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sun May 21 19:02:28 2017 -0400
-
-    Material theme rails_admin. Paper_trail.
-
-commit f6ae09400bfbc6ded1ac381d46aadb65313867a7
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sun May 21 00:01:56 2017 -0400
-
-    2017-05-20
-
-commit f5f622049196747bdae31bf0a8e37a0b56713566
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sun May 7 00:05:15 2017 -0400
-
-    ldap example.yml
-
-commit 6bc6e5a166bef76c75d80c4625e16c3b61eca913
-Merge: c3ad2cb 31a5a8b
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sat May 6 17:30:36 2017 -0400
-
-    fix
-
-commit c3ad2cb6eeea7ea9da9e2e5a1f8981ae2f92c380
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sat May 6 17:24:05 2017 -0400
-
-    update for 5ails5, add deploy, .env, ldap instructions
-
-commit 31a5a8b3caed737fdfb54a61e2e2fb7826ddf480
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sat May 6 17:24:05 2017 -0400
-
-    deploy, .env, ldap instructions
-
-commit c369f1da8ff3df2a6ee832431bda51b143a98481
-Author: David Gleba <dgleba@gmail.com>
-Date:   Tue May 2 22:36:34 2017 -0400
-
-    2017-05-02
-
-commit 73e73509b781f8701fec45811b04f5d166a2c3f8
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sun Apr 30 22:57:19 2017 -0400
-
-    commands to remove example scaffolds

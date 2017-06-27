@@ -60,14 +60,38 @@ cat << 'HEREDOC' > app/views/layouts/$file2
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="nav navbar-nav">
             <li>
-              <!-- <%= link_to 'Products', products_path %> -->
+              <!-- <%#  = link_to 'Products', products_path %> -->
             </li>
           </ul>
-        </div>
 
+          <ul class="nav navbar-nav navbar-right">
+            <%# views/devise/menu/_login_items.html.erb %>
+            <% if user_signed_in? %>
+                <li>
+                  <%= link_to "Administer", rails_admin.dashboard_path, :class => "btn btn-secondary " %>
+                </li>
+               <li>
+                  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= current_user.email %>,<%= current_user.name %>
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">This item to be used later</a></li>
+                    <li> <%#= link_to 'Users', users_path %> </li>
+                    <li> <%= link_to "Edit profile", edit_user_registration_path %> </li>
+                    <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+                  </ul>
+                </li>
+            <% else %>
+                <li>
+                  <%= link_to('Login', new_user_session_path)  %>
+                </li>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </nav>
-    
 
     <div class="container-fluid">
       <% flash.each do |type, msg| %>

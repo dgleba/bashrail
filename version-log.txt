@@ -139,3 +139,23 @@ Date:   Tue May 23 21:39:15 2017 -0400
     master merges with remote master
   Local ref configured for 'git push':
     master pushes to master (up to date)
+
+
+~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
+
+commit da988d07aa942bdf2eb153b9b8748dd8426277b3
+Author: albe <albe@pmdsdata9.local>
+Date:   Wed Jun 14 15:34:49 2017 -0400
+
+    remove scaffolds doc
+---
+* remote origin
+  Fetch URL: https://github.com/dgleba/bashrail.git
+  Push  URL: https://github.com/dgleba/bashrail.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)

@@ -1,5 +1,17 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 00a4a06348414e4538a6004ed64b2de722cb82be
+Author: albe <albe@pmdsdata9.local>
+Date:   Tue Jun 27 16:38:56 2017 -0400
+
+    add more devise features
+
+commit 3e610e574c2e0bdf83d878758bd6bc5b4eb42357
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Jun 26 21:56:50 2017 -0400
+
+    add more devise views with extra new lines
+
 commit 516f9c637b0a8b6c298a36df184e03850c4c5b4d
 Author: David Gleba <dgleba@gmail.com>
 Date:   Mon Jun 26 21:51:08 2017 -0400
@@ -47,15 +59,3 @@ Author: albe <albe@pmdsdata9.local>
 Date:   Thu May 25 10:58:18 2017 -0400
 
     2017-05-25a
-
-commit 9b26519d02023356aa34ceb71044ce78032eea0f
-Author: David Gleba <dgleba@gmail.com>
-Date:   Tue May 23 21:44:59 2017 -0400
-
-    rename shared dir to deployed
-
-commit f59919f5b05816f85ba4d0bb4aaf8e2227f60782
-Author: David Gleba <dgleba@gmail.com>
-Date:   Tue May 23 21:39:15 2017 -0400
-
-    Move folder

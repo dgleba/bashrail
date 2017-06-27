@@ -122,7 +122,6 @@
 2017-05-21 17:46:04 -0400 | 1495403164 | admin1.sh
 2017-05-21 18:33:35 -0400 | 1495406015 | app/models/ability.rb
 2017-05-21 18:56:42 -0400 | 1495407402 | papertrail1.sh
-2017-05-21 20:52:14 -0400 | 1495414334 | 1mk.sh
 2017-05-21 20:14:21 -0400 | 1495412061 | docs/ldap_howto_readme.sh.txt
 2017-05-22 12:00:56 -0400 | 1495468856 | ldap1.sh
 2016-07-16 17:17:18 -0400 | 1468703838 | deploy/deploy-drail-howto-notes.txt
@@ -130,7 +129,6 @@
 2016-07-16 17:17:18 -0400 | 1468703838 | deploy/puma.conf
 2017-05-23 21:42:22 -0400 | 1495590142 | deploy/deploy.sh
 2017-05-23 21:40:56 -0400 | 1495590056 | deploy/puma.rb
-2017-06-26 21:16:21 -0400 | 1498526181 | app/models/user.rb
 2017-06-26 21:46:13 -0400 | 1498527973 | app/views/devise/sessions/new.html.erb
 2017-06-26 21:45:09 -0400 | 1498527909 | app/views/devise/shared/_links.html.erb
 2017-06-26 19:22:30 -0400 | 1498519350 | applayout1.sh
@@ -140,3 +138,16 @@
 2017-06-19 21:15:50 -0400 | 1497921350 | docs/will_filter1.sh
 2017-06-26 19:43:34 -0400 | 1498520614 | figaro.env.sh
 2017-06-26 21:20:53 -0400 | 1498526453 | ldap_manual-edits.txt
+2017-06-26 21:17:38 -0400 | 1498526258 | app/views/devise/confirmations/new.html.erb
+2017-06-26 21:17:39 -0400 | 1498526259 | app/views/devise/mailer/confirmation_instructions.html.erb
+2017-06-26 21:17:39 -0400 | 1498526259 | app/views/devise/mailer/email_changed.html.erb
+2017-06-26 21:17:39 -0400 | 1498526259 | app/views/devise/mailer/password_change.html.erb
+2017-06-26 21:17:39 -0400 | 1498526259 | app/views/devise/mailer/reset_password_instructions.html.erb
+2017-06-26 21:17:39 -0400 | 1498526259 | app/views/devise/mailer/unlock_instructions.html.erb
+2017-06-26 21:55:11 -0400 | 1498528511 | app/views/devise/passwords/edit.html.erb
+2017-06-26 21:54:45 -0400 | 1498528485 | app/views/devise/passwords/new.html.erb
+2017-06-26 21:17:38 -0400 | 1498526258 | app/views/devise/registrations/edit.html.erb
+2017-06-26 21:17:38 -0400 | 1498526258 | app/views/devise/registrations/new.html.erb
+2017-06-26 21:17:39 -0400 | 1498526259 | app/views/devise/unlocks/new.html.erb
+2017-06-27 18:38:32 -0400 | 1498603112 | 1mk.sh
+2017-06-27 18:41:24 -0400 | 1498603284 | app/models/user.rb

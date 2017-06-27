@@ -140,3 +140,14 @@
 1497921350|docs/will_filter1.sh
 1498520614|figaro.env.sh
 1498526453|ldap_manual-edits.txt
+1498526258|app/views/devise/confirmations/new.html.erb
+1498526259|app/views/devise/mailer/confirmation_instructions.html.erb
+1498526259|app/views/devise/mailer/email_changed.html.erb
+1498526259|app/views/devise/mailer/password_change.html.erb
+1498526259|app/views/devise/mailer/reset_password_instructions.html.erb
+1498526259|app/views/devise/mailer/unlock_instructions.html.erb
+1498528511|app/views/devise/passwords/edit.html.erb
+1498528485|app/views/devise/passwords/new.html.erb
+1498526258|app/views/devise/registrations/edit.html.erb
+1498526258|app/views/devise/registrations/new.html.erb
+1498526259|app/views/devise/unlocks/new.html.erb

@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 516f9c637b0a8b6c298a36df184e03850c4c5b4d
+Author: David Gleba <dgleba@gmail.com>
+Date:   Mon Jun 26 21:51:08 2017 -0400
+
+    1. layout, 2. figaro, 3. user.rb 4 ldap doc.
+
 commit da988d07aa942bdf2eb153b9b8748dd8426277b3
 Author: albe <albe@pmdsdata9.local>
 Date:   Wed Jun 14 15:34:49 2017 -0400
@@ -53,9 +59,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Tue May 23 21:39:15 2017 -0400
 
     Move folder
-
-commit 175d72fd00863523b2a6ca95abacf2005d9561d0
-Author: David Gleba <dgleba@gmail.com>
-Date:   Mon May 22 13:00:39 2017 -0400
-
-    add ldap setup, some manual edits needed due to privacy

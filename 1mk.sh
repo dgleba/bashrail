@@ -279,7 +279,7 @@ rsync -av --ignore-times  $sfil2/ $pathtmp/
 # rsync.. -a - rltpgoD  preserve almost all. -u update don't copy older source files.
 rm -rf $pathtmp/.git
 zip -r  /tmp/bashrail_copy.zip $pathtmp/*
-cp /tmp/bashrail_copy.zip $pathtarget
+# cp /tmp/bashrail_copy.zip $pathtarget
 cp -av $sfil2/version* $pathtarget
 
 cp -av $sfil2/root/.gitignore .

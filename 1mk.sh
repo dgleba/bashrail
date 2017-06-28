@@ -164,7 +164,7 @@ pwd
 
   source $sfil2/papertrail1.sh
 
-  
+  source $sfil2/figaro.env.sh
 
 ### scaffold... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

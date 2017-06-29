@@ -62,8 +62,6 @@
 1480459011|util/hooks/pre-push
 1484966291|docs/howtoaddacolumn-railsknow.txt
 1484957040|util/version.sh
-1485918694|Gemfile
-1485918696|Gemfile.lock
 1485910589|devisejwt.sh
 1484885040|docs/50161230223303_add_country_of_origin_to_products.rb
 1483053668|docsbr/api-reference_articles-I-used-for-jwt.txt
@@ -131,7 +129,6 @@
 1498520703|config/database-sqlite.yml
 1498520703|docs/ldap/user_4ldap.rb
 1497921350|docs/will_filter1.sh
-1498520614|figaro.env.sh
 1498526453|ldap_manual-edits.txt
 1498526258|app/views/devise/confirmations/new.html.erb
 1498526259|app/views/devise/mailer/confirmation_instructions.html.erb
@@ -151,3 +148,5 @@
 1498604796|version-log.txt
 1498604796|version.txt
 1498609801|1mk.sh
+1498704132|Gemfile
+1498703137|figaro.env.sh

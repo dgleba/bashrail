@@ -1,5 +1,23 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit e39eecf8abbb3838f9b3bd9bb27d2a3d1e0c8b05
+Author: albe <albe@pmdsdata9.local>
+Date:   Wed Jun 28 22:21:15 2017 -0400
+
+    2017-06-28b
+
+commit c20a140f257cf2025b9af2f209f8843a5f027b90
+Author: albe <albe@pmdsdata9.local>
+Date:   Wed Jun 28 10:03:02 2017 -0400
+
+    deploy-2017-06-28
+
+commit 1e4a1d87a602e8b8a5023f350cd56498c42a5717
+Author: David Gleba <dgleba@gmail.com>
+Date:   Tue Jun 27 20:32:43 2017 -0400
+
+    dont copy zip file over
+
 commit 344fda12170ed91bf04288c36b3f16ff41ccc669
 Author: David Gleba <dgleba@gmail.com>
 Date:   Tue Jun 27 19:06:35 2017 -0400
@@ -41,21 +59,3 @@ Author: albe <albe@pmdsdata9.local>
 Date:   Mon Jun 5 15:52:03 2017 -0400
 
     license
-
-commit 65c22dcb8a37e173c5f443211371deef69fe14a0
-Author: albe <albe@pmdsdata9.local>
-Date:   Fri May 26 16:33:25 2017 -0400
-
-    features list
-
-commit 0337c62fc5ef782f2b590b170b264fe6952258f6
-Author: albe <albe@pmdsdata9.local>
-Date:   Thu May 25 23:02:42 2017 -0400
-
-    change deploy paths
-
-commit cca29dfe16e3f9a10a47b298c42263f4c8f4f7c7
-Author: albe <albe@pmdsdata9.local>
-Date:   Thu May 25 16:33:21 2017 -0400
-
-    working on deploy

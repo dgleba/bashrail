@@ -28,6 +28,10 @@ git commit -m "figaro environment gem"
 
 bundle exec figaro install
 
+
+echo 'SECRET_KEY_BASE: f55c9f3b84be053f8ea74b84d' >> config/application.yml
+
+
 git status
 # git diff
 git add -A

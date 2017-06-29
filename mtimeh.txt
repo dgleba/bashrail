@@ -62,8 +62,6 @@
 2016-11-29 17:36:51 -0500 | 1480459011 | util/hooks/pre-push
 2017-01-20 21:38:11 -0500 | 1484966291 | docs/howtoaddacolumn-railsknow.txt
 2017-01-20 19:04:00 -0500 | 1484957040 | util/version.sh
-2017-01-31 22:11:34 -0500 | 1485918694 | Gemfile
-2017-01-31 22:11:36 -0500 | 1485918696 | Gemfile.lock
 2017-01-31 19:56:29 -0500 | 1485910589 | devisejwt.sh
 2017-01-19 23:04:00 -0500 | 1484885040 | docs/50161230223303_add_country_of_origin_to_products.rb
 2016-12-29 18:21:08 -0500 | 1483053668 | docsbr/api-reference_articles-I-used-for-jwt.txt
@@ -131,7 +129,6 @@
 2017-06-26 19:45:03 -0400 | 1498520703 | config/database-sqlite.yml
 2017-06-26 19:45:03 -0400 | 1498520703 | docs/ldap/user_4ldap.rb
 2017-06-19 21:15:50 -0400 | 1497921350 | docs/will_filter1.sh
-2017-06-26 19:43:34 -0400 | 1498520614 | figaro.env.sh
 2017-06-26 21:20:53 -0400 | 1498526453 | ldap_manual-edits.txt
 2017-06-26 21:17:38 -0400 | 1498526258 | app/views/devise/confirmations/new.html.erb
 2017-06-26 21:17:39 -0400 | 1498526259 | app/views/devise/mailer/confirmation_instructions.html.erb
@@ -151,3 +148,5 @@
 2017-06-27 19:06:36 -0400 | 1498604796 | version-log.txt
 2017-06-27 19:06:36 -0400 | 1498604796 | version.txt
 2017-06-27 20:30:01 -0400 | 1498609801 | 1mk.sh
+2017-06-28 22:42:12 -0400 | 1498704132 | Gemfile
+2017-06-28 22:25:37 -0400 | 1498703137 | figaro.env.sh

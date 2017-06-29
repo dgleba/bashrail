@@ -80,7 +80,6 @@
 1489872618|lib/templates/erb/scaffold/edit.html.erb
 1489872590|lib/templates/erb/scaffold/new.html.erb
 1489881288|lib/templates/erb/scaffold/show.html.erb
-1489876404|lib/templates/rails/scaffold_controller/controller.rb
 1489872126|lib/templates/rails/scaffold_controller/controller__beforerail263controller.rb
 1489886320|tableprefix1.sh
 1489886280|timezone1.sh
@@ -150,3 +149,8 @@
 1498609801|1mk.sh
 1498704132|Gemfile
 1498703137|figaro.env.sh
+1498704137|app/controllers/application_controller.rb
+1495406015|backup/app/models/ability.rb
+1477773827|backup/app/models/role.rb
+1498603284|backup/app/models/user.rb
+1498704137|lib/templates/rails/scaffold_controller/controller.rb

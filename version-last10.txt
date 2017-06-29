@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit b3f7586e9c20f651f7b6f3e76fd644a30ce27e77
+Author: David Gleba <dgleba@gmail.com>
+Date:   Wed Jun 28 22:42:13 2017 -0400
+
+    add cancan 1
+
 commit e39eecf8abbb3838f9b3bd9bb27d2a3d1e0c8b05
 Author: albe <albe@pmdsdata9.local>
 Date:   Wed Jun 28 22:21:15 2017 -0400
@@ -51,11 +57,5 @@ Date:   Wed Jun 14 15:34:49 2017 -0400
 commit 3fc0174b1ffb9f080e5c524bf7f70540ae09089e
 Author: albe <albe@pmdsdata9.local>
 Date:   Mon Jun 5 15:56:41 2017 -0400
-
-    license
-
-commit 91fb2920e52b6a784e544fc628636e5348f3f63d
-Author: albe <albe@pmdsdata9.local>
-Date:   Mon Jun 5 15:52:03 2017 -0400
 
     license

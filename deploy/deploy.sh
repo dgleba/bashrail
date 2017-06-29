@@ -165,3 +165,4 @@ EOF
 # bundle exec rake db:migrate RAILS_ENV=production
 # bundle exec rake db:seed RAILS_ENV=production
 
+# Setup secret key in figaro and devise.rb  see ..bashrail\deploy\deployfiles - application.yml - devise-withproductionsecretkey.rb

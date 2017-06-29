@@ -30,7 +30,7 @@ bundle exec figaro install
 
 git status
 # git diff
-git add .
+git add -A
 git commit -m "after figaro install"
 
 
@@ -53,8 +53,8 @@ BLOCKCOMMENT
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-git add -A # Add all files and commit them
-git commit -m "figaro setup"
+# git add -A # Add all files and commit them
+# git commit -m "figaro setup"
 
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

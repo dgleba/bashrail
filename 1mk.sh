@@ -8,7 +8,7 @@
  # - rsync
  #
 
- 
+
 function abort()
 {
     # set -e will exit on first error. so set -vxe..
@@ -24,7 +24,7 @@ function abort()
 }
 
 # comment out the next two lines to disable the abort on error. [ trap and set -e]..
-# commented out it will not stop - just continue after and error and go to completion. 
+# commented out it will not stop - just continue after and error and go to completion.
 # You will have to find the error way back somewhere in the terminal. You may want that to happen. You have a choice.
 trap 'abort' 0
 set -e
@@ -56,7 +56,7 @@ set +vx
   exit 7
 else
   #
-  # Set variables 
+  # Set variables
   #
   # set app name as first pramater on commandline
   export appn=$1
@@ -84,10 +84,10 @@ chmod 777 /tmp/"_brvar1202_${USER}".txt
 touch "/tmp/_temprubyrunner_${USER}.rb"
 chmod 777 "/tmp/_temprubyrunner_${USER}.rb"
 
-echo 
+echo
 echo
 echo Press ctrl-c now if you want to stop and edit settings in /tmp/_brvar1202_${USER}.txt
-echo 
+echo
 
 date
 timeout1=20 ; read -t "${timeout1}" -p "Press ENTER or wait $timeout1 seconds..." || true ;  echo ;
@@ -105,8 +105,8 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
 
 # uncomment next lines for osx..
 
-# alias sed=gsed
-# shopt -s expand_aliases
+alias sed=gsed
+shopt -s expand_aliases
 
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -139,13 +139,13 @@ pwd
 
   source $sfil2/paginate1.sh  # optional, but you may need to edit to overcome some errors since it may include some code that depends on other features.
 
-  
+
   # use only devisetokenauth1.sh  or devisejwt.sh   NOT both..
 
 
   source $sfil2/devise1.sh   # optional, but will modify home page, so.. some edits to overcome missing items may be necessary
 
-  
+
   source $sfil2/devisejwt.sh   # optional. requires devise1.sh
 # or
   # source $sfil2/devisetokenauth1.sh   # optional
@@ -154,12 +154,12 @@ pwd
   source $sfil2/cancan1.sh   # optional, but ..  optional may require some further edits.
 
   source $sfil2/admin1.sh  # optional
-  
+
   #source ../bashrail/admin-ra-materialtheme.sh
   # or
   source $sfil2/admin-ra-materialtheme.sh
-  
-  
+
+
   source $sfil2/ldap1.sh
 
   source $sfil2/papertrail1.sh
@@ -202,7 +202,7 @@ git commit -m "scaffold"
   source $sfil2/select2.sh  # optional
 
 
- 
+
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -215,11 +215,11 @@ mkdir -p $path1/
 # rsync.. -a - rltpgoD  preserve almost all. -u update don't copy older source files.
 rsync -av --ignore-times  $sfil2/$path1/ $path1/
 
-  
+
 
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 
+
 
 ### db seed .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -303,7 +303,7 @@ HEREDOC
 sleep 1
 git add -A # Add all files and commit them
   git commit -m "add sqlite db and docs. Bashrail Finished."
-  
+
 
 ### finish up.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

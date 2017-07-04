@@ -108,7 +108,6 @@
 1476892483|docs/ldap/ldap265h-v206c.local_home_albe_share203__2016.10.19_11.54.42.tgz
 1469716724|docs/ldap/ldap265mk-copy.sh
 1494101906|docs/ldap/ldap_howto_readme.sh.txt
-1493838295|new1.sh
 1493857447|readme,runone,script,howto.txt
 1493857376|select2.sh
 1494114599|config/ldap-example.yml
@@ -118,7 +117,6 @@
 1495406015|app/models/ability.rb
 1495407402|papertrail1.sh
 1495412061|docs/ldap_howto_readme.sh.txt
-1495468856|ldap1.sh
 1468703838|deploy/deploy-drail-howto-notes.txt
 1468703838|deploy/puma-manager.conf
 1468703838|deploy/puma.conf
@@ -132,7 +130,6 @@
 1498520703|docs/ldap/user_4ldap.rb
 1497921350|docs/will_filter1.sh
 1498520614|figaro.env.sh
-1498526453|ldap_manual-edits.txt
 1498526258|app/views/devise/confirmations/new.html.erb
 1498526259|app/views/devise/mailer/confirmation_instructions.html.erb
 1498526259|app/views/devise/mailer/email_changed.html.erb
@@ -150,4 +147,7 @@
 1498604796|version-last10.txt
 1498604796|version-log.txt
 1498604796|version.txt
-1498609801|1mk.sh
+|1mk.sh
+|ldap1.sh
+|ldap_manual-edits.txt
+|new1.sh

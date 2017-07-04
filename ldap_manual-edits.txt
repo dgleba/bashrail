@@ -1,4 +1,14 @@
-_____________ 
+_____________
+
+
+copy my ldap.yml into place.
+
+copy docs/ldap/user_4ldap.rb to app/models/user.rb
+
+_____________
+
+this is now done in ldap1.sh...
+
 
 add this after /config.*ldap/ in config/initializers/devise.rb
 
@@ -6,14 +16,8 @@ add this after /config.*ldap/ in config/initializers/devise.rb
   config.ldap_create_user = true
   config.ldap_auth_username_builder = Proc.new() {|attribute, login, ldap| "#{login}@stackpole.ca"}
 
-_____________ 
 
 
-copy my ldap.yml into place.
-
-copy docs/ldap/user_4ldap.rb to app/models/user.rb
-
-
-_____________ 
+_____________
 
 

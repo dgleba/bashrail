@@ -103,10 +103,30 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
 # alias gsed to sed..
 # http://apple.stackexchange.com/questions/236177/using-alias-in-bash-script-in-osx
 
-# uncomment next lines for osx..
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+        echo linux
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+        echo OSX
+elif [[ "$OSTYPE" == "cygwin" ]]; then
+        # POSIX compatibility layer and Linux environment emulation for Windows
+        echo cygwin
+elif [[ "$OSTYPE" == "msys" ]]; then
+        # Lightweight shell and GNU utilities compiled for Windows (part of MinGW)
+        echo msys
+elif [[ "$OSTYPE" == "win32" ]]; then
+        # I'm not sure this can happen.
+        echo win
+elif [[ "$OSTYPE" == "freebsd"* ]]; then
+        echo freebsd
+fi
 
-alias sed=gsed
-shopt -s expand_aliases
+# for OSX....
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  echo Mac OSX
+  alias sed=gsed
+  shopt -s expand_aliases
+fi
 
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

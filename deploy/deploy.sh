@@ -166,3 +166,8 @@ EOF
 # bundle exec rake db:seed RAILS_ENV=production
 
 # Setup secret key in figaro and devise.rb  see ..bashrail\deploy\deployfiles - application.yml - devise-withproductionsecretkey.rb
+
+# ensure devise key is in  place..
+
+# \\10.4.1.227\rt\srv\share\test\brail347a21\config\initializers\devise.rb
+  # config.secret_key = 'a3adbe4786b5eea1568ad54e05120963e121aa88d1b9e7b62d0b2fc53ea51d447a629649e77cfdbe429d00c0a5f196c3a614329794019d56e28c8f9b412dc165'

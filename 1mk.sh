@@ -193,9 +193,9 @@ rails g scaffold CountryOfOrigin name fdate:datetime active_status:integer sort:
 
 rails g scaffold Pfeature name fdate:datetime active_status:integer sort:integer -f
 
-rails g scaffold ProductFeature name  product:references pfeature:references active_status:integer sort:integer -f
-
 rails g scaffold Product name country_of_origin:references pdate:datetime active_status:integer sort:integer -f
+
+rails g scaffold ProductFeature name  product:references pfeature:references active_status:integer sort:integer -f
 
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

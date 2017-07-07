@@ -1,9 +1,12 @@
 _____________
 
-
+  
+  
 copy my ldap.yml into place.
 
+
 copy docs/ldap/user_4ldap.rb to app/models/user.rb
+
 
 _____________
 

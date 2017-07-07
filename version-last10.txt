@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit b69a9ca4ac19a375f29f7c8e4704e2270e64d67e
+Author: David Gleba <dgleba@gmail.com>
+Date:   Wed Jun 28 22:42:19 2017 -0400
+
+    add cancan 2
+
 commit b3f7586e9c20f651f7b6f3e76fd644a30ce27e77
 Author: David Gleba <dgleba@gmail.com>
 Date:   Wed Jun 28 22:42:13 2017 -0400
@@ -53,9 +59,3 @@ Author: albe <albe@pmdsdata9.local>
 Date:   Wed Jun 14 15:34:49 2017 -0400
 
     remove scaffolds doc
-
-commit 3fc0174b1ffb9f080e5c524bf7f70540ae09089e
-Author: albe <albe@pmdsdata9.local>
-Date:   Mon Jun 5 15:56:41 2017 -0400
-
-    license

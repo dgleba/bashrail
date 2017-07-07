@@ -279,3 +279,23 @@ Date:   Wed Jun 28 22:42:13 2017 -0400
     master merges with remote master
   Local ref configured for 'git push':
     master pushes to master (fast-forwardable)
+
+
+~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
+
+commit b69a9ca4ac19a375f29f7c8e4704e2270e64d67e
+Author: David Gleba <dgleba@gmail.com>
+Date:   Wed Jun 28 22:42:19 2017 -0400
+
+    add cancan 2
+---
+* remote origin
+  Fetch URL: https://github.com/dgleba/bashrail.git
+  Push  URL: https://github.com/dgleba/bashrail.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (local out of date)

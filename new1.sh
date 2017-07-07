@@ -8,7 +8,7 @@ pwd
 # change for rails 5
 # gem install rails -v 4.2.7.1 --no-ri --no-rdoc
 
-ruby -v ; rails -v
+ruby -v ; rails -v --no-ri --no-rdoc
 
 
 if [  -d "$appn" ]; then

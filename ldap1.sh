@@ -73,7 +73,7 @@ git commit -m "after rails g devise_ldap_authenticatable:install"
   # }
   # ARGF.each do |line|
     # if line =~ /ldap_authenticatable/
-      # puts "  ##{line}" 
+      # puts "  ##{line}"
     # else
       # puts line
     # end
@@ -114,45 +114,42 @@ irb(main):004:0"   RBHEREDOC
 NameError: undefined local variable or method `login' for main:Object
 	from (irb):3
 	from /home/albe/.rbenv/versions/2.3.0/bin/irb:11:in `<main>'
-irb(main):005:0> 
+irb(main):005:0>
 
 
 BLOCKCOMMENT
 }
 
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 # add new lines of text after patrn...
-#
+
 filetarg='config/initializers/devise.rb'
 r1tmp="/tmp/_temprubyrunner_${USER}.rb"
 cat << 'HEREDOC' > $r1tmp
-  repl2 = <<-RBHEREDOC
+  repl2 = %q[
+
   config.ldap_create_user = true
   config.ldap_auth_username_builder = Proc.new() {|attribute, login, ldap| "#{login}@stackpole.ca"}
-  RBHEREDOC
+  ]
   ARGF.each do |line|
     puts line
-    puts repl2 if line =~ /config.*ldap/
+    puts repl2 if line =~ /config.ldap_ad_group_check/
   end
 HEREDOC
-#
-# offline due to error.
-#
-# ruby $r1tmp $filetarg > $filetarg.tmp
-# cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+ruby $r1tmp $filetarg > $filetarg.tmp
+cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# git add -A # Add all files and commit them
-# git commit -m "ldap - 3. setup"
+git add -A # Add all files and commit them
+git commit -m "ldap - 3. setup finished. check the ldap_manual-edits.txt file for more instructions"
 
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

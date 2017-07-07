@@ -103,9 +103,14 @@ sed -i  "s/.*$pattern.*/$repl/g" $file1
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-# copy app helper..
+# copy app helpers..
 
-cp -a $sfil2/app/helpers/ app/
+# I don't think this works the same in osx as in linux..
+# cp -a $sfil2/app/helpers/ app/
+# try this..  http://jondavidjohn.com/linux-vs-osx-the-cp-command/ ...
+cp -a $sfil2/app/helpers app/
+
+
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

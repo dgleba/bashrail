@@ -1,5 +1,37 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 91200b7d7e357246c71252629dc6a21bb77d9b29
+Merge: 56261a9 83cd73f
+Author: David Gleba <dgleba@gmail.com>
+Date:   Fri Jul 7 17:39:48 2017 -0400
+
+    Merge branch 'master' of https://github.com/dgleba/bashrail
+
+commit 83cd73f294fca387691ea8736edab4474fc98a05
+Author: albe <albe@pmdsdata9.local>
+Date:   Fri Jul 7 16:41:55 2017 -0400
+
+    adjust 2017-07-07
+
+commit 56261a9221e55a5755039c260b3aad55fea8dc48
+Merge: b69a9ca cea60bf
+Author: David Gleba <dgleba@gmail.com>
+Date:   Thu Jul 6 20:48:03 2017 -0400
+
+    2017-07-06
+
+commit cea60bf784792074a1fdd500941799e0a7c1366a
+Author: dgleba <dgleba@gmail.com>
+Date:   Wed Jul 5 23:09:18 2017 -0400
+
+    adjust for osx 2017-07-05
+
+commit bf2bdf567c88c220dbf7f4ba7bbde7c7be0d1b68
+Author: dgleba <dgleba@gmail.com>
+Date:   Tue Jul 4 06:57:57 2017 -0400
+
+    ldap1 2017-07-02
+
 commit b69a9ca4ac19a375f29f7c8e4704e2270e64d67e
 Author: David Gleba <dgleba@gmail.com>
 Date:   Wed Jun 28 22:42:19 2017 -0400
@@ -29,33 +61,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Tue Jun 27 20:32:43 2017 -0400
 
     dont copy zip file over
-
-commit 344fda12170ed91bf04288c36b3f16ff41ccc669
-Author: David Gleba <dgleba@gmail.com>
-Date:   Tue Jun 27 19:06:35 2017 -0400
-
-    adjust devise
-
-commit 00a4a06348414e4538a6004ed64b2de722cb82be
-Author: albe <albe@pmdsdata9.local>
-Date:   Tue Jun 27 16:38:56 2017 -0400
-
-    add more devise features
-
-commit 3e610e574c2e0bdf83d878758bd6bc5b4eb42357
-Author: David Gleba <dgleba@gmail.com>
-Date:   Mon Jun 26 21:56:50 2017 -0400
-
-    add more devise views with extra new lines
-
-commit 516f9c637b0a8b6c298a36df184e03850c4c5b4d
-Author: David Gleba <dgleba@gmail.com>
-Date:   Mon Jun 26 21:51:08 2017 -0400
-
-    1. layout, 2. figaro, 3. user.rb 4 ldap doc.
-
-commit da988d07aa942bdf2eb153b9b8748dd8426277b3
-Author: albe <albe@pmdsdata9.local>
-Date:   Wed Jun 14 15:34:49 2017 -0400
-
-    remove scaffolds doc

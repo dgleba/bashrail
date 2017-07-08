@@ -81,6 +81,33 @@ sed -i  "/ApplicationController/a  before_filter :authenticate_user!" lib/templa
 ruby $sfil2/devise2thor.rb gsub1 a
   
   
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# uncomment key
+
+
+# config.secret_key
+
+# uncomment line containing pattern...
+#
+filetarg='config/initializers/devise.rb'
+r1tmp="/tmp/_temprubyrunner_${USER}.rb"
+cat << 'HEREDOC' > $r1tmp
+  repl2 = %Q{
+  notused here
+  }
+  ARGF.each do |line|
+    line.sub!('#','') if line =~ /config\.secret_key/
+    puts line
+  end
+HEREDOC
+ruby $r1tmp $filetarg > $filetarg.tmp
+cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+
+
+
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 ### edit seeds .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    

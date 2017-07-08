@@ -43,6 +43,7 @@ git commit -m "after rails g devise_ldap_authenticatable:install"
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+# not working..
 
 # # add new lines of text after patrn...
 # #
@@ -63,6 +64,8 @@ git commit -m "after rails g devise_ldap_authenticatable:install"
 
 
 
+# not working..
+
 # # comment line containing pattern...
 # #
 # filetarg='app/models/user.rb'
@@ -81,14 +84,6 @@ git commit -m "after rails g devise_ldap_authenticatable:install"
 # HEREDOC
 # ruby $r1tmp $filetarg > $filetarg.tmp
 # cp $filetarg.tmp $filetarg; rm $filetarg.tmp
-
-
-
-
-
-
-
-
 
 
 

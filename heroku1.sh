@@ -19,10 +19,15 @@ sudo -u postgres bash -c "psql -c \"CREATE USER albe WITH PASSWORD 'albe';\""
 sudo -u postgres createdb albe
 
 
-psql
-\q
+# psql
+# \q
 
 sudo apt-get install -y libpq-dev
+
+
+echo 'gem "pg"' >> Gemfile
+
+# comment out gem 'sqlite3'
 
 bundle
 
@@ -32,24 +37,24 @@ heroku login
 
 heroku create
 
-      Logged in as dgleba@gmail.com
-      albe@pmdsdata4:/srv/share/test/brail347a21$       heroku create
-      Creating app... done, ? peaceful-plateau-37353
-      https://peaceful-plateau-37353.herokuapp.com/ | https://git.heroku.com/peaceful-plateau-37353.git
-      albe@pmdsdata4:/srv/share/test/brail347a21$
+      # Logged in as dgleba@gmail.com
+      # albe@pmdsdata4:/srv/share/test/brail347a21$       heroku create
+      # Creating app... done, ? peaceful-plateau-37353
+      # https://peaceful-plateau-37353.herokuapp.com/ | https://git.heroku.com/peaceful-plateau-37353.git
+      # albe@pmdsdata4:/srv/share/test/brail347a21$
 
 
 git config --list | grep heroku
 
-      albe@pmdsdata4:/srv/share/test/brail347a21$       git config --list | grep heroku
-      remote.heroku.url=https://git.heroku.com/peaceful-plateau-37353.git
-      remote.heroku.fetch=+refs/heads/*:refs/remotes/heroku/*
+      # albe@pmdsdata4:/srv/share/test/brail347a21$       git config --list | grep heroku
+      # remote.heroku.url=https://git.heroku.com/peaceful-plateau-37353.git
+      # remote.heroku.fetch=+refs/heads/*:refs/remotes/heroku/*
 
 
 git push heroku master
 
-# no need. heroku does that...
-#heroku config:set DATABASE_PASSWORD=albe
+  # no need. heroku does that...
+  # heroku config:set DATABASE_PASSWORD=albe
 
 
 

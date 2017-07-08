@@ -320,3 +320,23 @@ Date:   Fri Jul 7 17:39:48 2017 -0400
     master merges with remote master
   Local ref configured for 'git push':
     master pushes to master (fast-forwardable)
+
+
+~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
+
+commit 85007bbdd74f41d0be7f75aa789ffd1680e2a0ae
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat Jul 8 08:19:05 2017 -0400
+
+    devise-key
+---
+* remote origin
+  Fetch URL: https://github.com/dgleba/bashrail.git
+  Push  URL: https://github.com/dgleba/bashrail.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)

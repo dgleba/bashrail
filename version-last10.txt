@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 85007bbdd74f41d0be7f75aa789ffd1680e2a0ae
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat Jul 8 08:19:05 2017 -0400
+
+    devise-key
+
 commit 91200b7d7e357246c71252629dc6a21bb77d9b29
 Merge: 56261a9 83cd73f
 Author: David Gleba <dgleba@gmail.com>
@@ -55,9 +61,3 @@ Author: albe <albe@pmdsdata9.local>
 Date:   Wed Jun 28 10:03:02 2017 -0400
 
     deploy-2017-06-28
-
-commit 1e4a1d87a602e8b8a5023f350cd56498c42a5717
-Author: David Gleba <dgleba@gmail.com>
-Date:   Tue Jun 27 20:32:43 2017 -0400
-
-    dont copy zip file over

@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 653b59edc91a7981bf75df6b5578e3c07dea01f1
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat Jul 8 14:50:19 2017 -0400
+
+    heroku708
+
 commit 85007bbdd74f41d0be7f75aa789ffd1680e2a0ae
 Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Jul 8 08:19:05 2017 -0400
@@ -55,9 +61,3 @@ Author: albe <albe@pmdsdata9.local>
 Date:   Wed Jun 28 22:21:15 2017 -0400
 
     2017-06-28b
-
-commit c20a140f257cf2025b9af2f209f8843a5f027b90
-Author: albe <albe@pmdsdata9.local>
-Date:   Wed Jun 28 10:03:02 2017 -0400
-
-    deploy-2017-06-28

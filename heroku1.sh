@@ -15,10 +15,29 @@ sudo apt-get update
 sudo apt-get install -y postgresql postgresql-contrib postgresql-client-common  pgadmin3
 # not .. postgres-xc-client
 
+gem uninstall  heroku
+
+sudo apt-get --purge remove heroku
+sudo apt-get --purge remove heroku-toolbelt
+
+sudo apt-get remove heroku heroku-toolbelt
+sudo rm /etc/apt/sources.list.d/heroku.list
+
+sudo apt-key list
+sudo apt-key del KEYFROMABOVE
+sudo apt-key del 2048R/0F1B0520
+
+# got error:  .rbenv/shims/heroku: No such file or directory
+# ans..
+rbenv rehash
+
+
 sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
 curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
 #sudo apt-get update
 sudo apt-get install -y heroku
+
+rbenv rehash
 
 sudo -u postgres bash -c "psql -c \"CREATE USER albe WITH PASSWORD 'albe';\""
 
@@ -82,7 +101,7 @@ heroku ps:scale web=1
 
 
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function blockcomment211() {
 : <<'BLOCKCOMMENT'
 
@@ -105,7 +124,7 @@ rake db:populate
 
 BLOCKCOMMENT
 }
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
@@ -146,6 +165,23 @@ function blockcomment21() {
 : <zz<'BLOCKCOMMENT'
 
 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2017-07-11[Jul-Tue]21-57PM
+
+https://stackoverflow.com/questions/34702786/problems-with-heroku-rake-dbreset
+
+
+https://stackoverflow.com/questions/8162420/running-rake-dbdrop-dbcreate-dbmigrate-on-heroku-cedar-stack
+
+
+heroku run rake db:schema:load
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 

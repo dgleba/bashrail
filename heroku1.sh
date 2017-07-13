@@ -50,9 +50,26 @@ sudo -u postgres createdb albe
 sudo apt-get install -y libpq-dev
 
 
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
 echo 'gem "pg"' >> Gemfile
 
+
 # comment out gem 'sqlite3'
+
+
+# https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server
+# setup procfile and config..
+heroku config:set RAILS_MAX_THREADS=1
+
+# for rails 4 add rails-12-factor
+#  gem 'rails_12factor', group: :production
+
+
 
 bundle
 
@@ -75,6 +92,8 @@ git config --list | grep heroku
       # remote.heroku.url=https://git.heroku.com/peaceful-plateau-37353.git
       # remote.heroku.fetch=+refs/heads/*:refs/remotes/heroku/*
 
+# got error..   Precompiling assets failed.  Attempted to access a nonexistent database:  so...
+heroku addons:create heroku-postgresql
 
 git push heroku master
 
@@ -87,10 +106,14 @@ bin/rails db:environment:set RAILS_ENV=production
 
 heroku pg:reset DATABASE --confirm peaceful-plateau-37353
 
+heroku pg:reset DATABASE --confirm carlson-training-demo-gleba1
+
+
 # not sure this can work....   heroku run rake db:reset
 # or
 heroku run rake db:migrate
 heroku run rake db:seed
+heroku run rake db:seeder
 heroku run rake db:populate
 
 heroku ps:scale web=1
@@ -100,6 +123,8 @@ git pull heroku master
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 
 
 
@@ -118,17 +143,23 @@ bin/rails db:environment:set RAILS_ENV=development
 
 sudo -u postgres bash -c "psql -c \"ALTER USER albe CREATEDB;\""
 
+rake db:drop RAILS_ENV=development
 rake db:create RAILS_ENV=development
 rake db:migrate RAILS_ENV=development
+
 rake db:seed RAILS_ENV=development
+
+rake db:seeder RAILS_ENV=development
+
 rake db:populate RAILS_ENV=development
 
 
 rake db:reset RAILS_ENV=development
-rake db:populate RAILS_ENV=development
 
 
 # _____________
+
+# test..
 
 
 bin/rails db:environment:set RAILS_ENV=test
@@ -136,18 +167,21 @@ bin/rails db:environment:set RAILS_ENV=test
 rake db:drop RAILS_ENV=test
 rake db:create RAILS_ENV=test
 rake db:migrate RAILS_ENV=test
+
+rake db:seeder RAILS_ENV=test
+rake db:seed RAILS_ENV=test
+rake db:populate RAILS_ENV=test
+
 rake db:reset RAILS_ENV=test
+
+
+# _____________
 
 
 
 BLOCKCOMMENT
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
-
 
 
 
@@ -179,8 +213,34 @@ BLOCKCOMMENT
 
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+echo exiting..
+exit
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function blockcomment21() {
 : <zz<'BLOCKCOMMENT'
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2017-07-13[Jul-Thu]12-51PM
+
+remote:  !     Precompiling assets failed.
+remote:  !     Attempted to access a nonexistent database:
+remote:  !     https://devcenter.heroku.com/articles/pre-provision-database
+remote:  !
+remote:  !     Push rejected, failed to compile Ruby app.
+
+
+heroku addons:create heroku-postgresql
+heroku config
+git push heroku master
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 brail347a22.herokuapp.com/

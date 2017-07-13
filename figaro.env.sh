@@ -14,6 +14,7 @@ echo $appn $sfil $sfil2 $mpwd $parm0
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+echo '#' >> Gemfile
 echo 'gem "figaro"' >> Gemfile
 
 bundle

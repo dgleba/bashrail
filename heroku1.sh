@@ -175,6 +175,8 @@ rake db:populate RAILS_ENV=test
 rake db:reset RAILS_ENV=test
 
 
+git branch --set-upstream-to=origin/master master
+
 # _____________
 
 

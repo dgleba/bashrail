@@ -12,7 +12,7 @@ exit
 # https://devcenter.heroku.com/articles/getting-started-with-rails5#local-workstation-setup
 
 sudo apt-get update
-sudo apt-get install -y postgresql postgresql-contrib postgresql-client-common  pgadmin3
+sudo apt-get install -y postgresql postgresql-contrib postgresql-client-common pgadmin3 libpq-dev
 # not .. postgres-xc-client
 
 gem uninstall  heroku

@@ -48,14 +48,16 @@ git commit -m "after figaro install"
 
 # add text to end of line containing patrn...
 #
-filetarg='gemfile'
+filetarg='Gemfile'
 r1tmp="/tmp/_temprubyrunner_${USER}.rb"
 cat << 'HEREDOC' > $r1tmp
-  repl2 = %q{
-  , group: :development
-  }
+  repl2 = 'not used here' 
   ARGF.each do |line|
-    puts line,repl2 if line =~ /sqlite3/
+    if line =~ /gem.*sqlite3/
+      puts line.sub!(/sqlite3\'/, 'sqlite3\', group: :development')
+    else
+      puts line
+    end  
   end
 HEREDOC
 ruby $r1tmp $filetarg > $filetarg.tmp
@@ -65,7 +67,7 @@ cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 
 # add new lines of text after patrn...
 #
-filetarg='gemfile'
+filetarg='Gemfile'
 r1tmp="/tmp/_temprubyrunner_${USER}.rb"
 cat << 'HEREDOC' > $r1tmp
   repl2 = %q{
@@ -74,7 +76,7 @@ cat << 'HEREDOC' > $r1tmp
   }
   ARGF.each do |line|
     puts line
-    puts repl2 if line =~ /sqlite3/
+    puts repl2 if line =~ /gem.*sqlite3/
   end
 HEREDOC
 ruby $r1tmp $filetarg > $filetarg.tmp

@@ -30,6 +30,8 @@ bundle exec figaro install
 
 
 echo 'SECRET_KEY_BASE: f55c9f3b84be053f8ea74b84d' >> config/application.yml
+echo 'DATABASE_USERNAME: username1' >> config/application.yml
+echo 'DATABASE_PASSWORD: pass1' >> config/application.yml
 
 
 git status
@@ -37,6 +39,46 @@ git status
 git add -A
 git commit -m "after figaro install"
 
+
+
+
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# change database gems..
+
+# add text to end of line containing patrn...
+#
+filetarg='gemfile'
+r1tmp="/tmp/_temprubyrunner_${USER}.rb"
+cat << 'HEREDOC' > $r1tmp
+  repl2 = %q{
+  , group: :development
+  }
+  ARGF.each do |line|
+    puts line,repl2 if line =~ /sqlite3/
+  end
+HEREDOC
+ruby $r1tmp $filetarg > $filetarg.tmp
+cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+
+
+
+# add new lines of text after patrn...
+#
+filetarg='gemfile'
+r1tmp="/tmp/_temprubyrunner_${USER}.rb"
+cat << 'HEREDOC' > $r1tmp
+  repl2 = %q{
+  gem 'mysql2', group: :development
+  gem 'pg', group: :production
+  }
+  ARGF.each do |line|
+    puts line
+    puts repl2 if line =~ /sqlite3/
+  end
+HEREDOC
+ruby $r1tmp $filetarg > $filetarg.tmp
+cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 
 
 

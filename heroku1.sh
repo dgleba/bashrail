@@ -25,7 +25,7 @@ sudo rm /etc/apt/sources.list.d/heroku.list
 
 sudo apt-key list
 sudo apt-key del KEYFROMABOVE
-sudo apt-key del 2048R/0F1B0520
+# sudo apt-key del 2048R/0F1B0520
 
 # got error:  .rbenv/shims/heroku: No such file or directory
 # ans..
@@ -60,7 +60,7 @@ git ca heroku2
 
 heroku login
 
-heroku create
+heroku create  brail347a22
 
       # Logged in as dgleba@gmail.com
       # albe@pmdsdata4:/srv/share/test/brail347a21$       heroku create
@@ -96,6 +96,9 @@ heroku run rake db:populate
 heroku ps:scale web=1
 
 
+git pull heroku master
+
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -115,10 +118,25 @@ bin/rails db:environment:set RAILS_ENV=development
 
 sudo -u postgres bash -c "psql -c \"ALTER USER albe CREATEDB;\""
 
-rake db:create
-rake db:migrate
-rake db:seed
-rake db:populate
+rake db:create RAILS_ENV=development
+rake db:migrate RAILS_ENV=development
+rake db:seed RAILS_ENV=development
+rake db:populate RAILS_ENV=development
+
+
+rake db:reset RAILS_ENV=development
+rake db:populate RAILS_ENV=development
+
+
+# _____________
+
+
+bin/rails db:environment:set RAILS_ENV=test
+#
+rake db:drop RAILS_ENV=test
+rake db:create RAILS_ENV=test
+rake db:migrate RAILS_ENV=test
+rake db:reset RAILS_ENV=test
 
 
 
@@ -165,6 +183,7 @@ function blockcomment21() {
 : <zz<'BLOCKCOMMENT'
 
 
+https://coderwall.com/p/y5rtzq/created-a-heroku-app-but-i-want-to-change-the-name-now
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Title:  .
@@ -391,3 +410,4 @@ sudo apt-get install heroku
 BLOCKCOMMENT
 }
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

@@ -116,6 +116,8 @@ heroku run rake db:seed
 heroku run rake db:seeder
 heroku run rake db:populate
 
+heroku run rake db:schema:load
+
 heroku ps:scale web=1
 
 

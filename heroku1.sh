@@ -156,7 +156,9 @@ rake db:seeder RAILS_ENV=development
 rake db:populate RAILS_ENV=development
 
 
+bin/rails db:environment:set RAILS_ENV=development
 rake db:reset RAILS_ENV=development
+rake db:seeder RAILS_ENV=development
 
 
 # _____________
@@ -174,7 +176,12 @@ rake db:seeder RAILS_ENV=test
 rake db:seed RAILS_ENV=test
 rake db:populate RAILS_ENV=test
 
+
+bin/rails db:environment:set RAILS_ENV=test
+#
 rake db:reset RAILS_ENV=test
+rake db:seeder RAILS_ENV=test
+
 
 
 git branch --set-upstream-to=origin/master master

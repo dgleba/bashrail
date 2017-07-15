@@ -1,5 +1,11 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit 7c2c7f102e170593ef4682a8149cd7bdf7164d29
+Author: David Gleba <dgleba@gmail.com>
+Date:   Thu Jul 13 20:26:35 2017 -0400
+
+    heroku6
+
 commit 995a12927ca06af87e1c771cf981e1d716beb969
 Author: albe <albe@pmdsdata9.local>
 Date:   Thu Jul 13 16:59:22 2017 -0400
@@ -53,10 +59,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Sat Jul 8 08:19:05 2017 -0400
 
     devise-key
-
-commit 91200b7d7e357246c71252629dc6a21bb77d9b29
-Merge: 56261a9 83cd73f
-Author: David Gleba <dgleba@gmail.com>
-Date:   Fri Jul 7 17:39:48 2017 -0400
-
-    Merge branch 'master' of https://github.com/dgleba/bashrail

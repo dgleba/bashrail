@@ -35,8 +35,18 @@ fi
 
 cd $appn ; pwd
 
+
+
+
+
 rm -rf .git
 git init
+
+echo '/config/puma.rb' >> .gitignore
+echo '/config/ldap.yml' >> .gitignore
+echo '/config/database.yml' >> .gitignore
+echo '/config/secrets.yml' >> .gitignore
+
 git add -A # Add all files and commit them
   git commit -m "New, Before any changes. Created using github.com/dgleba/bashrail."
 

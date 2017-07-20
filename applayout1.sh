@@ -30,6 +30,8 @@ sed -i  "s/$patrn/ /" app/views/layouts/$file2
  
  
 file2='application.html.erb'
+cp -a app/assets/javascripts/$file1  backup/$file1$(date +"__%Y.%m.%d_%H.%M.%S").bak.txt
+#
 cat << 'HEREDOC' > app/views/layouts/$file2
 <!DOCTYPE html >
 <html>

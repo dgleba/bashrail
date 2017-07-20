@@ -11,17 +11,13 @@
 # http://github.com/RailsApps/rails-composer/issues
 #----------------------------------------------------------------------------
 
-/config/puma.rb
 # add /config/database.yml if it contains passwords
 /config/ldap.yml
 /config/database.yml
 /config/secrets.yml
-
 # keep this out of the project since it can't be present in dev mode.
 config/puma.rb
 
-# exclude this since I am switching between ldap and db auth frequently.
-app/models/user.rb
 
 # Environment files that may contain sensitive data
 .env

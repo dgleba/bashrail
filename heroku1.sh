@@ -1,4 +1,6 @@
 
+echo I haven't finished this yet.
+echo .
 echo run the commands by pasteing them..
 
 echo exiting..

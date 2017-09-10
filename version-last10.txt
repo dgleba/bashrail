@@ -1,5 +1,17 @@
  ~~~~~~~~~~~~~~~ Careful, this may be missing one version, but may hint this project history. ~~~~~~~~~~~~~~~~~~
 
+commit ffcaf4c530e3ec1a46c79d7733ea14d62a4747a2
+Author: albe <albe@pmdsdata9.local>
+Date:   Wed Jul 19 23:15:55 2017 -0400
+
+    gitignore and user2
+
+commit 96e0e154db40dc2b227ebdb312fbf7b25f82c678
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat Jul 15 15:08:01 2017 -0400
+
+    2017-07-15
+
 commit 7c2c7f102e170593ef4682a8149cd7bdf7164d29
 Author: David Gleba <dgleba@gmail.com>
 Date:   Thu Jul 13 20:26:35 2017 -0400
@@ -47,15 +59,3 @@ Author: David Gleba <dgleba@gmail.com>
 Date:   Mon Jul 10 23:04:08 2017 -0400
 
     adjusting 2017-07-10a
-
-commit 653b59edc91a7981bf75df6b5578e3c07dea01f1
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sat Jul 8 14:50:19 2017 -0400
-
-    heroku708
-
-commit 85007bbdd74f41d0be7f75aa789ffd1680e2a0ae
-Author: David Gleba <dgleba@gmail.com>
-Date:   Sat Jul 8 08:19:05 2017 -0400
-
-    devise-key

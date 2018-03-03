@@ -165,3 +165,24 @@ git commit -m "paper_trail - 3. setup"
 
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# To specify different table name..
+
+# ftp://albe@pmdsdata3/srv/web/hrapp361/app/models/papertrail_table.rb
+# #
+# class PapertrailTable < PaperTrail::Version
+  # self.table_name = :versions_dc
+# end
+
+# ftp://albe@pmdsdata3/srv/web/hrapp361/app/models/pp_parkingpass.rb
+# #
+# class PpParkingpass < ApplicationRecord
+  # has_paper_trail class_name: 'PapertrailTable'
+# end
+
+# I have not figured out how to get rails_admin to play nice with that..
+  # It said table versions was not present.
+
+
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

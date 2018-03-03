@@ -109,7 +109,7 @@ echo 'Rails.application.config.assets.precompile += %w( autocomplete-rails.js )'
 # style the autocomplete.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
 
-cat $sfil2/rails-jquery-autocomplete/dgautocomplete.scss>>app/assets/stylesheets
+cat $sfil2/rails-jquery-autocomplete/dgautocomplete.scss>>app/assets/stylesheets/application.scss
 
 # git add -A # Add all files and commit them
   # git commit -m "six"
@@ -202,10 +202,11 @@ sed -i "/before_action/a  \  #\n$line1\n"  app/controllers/country_of_origins_co
 line1='  resources :country_of_origins do'
 line2='    get :autocomplete_pfeature_name, :on => :collection'
 line3='  end'
-line4='  root "country_of_origins#index"'
+offline__line4='  root "country_of_origins#index"'
 stackoverflow.com/questions/148451/how-to-use-sed-to-replace-only-the-first-occurrence-in-a-file
 # replace the entire line matching pattern1...
-  sed  -i "0,/$pattern1/s/.*$pattern1.*/#\n$line1\n$line2\n$line3\n$line4\n/" config/routes.rb 
+  # sed  -i "0,/$pattern1/s/.*$pattern1.*/#\n$line1\n$line2\n$line3\n$line4\n/" config/routes.rb 
+  sed  -i "0,/$pattern1/s/.*$pattern1.*/#\n$line1\n$line2\n$line3\n/" config/routes.rb 
  
  
 # view.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

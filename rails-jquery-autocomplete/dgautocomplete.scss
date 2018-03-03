@@ -1,9 +1,12 @@
 
+
 // Copy this into application.scss
 //
 // bigtunacan jquery ui autocomplete
 //
+
 .ui-autocomplete {
+
   position: absolute;
   top: 100%;
   left: 0;
@@ -31,33 +34,6 @@
   background-clip: padding-box;
   *border-right-width: 2px;
   *border-bottom-width: 2px;
- 
-  .ui-menu-item > a.ui-corner-all {
-    display: block;
-    padding: 5px 15px;
-    clear: both;
-    font-weight: normal;
-    line-height: 300%;
-    color: #555555;
-    white-space: nowrap;
-  }
-}
-    .ui-widget-content .ui-state-focus {
-      color: #ffffff;
-      text-decoration: none;
-      background-color: #0088cc;
-      border-radius: 0px;
-      -webkit-border-radius: 0px;
-      -moz-border-radius: 0px;
-      background-image: none;
-    }
-    
-.ui-autocomplete-input {
-
-  min-width: 160px;
-  width: 100%;
-  border-radius: 4px;
-  border-width: 1px;
   line-height: 200%;
  
   .ui-menu-item > a.ui-corner-all {
@@ -68,16 +44,32 @@
     line-height: 300%;
     color: #555555;
     white-space: nowrap;
+      line-height: 200%;
   }
 }
-    .ui-widget-content .ui-state-focus {
-      -color: #ffffff;
-      -text-decoration: none;
-      background-color: #0088cc;
-      border-radius: 5px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      background-image: none;
-    }
+
+.ui-widget-content .ui-state-focus {
+
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #0088cc;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  background-image: none;
+line-height: 500%;
+}
+
+.ui-autocomplete-input {
+
+  min-width: 160px;
+  width: 100%;
+  border-radius: 4px;
+  border-width: 1px;
+  line-height: 200%;
+}
+
 //
 // end bigtunacan jquery ui autocomplete
+//
+

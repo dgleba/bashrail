@@ -1,9 +1,55 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-array1=( country_of_origin cilisting1  ci_review  leader  lkup_sugg_status  )
-array2=( CountryOfOrigin   Cilisting1  CiReview   Leader  LkupSuggStatus )  
+cd hrapp361 for example
+
+tarc
+
+cd to new empty folders
+
+tar -xvf hrapp361-pmdsdata3_srv_web__2018.03.03_18.50.05.tgz
+
+mv hrapp361 prod367
+
+cd  your-project  ( eg. prod367 )
+
+
+git r
+git remote remove origin
+git r
+
+
+
+
+find app/models
+
+
+papertrail_table.rb
+ability.rb
+incident.rb
+emp_homephone.rb
+pp_parkingpass.rb
+dc_discipline.rb
+...
+
+
+edit in notepad2 to be like the below. 
+  use edit convert title case to get the class naming convention.
+
+
+
+array1=( country_of_origin cilisting1 ci_review leader lkup_sugg_status incident emp_homephone pp_parkingpass emp_ceridian dc_level dc_stream employee corrective_action dc_discipline )
+array2=( CountryOfOrigin Cilisting1 CiReview  Leader LkupSuggStatus Incident EmpHomephone PpParkingpass EmpCeridian DcLevel DcStream Employee CorrectiveAction DcDiscipline )  
 
 set -x
+
+for patrn in "${array2[@]}"
+do
+  echo $patrn
+  rails destroy scaffold $patrn  
+done 
+#
+
+
 for patrn in "${array1[@]}"
 do
   echo $patrn
@@ -16,14 +62,13 @@ do
     rsync -av --remove-source-files  --files-from=$tmpf1 . $dest1
 done 
 #
-
-for patrn in "${array2[@]}"
-do
-  echo $patrn
-  rails destroy scaffold $patrn  
-done 
 set +x
-#
+
+
+rm -r backup/*
+rm -r tmp/*
+rm -r _offline/*
+
 
 for patrn in "${array1[@]}"
 do
@@ -33,13 +78,144 @@ do
 done  
 #
 
- 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# remove history before last 25 or x commits..
+
+#   shallow existing repo...    ; Shallow to last 25 commits
+git rev-parse HEAD~22 > .git/shallow
+#   Prune unreachable objects
+git fsck --unreachable ; Will show you the list of what will be deleted
+git gc --prune=now     ; Will actually delete your data
+#   The following 2 commands are optional - they keep your git repo in good shape.
+git prune --progress # delete all the objects w/o references
+git gc --aggressive # aggressively collect garbage; may take a lot of time on large repos
+
+
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+Application name is referenced in..
+
+v1=rail2
+grep -rin --color=always $v1 . | grep -vi -e deploy -e tmp -e .git -e log -e /offline -e readme -e docs -e mtime -e offlin
+
+v1=lpa34
+grep -rin --color=always  $v1 . | grep -vi -e deploy -e tmp -e .git -e log -e /offline -e readme -e docs -e mtime -e offlin
+
+v1=hrapp
+grep -rin --color=always  $v1 . | grep -vi -e deploy -e tmp -e .git -e log -e /offline -e readme -e docs -e mtime -e offlin
 
 
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+remove from routes.rb
+
+
+  resources :answers
+  resources :questions
+  resources :question_lists
+  resources :process_steps
+  resources :part_numbers
+  resources :surveys do
+    resources :questions do
+    end
+  end
+  resources :answers, only: [:create]
+  root "surveys#index"
+  resources :products
+  resources :product_features
+  resources :pfeatures
+  resources :country_of_origins
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# remove deployment
+
+
+mv config/puma.rb _offline/
+mv config/puma1.rb _offline/
+
+rm config/puma.rb
+
+rm config/puma1.rb
+
+
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+set db/database.yml 
+to  dev db - railtest
+
+disable production db
+
+
+rake db:migrate
+
+railss
+
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+try running it.
+
+
+edit home index erb
+
+Showing /srv/share/ci/ci349a/app/views/layouts/application.html.erb where line #30 raised:
+
+edit ability.rb
+
+edit user.rb, remove surveys reference.
+
+rename development.sqlite3
+
+rake db:migrate
+rake db:seed
+
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+older
+
+
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -159,55 +335,6 @@ git commit -m "Removed history and started over"
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-Application name is referenced in..
-
-grep -rin --color=always rail2 . | grep -vi -e deploy -e tmp -e .git -e log -e /offline -e readme -e docs -e mtime -e offlin
-grep -rin --color=always lpa34 . | grep -vi -e deploy -e tmp -e .git -e log -e /offline -e readme -e docs -e mtime -e offlin
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-remove from routes.rb
-
-
-  resources :answers
-  resources :questions
-  resources :question_lists
-  resources :process_steps
-  resources :part_numbers
-  resources :surveys do
-    resources :questions do
-    end
-  end
-  resources :answers, only: [:create]
-  root "surveys#index"
-  resources :products
-  resources :product_features
-  resources :pfeatures
-  resources :country_of_origins
-
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-try running it.
-
-
-edit home index erb
-
-Showing /srv/share/ci/ci349a/app/views/layouts/application.html.erb where line #30 raised:
-
-edit ability.rb
-
-edit user.rb, remove surveys reference.
-
-rename development.sqlite3
-
-rake db:migrate
-rake db:seed
-
-
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
 _____________
 

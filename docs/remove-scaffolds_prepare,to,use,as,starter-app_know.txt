@@ -159,13 +159,17 @@ disable production db
 
 rake db:migrate
 
-railss
 
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 try running it.
+
+
+
+railss
+
 
 
 edit home index erb
@@ -181,6 +185,11 @@ rename development.sqlite3
 rake db:migrate
 rake db:seed
 
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+deploy/deploy.sh
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

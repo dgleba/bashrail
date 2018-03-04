@@ -203,7 +203,7 @@ line1='  resources :country_of_origins do'
 line2='    get :autocomplete_pfeature_name, :on => :collection'
 line3='  end'
 offline__line4='  root "country_of_origins#index"'
-stackoverflow.com/questions/148451/how-to-use-sed-to-replace-only-the-first-occurrence-in-a-file
+#  stackoverflow.com/questions/148451/how-to-use-sed-to-replace-only-the-first-occurrence-in-a-file
 # replace the entire line matching pattern1...
   # sed  -i "0,/$pattern1/s/.*$pattern1.*/#\n$line1\n$line2\n$line3\n$line4\n/" config/routes.rb 
   sed  -i "0,/$pattern1/s/.*$pattern1.*/#\n$line1\n$line2\n$line3\n/" config/routes.rb 

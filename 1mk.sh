@@ -224,9 +224,8 @@ git commit -m "scaffold"
 
   source $sfil2/select2.sh  # optional
 
-sleep 1
-git add -A # Add all files and commit them
-  git commit -m "select2"
+  # commit is in  select2.sh
+
 
   source $sfil2/jqueryautocomplete.sh
 

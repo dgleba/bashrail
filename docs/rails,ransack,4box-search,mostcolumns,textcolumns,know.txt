@@ -1,0 +1,532 @@
+
+see dgrail_helper.rb
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2018-03-05[Mar-Mon]20-15PM
+
+this file..
+  C:\n\Dropbox\csd\computer\rails-ransack-search-know\rails,ransack,4box-search,mostcolumns,textcolumns,know.txt
+
+migration..
+  C:\n\Dropbox\csd\dg2\knowledge-csd-dg\computer\rails-know\summary-rubyonrails-knowledge2\rails,migration,know101.txt
+
+  
+http://stackoverflow.com/questions/15162055/rails-generate-migration
+
+
+rails g migration AddRsackdummy2ToVehicles rsackdummy2:string
+rails g migration AddRsackdummy3ToVehicles rsackdummy3:string
+
+rails g migration AddRsackdummy2ToCustomers rsackdummy2:string
+rails g migration AddRsackdummy3ToCustomers rsackdummy3:string
+
+rails g migration add_description_to_products description:string
+
+rails g migration add_containment_to_sr_csd1_sinters containtment:text
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+https://github.com/dgleba/rail263/commit/a7da04d29c3908da3307815fd812d45b1612e3b9
+
+
+commit a7da04d29c3908da3307815fd812d45b1612e3b9
+Author: David Gleba <dgleba@gmail.com>
+Date:   Thu Nov 17 22:19:52 2016 -0500
+
+    add 4-box search most fields to vehicle
+
+
+
+
+
+
+ 
+
+
+ ~~~diff
+
+ --git a/app/helpers/customer_helper.rb b/app/helpers/customer_helper.rb
+index 1e1f4e5..5df24e5 100644
+--- a/app/helpers/customer_helper.rb
++++ b/app/helpers/customer_helper.rb
+@@ -14,6 +14,65 @@ module CustomerHelper
+     end
+     most_attributes.join("_or_") + "_cont_all"
+   end
++
+  
+-   
++  def text1_customers_cont
++  #
++  # search  * text *  columns in .. table
++  #
++  # http://stackoverflow.com/questions/17980410/rails-get-the-names-of-all-a-tables-columns-of-a-certain-data-type-column
++  # ModelClass.columns.select{ |c| c.type == :integer }.map(&:name)
++  #
++    most_attributes = []
++    attributes_to_exclude = [
++      "created_at",
++      "updated_at"
++           
++    ]
++    Customer.columns.select{ |c| c.type == :string || c.type == :text }.map(&:name).each do |column_name|
++      most_attributes << column_name unless column_name.in?(attributes_to_exclude)
++    end
++    most_attributes.join("_or_") + "_cont_any"
++  end
++
++  def text2_customers_cont
++  #
++  # search  * text *  columns in .. table
++  #
++  # http://stackoverflow.com/questions/17980410/rails-get-the-names-of-all-a-tables-columns-of-a-certain-data-type-column
++  # ModelClass.columns.select{ |c| c.type == :integer }.map(&:name)
++  #
++    most_attributes = []
++    attributes_to_exclude = [
++      "created_at",
++      "updated_at",
++      "rsackdummy2"     
++    ]
++    Customer.columns.select{ |c| c.type == :string || c.type == :text }.map(&:name).each do |column_name|
++      most_attributes << column_name unless column_name.in?(attributes_to_exclude)
++    end
++    most_attributes.join("_or_") + "_cont_any"
++  end
++
++  
++  def text3_customers_cont
++  #
++  # search  * text *  columns in .. table
++  #
++  # http://stackoverflow.com/questions/17980410/rails-get-the-names-of-all-a-tables-columns-of-a-certain-data-type-column
++  # ModelClass.columns.select{ |c| c.type == :integer }.map(&:name)
++  #
++    most_attributes = []
++    attributes_to_exclude = [
++      "created_at",
++      "updated_at",
++      "rsackdummy3"     
++    ]
++    Customer.columns.select{ |c| c.type == :string || c.type == :text }.map(&:name).each do |column_name|
++      most_attributes << column_name unless column_name.in?(attributes_to_exclude)
++    end
++    most_attributes.join("_or_") + "_cont_any"
++  end
++
++  
+ end
+
+
+
+ 
+
+
+ ~~~diff
+
+ --git a/app/helpers/dgrail_helper.rb b/app/helpers/dgrail_helper.rb
+new file mode 100644
+index 0000000..a8147a0
+--- /dev/null
++++ b/app/helpers/dgrail_helper.rb
+@@ -0,0 +1,86 @@
++module DgrailHelper
++  
++  # show line breaks when showing text_area
++  def dgtexts(dgitem)
++    simple_format( dgitem, {}, {wrapper_tag: "div" } )
++  end
++  
++  # search most columns in .. table
++  def most_cilisting1s_cont
++    most_attributes = []
++    attributes_to_exclude = [
++      "created_at",
++      "updated_at",
++      "id"     
++    ]
++    Cilisting1.column_names.each do |column_name|
++      most_attributes << column_name unless column_name.in?(attributes_to_exclude)
++    end
++    most_attributes.join("_or_") + "_cont_any"
++  end
++
++
++  # there are three of these text?_cilisting1s_cont below. one for each search box on the index view...
++  
++  def text_sr_csd1_sinters_cont
++  #
++  # search  * text *  columns in .. table
++  #
++  # http://stackoverflow.com/questions/17980410/rails-get-the-names-of-all-a-tables-columns-of-a-certain-data-type-column
++  # ModelClass.columns.select{ |c| c.type == :integer }.map(&:name)
++  #
++    most_attributes = []
++    attributes_to_exclude = [
++      "created_at",
++      "updated_at",
++      "id"     
++    ]
++    SrCsd1Sinter.columns.select{ |c| c.type == :string || c.type == :text }.map(&:name).each do |column_name|
++      most_attributes << column_name unless column_name.in?(attributes_to_exclude)
++    end
++    most_attributes.join("_or_") + "_cont_any"
++  end
++
++  def text2_cilisting1s_cont
++  #
++  # search  * text *  columns in .. table
++  #
++  # http://stackoverflow.com/questions/17980410/rails-get-the-names-of-all-a-tables-columns-of-a-certain-data-type-column
++  # ModelClass.columns.select{ |c| c.type == :integer }.map(&:name)
++  #
++    most_attributes = []
++    attributes_to_exclude = [
++      "created_at",
++      "updated_at",
++      "id",     
++      "ci_leader_1"
++    ]
++    Cilisting1.columns.select{ |c| c.type == :string || c.type == :text }.map(&:name).each do |column_name|
++      most_attributes << column_name unless column_name.in?(attributes_to_exclude)
++    end
++    most_attributes.join("_or_") + "_cont_any"
++  end
++ 
++  def text3_cilisting1s_cont
++  #
++  # search  * text *  columns in .. table
++  #
++  # http://stackoverflow.com/questions/17980410/rails-get-the-names-of-all-a-tables-columns-of-a-certain-data-type-column
++  # ModelClass.columns.select{ |c| c.type == :integer }.map(&:name)
++  #
++    most_attributes = []
++    attributes_to_exclude = [
++      "created_at",
++      "updated_at",
++      "id",     
++      "orginator_email"
++    ]
++    Cilisting1.columns.select{ |c| c.type == :string || c.type == :text }.map(&:name).each do |column_name|
++      most_attributes << column_name unless column_name.in?(attributes_to_exclude)
++    end
++    most_attributes.join("_or_") + "_cont_any"
++  end
++ 
++   
++end
++
+
+
+
+ 
+
+
+ ~~~diff
+
+ --git a/app/helpers/vehicle_helper.rb b/app/helpers/vehicle_helper.rb
+new file mode 100644
+index 0000000..25c5faa
+--- /dev/null
++++ b/app/helpers/vehicle_helper.rb
+@@ -0,0 +1,63 @@
++module VehicleHelper
++  
++ 
++  def text1_vehicles_cont
++  #
++  # search  * text *  columns in .. table
++  #
++  # http://stackoverflow.com/questions/17980410/rails-get-the-names-of-all-a-tables-columns-of-a-certain-data-type-column
++  # ModelClass.columns.select{ |c| c.type == :integer }.map(&:name)
++  #
++    most_attributes = []
++    attributes_to_exclude = [
++      "created_at",
++      "updated_at"
++           
++    ]
++    Vehicle.columns.select{ |c| c.type == :string || c.type == :text }.map(&:name).each do |column_name|
++      most_attributes << column_name unless column_name.in?(attributes_to_exclude)
++    end
++    most_attributes.join("_or_") + "_cont_any"
++  end
++
++  def text2_vehicles_cont
++  #
++  # search  * text *  columns in .. table
++  #
++  # http://stackoverflow.com/questions/17980410/rails-get-the-names-of-all-a-tables-columns-of-a-certain-data-type-column
++  # ModelClass.columns.select{ |c| c.type == :integer }.map(&:name)
++  #
++    most_attributes = []
++    attributes_to_exclude = [
++      "created_at",
++      "updated_at",
++      "rsackdummy2"     
++    ]
++    Vehicle.columns.select{ |c| c.type == :string || c.type == :text }.map(&:name).each do |column_name|
++      most_attributes << column_name unless column_name.in?(attributes_to_exclude)
++    end
++    most_attributes.join("_or_") + "_cont_any"
++  end
++
++  
++  def text3_vehicles_cont
++  #
++  # search  * text *  columns in .. table
++  #
++  # http://stackoverflow.com/questions/17980410/rails-get-the-names-of-all-a-tables-columns-of-a-certain-data-type-column
++  # ModelClass.columns.select{ |c| c.type == :integer }.map(&:name)
++  #
++    most_attributes = []
++    attributes_to_exclude = [
++      "created_at",
++      "updated_at",
++      "rsackdummy3"     
++    ]
++    Vehicle.columns.select{ |c| c.type == :string || c.type == :text }.map(&:name).each do |column_name|
++      most_attributes << column_name unless column_name.in?(attributes_to_exclude)
++    end
++    most_attributes.join("_or_") + "_cont_any"
++  end
++
++  
++end
+
+
+
+ 
+
+
+ ~~~diff
+
+ --git a/app/views/customers/index.html.haml.works.4box.search b/app/views/customers/index.html.haml.works.4box.search
+new file mode 100644
+index 0000000..f1daaf8
+--- /dev/null
++++ b/app/views/customers/index.html.haml.works.4box.search
+@@ -0,0 +1,48 @@
++.container-fluid
++
++.row
++  .col-sm-6.col-md-5.col-lg-4{:style => "background-color:white;"}
++    %ul.list-inline
++      %li
++        = link_to t('actions.create'), new_customer_path, class: 'btn btn-primary'
++      %li 
++        %h4{:class => "vcenter", :style => "color:black;margin-left:1px;"}= Customer.model_name.human
++
++  .col-sm-4.col-md-4.col-lg-4{:style => "background-color:white;"}
++    %div#resize01
++      = search_form_for @q, {:class => "search-form"} do |f|
++        .input-group
++          / http://stackoverflow.com/questions/27451693/display-two-fields-side-by-side-in-a-bootstrap-form
++          = f.search_field text1_customers_cont, class: 'form-control' , :placeholder => "Most fields..(enter one word)"
++          = f.search_field text2_customers_cont, class: 'form-control' , :placeholder => "Most fields.."
++          %span.input-group-addon{:class => "seperator1", :style => "max-width:1px;"} &nbsp
++          = f.search_field text3_customers_cont, class: 'form-control', :placeholder => "Most fields.."
++          = f.search_field :id_eq, class: 'form-control', :placeholder => "ID"
++          %span.input-group-btn{:style => "vertical-align:top;"}
++            %button.btn.btn-primary
++              %i.fa.fa-search
++            
++= paginate @customers
++    
++ 
++%table.table.table-striped
++  %thead
++    %tr
++      %th
++      %th
++      %th= sort_link(@q, :name, Customer.human_attribute_name(:name))
++      %th= sort_link(@q, :address, Customer.human_attribute_name(:address))
++      %th= sort_link(@q, :phone, Customer.human_attribute_name(:phone))
++      %th= sort_link(@q, :discount, Customer.human_attribute_name(:discount))
++
++  %tbody
++    - @customers.each do |customer|
++      %tr
++        %td= link_to t('actions.show'), customer, class: 'btn btn-primary'
++        %td= link_to t('actions.edit'), edit_customer_path(customer)
++        %td= customer.name
++        %td= customer.address
++        %td= customer.phone
++        %td= customer.discount
++
++= paginate @customers
+
+
+
+ 
+
+
+ ~~~diff
+
+ --git a/app/views/vehicles/index.html.haml b/app/views/vehicles/index.html.haml
+index a18ac2e..17c5dce 100644
+--- a/app/views/vehicles/index.html.haml
++++ b/app/views/vehicles/index.html.haml
+@@ -7,14 +7,21 @@
+         = link_to t('actions.create'), new_vehicle_path, class: 'btn btn-primary'
+       %li 
+         %h4{:class => "vcenter", :style => "color:black;margin-left:1px;"}= Vehicle.model_name.human
+-  .col-sm-6.col-md-5.col-lg-4{:style => "background-color:white;"}
+-    = search_form_for @q, class: 'search-form ' do |f|
+-      .input-group
+-        = f.search_field :veh_reg_no_cont, class: 'form-control'
+-        %span.input-group-btn
+-          %button.btn.btn-primary
+-            %i.fa.fa-search    
+   
++  .col-sm-4.col-md-4.col-lg-4{:style => "background-color:white;"}
++    %div#resize01
++      = search_form_for @q, {:class => "search-form"} do |f|
++        .input-group
++          / http://stackoverflow.com/questions/27451693/display-two-fields-side-by-side-in-a-bootstrap-form
++          = f.search_field text1_vehicles_cont, class: 'form-control' , :placeholder => "Most fields..(enter one word)"
++          = f.search_field text2_vehicles_cont, class: 'form-control' , :placeholder => "Most fields.."
++          %span.input-group-addon{:class => "seperator1", :style => "max-width:1px;"} &nbsp
++          = f.search_field text3_vehicles_cont, class: 'form-control', :placeholder => "Most fields.."
++          = f.search_field :id_eq, class: 'form-control', :placeholder => "ID"
++          %span.input-group-btn{:style => "vertical-align:top;"}
++            %button.btn.btn-primary
++              %i.fa.fa-search
++
+   .col-sm-2.col-md-2.col-lg-2{:style => "background-color:white;"}
+     %a{:href => "http://#{request.host}/shiftcsd1/index.php?-table=sf_rpt", :target => "_blank"} Search-2(Login. Works after that)
+     - puts request.host
+
+
+
+
+
+
+ 
+
+
+ ~~~diff
+
+ --git a/db/migrate/20161118025934_add_rsackdummy2_to_customers.rb b/db/migrate/20161118025934_add_rsackdummy2_to_customers.rb
+new file mode 100644
+index 0000000..710ef02
+--- /dev/null
++++ b/db/migrate/20161118025934_add_rsackdummy2_to_customers.rb
+@@ -0,0 +1,5 @@
++class AddRsackdummy2ToCustomers < ActiveRecord::Migration
++  def change
++    add_column :customers, :rsackdummy2, :string
++  end
++end
+
+
+
+ 
+
+
+ ~~~diff
+
+ --git a/db/migrate/20161118025935_add_rsackdummy3_to_customers.rb b/db/migrate/20161118025935_add_rsackdummy3_to_customers.rb
+new file mode 100644
+index 0000000..087bbc9
+--- /dev/null
++++ b/db/migrate/20161118025935_add_rsackdummy3_to_customers.rb
+@@ -0,0 +1,5 @@
++class AddRsackdummy3ToCustomers < ActiveRecord::Migration
++  def change
++    add_column :customers, :rsackdummy3, :string
++  end
++end
+
+
+
+ 
+
+
+ ~~~diff
+
+ --git a/db/migrate/20161118031400_add_rsackdummy2_to_vehicles.rb b/db/migrate/20161118031400_add_rsackdummy2_to_vehicles.rb
+new file mode 100644
+index 0000000..d262caf
+--- /dev/null
++++ b/db/migrate/20161118031400_add_rsackdummy2_to_vehicles.rb
+@@ -0,0 +1,5 @@
++class AddRsackdummy2ToVehicles < ActiveRecord::Migration
++  def change
++    add_column :vehicles, :rsackdummy2, :string
++  end
++end
+
+
+
+ 
+
+
+ ~~~diff
+
+ --git a/db/migrate/20161118031401_add_rsackdummy3_to_vehicles.rb b/db/migrate/20161118031401_add_rsackdummy3_to_vehicles.rb
+new file mode 100644
+index 0000000..c5831ed
+--- /dev/null
++++ b/db/migrate/20161118031401_add_rsackdummy3_to_vehicles.rb
+@@ -0,0 +1,5 @@
++class AddRsackdummy3ToVehicles < ActiveRecord::Migration
++  def change
++    add_column :vehicles, :rsackdummy3, :string
++  end
++end
+
+
+
+ 
+
+
+ ~~~diff
+
+ --git a/db/schema.rb b/db/schema.rb
+index f0d6e7e..5bca256 100644
+--- a/db/schema.rb
++++ b/db/schema.rb
+@@ -11,7 +11,7 @@
+ #
+ # It's strongly recommended that you check this file into your version control system.
+ 
+-ActiveRecord::Schema.define(version: 20161029192623) do
++ActiveRecord::Schema.define(version: 20161118031401) do
+ 
+   create_table "audits", force: :cascade do |t|
+     t.integer  "auditable_id"
+@@ -41,9 +41,12 @@ ActiveRecord::Schema.define(version: 20161029192623) do
+     t.string   "address"
+     t.string   "phone"
+     t.float    "discount"
+-    t.datetime "created_at", null: false
+-    t.datetime "updated_at", null: false
++    t.datetime "created_at",  null: false
++    t.datetime "updated_at",  null: false
+     t.integer  "user_id"
++    t.string   "dummy1"
++    t.string   "rsackdummy2"
++    t.string   "rsackdummy3"
+   end
+ 
+   add_index "customers", ["user_id"], name: "index_customers_on_user_id"
+@@ -119,10 +122,12 @@ ActiveRecord::Schema.define(version: 20161029192623) do
+     t.string   "desc"
+     t.binary   "photo"
+     t.decimal  "daily_rate"
+-    t.datetime "created_at", null: false
+-    t.datetime "updated_at", null: false
++    t.datetime "created_at",  null: false
++    t.datetime "updated_at",  null: false
+     t.string   "features"
+     t.string   "color"
++    t.string   "rsackdummy2"
++    t.string   "rsackdummy3"
+   end
+ 
+   create_table "version_associations", force: :cascade do |t|
+

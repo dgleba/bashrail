@@ -1,0 +1,260 @@
+commit f72c9866a659a991b1198dbc4170672962501857
+Author: David Gleba <dgleba@gmail.com>
+Date:   Fri Mar 2 04:32:16 2018 +0000
+
+    bigtunacan/rails-jquery-autocomplete, 2018-03-01
+
+M	Gemfile
+M	app/assets/javascripts/application.js
+M	app/assets/stylesheets/application.scss
+A	app/assets/stylesheets/dgautocomplete.scss
+M	app/views/layouts/application.html.erb
+A	backup/application.html.1.erb
+M	config/initializers/assets.rb
+A	public/javascripts/autocomplete-rails.js
+
+M	app/views/pets/_form.html.erb
+M	app/controllers/pets_controller.rb
+M	config/routes.rb
+A	app/assets/javascripts/pet.js
+
+
+
+diff --git a/Gemfile b/Gemfile
+index a75dc82..ab84572 100755
++# https://github.com/bigtunacan/rails-jquery-autocomplete
++# https://github.com/yifeiwu/rails4-autocomplete-demo
++gem 'rails-jquery-autocomplete'
++gem 'jquery-ui-rails'
+
+
+
+diff --git a/app/assets/javascripts/application.js b/app/assets/javascripts/application.js
+index d111fd3..8400c4f 100644
+--- a/app/assets/javascripts/application.js
++++ b/app/assets/javascripts/application.js
+@@ -12,6 +12,8 @@
+ //
+ //= require jquery
+ //= require jquery_ujs
++ //= require jquery-ui/autocomplete 
++ //= require autocomplete-rails
+ //= require_tree .
+ //= require bootstrap-sprockets
+ //= require select2
+ 
+ 
+
+
+
+diff --git a/app/assets/stylesheets/application.scss b/app/assets/stylesheets/application.scss
+index 5dfface..08a6051 100644
+--- a/app/assets/stylesheets/application.scss
++++ b/app/assets/stylesheets/application.scss
+@@ -17,3 +17,53 @@
+  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
++
++
++.ui-autocomplete {
++  position: absolute;
++  top: 100%;
++  left: 0;
++  z-index: 1000;
++  float: left;
++  display: none;
++  min-width: 160px;
++  _width: 160px;
++  padding: 4px 0;
++  margin: 2px 0 0 0;
++  list-style: none;
++  background-color: #ffffff;
++  border-color: #ccc;
++  border-color: rgba(0, 0, 0, 0.2);
++  border-style: solid;
++  border-width: 1px;
++  -webkit-border-radius: 5px;
++  -moz-border-radius: 5px;
++  border-radius: 5px;
++  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
++  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
++  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
++  -webkit-background-clip: padding-box;
++  -moz-background-clip: padding;
++  background-clip: padding-box;
++  *border-right-width: 2px;
++  *border-bottom-width: 2px;
++ 
++  .ui-menu-item > a.ui-corner-all {
++    display: block;
++    padding: 5px 15px;
++    clear: both;
++    font-weight: normal;
++    line-height: 300%;
++    color: #555555;
++    white-space: nowrap;
++  }
++}
++    .ui-widget-content .ui-state-focus {
++      color: #ffffff;
++      text-decoration: none;
++      background-color: #0088cc;
++      border-radius: 0px;
++      -webkit-border-radius: 0px;
++      -moz-border-radius: 0px;
++      background-image: none;
++    }
+
+
+
+
+diff --git a/app/assets/stylesheets/dgautocomplete.scss b/app/assets/stylesheets/dgautocomplete.scss
+new file mode 100644
+index 0000000..e8d0d99
+--- /dev/null
++++ b/app/assets/stylesheets/dgautocomplete.scss
+@@ -0,0 +1,31 @@
++// Place all the styles related to the welcome controller here.
++// They will automatically be included in application.css.
++// You can use Sass (SCSS) here: http://sass-lang.com/
++
++.ui-autocomplete-input {
++
++  min-width: 160px;
++  width: 100%;
++  border-radius: 4px;
++  border-width: 1px;
++  line-height: 200%;
++ 
++  .ui-menu-item > a.ui-corner-all {
++    display: block;
++    padding: 5px 15px;
++    clear: both;
++    font-weight: normal;
++    line-height: 300%;
++    color: #555555;
++    white-space: nowrap;
++  }
++}
++    .ui-widget-content .ui-state-focus {
++      -color: #ffffff;
++      -text-decoration: none;
++      background-color: #0088cc;
++      border-radius: 5px;
++      -webkit-border-radius: 5px;
++      -moz-border-radius: 5px;
++      background-image: none;
++    }
+
+
+
+diff --git a/app/views/layouts/application.html.erb b/app/views/layouts/application.html.erb
+index d0b296f..0df2af7 100644
+--- a/app/views/layouts/application.html.erb
++++ b/app/views/layouts/application.html.erb
+@@ -7,6 +7,10 @@
+           <title><%= Rails.application.class.parent_name %></title>
+           <%= stylesheet_link_tag    'application', media: 'all' %>
+           <%= javascript_include_tag 'application' %>
++
++
++          <%= javascript_include_tag "autocomplete-rails.js" %>
++  
+           <%= csrf_meta_tags %>
+         </meta>
+       </meta>
+       
+       
+
+diff --git a/config/initializers/assets.rb b/config/initializers/assets.rb
+index 12ebad6..afab5a9 100644
+--- a/config/initializers/assets.rb
++++ b/config/initializers/assets.rb
+@@ -9,3 +9,4 @@ Rails.application.config.assets.version = "1.3"
+ # Precompile additional assets.
+ # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
+ # Rails.application.config.assets.precompile += %w( search.js )
++Rails.application.config.assets.precompile += %w( autocomplete-rails.js )
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app specific
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+diff --git a/config/routes.rb b/config/routes.rb
+index ea28b21..6625af5 100644
+--- a/config/routes.rb
++++ b/config/routes.rb
+@@ -1,7 +1,12 @@
+ Rails.application.routes.draw do
+  
+ 
+-  resources :pets
+#
+  resources :pets do
+    get :autocomplete_pfeature_name, :on => :collection
+  end
+  # root "pets#index"
+
+
+
+diff --git a/app/views/pets/_form.html.erb b/app/views/pets/_form.html.erb
+index 3fbeb0d..b40eea3 100644
+  <div class="form-group">
+            <%= f.label :name, class: "col-sm-2 control-label" %>
+        <div class="col-sm-10">
+
+        <%= f.text_field :name, class: "form-control" %>
+   <%= f.autocomplete_field :name, autocomplete_pfeature_name_pets_path , 'min-length' => 1 , 'data-auto-focus' => true %>
+
+   </div>
+  
+
+diff --git a/app/controllers/pets_controller.rb b/app/controllers/pets_controller.rb
+index 9b05a69..a0db339 100644
+--- a/app/controllers/pets_controller.rb
++++ b/app/controllers/pets_controller.rb
+@@ -1,6 +1,9 @@
+ class PetsController < ApplicationController
+ before_filter :authenticate_user!
+   # before_action :set_pet, only: [:show, :edit, :update, :destroy]
++  #
++  autocomplete :pfeature, :name, :full => true
++
+   
+
+
+diff --git a/app/assets/javascripts/pet.js b/app/assets/javascripts/pet.js
+new file mode 100644
+index 0000000..bf86397
+--- /dev/null
++++ b/app/assets/javascripts/pet.js
+@@ -0,0 +1,22 @@
++$(function() {
++  
++  // run when eventlistener is triggered
++  // http://stackoverflow.com/questions/6431459/jquery-autocomplete-trigger-change-event
++  //
++  $("#pet_name").on( "autocompletechange", function(event,data) {
++     // post value to console for validation
++     console.log("Item is: ", $(this).val());
++
++    // if item user typed in the input box is not in the list of suggestions, it will be cleared out. The user must select an item.
++    // if (!data.item) {
++    //     this.value = '';
++    //     console.log('> Item selected is:', data.item);
++    //     }
++        
++    });   
++    console.log ("msg.. 1014")  
++     
++});
+ 

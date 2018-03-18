@@ -77,3 +77,39 @@ cp $filetarg.tmp $filetarg; rm $filetarg.tmp
   
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+5.
+
+C:\n\Dropbox\csd\serve\vboxyard\bashrail\docs\rails,form_for add required field indicator,mark,form_builder_know.txt
+
+2018-03-05
+
+
+6.
+
+fix ugly formatting of field with  validation errors
+
+It moved to the left and spread out vertically.
+
+2018-03-05
+
+
+7.
+
+uncomment
+
+  ## == PaperTrail ==
+  #  config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
+in rails_admin.rb
+
+
+
+8.
+
+Ads version table to rails admin..
+
+  rails g model Version --no-migration
+
+ 
+ 
+

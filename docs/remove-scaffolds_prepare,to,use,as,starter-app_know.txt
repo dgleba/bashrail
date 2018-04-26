@@ -79,6 +79,33 @@ done
 #
 
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# remove deployment
+
+
+mv config/puma.rb _offline/
+mv config/puma1.rb _offline/
+
+rm config/puma.rb
+
+rm config/puma1.rb
+
+
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+edit db/database.yml 
+
+to  dev db - railtest
+
+disable production db
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -92,6 +119,13 @@ git gc --prune=now     ; Will actually delete your data
 #   The following 2 commands are optional - they keep your git repo in good shape.
 git prune --progress # delete all the objects w/o references
 git gc --aggressive # aggressively collect garbage; may take a lot of time on large repos
+
+
+# error: # ! [remote rejected] master -> master (shallow update not allowed) error: failed to push some refs to 'https://github.com/dgleba/prod367.git'
+#fix..
+ git fetch --unshallow
+ git filter-branch -- --all
+# git filter-branch -- --all -f
 
 
 
@@ -133,39 +167,21 @@ remove from routes.rb
   resources :country_of_origins
 
 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-# remove deployment
-
-
-mv config/puma.rb _offline/
-mv config/puma1.rb _offline/
-
-rm config/puma.rb
-
-rm config/puma1.rb
-
-
-
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-set db/database.yml 
-to  dev db - railtest
-
-disable production db
-
-
-rake db:migrate
-
-
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 try running it.
 
+edit  db/database.yml 
+to  dev db - railtest
+
+disable production db
+
+
+rake db:migrate
 
 
 railss

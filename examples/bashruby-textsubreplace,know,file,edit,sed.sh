@@ -33,6 +33,25 @@ cat $filep1
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+# sub...  if line contains pattern, sub in place.
+
+filetarg='app/views/pets/_form.html.erb'
+r1tmp="/tmp/_temprubyrunner_${USER}.rb"
+cat << 'HEREDOC' > $r1tmp
+  ARGF.each do |line|
+    if line =~ /image,/
+      line.sub! /f.text_field/, "f.file_field" 
+    end  
+    puts line
+  end
+HEREDOC
+ruby $r1tmp $filetarg > $filetarg.tmp
+cat $filetarg.tmp
+cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 # sub 2, add new text above patrn...
 
 echo '2..'
@@ -134,4 +153,51 @@ ruby $r1tmp $filetarg > $filetarg.tmp ; cp $filetarg.tmp $filetarg ; rm $filetar
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# add new lines of text before patrn...
+#
+
+# cat 'app/views/pets/_form.html.erb'
+# grep end 'app/views/pets/_form.html.erb'
+
+filetarg='app/views/layouts/application.html.erb'
+cat $filetarg
+r1tmp="/tmp/_temprubyrunner_${USER}.rb"
+cat << 'HEREDOC' > $r1tmp
+patrn='csrf_meta'
+  repl2 = %Q{
+          <%= javascript_include_tag "autocomplete-rails.js" %>
+  }
+  ARGF.each do |line|
+    puts repl2 if line =~ /#{Regexp.escape(patrn)}/
+    puts line
+  end
+HEREDOC
+ruby $r1tmp $filetarg > $filetarg.tmp
+cat $filetarg.tmp
+cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+
+
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# uncomment line containing pattern...
+#
+filetarg='config/initializers/rails_admin.rb'
+r1tmp="/tmp/_temprubyrunner_${USER}.rb"
+cat << 'HEREDOC' > $r1tmp
+  repl2 = %Q{
+  notused
+  }
+  ARGF.each do |line|
+    line.sub!('#','') if line =~ /config\.audit.*paper_trail/
+    puts line
+  end
+HEREDOC
+ruby $r1tmp $filetarg > $filetarg.tmp
+cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+
+
+###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

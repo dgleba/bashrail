@@ -171,7 +171,7 @@ pwd
   # source $sfil2/devisetokenauth1.sh   # optional
 
 
-  source $sfil2/cancan1.sh   # optional, but ..  optional may require some further edits.
+  source $sfil2/cancan1.sh   # optional, but ..  may require some further edits.
 
   source $sfil2/admin1.sh  # optional
 
@@ -187,6 +187,7 @@ pwd
   source $sfil2/figaro.env.sh
   
 
+  # See below for select2.sh and jqueryautocomplete.sh
   
   
 ### scaffold... ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

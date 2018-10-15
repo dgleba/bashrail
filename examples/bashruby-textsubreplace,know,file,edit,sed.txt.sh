@@ -99,8 +99,10 @@ cat $filep1
 
 # add whole line after line containing patrn... I get error file busy,  maybe due to virtualbox windows share.
 
-http://stackoverflow.com/questions/28119359/how-do-i-add-a-line-after-another-line-in-a-file-in-ruby
 
+
+# http://stackoverflow.com/questions/28119359/how-do-i-add-a-line-after-another-line-in-a-file-in-ruby
+#
 # insert_line.rb
 #   run with command "ruby insert_line.rb myinputfile.txt", where you
 #   replace "myinputfile.txt" with the actual name of your input file
@@ -111,7 +113,7 @@ ARGF.each do |line|
 end
 
 
-or
+****       or        ****
 
 
 
@@ -134,7 +136,8 @@ ruby $r1tmp $filetarg > $filetarg.tmp
 cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 
 
-or
+
+****       or        ****
 
 
  # add lines to roles_controller after..

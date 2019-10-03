@@ -89,6 +89,14 @@ rake db:migrate
 #eg:  sed -i '/CLIENTSCRIPT/i \ \ CLIENTSCRIPT2' file  # add line before pattern - include leading spaces like so - escape them.. '\ '  
 sed -i '/require_tree/i  \ //= require jquery-ui/autocomplete \n //= require autocomplete-rails'  app/assets/javascripts/application.js
 
+# todo
+# 2019-10-02 changes.
+# //= require jquery
+# //= require jquery_ujs
+# //= require jquery-ui/widgets/autocomplete
+# //= require autocomplete-rails
+
+
 
 # git add -A # Add all files and commit them
   # git commit -m "four"

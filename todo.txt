@@ -112,4 +112,38 @@ Ads version table to rails admin..
 
  
  
+9.
+
+2019-10-02
+
+use seeder.rake not populator.
+
+10.
+
+2019-10-02
+
+change application.js for jquery autocomplete
+
+11.
+
+2019-10-02
+
+CanCan::Error in ProductsController#index
+Subject is required for dashboard
+      can :dashboard                  # allow access to dashboard
+
+ Should be..     can :dashboard, :all
+
+12.
+
+2019-10-02
+
+rails_admin
+
+NoMethodError in RailsAdmin::MainController#dashboard undefined method `new' for nil:NilClass
+
+change sftp://192.168.88.39/srv/web/2rail/brail484b21/config/initializers/rails_admin.rb
+
+from cancan to CanCanCan
+
 

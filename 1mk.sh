@@ -275,26 +275,33 @@ git add -A # Add all files and commit them
 ### populate .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-cat << HEREDOC > lib/tasks/populate.rake
-namespace :db do
-  desc "fill database"
-  task :populate => :environment do
-    require 'populator'
-    require 'faker'
-    Product.populate 11 do |a12|
-      a12.name     = Faker::Commerce.product_name
-    end
-    CountryOfOrigin.populate 99 do |a12|
-      a12.name     = Faker::Address.country
-    end
-    Pfeature.populate 9 do |a12|
-      a12.name     = Faker::Commerce.color
-    end
-  end
-end
-HEREDOC
+# cat << HEREDOC > lib/tasks/populate.rake
+# namespace :db do
+#   desc "fill database"
+#   task :populate => :environment do
+#     require 'populator'
+#     require 'faker'
+#     Product.populate 11 do |a12|
+#       a12.name     = Faker::Commerce.product_name
+#     end
+#     CountryOfOrigin.populate 99 do |a12|
+#       a12.name     = Faker::Address.country
+#     end
+#     Pfeature.populate 9 do |a12|
+#       a12.name     = Faker::Commerce.color
+#     end
+#   end
+# end
+# HEREDOC
 
-rake db:populate
+# rake db:populate
+
+
+# todo
+# Changes 2019-10-02
+# use seeder
+
+
 
 sleep 1
 git add -A # Add all files and commit them

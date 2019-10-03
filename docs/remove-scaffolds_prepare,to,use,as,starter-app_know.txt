@@ -13,11 +13,29 @@ mv hrapp361 prod367
 cd  your-project  ( eg. prod367 )
 
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# remove git remotes..
+
 git r
 git remote remove origin
 git r
 
 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Remove unwanted scaffolds 
+
+
+_____________
+
+tried.
+remove models unwanted.
+remove migration code from  db/schema.rb
+
+_____________
 
 
 find app/models
@@ -84,6 +102,9 @@ done
 # remove deployment
 
 
+If you don't, It will just error with ..  prod466_dev_1 exited with code 1
+
+
 mv config/puma.rb _offline/
 mv config/puma1.rb _offline/
 
@@ -106,7 +127,8 @@ disable production db
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# optional..
 
 
 # remove history before last 25 or x commits..
@@ -140,7 +162,7 @@ grep -rin --color=always $v1 . | grep -vi -e deploy -e tmp -e .git -e log -e /of
 v1=lpa34
 grep -rin --color=always  $v1 . | grep -vi -e deploy -e tmp -e .git -e log -e /offline -e readme -e docs -e mtime -e offlin
 
-v1=hrapp
+v1=prod367
 grep -rin --color=always  $v1 . | grep -vi -e deploy -e tmp -e .git -e log -e /offline -e readme -e docs -e mtime -e offlin
 
 
@@ -189,6 +211,7 @@ railss
 
 
 edit home index erb
+
 
 Showing /srv/share/ci/ci349a/app/views/layouts/application.html.erb where line #30 raised:
 

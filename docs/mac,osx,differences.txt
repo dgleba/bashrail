@@ -37,3 +37,57 @@ alias sed=gsed
 http://stackoverflow.com/questions/14846304/sed-command-error-on-macos-x
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+stat is different
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+mac is bsd based. it is posix compliant.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+----------------------------------------------------
+Title:  .
+-----------------------2019-08-08[Aug-Thu]16-13PM
+
+How closely are Mac OS X and BSD related?
+
+I read that Mac OS X and bsd are related. How closely are they related. Can Mac OS X software be tweaked and installed on BSD?
+
+macos unix operating-system linux-kernel kernel
+
+
+Back in the days of OS X 10.4 I spent some time failing to write a VFS for OS X. In those days, of the major subsystems of the kernel, only the network stack and the VFS were still truly BSD. At that time, even the VFS had been partly rewritten to make it more modular (all the BSD VFS data structures became opaque pointers and the API was through what were called KPI functions). I believe the network stack was going the same way. There was also a thin layer at the interface with userland that made the OS look like BSD to userland programs.
+
+Everything else had been pretty much rewritten or replaced: memory management, process management etc came from the Mach microkernel; the device driver subsystem was written from the ground up by Apple.
+
+In terms of userland programming, OS X is very similar to BSD and programs written for BSD should be easily portable. However, OS X has a lot of APIs that aren't available in BSD. These include almost everything to do with the user interface - graphics, sound etc. There are also other interfaces that don't exist in BSD such as the launch API which is the OS X preferred way of launching background processes.
+
+----------------------------------------------------
+
+
+----------------------------------------------------
+Title:  .
+-----------------------2019-08-08[Aug-Thu]16-11PM
+
+The term "userland" can refer to many things in different contexts, but here I interpret "GNU userland" vs "BSD userland" as the default, minimum set of programs that come with a distribution.
+
+The big main difference is that the two userlands start with completely different source code. GNU cat source code NetBSD cat source code. Just from that simple-in-concept program, you can see that NetBSD's cat uses traditional, single-letter command line flags. GNU programs tend to have single-letter flags, but also the --something-long type options. GNU programs also tend towards POSIX compatibility.
+
+That difference in source code will lend the two userlands different behavior in some cases.
+
+It also looks like NetBSD (at least) uses its own version of libc, the standard C library. I'm getting in over my head here, but libc and dynamic linking are strangely inter=related. Again, different source code will lead to different behavior.
+
+I think that as a shell user, you'd find that ps would act different, and ls might give you slightly different output than you're used to. You'd have to find equivalent command line flags for some programs, if you use the --long-option type of command line flags.
+
+Historically, my understanding is that BSD userland descends more directly from V6 and V7 Bell Labs Unix, via the 32V port to VAX hardware. GNU userland is newer, written at least somewhat in reaction to AT&T's attempts to keep code a closely guarded secret in the early 80s. After the 1983 Bell System divestiture, AT&T tried to "monetize" Unix. Part of that was to license the source code in a way that prevented most people from ever seeing it. Richard Stallman and others had problems with this. Their GNU project existed specifically to create a freely-shareable Unix-like system.
+
+In the meantime, by 1993, AT&T sued the University of California system over the BSD ('B' is Berkeley, where University of California is located) systems. People at Berkeley had replaced all of AT&T's original source with new code, and that new code became the ancestor of at least NetBSD's userland. AT&T and UCB came to a settlement in 1994, revealed to the public in 2004.
+
+Naturally, at least ideas cross-pollinate, so there's at least conceptual similarity between GNU and BSD userland, but corner cases definitely differ.
+
+----------------------------------------------------

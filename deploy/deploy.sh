@@ -42,8 +42,8 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
 # settings...
 
 prjname="railci350"
-dpath="/srv/web/$prjname"
 vport="1301"
+	dpath="/srv/web/$prjname"
 
 
 

@@ -73,7 +73,7 @@ r1tmp="/tmp/_temprubyrunner_${USER}.rb"
 cat << 'HEREDOC' > $r1tmp
   repl2 = %q{
   gem 'mysql2', group: :development
-  gem 'pg', group: :production
+  # gem 'pg', group: :production
   }
   ARGF.each do |line|
     puts line
@@ -83,7 +83,7 @@ HEREDOC
 ruby $r1tmp $filetarg > $filetarg.tmp
 cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 
-
+bundle install
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

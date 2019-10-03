@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+echo ~----------~----------Startingd $HOSTNAME, pwd: `pwd`, dlr0: "$0", bashsource0: "${BASH_SOURCE[0]}", $(date +"%Y-%m-%d_%H.%M.%S")
+
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -67,6 +69,19 @@ mkdir -p $path1/
 rm -r $path1/
 # rsync.. -a - rltpgoD  preserve almost all. -u update don't copy older source files.
 rsync -av --ignore-times  $sfil2/$path1/ $path1/
+
+
+# copy secrets.yml
+
+# first, backup secrets..
+mkdir -p backup
+file1='secrets.yml'
+if [ -f  config/$file1 ] ; then 
+  cp -a config/$file1  backup/$file1$(date +"__%Y.%m.%d_%H.%M.%S").bak.txt
+fi  
+#
+path1='config/secrets.yml'
+cp -a  $sfil2/$path1 $path1
 
 
 

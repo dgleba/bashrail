@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+echo ~----------~----------Startingd $HOSTNAME, pwd: `pwd`, dlr0: "$0", bashsource0: "${BASH_SOURCE[0]}", $(date +"%Y-%m-%d_%H.%M.%S")
+
+
 #cd ;
  # set -e will exit on first error. so set -vxe..
 date ; set +vx  ; set -vx ; # echo off, then echo on

@@ -14,7 +14,7 @@ echo "gem 'populator'" >> Gemfile
 # ggl: rails new ruby thor-0.19.2   validate_default_type An option's default must match its type. (ArgumentError)
 # rails _4.2.7.1_ new /2.3.0/lib/ruby/gems/2.3.0/gems/thor-0.19.2/lib/thor/parser/option.rb:130:in `validate_default_type!': An option's default must match its type. (ArgumentError)
 
-echo "gem 'thor', '0.19.1'">> Gemfile
+echo "gem 'thor'">> Gemfile
 
 echo "# " >> Gemfile
 

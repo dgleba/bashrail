@@ -22,4 +22,7 @@ echo $appn $sfil $sfil2 $mpwd $parm0
 chmod +x $sfil2/jqueryautocomplete.sh
 dos2unix $sfil2/jqueryautocomplete.sh
  
-$sfil2/jqueryautocomplete.sh
+# $sfil2/jqueryautocomplete.sh
+
+  source $sfil2/bootstrap1.sh
+

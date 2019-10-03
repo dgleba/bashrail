@@ -48,6 +48,8 @@ echo '//= require bootstrap-sprockets' >> app/assets/javascripts/application.js
 
 rails generate simple_form:install --bootstrap
 
+bundle install
+
 sleep 1
 git add -A # Add all files and commit them
 git commit -m "install 1 - bootstrap1.sh"
@@ -70,6 +72,7 @@ echo "${railt1}/${path1}"
 ls -la "${railt1}/${path1}"
 
 mkdir -p lib/templates/erb/scaffold/
+rsync -auv "${sfil2}/lib/templates/erb/scaffold/" lib/templates/erb/scaffold/
 rsync -auv "${railt1}/${path1}/" lib/templates/erb/scaffold/
 
 # edit template index...

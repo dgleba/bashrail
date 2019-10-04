@@ -301,6 +301,42 @@ git add -A # Add all files and commit them
 # Changes 2019-10-02
 # use seeder
 
+cat << HEREDOC > lib/tasks/seader.rake
+# lib/tasks/seeder.rake
+# https://stackoverflow.com/questions/19872271/adding-a-custom-seed-file
+# usage: rake db:seeder
+#   seeds all files in db/seeds/*
+
+desc "Run all files in db/seeds directory"
+namespace :db do
+  task seeder: :environment do
+    Dir[File.join(Rails.root, 'db', 'seeds', '*.rb')].each do |filename|
+      puts "seeding - #{filename}. (see lib/tasks/seeder.rake)"
+      load(filename)
+    end
+  end
+end
+HEREDOC
+
+mkdir -p db/seeds
+cat << HEREDOC > db/seeds/seed3.rb
+10.times do
+  CountryOfOrigin.create(
+    name: Faker::Address.country
+  )
+end
+10.times do
+  Pfeature.create(
+    name: Faker::Commerce.color
+  )
+end
+7.times do
+  Product.create(
+    name: Faker::Commerce.product_name,
+    country_of_origin_id: Faker::Number.within(range: 1..5)
+  )
+end
+HEREDOC
 
 
 sleep 1

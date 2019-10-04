@@ -182,6 +182,30 @@ addln='\ \ config.total_columns_width = 9999999'
 sed -i  "/$patrn/a$addln" config/initializers/rails_admin.rb
 
 
+
+# Change this line.. config.authorize_with :cancan
+#
+# replace line if line matches patrn...
+#
+filetarg='app/views/layouts/application.html.erb'
+cat $filetarg
+r1tmp="/tmp/_temprubyrunner_${USER}.rb"
+cat << 'HEREDOC' > $r1tmp
+patrn='config.authorize_with :cancan'
+  repl2 = %Q{   config.authorize_with :cancancan  }
+  ARGF.each do |line|
+    puts repl2 if line =~ /#{Regexp.escape(patrn)}/
+    # don't put the line.. puts line
+  end
+HEREDOC
+ruby $r1tmp $filetarg > $filetarg.tmp
+cat $filetarg.tmp
+cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+
+
+
+
+
 sleep 1
 git add -A # Add all files and commit them
 git commit -m "configure customized  admin"

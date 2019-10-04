@@ -106,7 +106,7 @@ in rails_admin.rb
 
 8.
 
-Ads version table to rails admin..
+Ad version table to rails admin..
 
   rails g model Version --no-migration
 
@@ -114,15 +114,20 @@ Ads version table to rails admin..
  
 9.
 
+done.
+
 2019-10-02
 
 use seeder.rake not populator.
 
 10.
 
+done.
+
 2019-10-02
 
 change application.js for jquery autocomplete
+
 
 11.
 
@@ -135,6 +140,8 @@ Subject is required for dashboard
  Should be..     can :dashboard, :all
 
 12.
+
+done.
 
 2019-10-02
 

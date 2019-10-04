@@ -87,7 +87,18 @@ rake db:migrate
 # app...js  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #eg:  sed -i '/CLIENTSCRIPT/i \ \ CLIENTSCRIPT2' file  # add line before pattern - include leading spaces like so - escape them.. '\ '  
+
+# old..
 sed -i '/require_tree/i  \ //= require jquery-ui/autocomplete \n //= require autocomplete-rails'  app/assets/javascripts/application.js
+
+
+cat << HEREDOC >  app/assets/javascripts/application.js
+//= require jquery
+//= require jquery_ujs
+//= require jquery-ui/widgets/autocomplete
+//= require autocomplete-rails
+HEREDOC
+
 
 # todo
 # 2019-10-02 changes.

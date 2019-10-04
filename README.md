@@ -46,8 +46,8 @@ edit 1mk.sh
 To run the resulting app...
 
 - cd project_name
-- rails s
-- visit localhost:3000/
+- rails s -b 0.0.0.0
+- visit localhost:3000/ or ipaddress:3000/
 - login as:
 
   - admin: username = a password = a

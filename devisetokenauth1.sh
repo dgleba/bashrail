@@ -86,7 +86,7 @@ source $sfil2/seeds2.sh
 
 # add auth requirement in controller..
 #     sed -i  '/CLIENTSCRIPT="foo"/a CLIENTSCRIPT2="hello"' file  # add line after pattern
-sed -i  '/ApplicationController/a  before_filter :authenticate_user!' app/controllers/application_controller.rb
+sed -i  '/ApplicationController/a  before_action :authenticate_user!' app/controllers/application_controller.rb
 
 
 

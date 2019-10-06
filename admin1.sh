@@ -185,25 +185,25 @@ sed -i  "/$patrn/a$addln" config/initializers/rails_admin.rb
 
 # Change this line.. config.authorize_with :cancan
 #
-# replace line if line matches patrn...
+# replace whole complete entire line if line matches patrn using ruby...
 #
-filetarg='app/views/layouts/application.html.erb'
+filetarg='config/initializers/rails_admin.rb'
 cat $filetarg
 r1tmp="/tmp/_temprubyrunner_${USER}.rb"
 cat << 'HEREDOC' > $r1tmp
 patrn='config.authorize_with :cancan'
   repl2 = %Q{   config.authorize_with :cancancan  }
   ARGF.each do |line|
-    puts repl2 if line =~ /#{Regexp.escape(patrn)}/
-    # don't put the line.. puts line
+    if line =~ /#{Regexp.escape(patrn)}/
+      puts repl2 
+    else  
+      puts line
+    end
   end
 HEREDOC
 ruby $r1tmp $filetarg > $filetarg.tmp
 cat $filetarg.tmp
 cp $filetarg.tmp $filetarg; rm $filetarg.tmp
-
-
-
 
 
 sleep 1

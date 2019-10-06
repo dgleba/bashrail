@@ -131,6 +131,8 @@ change application.js for jquery autocomplete
 
 11.
 
+done.
+
 2019-10-02
 
 CanCan::Error in ProductsController#index
@@ -152,5 +154,16 @@ NoMethodError in RailsAdmin::MainController#dashboard undefined method `new' for
 change sftp://192.168.88.39/srv/web/2rail/brail484b21/config/initializers/rails_admin.rb
 
 from cancan to CanCanCan
+
+
+13.
+
+done.
+
+2019-10-03
+
+undefined method `before_filter' for ProductsController:Class Did you mean? before_action
+
+
 
 

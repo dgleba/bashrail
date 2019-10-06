@@ -338,6 +338,7 @@ end
 end
 HEREDOC
 
+rake db:seeder
 
 sleep 1
 git add -A # Add all files and commit them

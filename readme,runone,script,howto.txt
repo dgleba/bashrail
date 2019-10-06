@@ -5,10 +5,12 @@ Paste this into the commandline to run one script or some commands again later..
 # Run normally...
 
 cd /srv/web/2rail
-  bashrail/1mk.sh brail484b24
+  bashrail/1mk.sh brail484b27
 
 
 ---
+
+To run one script..
 
 
 cat /tmp/"_brvar1202_${USER}".txt

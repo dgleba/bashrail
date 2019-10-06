@@ -204,7 +204,7 @@ HEREDOC
 
 
 # add new lines of text after patrn...
-
+#
 filetarg='app/controllers/application_controller.rb'
 r1tmp="/tmp/_temprubyrunner_${USER}.rb"
 cat << 'HEREDOC' > $r1tmp
@@ -214,7 +214,7 @@ cat << 'HEREDOC' > $r1tmp
   }
   ARGF.each do |line|
     puts line
-    puts repl2 if line =~ /before_filter/
+    puts repl2 if line =~ /before_action/
   end
 HEREDOC
 ruby $r1tmp $filetarg > $filetarg.tmp

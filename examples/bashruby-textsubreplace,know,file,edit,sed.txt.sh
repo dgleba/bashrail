@@ -1,5 +1,43 @@
 #!/usr/bin/env bash
 
+
+
+
+
+----------------------------------------------------
+Title:  .
+-----------------------2019-10-03[Oct-Thu]22-48PM
+
+
+# Change this line.. config.authorize_with :cancan
+#
+# replace whole complete entire line if line matches patrn using ruby...
+#
+filetarg='config/initializers/rails_admin.rb'
+cat $filetarg
+r1tmp="/tmp/_temprubyrunner_${USER}.rb"
+cat << 'HEREDOC' > $r1tmp
+patrn='config.authorize_with :cancan'
+  repl2 = %Q{   config.authorize_with :cancancan  }
+  ARGF.each do |line|
+    if line =~ /#{Regexp.escape(patrn)}/
+      puts repl2 
+    else  
+      puts line
+    end
+  end
+HEREDOC
+ruby $r1tmp $filetarg > $filetarg.tmp
+cat $filetarg.tmp
+cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+
+
+----------------------------------------------------
+
+
+
+
+
 #usage: bashrail/examples/bashruby-textsubreplace.sh
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

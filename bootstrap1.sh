@@ -15,6 +15,8 @@ echo "# " >> Gemfile
 
 gem1="gem 'simple_form'"
 echo "$gem1" >> Gemfile
+gem1="gem 'boostrap-sass'"
+echo "$gem1" >> Gemfile
 
 bundle
 

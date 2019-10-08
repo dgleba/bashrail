@@ -7,9 +7,9 @@ echo ~----------~----------Startingd $HOSTNAME, pwd: `pwd`, dlr0: "$0", bashsour
 pwd
 
 # change for rails 5
-# gem install rails -v 4.2.7.1 --no-ri --no-rdoc
+# gem install rails -v 5.2.3 --no-ri --no-rdoc
 
-ruby -v ; rails -v --no-ri --no-rdoc
+ruby -v ; rails -v 
 
 
 if [  -d "$appn" ]; then
@@ -23,7 +23,7 @@ fi
 
 # change for rails 5
 # rails _4.2.7.1_ new $appn --skip-bundle
-rails new $appn --skip-bundle
+rails  _5.2.3_  new $appn --skip-bundle --no-ri --no-rdoc
 
 
 if [ ! -d "$appn" ]; then

@@ -236,7 +236,11 @@ sleep 1
 git add -A # Add all files and commit them
   git commit -m "jquery-autocomplete-bigtunacan"
  
- 
+
+
+  source $sfil2/activestorage.sh
+
+
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -275,6 +279,9 @@ git add -A # Add all files and commit them
 ### populate .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+# populator gem seems to be too old to work now. Switch to seeder.rake task. See below.
+
+
 # cat << HEREDOC > lib/tasks/populate.rake
 # namespace :db do
 #   desc "fill database"
@@ -293,13 +300,9 @@ git add -A # Add all files and commit them
 #   end
 # end
 # HEREDOC
-
 # rake db:populate
 
 
-# todo
-# Changes 2019-10-02
-# use seeder
 
 cat << HEREDOC > lib/tasks/seader.rake
 # lib/tasks/seeder.rake

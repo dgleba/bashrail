@@ -1,0 +1,51 @@
+# ref..
+# https://gist.github.com/satendra02/1b335b06bfc5921df486f26bd98e0e89
+# https://www.reddit.com/r/docker/comments/7zjbe4/docker_rails_puma_nginx_postgres/
+# https://itnext.io/docker-rails-puma-nginx-postgres-999cd8866b18
+
+version: "3.6"
+
+# volumes:
+# postgres_data: {}
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/app.Dockerfile
+      args:
+        - RACK_ENV=development
+        - RAKE_ENV=development
+        - RAILS_ENV=development
+    volumes:
+      - .:/app
+      - bundle_cache:/usr/local/bundle/
+    # depends_on:
+    # - db
+    environment:
+      - RACK_ENV=development
+      - RAKE_ENV=development
+      - RAILS_ENV=development
+      # - RAILS_LOG_TO_STDOUT=1
+    ports:
+      - 6035:3000
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    #
+    # command: bash -c  "bundle check || bundle install --jobs 40 --retry 5 \
+    # && bundle exec puma -C config/puma.rb -p 3000  "
+    #
+  # db:
+  # image: postgres
+  # volumes:
+  # - postgres_data:/var/lib/postgresql/data
+  # web:
+  # build:
+  # context: .
+  # dockerfile: ./docker/web.Dockerfile
+  # depends_on:
+  # - app
+  # ports:
+  # - 6032:80
+
+volumes:
+  bundle_cache:

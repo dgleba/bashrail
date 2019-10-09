@@ -1,0 +1,56 @@
+# ref..
+# https://docs.docker.com/compose/rails/
+# https://gist.github.com/satendra02/1b335b06bfc5921df486f26bd98e0e89
+# https://www.reddit.com/r/docker/comments/7zjbe4/docker_rails_puma_nginx_postgres/
+# https://itnext.io/docker-rails-puma-nginx-postgres-999cd8866b18
+
+version: "3.6"
+
+# volumes:
+# postgres_data: {}
+
+services:
+  webp:
+    build:
+      context: .
+      dockerfile: ./docker/app.Dockerfile
+    volumes:
+      - .:/app
+      - bundle_cache:/usr/local/bundle/
+    # depends_on:
+    # - db
+    environment:
+      - RACK_ENV=production
+      - RAKE_ENV=production
+      - RAILS_ENV=production
+      # - RAILS_LOG_TO_STDOUT=1
+    command: bash -c  " bundle exec puma -C config/puma-prod.rb -p 3010  "
+    expose:
+      - 3010
+    restart: always
+
+  # db:
+  # image: postgres
+  # volumes:
+  # - postgres_data:/var/lib/postgresql/data
+
+  # ngx:
+  #   build:
+  #     context: .
+  #     dockerfile: ./docker/web.Dockerfile
+  #   depends_on:
+  #     - app
+  #   ports:
+  #     - 6031:80
+  nginx:
+    image: nginx:1.14-alpine
+    ports:
+      - 6031:80
+    restart: always
+    volumes:
+      #  - ./docker/nginxmain.conf:/etc/nginx/nginx.conf
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf
+      # - ./index.html:/usr/share/nginx/html/index.html
+
+volumes:
+  bundle_cache:

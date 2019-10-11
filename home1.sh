@@ -38,6 +38,7 @@ Use /radmin to access the rails admin tool if it is setup.
 <br>
 <br>
 <%= link_to 'Country of Origin list', country_of_origins_path, class: "btn btn-primary", :style=>'color:#FFFFFF;' %>
+<p>This has attachments</p>
 <br>
 <br>
 <%= link_to 'Product_features join table', product_features_path, class: "btn btn-primary", :style=>'color:#FFFFFF;' %>

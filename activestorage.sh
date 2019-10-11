@@ -250,7 +250,17 @@ r1tmp="/tmp/_temprubyrunner_${USER}.rb"
 cat << 'HEREDOC' > $r1tmp
 patrn='@country_of_origin.sort'
 repl2 = %Q{
-<hr>
+<hr> 
+<p>
+<strong>Avatar:</strong> <br><br>
+    Syntax type 1:  
+      <%= if  @country_of_origin.avatar.attached? then ( link_to @country_of_origin.avatar.blob.filename, url_for(@country_of_origin.avatar) ) end %> <br>
+      <%= if @country_of_origin.avatar.image?  then ( image_tag @country_of_origin.avatar.variant(resize: "180x180") )  end %> <br>
+    <br>
+    Syntax type 2:  
+      <%= if  @country_of_origin.avatar.attached? then link_to @country_of_origin.avatar.filename, rails_blob_path(@country_of_origin.avatar, disposition: 'preview') end %>
+</p>
+<br>
 <p>
   <strong>Documents:</strong>
   <ul>
@@ -261,10 +271,9 @@ repl2 = %Q{
           <%= link_to 'Remove', delete_document_attachment_country_of_origin_url(document),
                     method: :delete,
                     data: { confirm: 'Are you sure you want to delete?' } %>
-
    <% end %>
   </ul>
-</p>
+</p> 
 <hr>
 }
   i=-2

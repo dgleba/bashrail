@@ -93,10 +93,13 @@ patrn='f.number_field :sort_order'
   <hr>
   <div class="field">
     <%= f.label :avatar %>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (A new choice will replace previous one.)</p>
     <%= f.file_field :avatar %>
   </div>
+  <br>
   <div class="field">
-    <%= f.label :documents %>
+  <%= f.label :documents %>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Choosing files will add to previous ones..)</p>
     <%= f.file_field :documents, multiple: true %>
   </div>
   <hr>
@@ -253,11 +256,14 @@ repl2 = %Q{
 <hr> 
 <p>
 <strong>Avatar:</strong> <br><br>
-    Syntax type 1:  
-      <%= if  @country_of_origin.avatar.attached? then ( link_to @country_of_origin.avatar.blob.filename, url_for(@country_of_origin.avatar) ) end %> <br>
-      <%= if @country_of_origin.avatar.image?  then ( image_tag @country_of_origin.avatar.variant(resize: "180x180") )  end %> <br>
-    <br>
-    Syntax type 2:  
+      Syntax type 1:  
+      <%= if  @country_of_origin.avatar.attached? then  
+            link_to @country_of_origin.avatar.blob.filename, url_for(@country_of_origin.avatar)  
+          end %> <br>
+      <%= if  @country_of_origin.avatar.attached? then 
+            if @country_of_origin.avatar.image?  then ( image_tag @country_of_origin.avatar.variant(resize: "180x180") )  end
+          end %> <br>        
+      Syntax type 2:  
       <%= if  @country_of_origin.avatar.attached? then link_to @country_of_origin.avatar.filename, rails_blob_path(@country_of_origin.avatar, disposition: 'preview') end %>
 </p>
 <br>

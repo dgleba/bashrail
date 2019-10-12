@@ -135,14 +135,14 @@ cp -a $sfil2/config/environments/development.rb config/environments/
 
 
 
-edit the login page to show how to login..
+# edit the login page to show how to login..
 
-sftp://10.4.1.228/srv/share/test/brails/brail484b46/app/views/devise/sessions/new.html.erb
+# sftp://10.4.1.228/srv/share/test/brails/brail484b46/app/views/devise/sessions/new.html.erb
 
-after 
-<h2>Log in</h2>
+# after 
+# <h2>Log in</h2>
 
-<br> <div> Username (enter into the email box below) = a ,  Password = a </div> <br>
+# <br> <div> Username (enter into the email box below) = a ,  Password = a </div> <br>
 
 
 

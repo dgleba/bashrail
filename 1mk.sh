@@ -365,6 +365,10 @@ cp -av $sfil2/version* $pathtarget
 
 cp -av $sfil2/root/.gitignore .
 
+cp -av $sfil2/docker .
+cp -av $sfil2/docker-com*.* .
+cp -av $sfil2/Makefil* .
+
 # cleanup
 rm -rf $pathtmp
 rm /tmp/bashrail_copy.zip

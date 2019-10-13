@@ -23,7 +23,7 @@ fi
 
 # change for rails 5
 # rails _4.2.7.1_ new $appn --skip-bundle
-rails  _5.2.3_  new $appn --skip-bundle --no-ri --no-rdoc
+rails  _5.2.3_  new $appn --skip-bundle --no-document
 
 
 if [ ! -d "$appn" ]; then

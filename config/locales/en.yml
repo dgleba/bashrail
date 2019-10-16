@@ -29,8 +29,8 @@ en:
     login_created: You are signed in
     login_failed: Failed to sign in
     login_destroyed: Logged out successfully
-    login_first: You have to be logged in to see this page
+    login_first: You have to be logged in to see that
 
   unauthorized:
     manage:
-      all: You do not have access to this page
+      all: You do not have access to that

@@ -92,7 +92,7 @@ rake db:migrate
 sed -i '/require_tree/i  \ //= require jquery-ui/autocomplete \n //= require autocomplete-rails'  app/assets/javascripts/application.js
 
 
-cat << HEREDOC >  app/assets/javascripts/application.js
+cat << HEREDOC >>  app/assets/javascripts/application.js
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui/widgets/autocomplete

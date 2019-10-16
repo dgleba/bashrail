@@ -68,20 +68,33 @@ cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 r1tmp="/tmp/_temprubyrunner_${USER}.rb"
 cat << 'HEREDOC' > $r1tmp
   repl2 = %Q{
+
   rescue_from CanCan::AccessDenied do |exception|
-    # redirect_to :back, alert: exception.message
-    redirect_to main_app.root_path, :alert => exception.message
+    respond_to do |format|
+      format.json { head :forbidden }
+      format.html { redirect_to request.referrer, :alert => exception.message }
+    end
   end
+
   }
   ARGF.each do |line|
     puts line
-    puts repl2 if line =~ /protect_from_forgery with\: \:exception/
+    puts repl2 if line =~ /class ApplicationController/
   end
 HEREDOC
 filetarg='app/controllers/application_controller.rb'
 ruby $r1tmp $filetarg > $filetarg.tmp
 cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 
+
+# Another exmple.
+#
+  # rescue_from CanCan::AccessDenied do |exception|
+  #   respond_to do |format|
+  #     format.json { head :forbidden }
+  #     format.html { redirect_to main_app.root_url, :alert => exception.message }
+  #   end
+  # end
 
 
 
@@ -127,6 +140,9 @@ rails g scaffold Role name description active_status:integer sort:integer
 # Add role to user.
 
 rails g migration AddRoleToUser role:references
+
+
+
 rake db:migrate
 
 

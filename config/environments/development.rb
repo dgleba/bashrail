@@ -59,23 +59,24 @@ Rails.application.configure do
   #10.5.1.210  # MESG01.stackpole.ca
   # works..
   
-  # config.action_mailer.smtp_settings = {
-   # :address           => "mesg01.stackpole.ca"
-  # }
+  config.action_mailer.smtp_settings = {
+   :address           => "mesg01.stackpole.ca"
+  }
  
   # gmail worked, 2016-07-21_Thu_14.44-PM.
   # or try smtp-mail.outlook.com
   
-  config.action_mailer.smtp_settings = {
-   :address              => "smtp.gmail.com",
-   :port                 => 587,
-   :user_name            => ENV['gmail_username'],
-   :password             => ENV['gmail_password'],
-   :authentication       => "plain",
-  :enable_starttls_auto => true
-  } 
+  # config.action_mailer.smtp_settings = {
+  #  :address              => "smtp.gmail.com",
+  #  :port                 => 587,
+  #  :user_name            => ENV['gmail_username'],
+  #  :password             => ENV['gmail_password'],
+  #  :authentication       => "plain",
+  # :enable_starttls_auto => true
+  # } 
   
   #for devise.. 2016-07-22_Fri_14.52-PM David Gleba
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }  
+  # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }  
+  config.action_mailer.default_url_options = { host: '10.4.1.228', port: 3001 }  
 
 end

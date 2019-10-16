@@ -20,6 +20,8 @@ The resulting generated application has both an html interface which you can con
 
 usage:
 
+      sudo apt -y install imagemagick
+
       bashrail/1mk.sh  project_name
 
 where project_name is the name you want to give your new rails app..
@@ -54,6 +56,17 @@ To run the resulting app...
   - regular: username = r password = a
 
 - to use the api, see bashrail/docsbr/ for tips on how to consume the restful json api
+
+# Devise forgot password
+
+Edit `config/environment/development.rb` (or production) and set the following.
+
+```
+  config.action_mailer.smtp_settings = {
+    ...
+  #for devise.. 2016-07-22_Fri_14.52-PM David Gleba
+  config.action_mailer.default_url_options = { host: '10.4.1.228', port: 3001 }
+```
 
 ===
 

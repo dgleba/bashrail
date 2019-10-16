@@ -17,7 +17,7 @@ echo $appn $sfil $sfil2 $mpwd $parm0
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # If not installed, install imagemagick
-sudo apt -y install imagemagick
+#   sudo apt -y install imagemagick
 
 bin/rails active_storage:install
   

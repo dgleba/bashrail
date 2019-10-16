@@ -49,6 +49,7 @@ date ; set +vx  ; set -vx ; # echo off, then echo on
 echo "# https://github.com/bigtunacan/rails-jquery-autocomplete" >> Gemfile
 echo "# https://github.com/yifeiwu/rails4-autocomplete-demo" >> Gemfile
 echo "gem 'rails-jquery-autocomplete'" >> Gemfile
+echo "gem 'jquery-rails'" >> Gemfile
 echo "gem 'jquery-ui-rails'" >> Gemfile
 
 bundle
@@ -89,15 +90,7 @@ rake db:migrate
 #eg:  sed -i '/CLIENTSCRIPT/i \ \ CLIENTSCRIPT2' file  # add line before pattern - include leading spaces like so - escape them.. '\ '  
 
 # old..
-sed -i '/require_tree/i  \ //= require jquery-ui/autocomplete \n //= require autocomplete-rails'  app/assets/javascripts/application.js
-
-
-cat << HEREDOC >>  app/assets/javascripts/application.js
-//= require jquery
-//= require jquery_ujs
-//= require jquery-ui/widgets/autocomplete
-//= require autocomplete-rails
-HEREDOC
+ sed -i '/require_tree/i//= require jquery\n//= require jquery-ui/widgets/autocomplete\n//= require autocomplete-rails'  app/assets/javascripts/application.js
 
 
 # todo
@@ -218,7 +211,7 @@ sed -i "/before_action/a  \  #\n$line1\n"  app/controllers/country_of_origins_co
     # get :autocomplete_type_name, :on => :collection
   # end  
 
-  pattern1='resources :country_of_origins'
+pattern1='resources :country_of_origins'
 line1='  resources :country_of_origins do'
 line2='    get :autocomplete_pfeature_name, :on => :collection'
 line3='  end'
@@ -238,11 +231,11 @@ offline__line4='  root "country_of_origins#index"'
 #
 # multiple autocomplete... use this option... 'data-delimiter' => ','
 #
-pattern1='f.text_field :name'
+pattern1='f.text_field :ctype'
 # for multiple autocomplete..
-# line1='   <%= f.autocomplete_field :name, autocomplete_country_of_origin_products_path, \"data-delimiter\" => \", \" %>'  
+# line1='   <%= f.autocomplete_field :ctype, autocomplete_country_of_origin_products_path, \"data-delimiter\" => \", \" %>'  
 #
-line1="   <%= f.autocomplete_field :name, autocomplete_pfeature_name_country_of_origins_path , \'min-length\' => 1 , \'data-auto-focus\' => true %>"
+line1="   <%= f.autocomplete_field :ctype, autocomplete_pfeature_name_country_of_origins_path , \'min-length\' => 1 , \'data-auto-focus\' => true %>"
   sed  -i "0,/$pattern1/s/.*$pattern1.*/$line1\n/" app/views/country_of_origins/_form.html.erb
 
 

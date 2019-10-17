@@ -218,6 +218,11 @@ cp $filetarg.tmp $filetarg; rm $filetarg.tmp
 
 sleep 1
 
+
+
+# csrf handling ..
+
+
 # comment out line if matches patrn and insert repl2 before that line...
 
 filetarg='app/controllers/application_controller.rb'
@@ -239,6 +244,33 @@ cat << 'HEREDOC' > $r1tmp
 HEREDOC
 ruby $r1tmp $filetarg > $filetarg.tmp
 cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+
+
+# If patrn `forgery` not found, then add it..
+
+pattern1='protect_from_forgery'
+filetarg='app/controllers/application_controller.rb'
+if ! grep -q "${pattern1}" $filetarg ; then 
+  (
+  # add new lines of text after patrn...
+  #
+  filetarg='app/controllers/application_controller.rb'
+  r1tmp="/tmp/_temprubyrunner_${USER}.rb"
+  cat <<-'HEREDOC' > $r1tmp
+    patrn='class ApplicationController'
+    repl2 = %Q{
+    protect_from_forgery with: :null_session
+    }
+    ARGF.each do |line|
+      puts line
+      puts repl2 if line =~ /#{Regexp.escape(patrn)}/
+   end
+HEREDOC
+    ruby $r1tmp $filetarg > $filetarg.tmp ; cat $filetarg.tmp ; cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+  )
+else
+  echo L.272 else  
+fi
 
 
   

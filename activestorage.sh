@@ -4,6 +4,15 @@ echo ~----------~----------Startingd $HOSTNAME, pwd: `pwd`, dlr0: "$0", bashsour
 
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+
+# Summary:
+
+
+# This depends on jq autocomplete
+
+
+
 ###  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # read settings..
@@ -196,27 +205,40 @@ ruby $r1tmp $filetarg > $filetarg.tmp ; cat $filetarg.tmp ; cp $filetarg.tmp $fi
 # edit routes
 
 
+# if  `resources :country_of_origins do` found, then - add - to the stanza.
+# if  `resources :country_of_origins` found, then  - replace -   the stanza.
 
+
+
+pattern1='resources :country_of_origins do'
+filetarg='config/routes.rb'
+if ! grep -q "${pattern1}" $filetarg ; then 
+  echo 'nogrep ~216. routes stanza not found check script interation between jq and activestorage. '
+  sleep 9 ; 
+  exit 9 ; 
+fi
+
+# make the edit to add 
+#
 # add new lines of text after patrn...
 #
 filetarg='config/routes.rb'
 cat $filetarg
 r1tmp="/tmp/_temprubyrunner_${USER}.rb"
-cat << 'HEREDOC' > $r1tmp
-patrn='Rails.application.routes.draw'
+cat <<'HEREDOC' > $r1tmp
+  patrn=':country_of_origins do'
   repl2 = %Q{
-  resources :country_of_origins do
     member do
       delete :delete_document_attachment
     end
-  end
   }
   ARGF.each do |line|
     puts line
     puts repl2 if line =~ /#{Regexp.escape(patrn)}/
   end
 HEREDOC
-ruby $r1tmp $filetarg > $filetarg.tmp ; cat $filetarg.tmp ; cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+  ruby $r1tmp $filetarg > $filetarg.tmp ; cat $filetarg.tmp ; cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+
 
 
 
@@ -250,7 +272,7 @@ sed -i '/Rails.application.configure/a   \ \ config.active_storage.service = :lo
 filetarg='app/views/country_of_origins/show.html.erb'
 cat $filetarg
 r1tmp="/tmp/_temprubyrunner_${USER}.rb"
-cat << 'HEREDOC' > $r1tmp
+cat <<'HEREDOC' > $r1tmp
 patrn='@country_of_origin.sort'
 repl2 = %Q{
 <hr> 

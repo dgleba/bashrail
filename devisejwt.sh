@@ -178,11 +178,7 @@ cat << 'HEREDOC' >> app/views/home/index.html.erb
 
 JWT
 <br>
-# Add the following code to a view
-<br>
-# It will show you an example of how to make a
-<br>
-# curl HTTP request with the proper authentication headers.
+# The example below is how to make a curl HTTP request with the proper authentication headers.
 <br>
 # Be sure to actually use a working route and not "http://localhost:3001/products.json"
 <br>
@@ -192,7 +188,7 @@ JWT
   curl -i -X  GET --header 'Authorization: Bearer <%= JWTWrapper.encode({ user_id: current_user.id }) %>' 'http://localhost:3001/products.json'
 <% end %>
 
-<br><br><br>
+<br><br>
 <hr>
 
 HEREDOC

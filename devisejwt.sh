@@ -19,6 +19,7 @@ echo $appn $sfil $sfil2 $mpwd $parm0
 
 
 echo "gem 'jwt'" >> Gemfile
+echo "gem 'rack-cors'" >> Gemfile
 
 bundle
 
@@ -220,7 +221,7 @@ sleep 1
 
 
 
-# csrf handling ..
+# csrf handling  cors..
 
 
 # comment out line if matches patrn and insert repl2 before that line...
@@ -322,3 +323,38 @@ git commit -m "jwt token auth 3"
 
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# add rack-cors logic.
+
+# If patrn `x` not found, then add it..
+
+pattern1='config.middleware.insert'
+filetarg='config/application.rb'
+if ! grep -q "${pattern1}" $filetarg ; then 
+  (
+  # add new lines of text after patrn...
+  #
+  filetarg='config/application.rb'
+  r1tmp="/tmp/_temprubyrunner_${USER}.rb"
+  cat <<-'HEREDOC' > $r1tmp
+    patrn='class Application'
+    repl2 = %Q{
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: [:get, :post, :options]
+      end
+    end
+    }
+    ARGF.each do |line|
+      puts line
+      puts repl2 if line =~ /#{Regexp.escape(patrn)}/
+   end
+HEREDOC
+    ruby $r1tmp $filetarg > $filetarg.tmp ; cat $filetarg.tmp ; cp $filetarg.tmp $filetarg; rm $filetarg.tmp
+  )
+else
+  echo L.358 was already there  
+fi
+

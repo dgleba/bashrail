@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/json; charset=utf-8
+ETag: W/"7ca763341ad7b0dff0d207c40e72cd69"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _brail484b48_session=IR%2B%2BTXaEICx447woPtwQze081Ok%2FAvwuekS%2FVJN%2Fuu0MwXx%2BRtnAjwKawjwxWLxfYMXt%2BDKah%2B5JxKLk7G9WfsjnadUGLwr8QNgPPQO7smiGD1OmXEFZB4kfhMnJjm2p1Z7o8PK9lyZnrATrLqJ6YjjcH2bNkEH8YBbnT49Vq1U3Se7dxaYEncCX0XozSeieqcJEPduUD86Rd9%2FvnwPSiBU4C82wAuFy--qrO9an2K3fn8%2BgZo--%2FSF2gOdBAG1iMtcgpFt4Cg%3D%3D; path=/; HttpOnly
+X-Request-Id: 0ebd676f-4b06-41a1-abe8-6aae6504aad6
+X-Runtime: 0.526073
+Vary: Origin
+Transfer-Encoding: chunked
+

@@ -1,0 +1,165 @@
+
+hrapp361.
+
+https://github.com/dgleba/hrapp361/commit/a09d1029aa1cca71c8c26de023fa5a431a379133
+
+_____________ 
+
+
+
+
+commit a09d1029aa1cca71c8c26de023fa5a431a379133
+Author: David Gleba <dgleba@gmail.com>
+Date:   Sat Dec 9 14:33:50 2017 -0500
+
+    add sig pad
+
+diff --git a/Gemfile b/Gemfile
+index e816b31..7a25d0e 100644
+--- a/Gemfile
++++ b/Gemfile
+@@ -79,3 +79,4 @@ gem 'enum_help'
+   gem "yaml_db", :git => "git://github.com/dgleba/yaml_db.git"
+   gem 'seed_dump'
+ #
++gem 'signature-pad-rails'
+
+
+diff --git a/Gemfile.lock b/Gemfile.lock
+index 8cff1e3..608b03c 100644
+--- a/Gemfile.lock
++++ b/Gemfile.lock
+@@ -258,6 +258,9 @@ GEM
+       thor (~> 0.14)
+     shoulda-matchers (3.1.1)
+       activesupport (>= 4.0.0)
++    signature-pad-rails (0.5)
++      jquery-rails (>= 3.0.0, < 5.1)
++      rails (>= 3.0.0, < 5.1)
+     simple_form (3.4.0)
+       actionpack (> 4, < 5.1)
+       activemodel (> 4, < 5.1)
+@@ -334,6 +337,7 @@ DEPENDENCIES
+   seed_dump
+   select2-rails
+   shoulda-matchers
++  signature-pad-rails
+   simple_form
+   spring
+   spring-watcher-listen (~> 2.0.0)
+   
+   
+diff --git a/app/assets/javascripts/application.js b/app/assets/javascripts/application.js
+index a0a24ca..fa29bd8 100644
+--- a/app/assets/javascripts/application.js
++++ b/app/assets/javascripts/application.js
+@@ -13,6 +13,7 @@
+ //= require jquery
+ //= require jquery_ujs
+ //= require bootstrap-sprockets
++//= require signature-pad
+ //= require select2
+ //= require cocoon
+ //= require tether
+@@ -20,4 +21,4 @@
+ //= require_tree .
+ //= areyousure/jquery.are-you-sure
+ //= maximize-select2-height_dg/maximizeSelect2Height
+-//= areyousure/ays-beforeunload-shim
++//= areyousure/ays-beforeunload-shim
+
+
+diff --git a/app/assets/javascripts/dgsigpad.js b/app/assets/javascripts/dgsigpad.js
+new file mode 100644
+index 0000000..48bc6cc
+--- /dev/null
++++ b/app/assets/javascripts/dgsigpad.js
+@@ -0,0 +1,16 @@
++
++// see passenger.js
++
++var dgoptions = {
++  bgColour : '#F0FEEF'
++  , drawOnly : true
++};
++
++$( document ).ready(function(){
++  // if sigpad is not in a cocoon nested form.. 
++  // also, without this, it won't show sigpad when edit is pressed. 2016-06-24.  
++  $('.sigPad').signaturePad(dgoptions);
++ });
++
++ 
++
+
+
+diff --git a/app/assets/stylesheets/application.scss b/app/assets/stylesheets/application.scss
+index 96d5271..b3b859e 100644
+--- a/app/assets/stylesheets/application.scss
++++ b/app/assets/stylesheets/application.scss
+@@ -14,5 +14,6 @@
+  *= require_self
+   *= require select2
+   *= require select2-bootstrap
++  *= require signature-pad
+  */
+ @import "bootstrap";
+ 
+ 
+diff --git a/app/views/dc_disciplines/_form.html.erb b/app/views/dc_disciplines/_form.html.erb
+index 06d6336..512858b 100644
+--- a/app/views/dc_disciplines/_form.html.erb
++++ b/app/views/dc_disciplines/_form.html.erb
+@@ -10,12 +10,52 @@
+     <%= f.input :infraction_description %>
+     <%= f.input :dc_action %>
+     <%= f.input :dc_comment %>
+-    <%= f.input :output %>
++    
+     <%= f.input :sort_order %>
+     <%= f.input :active_status %>
+-  </div>
+ 
++
++  
++  
++<style>
++.sigPad {
++  margin: 0;
++  padding: 0;
++  width: 303px; /* Change the width */
++}
++
++.sigWrapper {
++  clear: both;
++  height: 108px; /* Change the height */
++
++  border: 1px solid #ccc;
++}
++</style>  
++
++    <div class="sigPad">
++     <p class="drawItDesc">Draw your signature</p>
++       <ul class="sigNav">
++          <li class="clearButton"><a href="#clear">Clear</a></li>
++        </ul>
++    <div class="sig sigWrapper">
++     <div class="typed"></div>
++       <canvas class="pad" width="300" height="105"></canvas>
++      <%= f.input :output , as: :hidden , input_html: { class: 'output' } %>
++    </div>
++    </div>
++  <div>
++    <br>
++  </div>
++ 
++ 
++ 
++   </div>
++ 
+   <div class="form-actions">
+     <%= f.button :submit, class: 'btn btn-success'%>
+   </div>
+ <% end %>
++
++

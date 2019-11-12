@@ -1,0 +1,296 @@
+
+
+testing the json api for login,getpagefull,search,etc..
+
+
+Search. see below  - Title:  .  search
+
+_____________
+
+
+Also Refer to:  
+      https://github.com/dgleba/bashrail/tree/master/docsbr
+
+      
+----------------------------------------------------
+
+Title:  .  when not logged in..
+
+-----------------------2019-10-04[Oct-Fri]09-14AM
+
+when not logged in..
+
+
+curl -i -X GET --header 'Authorization: Bearer eyJpykg' 'http://pmdsdata8:6031/products.json'
+
+curl -i -X GET --header 'Authorization: Bearer wrongtoken' 'http://10.4.1.231:6031/products.json'
+
+
+wrongtoken
+curl -i -X GET --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.yJ1c2VyX2lkIjoyLCJleHAiOjE0ODM2MDMxMTd9.Y9tKQFFv7jHV5NuYNVwKczqkn62cA58nco0LiVMv4M' 'http://10.4.1.231:6031/products.json'
+
+
+albe@pmdsdata3:~$ curl -i -X GET --header 'Authorization: Bearer wrongtoken' 'http://10.4.1.231:6031/products.json'
+HTTP/1.1 401 Unauthorized
+Server: nginx/1.14.2
+Date: Fri, 04 Oct 2019 13:34:30 GMT
+...
+{"error":"Failed to Login"}
+
+
+_____________
+
+signin..
+
+curl -i -H "Content-Type: application/json" \
+      -X POST -D ./curldump -i\
+      -d '{"user": {"email":"a","password":"a"}}' \
+      http://10.4.1.228:3001/users/sign_in.json
+      
+      
+{"user":"a","token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNTk2OTF9.U7--2hji1Hv7Roi8TwmxOi7u84r6YWmWXkUMhqey-I8"}
+
+{"user":"a","token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNjQzOTN9.GgrMZHGut_HXJWv7V4R0B11V4jiR5Dn2qpP2Z-OLnM0"}albe@pmdsdata3:~$
+albe@pmdsdata3:~$
+_____________
+
+get products..
+
+
+curl -i -X GET --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNTk2OTF9.U7--2hji1Hv7Roi8TwmxOi7u84r6YWmWXkUMhqey-I8' 'http://10.4.1.231:6031/products.json'
+
+ok..
+
+albe@pmdsdata3:~$ curl -i -X GET --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNTk2OTF9.U7--2hji1Hv7Roi8TwmxOi7u84r6YWmWXkUMhqey-I8' 'http://10.4.1.231:6031/products.json'HTTP/1.1 200 OK
+Server: nginx/1.14.2
+Date: Fri, 04 Oct 2019 13:37:35 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+ETag: W/"608a0a0f23f510891f7ad271aed6dbaf"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: brail347a22-production_session=UlQ2RkZQOXZPSXhhOGRMaTBGTXdJdnQ3U3NCcStUT2ZrWnJvbzdGaG1FYzdwTTh3QW9hZlUrOVZ5bncxbnlVeHZCY01qd0FjcTdUKyt4aVo5aUdFSFkyd1dvNVRJMDlwTU1ObHM2UG1wK296c1dWU0hzWVBNQ3NqZG5ZUFpoaTBqYlB1YlVNdnNPN2xiaGJINmpSbFdQRE9rVWZGTjhqOUdqbkZRMVA5MHd0TTZvUWcvRzAzTUZ5U3VjdGFDbXZwZjQzV1NZaG9RRW9iYlg4Z040aFl3Z2lTTm56MHFQb2k0YWRLcGNnUkU4TT0tLVRvUXJ6VElIRGkzK1ZJL0E1blFrTlE9PQ%3D%3D--74cd6651404496a1b62b5fecdffb332709c3b065; path=/; HttpOnly
+X-Request-Id: 3ea95cdf-9141-4484-9375-61e997c953fb
+X-Runtime: 0.056008
+
+[{"id":1,"name":"Fantastic Granite Watch - 2018-07-11_Wed_15.27-PM dg1","country_of_origin_id":0,"pdate":"2017-12-06T17:21:00.000-05:00","active_status":null,"sort":null,"created_at":"2017-07-08T08:22:03.062-04:00","updated_at":"2018-07-11T15:28:02.959-04:00","url":"http://10.4.1.231:6031/products/1.json"},{"id":2,"name":"Aerodynamic Iron Clock","country_of_origin_id":0,"pdate":"2017-12-06T20:21:00.000-05:00","active_status":null,"sort":null,"created_at":"2017-07-08T08:22:03.889-04:00","updated_at":"2017-12-06T20:22:09.087-05:00","url":"http://10.4.1.231:6031/products/2.json"},{"id":3,"name":"Incredible Leather Keyboard","country_of_origin_id":0,"pdate":"2018-03-27T19:56:00.000-04:00","active_status":null,"sort":null,"created_at":"2017-07-08T08:22:03.890-04:00","updated_at":"2018-03-27T19:56:35.173-04:00","url":"http://10.4.1.231:6031/products/3.json"},{"id":4,"name":"Aerodynamic Steel Plate","country_of_origin_id":null,"pdate":null,"active_status":null,"sort":null,"created_at":"2017-07-08T08:22:03.890-04:00","updated_at":"2017-07-08T08:22:03.890-04:00","url":"http://10.4.1.231:6031/products/4.json"},{"id":5,"name":"Gorgeous Granite Shirt","country_of_origin_id":null,"pdate":null,"active_status":null,"sort":null,"created_at":"2017-07-08T08:22:03.890-04:00","updated_at":"2017-07-08T08:22:03.890-04:00","url":"http://10.4.1.231:6031/products/5.json"}]albe@pmdsdata3:~$
+
+
+
+----------------------------------------------------
+
+Title:  .  search
+
+-----------------------2019-10-04[Oct-Fri]10-02AM
+
+
+q%5Bname_cont%5D=ock
+
+q[name_cont]=clock
+
+
+looked at rails log on console.
+ Started GET "/products?utf8=%E2%9C%93&q%5Bname_cont%5D=lock" for 10.4.11.157 at 2019-10-04 14:36:58 +0000
+
+ this is the key...  ?utf8=%E2%9C%93&q%5Bname_cont%5D=lock
+ 
+works..
+ 
+  curl -i -X GET --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNjQzOTN9.GgrMZHGut_HXJWv7V4R0B11V4jiR5Dn2qpP2Z-OLnM0' 'http://10.4.1.231:6035/products.json?utf8=%E2%9C%93&q%5Bname_cont%5D=ock'
+
+
+albe@pmdsdata3:~$   curl -i -X GET --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzA4Nzk2NzB9.rh_AzU7GfZSw2i8TfuzXJR3HgOiOkio1zt3fw-L1AtY' 'http://10.4.1.228:3001/products.json?utf8=%E2%9C%93&page=1&q%5Bname_cont%5D=e'
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/json; charset=utf-8
+ETag: W/"4ffa6bfec54cbdf2d005266102047669"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: brail347a22-development_session=MCtFR3dVNlJ6RDJiVEpIdVludWFMZWJRdUFLU0ppQjR4NE1nQ25YRGNYNVRzaS9QN3dWTTNrcC9hNlFudDFVeHBNZldUN2tzK2pPbGtjNU1zQW16bXZkWEtncGhhYTJqaWpwTUdDalAzNTZVMkNUT2NOVEIxYU84WmR5THFTbEJNcnBXaEFBZ1V2QzV1L1VyZFczbG84WS9aTEtGTTVCN1VJTW5yaFJuRERLVkZiNldoWHlQalppbk9idFVmRnU5dXBIK0kzTlJZQlhmU3hIKzlOdjJaYWxLUHFCdGkvSG9jempWMnJsQ2JlUT0tLVRoZTRhVzFSeWFESDY2bnJoblVOZ0E9PQ%3D%3D--db1c8569a828448747290aa76cb3aafb6f1f48a9; path=/; HttpOnly
+X-Request-Id: 08d817c0-9d97-4820-9acf-ef1e940ddfff
+X-Runtime: 0.150588
+Transfer-Encoding: chunked
+
+[{"id":2,"name":"Aerodynamic Iron Clock", "country_of_origin_id":0,"pdate":"2017-12-06T20:21:00.000-05:00","active_status":null,"sort":null,"created_at":"2017-07-08T08:22:03.889-04:00","updated_at":"2017-12-06T20:22:09.087-05:00","url":"http://10.4.1.231:6035/products/2.json"}, 
+{"id":8,"name":"Durable Aluminum Clock", "country_of_origin_id":null,"pdate":null,"active_status":null,"sort":null,"created_at":"2017-07-08T08:22:03.890-04:00","updated_at":"2017-07-08T08:22:03.890-04:00","url":"http://10.4.1.231:6035/products/8.json"}]
+albe@pmdsdata3:~$
+
+  
+  
+_____________
+  
+
+other things that didn't work...
+no...
+curl -i -X GET --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNTk2OTF9.U7--2hji1Hv7Roi8TwmxOi7u84r6YWmWXkUMhqey-I8' 'http://10.4.1.231:6031/products.json&q[name_cont]=clock'
+curl -i -X GET --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNTk2OTF9.U7--2hji1Hv7Roi8TwmxOi7u84r6YWmWXkUMhqey-I8' 'http://10.4.1.231:6031/products&q%5Bname_cont%5D=ock.json'
+curl -i -X GET --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNTk2OTF9.U7--2hji1Hv7Roi8TwmxOi7u84r6YWmWXkUMhqey-I8' 'http://10.4.1.231:6031/products?utf8=✓&q%5Bname_cont%5D=ock.json'
+curl -i -X GET --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNTk2OTF9.U7--2hji1Hv7Roi8TwmxOi7u84r6YWmWXkUMhqey-I8' 'http://10.4.1.231:6031/products?q%5BBname_cont%5d=ock.json'
+curl -i -X GET --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNTk2OTF9.U7--2hji1Hv7Roi8TwmxOi7u84r6YWmWXkUMhqey-I8' 'http://10.4.1.231:6031/products.json?q%5BBname_cont%5d=ock'
+curl -i -X GET --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNTk2OTF9.U7--2hji1Hv7Roi8TwmxOi7u84r6YWmWXkUMhqey-I8' 'http://10.4.1.231:6031/products?"q%5BBname_cont%5d=ock".json'
+curl -i -X GET --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNTk2OTF9.U7--2hji1Hv7Roi8TwmxOi7u84r6YWmWXkUMhqey-I8' 'http://10.4.1.231:6031/products?"q[Bname_cont]=ock".json'
+curl -i -X GET --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNTk2OTF9.U7--2hji1Hv7Roi8TwmxOi7u84r6YWmWXkUMhqey-I8' 'http://10.4.1.231:6031/products?"q[Bname_cont]=ock".json'
+curl -i -X GET --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNTk2OTF9.U7--2hji1Hv7Roi8TwmxOi7u84r6YWmWXkUMhqey-I8' 'http://10.4.1.231:6031/products.json??utf8=%E2%9C%93&q%5Bname_cont%5D=ock'
+
+
+
+http://10.4.1.231:6031/products.json&q[name_cont]=clock
+http://10.4.1.231:6031/products?q[Bname_cont]=ock.json
+
+
+
+----------------------------------------------------
+
+
+
+----------------------------------------------------
+
+Title:  .  Update..
+
+
+-----------------------2019-10-04[Oct-Fri]11-19AM
+
+works..
+
+
+was ..  Fantastic Granite Watch
+
+
+curl -i  --request PUT \
+  --url http://10.4.1.231:6035/products/1.json \
+  --header 'authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNjQzOTN9.GgrMZHGut_HXJWv7V4R0B11V4jiR5Dn2qpP2Z-OLnM0' \
+  --header 'content-type: application/json' \
+  --data '{"name":"David9 Linen Keyboard"}'
+  
+  
+  
+albe@pmdsdata3:~$ curl -i  --request PUT \
+>   --url http://10.4.1.231:6035/products/1.json \
+>   --header 'authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzAyNjQzOTN9.GgrMZHGut_HXJWv7V4R0B11V4jiR5Dn2qpP2Z-OLnM0' \
+  >   --header 'content-type: application/json' \
+>   --data '{"name":"David9 Linen Keyboard"}'
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/json; charset=utf-8
+Location: http://10.4.1.231:6035/products/1
+ETag: W/"7fdd02d020ed36857fb69d6bffba9c56"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: a4ffc4bf-422f-4332-8972-c7599b3c3941
+X-Runtime: 0.139637
+Transfer-Encoding: chunked
+
+{"id":1,"name":"David9 Linen Keyboard","country_of_origin_id":1,"pdate":"2017-12-06T17:21:00.000-05:00","active_status":null,"sort":null,"created_at":"2017-07-08T08:22:03.062-04:00","updated_at":"2019-10-04T11:29:25.385-04:00","url":"http://10.4.1.231:6035/products/1.json"}albe@pmdsdata3:~$
+albe@pmdsdata3:~$
+
+
+  
+----------------------------------------------------
+
+----------------------------------------------------
+
+Abrahmbhatt4054@conestogac.on.ca;
+Mdevnani2938@conestogac.on.ca;
+Ashamma4021@conestogac.on.ca;
+
+
+
+----------------------------------------------------
+Title:  .
+-----------------------2019-11-01[Nov-Fri]11-08AM
+
+signin
+
+curl -i -H "Content-Type: application/json" \
+      -X POST -D ./curldump -i\
+      -d '{"user": {"email":"a","password":"a"}}' \
+      http://10.4.1.228:6036/users/sign_in.json
+     
+{"user":"a","token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzI2ODU3NTF9.-cwHGnN09zWhT6OgFG_UpU4kzNfX12WbEHCxt_Vf1BY"}     
+     
+tokn=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzI2ODU3NTF9.-cwHGnN09zWhT6OgFG_UpU4kzNfX12WbEHCxt_Vf1BY
+tokn=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzI2OTEwNzB9.aaxT9r4pnunBaE8MgF7-LsvguVezoCOKw5mRJXqWNsU
+  
+curl -i   --request GET \
+  --url http://10.4.1.228:6036/machines.json \
+  --header 'content-type: application/json' \
+  --header "authorization: Bearer ${tokn}"   
+
+
+curl -i   --request GET \
+  --url http://10.4.1.228:6036/parts.json \
+  --header 'content-type: application/json' \
+  --header "authorization: Bearer ${tokn}"   
+  
+curl -i   --request GET  --url http://10.4.1.228:6036/parts/11-3337.json \
+  --header 'content-type: application/json' --header "authorization: Bearer ${tokn}"   
+
+response:  
+{"id":"11-3337","Description":"GEAR, BEVEL\"","RptScrap":false,"PlantNumber":1,"url":"http://10.4.1.228:6036/parts/11-3337.json"}
+dgleba@PMDS-3HZGD42 /cygdrive/c/n/Dropbox/csd/serve/bashrail$
+
+_____________
+
+tbl_quality_issue
+
+curl -i   --request GET  --url http://10.4.1.228:6036/tbl_quality_issues.json \
+  --header 'content-type: application/json' --header "authorization: Bearer ${tokn}"   
+
+curl -iv   --request GET  --url http://10.4.1.228:6036/tbl_quality_issues/12201.json \
+  --header 'content-type: application/json' --header "authorization: Bearer ${tokn}"   
+
+  
+reformated the commands..  
+curl -i --header 'content-type: application/json' --header "authorization: Bearer ${tokn}" \
+  --request GET --url http://10.4.1.228:6036/tbl_quality_issues/12201.json 
+  
+Sign in..
+  curl -i -H "Content-Type: application/json" -X POST -D ./curldump -i \
+    -d '{"user": {"email":"a","password":"a"}}'  http://10.4.1.228:6036/users/sign_in.json
+     
+
+  
+----------------------------------------------------
+
+
+
+----------------------------------------------------
+Title:  .
+-----------------------2019-11-03[Nov-Sun]09-43AM
+
+{"user":"a","token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzI4NTcwMDd9.kGJFmPcpiSezC7v1GIcniArhc9kYLouWAqwv_rTMnUo"}
+albe@pmdsdata7:/srv/file/test/0tags/qtag486$
+
+tokn=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzI4NTcwMDd9.kGJFmPcpiSezC7v1GIcniArhc9kYLouWAqwv_rTMnUo
+
+curl -i --header 'content-type: application/json' --header "authorization: Bearer ${tokn}" \
+  --request POST --url http://10.4.1.228:6036/pfeatures.json  \
+  --data '{"name":"David567 Linen Keyboard"}'
+#Success.
+  
+curl -i --header 'content-type: application/json' --header "authorization: Bearer ${tokn}" \
+  --request POST --url http://10.4.1.228:6036/tbl_quality_issues.json  \
+  --data '{"Date": "2019-01-01 22:55:59", "PartID":"David568", "Issuedby": "drg", "Lengthofchange": "99" }'
+  
+
+# get
+curl -i --header 'content-type: application/json' --header "authorization: Bearer ${tokn}" \
+  --request GET --url http://10.4.1.228:6036/tbl_quality_issues/19393.json 
+  
+
+
+----------------------------------------------------

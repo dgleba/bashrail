@@ -12,7 +12,8 @@ edit gitignore to include sqlite db
 
 2.
 
-done. may do more later..
+done. 
+may do more later..
 
 add docs to generated proj to indicate bashrail version x made this..
 include relevant files like 1mk.sh
@@ -167,3 +168,35 @@ undefined method `before_filter' for ProductsController:Class Did you mean? befo
 
 
 
+14.
+
+
+2019-11-06
+
+add mailer to products
+
+
+
+15.
+
+
+2019-11-06
+
+  add cors or change cors to all methods. put is missing.
+  see qtag486  1a41aa7\ 2019-11-06 (HEAD -> master, origin/master)\ changed cors method\ [David Glebagit]
+
+16.
+
+2019-11-06
+
+  add file upload features for json api
+  
+  instructions.
+  get file-url json response
+  see qtag486   1a96668\ 2019-11-06\ added code to return avatar url to json 2019-11-06\ [David Glebagit]
+
+17.
+  
+  see qtag486  4542004\ 2019-11-06\ opened up more console logging 2019-11-06\ [David Glebagit]
+  
+  

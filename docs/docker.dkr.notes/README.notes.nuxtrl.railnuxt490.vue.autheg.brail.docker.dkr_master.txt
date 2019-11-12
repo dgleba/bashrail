@@ -3,7 +3,7 @@
 Status: works.  
 
 autheg-backend works with autheg-frontend. 
-and works with brail484b53 as well. 
+and works with brail484b53 backend as well. 
 
 
 

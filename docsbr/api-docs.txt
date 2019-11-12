@@ -1,0 +1,7 @@
+
+See files in this folder for api examples.
+
+Also see qtag486 project. It has some newer notes.
+
+
+hint:  C:\n\sflarge\sharesf\QualityTagsCapstone2019\rails-api\

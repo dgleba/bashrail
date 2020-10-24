@@ -1,0 +1,47 @@
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  files mentioning JWT
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-10-19[Oct-Mon]08-11AM 
+
+
+
+root@SICS-GZPJL13 /cygdrive/c/0/brail484b53
+
+$ grep -rin --color jwt
+
+app/controllers/users/sessions_controller.rb:5:  # to support JSON based authentication and issuing a JWT.
+app/controllers/users/sessions_controller.rb:25:    # from: https://github.com/jimjeffers/rails-devise-cors-jwt-example
+app/controllers/users/sessions_controller.rb:32:    # Here we're deviating from the standard behavior by issuing our JWT
+app/controllers/users/sessions_controller.rb:34:    token = JWTWrapper.encode({ user_id: current_user.id })
+
+app/helpers/jwt_wrapper.rb:3:# "app/helpers/jwt_wrapper.rb"
+app/helpers/jwt_wrapper.rb:5:module JWTWrapper
+app/helpers/jwt_wrapper.rb:9:    expiration ||= Rails.application.secrets.jwt_expiration_hours
+app/helpers/jwt_wrapper.rb:14:    JWT.encode payload, Rails.application.secrets.jwt_secret
+app/helpers/jwt_wrapper.rb:19:      decoded_token = JWT.decode token, Rails.application.secrets.jwt_secret
+
+config/initializers/core/extensions/devise/strategies/json_web_token.rb:1:# Your actual JWT Strategy
+config/initializers/core/extensions/devise/strategies/json_web_token.rb:25:        JWTWrapper.decode(token) rescue nil
+
+config/initializers/devise.rb:27:   manager.strategies.add(:jwt, Devise::Strategies::JsonWebToken)
+config/initializers/devise.rb:28:   # Adding the new JWT Strategy to the top of Warden's list,
+config/initializers/devise.rb:30:   manager.default_strategies(scope: :user).unshift :jwt
+
+config/secrets-example.yml:15:  # jwt token auth
+config/secrets-example.yml:18:  jwt_secret: '38af0483c50d39ebd0b58ea81a3fc366c1995c4da5bsuperrandomkey'
+config/secrets-example.yml:19:  jwt_expiration_hours: 18
+config/secrets-example.yml:23:  # jwt token auth
+
+config/secrets.yml:15:  # jwt token auth
+config/secrets.yml:18:  jwt_secret: '38af0483c50d39ebd0b58ea81a3fc366c1995c4da5bsuperrandomkey'
+config/secrets.yml:19:  jwt_expiration_hours: 18
+
+Gemfile:81:gem 'jwt'
+Gemfile.lock:129:    jwt (2.2.1)
+Gemfile.lock:325:  jwt
+
+root@SICS-GZPJL13 /cygdrive/c/0/brail484b53
+$
+

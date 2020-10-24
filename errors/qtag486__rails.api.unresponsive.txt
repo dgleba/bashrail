@@ -1,0 +1,61 @@
+
+
+rails backend api becomes unresponsive 
+
+
+qtag486
+
+
+----------------------------------------------------
+Title:  .
+-----------------------2019-11-11[Nov-Mon]23-19PM
+
+https://www.google.com/search?rlz=1C1CHBF_enCA846CA846&sxsrf=ACYBGNRPGtF0xqvKmMWMOEQwk1ru8AiEiQ:1573532051275&q=rails+backend+api+becomes+unresponsive&spell=1&sa=X&ved=0ahUKEwjh0dXX5-PlAhWMUt8KHYr2BfkQBQguKAA&biw=2133&bih=1046
+
+rails backend api becomes unresponsive
+
+
+
+https://github.com/rails/rails/issues/32451
+
+
+Rails server hangs up with concurrent json requests
+#32451
+sergiogomez opened this issue on Apr 4, 2018 · 7 comments · Fixed by #32541
+
+
+https://github.com/rails/rails/pull/36939
+
+gemfile..
+
+gem 'rails', github: 'rails/rails',  :branch => '5-2-stable'
+
+_____________
+
+dc build
+
+web_1  | Running command bash -c  bundle exec rails s -p 3000 -b '0.0.0.0'
+web_1  | bundler: failed to load command: rails (/usr/local/bundle/bin/rails)
+web_1  | Bundler::GitError: The git source https://github.com/rails/rails.git is not yet checked out. Please run `bundle install` before trying to start your application
+web_1  |   /usr/local/bundle/gems/bundler-2.0.2/lib/bundler/source/git/git_proxy.rb:235:in `allowed_in_path'
+
+
+added bundle install to entry.sh
+
+_____________
+
+2019-11-12_Tue_05.50-AM
+
+seems better. Let's try it out more.
+
+
+
+get latest from git repo.
+
+
+dc stop
+git pull
+dc build
+dc up
+
+----------------------------------------------------

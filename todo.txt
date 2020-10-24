@@ -200,3 +200,36 @@ add mailer to products
   see qtag486  4542004\ 2019-11-06\ opened up more console logging 2019-11-06\ [David Glebagit]
   
   
+
+18.
+
+s/before_filter/before_action/  2020-10-23
+
+
+	 
+# grep -l for filenames only..
+#
+ftmp=/tmp/filelist.tmp.91001.txt
+grep 'before_filter'  -ria  -l  --include={*.rb,}  --exclude-dir={tmp,bin,shared,log,nbproject,templates_c,backup,test,test2}  --exclude={*.sublime-workspace,*.geany,error_log,*.msg,___check.these___,*.sql,java*.*,JAVA*.*,*.csv,*.CSV,*.txt,*.log} . >$ftmp
+cat $ftmp
+      # next, do the work..
+while read Ft ; do
+ 
+  echo $Ft ;  sed -i -e 's/before_filter/before_action/' $Ft ;
+done <$ftmp
+
+
+19.
+
+rails_admin 2.02 NoMethodError in RailsAdmin::MainController#dashboard undefined method `new' for nil:NilClass @authorization_adapter = klass.new(*([self] + args).compact)
+
+	I just debugged it and it's from the rails_admin initializer.
+	You'll need to update config.authorize_with and set it as :cancancan instead of :cancan.
+
+
+20.
+
+
+
+
+

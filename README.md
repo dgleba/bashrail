@@ -32,6 +32,15 @@ example..
 - output.. /var/web/project_name
 - run command above from /var/web
 
+
+example..
+
+from the folder just above bashrail...
+```
+    appn='brail542c12'; 
+       chmod +x bashrail/*.sh;  bashrail/1mk.sh $appn   2>&1 | tee -a ${appn}_sh_log$(date +"__%Y-%m-%d_%H.%M.%S").log
+```
+
 --
 
 edit 1mk.sh

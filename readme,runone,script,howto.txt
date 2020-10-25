@@ -56,7 +56,7 @@ cd /srv/web/2rail
 # on pmdsdata7
 #
 cd /srv/file/test/brails
-    appn='brail484b53'; 
+    appn='brail542c14'; 
        chmod +x bashrail/*.sh;  bashrail/1mk.sh $appn   2>&1 | tee -a ${appn}_sh_log$(date +"__%Y-%m-%d_%H.%M.%S").log
 
 

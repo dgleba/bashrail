@@ -34,6 +34,28 @@ services:
     # command: bash -c  "bundle check || bundle install --jobs 40 --retry 5 \
     # && bundle exec puma -C config/puma.rb -p 3000  "
     #
+
+  adminerd:
+    # 10.4.1.231:6117/
+    # image: adminer:4.7
+    # image: dockette/adminer:full
+    image: dgleba/adminer-sqlite:one
+    # build: ./adminer-sqlite    
+    restart: always
+    ports:
+      - 14123:80
+      # 8080 for regular adminer, 80 for dockette
+    volumes:
+      - ./db/development.sqlite3:/db.sq3
+      - ./adminer-sqlite:/var/www/html
+    environment:
+      - ADMINER_DEFAULT_SERVER=s
+      - DB_PATH=/db.sq3
+      - DB_USER=u 
+      - DB_PASS=a
+      # - ADMINER_PLUGINS='tables-filter'
+
+
   # db:
   # image: postgres
   # volumes:

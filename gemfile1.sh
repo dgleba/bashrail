@@ -24,6 +24,15 @@ echo "# " >> Gemfile
 # gem install thor -v 0.19.1 
 # bundle update thor  
   
+
+#got error with # bundle show railties
+# output ...
+#   The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+#   /home/albe/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-5.2.4.4
+#
+bundle config disable_platform_warnings true
+
+
 bundle update
 
 sleep 1

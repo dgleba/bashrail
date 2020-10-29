@@ -2,11 +2,14 @@
 
 
 # Requirements:
- # - ruby
- # - rails
- # - apt install zip
+
+ # - ruby 2.6 3   [2.7.1 got error mysql2 gem failed to build native extension 0.5.3 ] 
+ # - rails 5.2.4.4
+ # - apt -y install zip
  # - rsync
- #
+ # - sudo apt-get -y install libmysqlclient-dev
+
+
 
 
 function abort()

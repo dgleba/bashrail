@@ -72,7 +72,7 @@ railt1="$(bundle show railties)"
 echo "${railt1}"
 path1='lib/rails/generators/erb/scaffold/templates'
 echo "${railt1}/${path1}"
-ls -la "${railt1}/${path1}"
+# ls -la "${railt1}/${path1}"
 
 mkdir -p lib/templates/erb/scaffold/
 rsync -auv "${sfil2}/lib/templates/erb/scaffold/" lib/templates/erb/scaffold/

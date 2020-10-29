@@ -20,6 +20,7 @@ cd /srv/share/test/brails/brail484b45
 
 
 
+
 ###  ---  examples like..  -----
 
 
@@ -31,6 +32,9 @@ cd /srv/share/test/brails/brail484b45
   chmod +x $sfil2/jqueryautocomplete.sh
   dos2unix $sfil2/jqueryautocomplete.sh
   $sfil2/jqueryautocomplete.sh
+
+  cd brail542c16
+  $sfil2/bootstrap1.sh
 
 
 
@@ -56,7 +60,7 @@ cd /srv/web/2rail
 # on pmdsdata7
 #
 cd /srv/file/test/brails
-    appn='brail542c14'; 
+    appn='brail542c17'; 
        chmod +x bashrail/*.sh;  bashrail/1mk.sh $appn   2>&1 | tee -a ${appn}_sh_log$(date +"__%Y-%m-%d_%H.%M.%S").log
 
 

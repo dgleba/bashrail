@@ -8,6 +8,7 @@ pwd
 
 # change for rails 5
 # gem install rails -v 5.2.3 --no-ri --no-rdoc
+gem install rails -v 5.2.4.4 --no-document
 
 ruby -v ; rails -v 
 

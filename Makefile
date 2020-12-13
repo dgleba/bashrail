@@ -3,6 +3,86 @@
 # run scripts from project folder like this --  sc/cl
 
 
+
+cons:
+	docker-compose exec web bundle exec rails console
+
+devb:
+	docker-compose  -f docker-compose.yml  build
+
+bi:
+	docker-compose run --rm web bundle install
+
+dup:
+	docker-compose  -f docker-compose.yml up
+
+mi:
+	docker-compose  -f docker-compose.yml  exec web rails db:migrate
+
+
+se:
+	docker-compose  -f docker-compose.yml  exec web rails db:seed
+
+destroyscaffold2:
+
+	docker-compose  -f docker-compose.yml  exec web rails destroy scaffold  Elist 
+	docker-compose  -f docker-compose.yml  exec web rails destroy scaffold  ElistReport 
+	docker-compose  -f docker-compose.yml  exec web rails destroy scaffold  Report
+
+# having trouble setting env variable, but do I need it?
+# to gain write access to code files created by the container.
+perm:
+	docker-compose exec  web	bash -c "chmod -R u+rw-s,g+rws,o+r  /app "
+	# docker-compose exec dbm	bash -c "chmod -R u+rw-s,g+rws,o+rw  /mydat "
+
+asc:
+	docker-compose  run --rm web bundle exec rake assets:precompile
+
+
+devisin:
+	docker-compose  -f docker-compose.yml  exec web rails generate devise:install
+
+devisfn:
+	docker-compose  -f docker-compose.yml  exec web rails generate migration DeviseAddFirstNameLastNameToUsers
+
+
+seeddump:
+	docker-compose  exec web rails db:seed:dump FILE=db/seeds/seeddump00.rb
+
+
+#
+
+# Production deployment
+
+prb:
+	docker-compose  -f docker-compose.prod.yml build
+
+prup:
+	docker-compose  -f docker-compose.prod.yml up
+
+prd:
+	docker-compose  -f docker-compose.prod.yml up -d
+
+pasc:
+	docker-compose -f docker-compose.prod.yml run prodweb bundle exec rake assets:precompile
+
+prdn:
+	# leads to.. ERROR: for prod469_web_1  Cannot start service web: network dd5fb837f569e4aed574e9af8ded2914b359b0d2899aaeccf93857950bb15fd6 not found
+	docker-compose  -f docker-compose.prod.yml down
+
+prst:
+	docker-compose  -f docker-compose.prod.yml stop
+
+
+#
+
+mgr219:
+	docker-compose --rm run app bin/rails active_storage:install:migrations ; \
+     	docker-compose run app rake db:migrate
+
+
+
+#
   
 devup:  
 	docker-compose  -f docker-compose.yml up 
@@ -13,12 +93,6 @@ devrup:
 prupr:  
 	docker-compose  -f docker-compose.prod.yml up --build  --force-recreate  
    
-prup:  
-	docker-compose  -f docker-compose.prod.yml up 
-  
-prd:  
-	docker-compose  -f docker-compose.prod.yml up -d 
-
   
 # having trouble setting env variable, but do I need it?  
 perm2:  
@@ -30,7 +104,7 @@ mgr21:
 	docker-compose run app bin/rails active_storage:install:migrations ; \
      	docker-compose run app rake db:migrate   
 
-asc:
+asc9:
 	docker-compose -f docker-compose.prod.yml run app bundle exec rake assets:precompile 
 	
   
@@ -137,7 +211,7 @@ dkv:
 	docker-compose -version
 
   
-perm:
+perm9:
 # fix permissions. make them group writable so www-data group can manage the files. move, delete, etc..  
 	docker-compose run djangodev sh sc/fixpermsh
 

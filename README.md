@@ -6,14 +6,16 @@ https://github.com/dgleba/bashrail
 
 This is a set of bash and ruby scripts to create a rails app with features like
 
-- bootstrap styling,
+- Both html interface per pics below as well as json api. full json api responds to all requests equally by json or html.
+- bootstrap styling responsive styling adjusts to mobile screens like phones,
 - select2 dropdown selects,
-- devise login,
-- cancancan role based access,
-- kaminari pagination,
-- ransack search,
+- login using devise,
 - jwt token authentication
+- role based access using cancancan,
+- kaminari for pagination,
+- ransack for search,
 - database is populated with users, roles, and faked data,
+- example tables/resources are scaffolded and ready to test.
 - etc...
 
 The resulting generated application has both an html interface which you can consume with most modern browsers and mobile device browsers, and a restful api which responds to json requests.

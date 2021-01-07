@@ -5,3 +5,10 @@ Also see qtag486 project. It has some newer notes.
 
 
 hint:  C:\n\sflarge\sharesf\QualityTagsCapstone2019\rails-api\
+
+
+Also see:
+
+    https://guides.rubyonrails.org/routing.html
+
+    

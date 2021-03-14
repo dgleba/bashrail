@@ -164,3 +164,27 @@ web_1       |   Rendered products/show.json.jbuilder (2.6ms)
 web_1       | Completed 201 Created in 266ms (Views: 12.1ms | ActiveRecord: 176.9ms)
 web_1       |
 
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  p-chart
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2021-02-18[Feb-Thu]19-27PM 
+
+
+
+token="eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjI4NTU0MzYwNjZ9.OQWCpF-TJgoPzb9klQsbEC3EEFHjx1e6sYcoVxXC7GA"
+
+curl -i  --request POST   --url http://10.4.71.231:16123/c9contacts.json \
+  --header "authorization: Bearer $token"  --header 'content-type: application/json' \
+  --data '{"C9country_id":"1"}'
+  
+curl -i  --request POST   --url http://10.4.71.231:16123/c9contacts.json \
+  --header "authorization: Bearer $token"  --header 'content-type: application/json' \
+  --data '{"name":"1a"}'
+  
+  
+=================================================
+
+
+

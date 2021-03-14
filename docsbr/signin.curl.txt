@@ -53,7 +53,7 @@ dgleba@PMDS-3HZGD42 MINGW64 ~
 srvr=http://192.168.88.60:6035
 
 curl -i -H "Content-Type: application/json" \
-      -X POST -D ./curldump -i\
+      -X POST -D ./curldump -i \
       -d '{"user": {"email":"a","password":"a"}}' \
       $srvr/users/sign_in.json
       
@@ -66,3 +66,16 @@ token="eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MDk4NDQ3ODl9.JBDg7Js09Ug
 
 
 {"user":"a","token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MDk4NDQ3ODl9.JBDg7Js09Ug4Vtz2YeJjiRnm3Tp_IrcXxVSn-jz8yvU"}
+
+
+=================================================
+
+curl -i -H "Content-Type: application/json" \
+      -X POST  -d '{"user": {"email":"b","password":"a"}}' \
+      http://10.4.71.231:16123/users/sign_in.json
+     
+	 
+	 
+
+=================================================
+

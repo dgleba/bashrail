@@ -19,7 +19,7 @@ services:
         - RAILS_ENV=development
     volumes:
       - .:/app
-      - bundle_cache:/usr/local/bundle/
+      - ~/bundle_cache:/usr/local/bundle/
     # depends_on:
     # - db
     environment:

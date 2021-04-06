@@ -21,6 +21,8 @@ include relevant files like 1mk.sh
 
 3.
 
+done.
+
 currently getting html response from curl / json create product request. 
 how to get json response?
 
@@ -44,6 +46,8 @@ idea:
 
   
 4.
+
+done.
 
 user2 resource
 
@@ -88,6 +92,8 @@ C:\n\Dropbox\csd\serve\vboxyard\bashrail\docs\rails,form_for add required field 
 
 6.
 
+done.
+
 fix ugly formatting of field with  validation errors
 
 It moved to the left and spread out vertically.
@@ -106,6 +112,8 @@ in rails_admin.rb
 
 
 8.
+
+done.
 
 Ad version table to rails admin..
 
@@ -179,6 +187,7 @@ add mailer to products
 
 15.
 
+done?
 
 2019-11-06
 
@@ -186,6 +195,8 @@ add mailer to products
   see qtag486  1a41aa7\ 2019-11-06 (HEAD -> master, origin/master)\ changed cors method\ [David Glebagit]
 
 16.
+
+done?
 
 2019-11-06
 
@@ -202,6 +213,7 @@ add mailer to products
   
 
 18.
+
 
 s/before_filter/before_action/  2020-10-23
 
@@ -229,6 +241,9 @@ rails_admin 2.02 NoMethodError in RailsAdmin::MainController#dashboard undefined
 
 20.
 
+rename product table to Z9product.
+also Z9country, Z9feature, Z9product_feature
+2021-01-31
 
 
 

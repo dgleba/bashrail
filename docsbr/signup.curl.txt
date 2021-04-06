@@ -48,3 +48,47 @@ Connection: Keep-Alive
 
 dgleba@PMDS-3HZGD42 MINGW64 ~
 $
+
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  https://github.com/bymi15/express-typeorm-rest-boilerplate#readme
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2021-01-17[Jan-Sun]15-39PM 
+
+
+pth=http://192.168.88.60:3000/api/auth/register
+curl -i -H "Content-Type: application/json"  -X POST \
+  -d '{"email":"dgleba@gmail.com","password":"123","firstName":"123","lastName":"123"}' \
+  $pth
+
+
+albe@vamp398:/srv/dkr/550dkrcolbrail/bashrail$ pth=http://192.168.88.60:3000/api/auth/register
+albe@vamp398:/srv/dkr/550dkrcolbrail/bashrail$ curl -i -H "Content-Type: application/json"  -X POST \
+>   -d '{"email":"dgleba@gmail.com","password":"123","firstName":"123","lastName":"123"}' \
+>   $pth
+HTTP/1.1 201 Created
+Access-Control-Allow-Origin: *
+...
+Date: Sun, 17 Jan 2021 20:44:33 GMT
+Connection: keep-alive
+
+{"user":{"role":"user","firstName":"123","lastName":"123","email":"dgleba@gmail.com","id":"6004a1b18b879d65fb304632"},
+"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMDRhMWIxOGI4NzlkNjVmYjMwNDYzMiIsImVtYWlsIjoiZGdsZWJhQGdtYWlsLmNvbSIsImV4cCI6MTYxMTUyMTA3My40MTcsImlhdCI6MTYxMDkxNjI3M30.kuVl1-lUgXLOh_J_VEW-rl5cJHPAEnEAV3gGwKcO5H8"}
+albe@vamp398:/srv/dkr/550dkrcolbrail/bashrail$
+
+
+token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMDRhMWIxOGI4NzlkNjVmYjMwNDYzMiIsImVtYWlsIjoiZGdsZWJhQGdtYWlsLmNvbSIsImV4cCI6MTYxMTUyMTA3My40MTcsImlhdCI6MTYxMDkxNjI3M30.kuVl1-lUgXLOh_J_VEW-rl5cJHPAEnEAV3gGwKcO5H8"
+
+
+
+=================================================
+
+  
+curl -i -H "Content-Type: application/json" -X POST \
+      -d '{"user": {"email":"d","password":"a","password_confirmation":"a"}}' \
+      http://10.4.71.231:16123/users.json
+       
+    

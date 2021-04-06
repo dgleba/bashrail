@@ -63,3 +63,142 @@ curl -i   --request GET \
 _____________
 
   
+  
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2021-01-09[Jan-Sat]20-47PM 
+
+
+
+srvr=http://192.168.88.60:6035 &&
+
+curl -i -H "Content-Type: application/json" \
+      -X POST -D ./curldump -i \
+      -d '{"user": {"email":"a","password":"a"}}' \
+      $srvr/users/sign_in.json
+      
+	  
+
+{"user":"a","token":"
+eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MTAzMDc0OTl9.HwH3C8jEJQ5UtXCYIIvr_84ny6Nj3NKnF5W2b2o9NwU
+"}albe@vamp398:~$
+albe@vamp398:~$
+	  
+	  token='eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MTAzMDc0OTl9.HwH3C8jEJQ5UtXCYIIvr_84ny6Nj3NKnF5W2b2o9NwU'
+
+
+srvr=http://192.168.88.60:6035 && \
+curl -i   --request GET \
+  --url $srvr/products.json \
+  --header "authorization: Bearer $token" \
+  --header 'content-type: application/json' 
+
+
+albe@vamp398:~$ srvr=http://192.168.88.60:6035 && \
+> curl -i   --request GET \
+>   --url $srvr/products.json \
+>   --header "authorization: Bearer $token" \
+>   --header 'content-type: application/json'
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/json; charset=utf-8
+ETag: W/"ce14a9d64cf2fe101078816c4baf4f87"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _brail542c17_session=KTM%2B579kknmM0U%2FIVnmiaxDb76pHymKg%2B4U0iS0KeYLGTzRtbJdmALlgxlmI%2FxKg0R5OBlcKyPld964M0Xm8noc%2BIpAUXo7L2VPyBXFNA5ZWMNkBslRZUrhwcGlcJGCmoSOLp4lwycoqe%2BPuUj0ulEpLNxXznQ7xgOcAjN5G1ztDGNQJ6HJ7qfg%2BkFb%2FCemc16d89G3bp2S9aiuO44pGGR%2FSKcTJYKTV--ZazCu0ASvQkXbpzq--NG37dUuNqnl1JFRvTeeMnA%3D%3D; path=/; HttpOnly
+X-Request-Id: 698fc5d4-4ae0-4be2-9bc1-e07b62cc0c58
+X-Runtime: 0.138159
+Vary: Origin
+Transfer-Encoding: chunked
+
+[{"id":1,"name":"Synergistic Marble Watch","pcolor":null,"country_of_origin_id":3,"pdate":null,"active_status":null,"sort_order":null,"created_at":"2020-10-25T21:48:54.209-04:00","updated_at":"2020-10-25T21:48:54.209-04:00","url":"http://192.168.88.60:6035/products/1.json"},{"id":2,"name":"Practical Paper Car","pcolor":null,"country_of_origin_id":5,"pdate":null,"active_status":null,"sort_order":null,"created_at":"2020-10-25T21:48:54.274-04:00","updated_at":"2020-10-25T21:48:54.274-04:00","url":"http://192.168.88.60:6035/products/2.json"},{"id":3,"name":"Synergistic Rubber Coat","pcolor":null,"country_of_origin_id":3,"pdate":null,"active_status":null,"sort_order":null,"created_at":"2020-10-25T21:48:54.336-04:00","updated_at":"2020-10-25T21:48:54.336-04:00","url":"http://192.168.88.60:6035/products/3.json"},{"id":4,"name":"Small Wooden Knife","pcolor":null,"country_of_origin_id":2,"pdate":null,"active_status":null,"sort_order":null,"created_at":"2020-10-25T21:48:54.398-04:00","updated_at":"2020-10-25T21:48:54.398-04:00","url":"http://192.168.88.60:6035/products/4.json"},{"id":5,"name":"Aerodynamic Granite Coat","pcolor":null,"country_of_origin_id":3,"pdate":null,"active_status":null,"sort_order":null,"created_at":"2020-10-25T21:48:54.462-04:00","updated_at":"2020-10-25T21:48:54.462-04:00","url":"http://192.168.88.60:6035/products/5.json"}]albe@vamp398:~$
+albe@vamp398:~$
+
+
+
+
+=================================================
+
+  
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  https://github.com/bymi15/express-typeorm-rest-boilerplate#readme
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2021-01-17[Jan-Sun]15-47PM 
+
+
+token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMDRhMWIxOGI4NzlkNjVmYjMwNDYzMiIsImVtYWlsIjoiZGdsZWJhQGdtYWlsLmNvbSIsImV4cCI6MTYxMTUyMTA3My40MTcsImlhdCI6MTYxMDkxNjI3M30.kuVl1-lUgXLOh_J_VEW-rl5cJHPAEnEAV3gGwKcO5H8"
+pth=http://192.168.88.60:3000/api/company
+curl -i -H "Content-Type: application/json"  --request GET \
+  --url $pth -H "authorization: Bearer $token"  
+  
+
+_____________
+
+
+error ..  Here, i didn't include  token...
+
+albe@vamp398:/srv/dkr/550dkrcolbrail/bashrail$ pth=http://192.168.88.60:3000/api/company
+albe@vamp398:/srv/dkr/550dkrcolbrail/bashrail$ curl -i -H "Content-Type: application/json"  --request GET \
+>   --url $pth -H "authorization: Bearer $token"
+HTTP/1.1 401 Unauthorized
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 44
+ETag: W/"2c-05Rh4/PcS5n8BHLFYsQTAmZI5Q0"
+Date: Sun, 17 Jan 2021 20:50:15 GMT
+Connection: keep-alive
+
+{"error":"No authorization token was found"}
+
+albe@vamp398:/srv/dkr/550dkrcolbrail/bashrail$
+
+
+
+_____________
+
+
+works.
+
+albe@vamp398:/srv/dkr/550dkrcolbrail/bashrail$ token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMDRhMWIxOGI4NzlkNjVmYjMwNDYzMiIsImVtYWlsIjoiZGdsZWJhQGdtYWlsLmNvbSIsImV4cCI6MTYxMTUyMTA3My40MTcsImlhdCI6MTYxMDkxNjI3M30.kuVl1-lUgXLOh_J_VEW-rl5cJHPAEnEAV3gGwKcO5H8"
+albe@vamp398:/srv/dkr/550dkrcolbrail/bashrail$ pth=http://192.168.88.60:3000/api/company
+albe@vamp398:/srv/dkr/550dkrcolbrail/bashrail$ curl -i -H "Content-Type: application/json"  --request GET \
+>   --url $pth -H "authorization: Bearer $token"
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+.. ..
+Date: Sun, 17 Jan 2021 20:50:36 GMT
+Connection: keep-alive
+
+[{"id":"600499427629de57b233459e","name":"Oberbrunner - Rowe","description":"Self-enabling secondary core","logo":"http://placeimg.com/640/480/business","website":"https://earnest.net","headquarters":{"city":"Rathborough","country":"Togo"},"industry":"users","foundedYear":"2020"},
+{"id":"600499427629de57b233459f","name":"Robel, Rippin and Nader","description":"Open-source contextually-based time-frame","logo":"http://placeimg.com/640/480/business","website":"https://erin.com","headquarters":{"city":"Port Ernashire","country":"Austria"},"industry":"models","foundedYear":"2020"}]
+albe@vamp398:/srv/dkr/550dkrcolbrail/bashrail$
+
+
+=================================================
+
+
+
+
+    

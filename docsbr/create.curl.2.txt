@@ -1,0 +1,190 @@
+
+https://listoa.d.jgleba.com/
+
+http://192.168.88.60:6035/products?page=2
+
+token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MDk3MDkxNjl9.pf4FXrW8AobmWWQYej1PXKP2bVddRTqUy7CVjhe7_NU
+token="eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MDk4NDQ3ODl9.JBDg7Js09Ug4Vtz2YeJjiRnm3Tp_IrcXxVSn-jz8yvU"
+
+curl -i  --request POST   --url http://192.168.88.60:6035/products.json \
+  --header "authorization: Bearer $token"  --header 'content-type: application/json' \
+  --data '{"name":"David76-104 Linen Keyboard","country_of_origin_id":"3"}'
+  
+_____________
+
+  
+  
+albe@vamp398:~$ token=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MDk3MDkxNjl9.pf4FXrW8AobmWWQYej1PXKP2bVddRTqUy7CVjhe7_NU
+albe@vamp398:~$
+albe@vamp398:~$ curl -i  --request POST   --url http://192.168.88.60:6035/products.json \
+>   --header "authorization: Bearer $token"  --header 'content-type: application/json' \
+>   --data '{"name":"David76 Linen Keyboard","country_of_origin_id":"3"}'
+HTTP/1.1 201 Created
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/json; charset=utf-8
+Location: http://192.168.88.60:6035/products/10
+ETag: W/"aace1a532bf6017cb499ead26ed1f674"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: b83cbabd-bd39-4a6d-998a-72e4d68cf0c1
+X-Runtime: 0.237916
+Vary: Origin
+Transfer-Encoding: chunked
+
+{"id":10,"name":"David76 Linen Keyboard","pcolor":null,"country_of_origin_id":3,"pdate":null,"active_status":null,"sort_order":null,"created_at":"2021-01-02T22:32:19.148-05:00","updated_at":"2021-01-02T22:32:19.148-05:00","url":"http://192.168.88.60:6035/products/10.json"}albe@vamp398:~$
+albe@vamp398:~$
+
+
+=================================================
+
+html ok.
+
+web_1       | Started POST "/products" for 192.168.88.54 at 2021-01-03 04:17:17 +0000
+web_1       | Cannot render console from 192.168.88.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+web_1       | Processing by ProductsController#create as HTML
+web_1       |   Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZuT7LferBkSPWcnkZGIeTvKv7lqH26xcHm9ugD6SmDGPaBojhZigUFWwENImsqq+Jrr1IpxoeuAKki0gFr4U9Q==", "product"=>{"name"=>"22333", "pcolor"=>"", "country_of_origin_id"=>"1", "pdate(1i)"=>"2021", "pdate(2i)"=>"1", "pdate(3i)"=>"2", "pdate(4i)"=>"23", "pdate(5i)"=>"17", "active_status"=>"", "sort_order"=>""}, "commit"=>"Create Product"}
+web_1       |   User Load (0.1ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 2], ["LIMIT", 1]]
+web_1       |   Role Load (0.1ms)  SELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?  [["id", 18], ["LIMIT", 1]]
+web_1       |    (0.1ms)  begin transaction
+web_1       |   CountryOfOrigin Load (0.1ms)  SELECT  "country_of_origins".* FROM "country_of_origins" WHERE "country_of_origins"."id" = ? LIMIT ?  [["id", 1], ["LIMIT", 1]]
+web_1       |   Product Create (0.2ms)  INSERT INTO "products" ("name", "pcolor", "country_of_origin_id", "pdate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "22333"], ["pcolor", ""], ["country_of_origin_id", 1], ["pdate", "2021-01-03 04:17:00"], ["created_at", "2021-01-03 04:17:17.162157"], ["updated_at", "2021-01-03 04:17:17.162157"]]
+web_1       |    (53.5ms)  commit transaction
+web_1       | Redirected to http://192.168.88.60:6035/products/11
+web_1       | Completed 302 Found in 68ms (ActiveRecord: 54.1ms)
+web_1       |
+web_1       | Started GET "/products/11" for 192.168.88.54 at 2021-01-03 04:17:17 +0000
+web_1       | Cannot render console from 192.168.88.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+web_1       | Processing by ProductsController#show as HTML
+web_1       |   Parameters: {"id"=>"11"}
+web_1       |   User Load (0.3ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 2], ["LIMIT", 1]]
+web_1       |   Product Load (0.2ms)  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?  [["id", 11], ["LIMIT", 1]]
+web_1       |   Role Load (0.1ms)  SELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?  [["id", 18], ["LIMIT", 1]]
+web_1       |   Rendering products/show.html.erb within layouts/application
+web_1       |   CountryOfOrigin Load (0.1ms)  SELECT  "country_of_origins".* FROM "country_of_origins" WHERE "country_of_origins"."id" = ? LIMIT ?  [["id", 1], ["LIMIT", 1]]
+web_1       |   Pfeature Load (0.2ms)  SELECT "pfeatures".* FROM "pfeatures" INNER JOIN "product_features" ON "pfeatures"."id" = "product_features"."pfeature_id" WHERE "product_features"."product_id" = ?  [["product_id", 11]]
+web_1       |   Rendered products/show.html.erb within layouts/application (3.8ms)
+web_1       | Completed 200 OK in 97ms (Views: 87.3ms | ActiveRecord: 1.0ms)
+=================================================
+
+failed axios
+
+web_1       | Started POST "/products.json" for 192.168.88.54 at 2021-01-03 04:18:07 +0000
+web_1       | Cannot render console from 192.168.88.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+web_1       | Processing by ProductsController#create as JSON
+web_1       |   Parameters: {"_json"=>[], "product"=>{}}
+web_1       |   User Load (0.3ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?  [["id", 2], ["LIMIT", 1]]
+web_1       |    (0.1ms)  begin transaction
+web_1       |   Role Load (0.1ms)  SELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?  [["id", 18], ["LIMIT", 1]]
+web_1       |   User Update (0.2ms)  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2021-01-03 04:18:07.435293"], ["last_sign_in_at", "2021-01-03 04:16:56.723597"], ["sign_in_count", 144], ["updated_at", "2021-01-03 04:18:07.437999"], ["id", 2]]
+web_1       |   PaperTrail::Version Create (0.2ms)  INSERT INTO "versions" ("item_type", "item_id", "event", "object", "created_at", "object_changes") VALUES (?, ?, ?, ?, ?, ?)  [["item_type", "User"], ["item_id", 2], ["event", "update"], ["object", "---\nid: 2\nencrypted_password: \"$2a$11$mtY2iW6T/Uk806XFDYdKKefKIZqM5un19dZANv3oyO2Fz1RSuMomC\"\nlocked_at: \nfailed_attempts: 0\ncurrent_sign_in_at: 2021-01-03 04:16:56.723597000 Z\nlast_sign_in_at: 2021-01-03 04:16:38.762444000 Z\ncurrent_sign_in_ip: 192.168.88.54\nlast_sign_in_ip: 192.168.88.54\nsign_in_count: 143\nrole_id: 18\nemail: a\nreset_password_token: \nreset_password_sent_at: \nremember_created_at: \ncreated_at: 2019-10-25 20:12:41.147500000 Z\nupdated_at: 2021-01-03 04:16:56.725999000 Z\nconfirmation_token: \nconfirmed_at: \nconfirmation_sent_at: \nunconfirmed_email: \nunlock_token: \nname: admin\n"], ["created_at", "2021-01-03 04:18:07.437999"], ["object_changes", "---\ncurrent_sign_in_at:\n- 2021-01-03 04:16:56.723597000 Z\n- 2021-01-03 04:18:07.435293182 Z\nlast_sign_in_at:\n- 2021-01-03 04:16:38.762444000 Z\n- 2021-01-03 04:16:56.723597000 Z\nsign_in_count:\n- 143\n- 144\nupdated_at:\n- 2021-01-03 04:16:56.725999000 Z\n- 2021-01-03 04:18:07.437999373 Z\n"]]
+web_1       |    (61.5ms)  commit transaction
+
+****  web_1       | HTTP Origin header (http://192.168.88.60:8080) didn't match request.base_url (http://192.168.88.60:6035)
+
+web_1       |    (0.1ms)  begin transaction
+web_1       |    (0.1ms)  commit transaction
+web_1       |    (0.1ms)  begin transaction
+web_1       |   User Update (0.6ms)  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2021-01-03 04:18:07.510221"], ["last_sign_in_at", "2021-01-03 04:18:07.435293"], ["sign_in_count", 145], ["updated_at", "2021-01-03 04:18:07.510946"], ["id", 2]]
+web_1       |   PaperTrail::Version Create (0.2ms)  INSERT INTO "versions" ("item_type", "item_id", "event", "whodunnit", "object", "created_at", "object_changes") VALUES (?, ?, ?, ?, ?, ?, ?)  [["item_type", "User"], ["item_id", 2], ["event", "update"], ["whodunnit", "2"], ["object", "---\nid: 2\nencrypted_password: \"$2a$11$mtY2iW6T/Uk806XFDYdKKefKIZqM5un19dZANv3oyO2Fz1RSuMomC\"\nlocked_at: \nfailed_attempts: 0\ncurrent_sign_in_at: 2021-01-03 04:18:07.435293182 Z\nlast_sign_in_at: 2021-01-03 04:16:56.723597000 Z\ncurrent_sign_in_ip: 192.168.88.54\nlast_sign_in_ip: 192.168.88.54\nsign_in_count: 144\nrole_id: 18\nemail: a\nreset_password_token: \nreset_password_sent_at: \nremember_created_at: \ncreated_at: 2019-10-25 20:12:41.147500000 Z\nupdated_at: 2021-01-03 04:18:07.437999373 Z\nconfirmation_token: \nconfirmed_at: \nconfirmation_sent_at: \nunconfirmed_email: \nunlock_token: \nname: admin\n"], ["created_at", "2021-01-03 04:18:07.510946"], ["object_changes", "---\ncurrent_sign_in_at:\n- &1 2021-01-03 04:18:07.435293182 Z\n- 2021-01-03 04:18:07.510221643 Z\nlast_sign_in_at:\n- 2021-01-03 04:16:56.723597000 Z\n- *1\nsign_in_count:\n- 144\n- 145\nupdated_at:\n- 2021-01-03 04:18:07.437999373 Z\n- 2021-01-03 04:18:07.510946072 Z\n"]]
+web_1       |    (60.5ms)  commit transaction
+web_1       | Completed 400 Bad Request in 151ms (ActiveRecord: 123.9ms)
+
+web_1       | ActionController::ParameterMissing (param is missing or the value is empty: product):
+web_1       |
+web_1       | app/controllers/products_controller.rb:93:in `product_params'
+
+ggl:
+axios HTTP Origin header didn't match request.base_url 
+
+
+__________
+
+curl ok
+
+web_1       | Started POST "/products.json" for 192.168.88.60 at 2021-01-03 04:19:54 +0000
+web_1       | Cannot render console from 192.168.88.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+web_1       | Processing by ProductsController#create as JSON
+web_1       |   Parameters: {"name"=>"David76b Linen Keyboard", "country_of_origin_id"=>"3", "product"=>{"name"=>"David76b Linen Keyboard", "country_of_origin_id"=>"3"}}
+web_1       |   User Load (0.2ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?  [["id", 2], ["LIMIT", 1]]
+web_1       |    (0.1ms)  begin transaction
+web_1       |   Role Load (0.1ms)  SELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?  [["id", 18], ["LIMIT", 1]]
+web_1       |   User Update (0.2ms)  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2021-01-03 04:19:54.389946"], ["last_sign_in_at", "2021-01-03 04:18:07.510221"], ["current_sign_in_ip", "192.168.88.60"], ["sign_in_count", 146], ["updated_at", "2021-01-03 04:19:54.392394"], ["id", 2]]
+web_1       |   PaperTrail::Version Create (0.2ms)  INSERT INTO "versions" ("item_type", "item_id", "event", "object", "created_at", "object_changes") VALUES (?, ?, ?, ?, ?, ?)  [["item_type", "User"], ["item_id", 2], ["event", "update"], ["object", "---\nid: 2\nencrypted_password: \"$2a$11$mtY2iW6T/Uk806XFDYdKKefKIZqM5un19dZANv3oyO2Fz1RSuMomC\"\nlocked_at: \nfailed_attempts: 0\ncurrent_sign_in_at: 2021-01-03 04:18:07.510221000 Z\nlast_sign_in_at: 2021-01-03 04:18:07.435293000 Z\ncurrent_sign_in_ip: 192.168.88.54\nlast_sign_in_ip: 192.168.88.54\nsign_in_count: 145\nrole_id: 18\nemail: a\nreset_password_token: \nreset_password_sent_at: \nremember_created_at: \ncreated_at: 2019-10-25 20:12:41.147500000 Z\nupdated_at: 2021-01-03 04:18:07.510946000 Z\nconfirmation_token: \nconfirmed_at: \nconfirmation_sent_at: \nunconfirmed_email: \nunlock_token: \nname: admin\n"], ["created_at", "2021-01-03 04:19:54.392394"], ["object_changes", "---\ncurrent_sign_in_at:\n- 2021-01-03 04:18:07.510221000 Z\n- 2021-01-03 04:19:54.389946348 Z\nlast_sign_in_at:\n- 2021-01-03 04:18:07.435293000 Z\n- 2021-01-03 04:18:07.510221000 Z\ncurrent_sign_in_ip:\n- 192.168.88.54\n- 192.168.88.60\nsign_in_count:\n- 145\n- 146\nupdated_at:\n- 2021-01-03 04:18:07.510946000 Z\n- 2021-01-03 04:19:54.392394113 Z\n"]]
+web_1       |    (38.3ms)  commit transaction
+web_1       | Can't verify CSRF token authenticity.
+web_1       |    (0.1ms)  begin transaction
+web_1       |    (0.1ms)  commit transaction
+web_1       |    (0.3ms)  begin transaction
+web_1       |   User Update (0.3ms)  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2021-01-03 04:19:54.442137"], ["last_sign_in_at", "2021-01-03 04:19:54.389946"], ["last_sign_in_ip", "192.168.88.60"], ["sign_in_count", 147], ["updated_at", "2021-01-03 04:19:54.443329"], ["id", 2]]
+web_1       |   PaperTrail::Version Create (0.2ms)  INSERT INTO "versions" ("item_type", "item_id", "event", "whodunnit", "object", "created_at", "object_changes") VALUES (?, ?, ?, ?, ?, ?, ?)  [["item_type", "User"], ["item_id", 2], ["event", "update"], ["whodunnit", "2"], ["object", "---\nid: 2\nencrypted_password: \"$2a$11$mtY2iW6T/Uk806XFDYdKKefKIZqM5un19dZANv3oyO2Fz1RSuMomC\"\nlocked_at: \nfailed_attempts: 0\ncurrent_sign_in_at: 2021-01-03 04:19:54.389946348 Z\nlast_sign_in_at: 2021-01-03 04:18:07.510221000 Z\ncurrent_sign_in_ip: 192.168.88.60\nlast_sign_in_ip: 192.168.88.54\nsign_in_count: 146\nrole_id: 18\nemail: a\nreset_password_token: \nreset_password_sent_at: \nremember_created_at: \ncreated_at: 2019-10-25 20:12:41.147500000 Z\nupdated_at: 2021-01-03 04:19:54.392394113 Z\nconfirmation_token: \nconfirmed_at: \nconfirmation_sent_at: \nunconfirmed_email: \nunlock_token: \nname: admin\n"], ["created_at", "2021-01-03 04:19:54.443329"], ["object_changes", "---\ncurrent_sign_in_at:\n- &1 2021-01-03 04:19:54.389946348 Z\n- 2021-01-03 04:19:54.442137673 Z\nlast_sign_in_at:\n- 2021-01-03 04:18:07.510221000 Z\n- *1\nlast_sign_in_ip:\n- 192.168.88.54\n- 192.168.88.60\nsign_in_count:\n- 146\n- 147\nupdated_at:\n- 2021-01-03 04:19:54.392394113 Z\n- 2021-01-03 04:19:54.443329259 Z\n"]]
+web_1       |    (31.0ms)  commit transaction
+web_1       |    (0.1ms)  begin transaction
+web_1       |   CountryOfOrigin Load (0.3ms)  SELECT  "country_of_origins".* FROM "country_of_origins" WHERE "country_of_origins"."id" = ? LIMIT ?  [["id", 3], ["LIMIT", 1]]
+web_1       |   Product Create (0.5ms)  INSERT INTO "products" ("name", "country_of_origin_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "David76b Linen Keyboard"], ["country_of_origin_id", 3], ["created_at", "2021-01-03 04:19:54.489846"], ["updated_at", "2021-01-03 04:19:54.489846"]]
+web_1       |    (23.2ms)  commit transaction
+web_1       |   Rendering products/show.json.jbuilder
+web_1       |   Rendered products/_product.json.jbuilder (0.4ms)
+web_1       |   Rendered products/show.json.jbuilder (1.9ms)
+web_1       | Completed 201 Created in 146ms (Views: 12.9ms | ActiveRecord: 95.2ms)
+web_1       |
+web_1       |
+
+
+curl ok from other ip
+
+
+web_1       | Started POST "/products.json" for 192.168.88.54 at 2021-01-03 04:50:38 +0000
+web_1       | Cannot render console from 192.168.88.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+web_1       | Processing by ProductsController#create as JSON
+web_1       |   Parameters: {"name"=>"David76b Linen Keyboard", "country_of_origin_id"=>"3", "product"=>{"name"=>"David76b Linen Keyboard", "country_of_origin_id"=>"3"}}
+web_1       |   User Load (0.2ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?  [["id", 2], ["LIMIT", 1]]
+web_1       |    (0.0ms)  begin transaction
+web_1       |   Role Load (0.1ms)  SELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?  [["id", 18], ["LIMIT", 1]]
+web_1       |   User Update (0.2ms)  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2021-01-03 04:50:38.298598"], ["last_sign_in_at", "2021-01-03 04:19:54.442137"], ["current_sign_in_ip", "192.168.88.54"], ["sign_in_count", 148], ["updated_at", "2021-01-03 04:50:38.300221"], ["id", 2]]
+web_1       |   PaperTrail::Version Create (0.2ms)  INSERT INTO "versions" ("item_type", "item_id", "event", "object", "created_at", "object_changes") VALUES (?, ?, ?, ?, ?, ?)  [["item_type", "User"], ["item_id", 2], ["event", "update"], ["object", "---\nid: 2\nencrypted_password: \"$2a$11$mtY2iW6T/Uk806XFDYdKKefKIZqM5un19dZANv3oyO2Fz1RSuMomC\"\nlocked_at: \nfailed_attempts: 0\ncurrent_sign_in_at: 2021-01-03 04:19:54.442137000 Z\nlast_sign_in_at: 2021-01-03 04:19:54.389946000 Z\ncurrent_sign_in_ip: 192.168.88.60\nlast_sign_in_ip: 192.168.88.60\nsign_in_count: 147\nrole_id: 18\nemail: a\nreset_password_token: \nreset_password_sent_at: \nremember_created_at: \ncreated_at: 2019-10-25 20:12:41.147500000 Z\nupdated_at: 2021-01-03 04:19:54.443329000 Z\nconfirmation_token: \nconfirmed_at: \nconfirmation_sent_at: \nunconfirmed_email: \nunlock_token: \nname: admin\n"], ["created_at", "2021-01-03 04:50:38.300221"], ["object_changes", "---\ncurrent_sign_in_at:\n- 2021-01-03 04:19:54.442137000 Z\n- 2021-01-03 04:50:38.298598377 Z\nlast_sign_in_at:\n- 2021-01-03 04:19:54.389946000 Z\n- 2021-01-03 04:19:54.442137000 Z\ncurrent_sign_in_ip:\n- 192.168.88.60\n- 192.168.88.54\nsign_in_count:\n- 147\n- 148\nupdated_at:\n- 2021-01-03 04:19:54.443329000 Z\n- 2021-01-03 04:50:38.300221518 Z\n"]]
+web_1       |    (58.9ms)  commit transaction
+web_1       | Can't verify CSRF token authenticity.
+web_1       |    (1.4ms)  begin transaction
+web_1       |    (0.1ms)  commit transaction
+web_1       |    (0.1ms)  begin transaction
+web_1       |   User Update (0.6ms)  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2021-01-03 04:50:38.408562"], ["last_sign_in_at", "2021-01-03 04:50:38.298598"], ["last_sign_in_ip", "192.168.88.54"], ["sign_in_count", 149], ["updated_at", "2021-01-03 04:50:38.410293"], ["id", 2]]
+web_1       |   PaperTrail::Version Create (0.2ms)  INSERT INTO "versions" ("item_type", "item_id", "event", "whodunnit", "object", "created_at", "object_changes") VALUES (?, ?, ?, ?, ?, ?, ?)  [["item_type", "User"], ["item_id", 2], ["event", "update"], ["whodunnit", "2"], ["object", "---\nid: 2\nencrypted_password: \"$2a$11$mtY2iW6T/Uk806XFDYdKKefKIZqM5un19dZANv3oyO2Fz1RSuMomC\"\nlocked_at: \nfailed_attempts: 0\ncurrent_sign_in_at: 2021-01-03 04:50:38.298598377 Z\nlast_sign_in_at: 2021-01-03 04:19:54.442137000 Z\ncurrent_sign_in_ip: 192.168.88.54\nlast_sign_in_ip: 192.168.88.60\nsign_in_count: 148\nrole_id: 18\nemail: a\nreset_password_token: \nreset_password_sent_at: \nremember_created_at: \ncreated_at: 2019-10-25 20:12:41.147500000 Z\nupdated_at: 2021-01-03 04:50:38.300221518 Z\nconfirmation_token: \nconfirmed_at: \nconfirmation_sent_at: \nunconfirmed_email: \nunlock_token: \nname: admin\n"], ["created_at", "2021-01-03 04:50:38.410293"], ["object_changes", "---\ncurrent_sign_in_at:\n- &1 2021-01-03 04:50:38.298598377 Z\n- 2021-01-03 04:50:38.408562822 Z\nlast_sign_in_at:\n- 2021-01-03 04:19:54.442137000 Z\n- *1\nlast_sign_in_ip:\n- 192.168.88.60\n- 192.168.88.54\nsign_in_count:\n- 148\n- 149\nupdated_at:\n- 2021-01-03 04:50:38.300221518 Z\n- 2021-01-03 04:50:38.410293045 Z\n"]]
+web_1       |    (61.1ms)  commit transaction
+web_1       |    (0.1ms)  begin transaction
+web_1       |   CountryOfOrigin Load (0.2ms)  SELECT  "country_of_origins".* FROM "country_of_origins" WHERE "country_of_origins"."id" = ? LIMIT ?  [["id", 3], ["LIMIT", 1]]
+web_1       |   Product Create (0.3ms)  INSERT INTO "products" ("name", "country_of_origin_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "David76b Linen Keyboard"], ["country_of_origin_id", 3], ["created_at", "2021-01-03 04:50:38.490386"], ["updated_at", "2021-01-03 04:50:38.490386"]]
+web_1       |    (53.1ms)  commit transaction
+web_1       |   Rendering products/show.json.jbuilder
+web_1       |   Rendered products/_product.json.jbuilder (0.7ms)
+web_1       |   Rendered products/show.json.jbuilder (2.6ms)
+web_1       | Completed 201 Created in 266ms (Views: 12.1ms | ActiveRecord: 176.9ms)
+web_1       |
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  p-chart
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2021-02-18[Feb-Thu]19-27PM 
+
+
+
+token="eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjI4NTU0MzYwNjZ9.OQWCpF-TJgoPzb9klQsbEC3EEFHjx1e6sYcoVxXC7GA"
+
+curl -i  --request POST   --url http://10.4.71.231:16123/c9contacts.json \
+  --header "authorization: Bearer $token"  --header 'content-type: application/json' \
+  --data '{"C9country_id":"1"}'
+  
+curl -i  --request POST   --url http://10.4.71.231:16123/c9contacts.json \
+  --header "authorization: Bearer $token"  --header 'content-type: application/json' \
+  --data '{"name":"1a"}'
+  
+  
+=================================================
+
+
+

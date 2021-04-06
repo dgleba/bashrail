@@ -192,7 +192,10 @@ cat $filetarg
 r1tmp="/tmp/_temprubyrunner_${USER}.rb"
 cat << 'HEREDOC' > $r1tmp
 patrn='config.authorize_with :cancan'
-  repl2 = %Q{   config.authorize_with :cancancan  }
+  repl2 = %Q{   
+	config.authorize_with :cancancan 
+	config.parent_controller = 'ApplicationController'  
+  }
   ARGF.each do |line|
     if line =~ /#{Regexp.escape(patrn)}/
       puts repl2 
